@@ -40,7 +40,11 @@ add_action( 'after_setup_theme', 'mci_theme_setup' );
 function mci_enqueue_assets() {
 	wp_enqueue_style(
 		'mci-google-fonts',
+<<<<<<< HEAD
 		'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap',
+=======
+		'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700;800;900&display=swap',
+>>>>>>> aa42d112f83445055c1b69dd5262da5f7b31815b
 		array(),
 		null
 	);
@@ -49,4 +53,10 @@ function mci_enqueue_assets() {
 }
 add_action( 'wp_enqueue_scripts', 'mci_enqueue_assets' );
 
+<<<<<<< HEAD
+=======
+/**
+ * Customizer: Design Tokens.
+ */
+>>>>>>> aa42d112f83445055c1b69dd5262da5f7b31815b
 require get_template_directory() . '/inc/customizer.php';
