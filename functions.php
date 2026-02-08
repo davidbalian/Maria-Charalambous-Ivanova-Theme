@@ -38,6 +38,15 @@ add_action( 'after_setup_theme', 'mci_theme_setup' );
  * Enqueue styles and scripts.
  */
 function mci_enqueue_assets() {
-	wp_enqueue_style( 'mci-style', get_stylesheet_uri(), array(), MCI_THEME_VERSION );
+	wp_enqueue_style(
+		'mci-google-fonts',
+		'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap',
+		array(),
+		null
+	);
+
+	wp_enqueue_style( 'mci-style', get_stylesheet_uri(), array( 'mci-google-fonts' ), MCI_THEME_VERSION );
 }
 add_action( 'wp_enqueue_scripts', 'mci_enqueue_assets' );
+
+require get_template_directory() . '/inc/customizer.php';
