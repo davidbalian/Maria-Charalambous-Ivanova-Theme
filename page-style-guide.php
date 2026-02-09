@@ -40,7 +40,7 @@ $colors = array(
 
 			<div class="sg-swatches">
 				<?php foreach ( $colors as $key => $meta ) :
-					$value = get_theme_mod( 'mci_color_' . $key, $meta[1] );
+					$value = $meta[1];
 					$prop  = str_replace( '_', '-', $key );
 				?>
 					<div class="sg-swatch">

@@ -41,5 +41,3 @@ function mci_enqueue_assets() {
 	wp_enqueue_style( 'mci-style', get_stylesheet_uri(), array(), MCI_THEME_VERSION );
 }
 add_action( 'wp_enqueue_scripts', 'mci_enqueue_assets' );
-
-require get_template_directory() . '/inc/customizer.php';

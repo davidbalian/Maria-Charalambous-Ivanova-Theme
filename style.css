@@ -41,6 +41,50 @@ Text Domain: maria-charalambous-ivanova
 
 
 /* ==========================================================================
+   0b. Design Tokens
+   ========================================================================== */
+
+:root {
+	/* Colors */
+	--mci-color-primary: #0071E3;
+	--mci-color-primary-hover: #005BBB;
+	--mci-color-secondary: #1D1D1F;
+	--mci-color-secondary-hover: #424245;
+	--mci-color-text: #1D1D1F;
+	--mci-color-text-light: #6E6E73;
+	--mci-color-background: #F5F5F7;
+	--mci-color-surface: #FFFFFF;
+	--mci-color-border: #D2D2D7;
+	--mci-color-white: #FFFFFF;
+
+	/* Typography */
+	--mci-font-heading: 'Playfair Display', Georgia, serif;
+	--mci-font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+	--mci-font-size-base: 17px;
+	--mci-font-weight-normal: 400;
+	--mci-font-weight-bold: 600;
+	--mci-line-height: 1.65;
+
+	/* Borders */
+	--mci-radius-sm: 8px;
+	--mci-radius-md: 12px;
+	--mci-radius-lg: 20px;
+	--mci-border-width: 1px;
+
+	/* Spacing */
+	--mci-spacing-unit: 8px;
+	--mci-container-width: 1080px;
+	--mci-spacing-xs: 8px;
+	--mci-spacing-sm: 16px;
+	--mci-spacing-md: 24px;
+	--mci-spacing-lg: 32px;
+	--mci-spacing-xl: 48px;
+	--mci-spacing-2xl: 64px;
+	--mci-spacing-3xl: 96px;
+}
+
+
+/* ==========================================================================
    1. Reset
    ========================================================================== */
 
