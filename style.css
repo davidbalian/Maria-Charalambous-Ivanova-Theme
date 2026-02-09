@@ -815,42 +815,6 @@ hr {
 .text-center { text-align: center; }
 .text-light  { color: var(--mci-color-text-light); }
 
-.has-grid-lines {
-	position: relative;
-	border-top: none;
-}
-
-/* Vertical lines at container edges, fading top & bottom */
-.has-grid-lines::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 100%;
-	max-width: var(--mci-container-width);
-	border-left: 1px solid var(--mci-color-border);
-	border-right: 1px solid var(--mci-color-border);
-	mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
-	-webkit-mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
-	pointer-events: none;
-}
-
-/* Horizontal line at top, fading left & right */
-.has-grid-lines::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 1px;
-	background: var(--mci-color-border);
-	mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-	-webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-	pointer-events: none;
-}
-
 
 /* ==========================================================================
    16. Page Templates — Home
@@ -1247,10 +1211,6 @@ hr {
 
 	.sg-type-scale__label {
 		flex: none;
-	}
-
-	.has-grid-lines::before {
-		display: none;
 	}
 
 	/* Home */

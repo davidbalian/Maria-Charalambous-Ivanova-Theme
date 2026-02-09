@@ -18,7 +18,7 @@ get_header(); ?>
 	</section>
 
 	<!-- Smilers Aligners -->
-	<section class="services-item has-grid-lines">
+	<section class="services-item">
 		<div class="container">
 			<div class="services-item__grid">
 				<div class="services-item__content">
@@ -36,7 +36,7 @@ get_header(); ?>
 	</section>
 
 	<!-- One-Visit Transformations -->
-	<section class="services-item services-item--reverse has-grid-lines">
+	<section class="services-item services-item--reverse">
 		<div class="container">
 			<div class="services-item__grid">
 				<div class="services-item__content">
@@ -54,7 +54,7 @@ get_header(); ?>
 	</section>
 
 	<!-- Cosmetic Masterpieces -->
-	<section class="services-item has-grid-lines">
+	<section class="services-item">
 		<div class="container">
 			<div class="services-item__grid">
 				<div class="services-item__content">
@@ -72,7 +72,7 @@ get_header(); ?>
 	</section>
 
 	<!-- Preventative & Restorative Care -->
-	<section class="services-item services-item--reverse has-grid-lines">
+	<section class="services-item services-item--reverse">
 		<div class="container">
 			<div class="services-item__grid">
 				<div class="services-item__content">
