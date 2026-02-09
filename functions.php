@@ -39,6 +39,13 @@ add_action( 'after_setup_theme', 'mci_theme_setup' );
  */
 function mci_enqueue_assets() {
 	wp_enqueue_style( 'mci-style', get_stylesheet_uri(), array(), MCI_THEME_VERSION );
+
+	// GLightbox.
+	wp_enqueue_style( 'glightbox', 'https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css', array(), '3.3.0' );
+	wp_enqueue_script( 'glightbox', 'https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/js/glightbox.min.js', array(), '3.3.0', true );
+
+	// Theme main JS.
+	wp_enqueue_script( 'mci-main', get_template_directory_uri() . '/assets/js/main.js', array( 'glightbox' ), MCI_THEME_VERSION, true );
 }
 add_action( 'wp_enqueue_scripts', 'mci_enqueue_assets' );
 
