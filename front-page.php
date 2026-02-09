@@ -10,7 +10,7 @@ get_header(); ?>
 <main id="main" class="site-main">
 
 	<!-- 1. Hero -->
-	<section class="home-hero">
+	<section class="home-hero" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/smilers-package-and-dr-maria-charalambous-ivanova-at-dental-art-clinic-limassol.webp' ); ?>');">
 		<div class="home-hero__overlay"></div>
 		<div class="container home-hero__inner">
 			<h1 class="home-hero__title">Your Smile, Our Masterpiece</h1>
@@ -95,7 +95,7 @@ get_header(); ?>
 					<a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" class="btn btn-outline">Learn More About Us</a>
 				</div>
 				<div class="home-about__image">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/dental-art-clinic-limassol.webp' ); ?>" alt="Dental Art Clinic Limassol" width="560" height="400">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/dr-maria-charalambous-ivanova-dental-clinic-in-limassol.webp' ); ?>" alt="Dr. Maria Charalambous-Ivanova at Dental Art Clinic Limassol" width="560" height="400">
 				</div>
 			</div>
 		</div>
@@ -106,23 +106,14 @@ get_header(); ?>
 		<div class="container">
 			<h2 class="home-clinic__title">The Clinic</h2>
 			<div class="home-clinic__grid">
-				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/clinic-placeholder-1.webp' ); ?>" class="glightbox home-clinic__item" data-gallery="clinic">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/clinic-placeholder-1.webp' ); ?>" alt="Dental Art Clinic" width="400" height="300">
+				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/smilers-aligners-at-dental-art-clinic-by-dr-maria-charalambous-ivanova.webp' ); ?>" class="glightbox home-clinic__item" data-gallery="clinic">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/smilers-aligners-at-dental-art-clinic-by-dr-maria-charalambous-ivanova.webp' ); ?>" alt="Smilers aligners at Dental Art Clinic" width="400" height="300">
 				</a>
-				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/clinic-placeholder-2.webp' ); ?>" class="glightbox home-clinic__item" data-gallery="clinic">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/clinic-placeholder-2.webp' ); ?>" alt="Dental Art Clinic" width="400" height="300">
+				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/smilers-at-dental-art-clinic-in-limassol.webp' ); ?>" class="glightbox home-clinic__item" data-gallery="clinic">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/smilers-at-dental-art-clinic-in-limassol.webp' ); ?>" alt="Smilers at Dental Art Clinic in Limassol" width="400" height="300">
 				</a>
-				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/clinic-placeholder-3.webp' ); ?>" class="glightbox home-clinic__item" data-gallery="clinic">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/clinic-placeholder-3.webp' ); ?>" alt="Dental Art Clinic" width="400" height="300">
-				</a>
-				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/clinic-placeholder-4.webp' ); ?>" class="glightbox home-clinic__item" data-gallery="clinic">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/clinic-placeholder-4.webp' ); ?>" alt="Dental Art Clinic" width="400" height="300">
-				</a>
-				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/clinic-placeholder-5.webp' ); ?>" class="glightbox home-clinic__item" data-gallery="clinic">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/clinic-placeholder-5.webp' ); ?>" alt="Dental Art Clinic" width="400" height="300">
-				</a>
-				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/clinic-placeholder-6.webp' ); ?>" class="glightbox home-clinic__item" data-gallery="clinic">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/clinic-placeholder-6.webp' ); ?>" alt="Dental Art Clinic" width="400" height="300">
+				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/dr-maria-charalambous-ivanova-dental-clinic-in-limassol.webp' ); ?>" class="glightbox home-clinic__item" data-gallery="clinic">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/dr-maria-charalambous-ivanova-dental-clinic-in-limassol.webp' ); ?>" alt="Dr. Maria Charalambous-Ivanova at Dental Art Clinic" width="400" height="300">
 				</a>
 			</div>
 		</div>
@@ -144,14 +135,14 @@ get_header(); ?>
 		<div class="container">
 			<h2 class="home-cases__title">Before &amp; After</h2>
 			<div class="home-cases__grid">
-				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/case-study-1.webp' ); ?>" class="glightbox home-cases__item" data-gallery="cases">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/case-study-1.webp' ); ?>" alt="Before and after case study" width="400" height="300">
+				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol.webp' ); ?>" class="glightbox home-cases__item" data-gallery="cases">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol.webp' ); ?>" alt="Before and after at Dental Art Clinic" width="400" height="300">
 				</a>
-				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/case-study-2.webp' ); ?>" class="glightbox home-cases__item" data-gallery="cases">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/case-study-2.webp' ); ?>" alt="Before and after case study" width="400" height="300">
+				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp' ); ?>" class="glightbox home-cases__item" data-gallery="cases">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp' ); ?>" alt="Before and after at Dental Art Clinic" width="400" height="300">
 				</a>
-				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/case-study-3.webp' ); ?>" class="glightbox home-cases__item" data-gallery="cases">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/case-study-3.webp' ); ?>" alt="Before and after case study" width="400" height="300">
+				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-2.webp' ); ?>" class="glightbox home-cases__item" data-gallery="cases">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-2.webp' ); ?>" alt="Before and after at Dental Art Clinic" width="400" height="300">
 				</a>
 			</div>
 			<div class="home-cases__action">
@@ -202,7 +193,7 @@ get_header(); ?>
 	</section>
 
 	<!-- 8. CTA -->
-	<section class="home-cta">
+	<section class="home-cta" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/smilers-at-dental-art-clinic-in-limassol.webp' ); ?>');">
 		<div class="home-cta__overlay"></div>
 		<div class="container home-cta__inner">
 			<h2 class="home-cta__title">Ready to Transform Your Smile?</h2>

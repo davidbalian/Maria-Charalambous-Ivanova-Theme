@@ -859,7 +859,9 @@ hr {
 	display: flex;
 	align-items: flex-end;
 	justify-content: flex-start;
-	background: linear-gradient(135deg, var(--mci-color-secondary) 0%, rgb(90, 78, 72) 100%);
+	background-color: var(--mci-color-secondary);
+	background-size: cover;
+	background-position: center;
 	overflow: hidden;
 }
 
@@ -1141,7 +1143,9 @@ hr {
 .home-cta {
 	position: relative;
 	padding: var(--mci-spacing-3xl) 0;
-	background: linear-gradient(135deg, var(--mci-color-secondary) 0%, rgb(90, 78, 72) 100%);
+	background-color: var(--mci-color-secondary);
+	background-size: cover;
+	background-position: center;
 	text-align: center;
 	overflow: hidden;
 }
