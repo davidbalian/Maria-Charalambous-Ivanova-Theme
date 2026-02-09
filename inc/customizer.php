@@ -235,8 +235,8 @@ function mci_customizer_css() {
 	}
 
 	echo "\n";
-	echo "\t" . '--mci-font-heading: ' . esc_attr( get_theme_mod( 'mci_font_heading', "'Playfair Display', Georgia, serif" ) ) . ';' . "\n";
-	echo "\t" . '--mci-font-body: ' . esc_attr( get_theme_mod( 'mci_font_body', "'Inter', -apple-system, BlinkMacSystemFont, sans-serif" ) ) . ';' . "\n";
+	echo "\t" . '--mci-font-heading: ' . wp_strip_all_tags( get_theme_mod( 'mci_font_heading', "'Playfair Display', Georgia, serif" ) ) . ';' . "\n";
+	echo "\t" . '--mci-font-body: ' . wp_strip_all_tags( get_theme_mod( 'mci_font_body', "'Inter', -apple-system, BlinkMacSystemFont, sans-serif" ) ) . ';' . "\n";
 	echo "\t" . '--mci-font-size-base: ' . absint( get_theme_mod( 'mci_font_size_base', 17 ) ) . 'px;' . "\n";
 	echo "\t" . '--mci-font-weight-normal: ' . esc_attr( get_theme_mod( 'mci_font_weight_normal', '400' ) ) . ';' . "\n";
 	echo "\t" . '--mci-font-weight-bold: ' . esc_attr( get_theme_mod( 'mci_font_weight_bold', '600' ) ) . ';' . "\n";
