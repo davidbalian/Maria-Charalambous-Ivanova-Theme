@@ -29,7 +29,7 @@ get_header(); ?>
 					<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-primary">Book a Consultation</a>
 				</div>
 				<div class="services-item__image">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/smilers-aligners.jpg' ); ?>" alt="Smilers Aligners" width="560" height="420">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/smilers-aligners-at-dental-art-clinic-by-dr-maria-charalambous-ivanova.webp' ); ?>" alt="Smilers Aligners" width="560" height="420">
 				</div>
 			</div>
 		</div>
@@ -47,7 +47,7 @@ get_header(); ?>
 					<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-primary">Book a Consultation</a>
 				</div>
 				<div class="services-item__image">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/one-visit.jpg' ); ?>" alt="One-Visit Transformations" width="560" height="420">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/smilers-aligners-at-dental-art-clinic-by-dr-maria-charalambous-ivanova.webp' ); ?>" alt="One-Visit Transformations" width="560" height="420">
 				</div>
 			</div>
 		</div>
@@ -65,7 +65,7 @@ get_header(); ?>
 					<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-primary">Book a Consultation</a>
 				</div>
 				<div class="services-item__image">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/cosmetic.jpg' ); ?>" alt="Cosmetic Masterpieces" width="560" height="420">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/smilers-aligners-at-dental-art-clinic-by-dr-maria-charalambous-ivanova.webp' ); ?>" alt="Cosmetic Masterpieces" width="560" height="420">
 				</div>
 			</div>
 		</div>
@@ -83,7 +83,7 @@ get_header(); ?>
 					<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-primary">Book a Consultation</a>
 				</div>
 				<div class="services-item__image">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/restorative.jpg' ); ?>" alt="Preventative and Restorative Care" width="560" height="420">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/smilers-aligners-at-dental-art-clinic-by-dr-maria-charalambous-ivanova.webp' ); ?>" alt="Preventative and Restorative Care" width="560" height="420">
 				</div>
 			</div>
 		</div>

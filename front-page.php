@@ -33,7 +33,7 @@ get_header(); ?>
 			<div class="card-grid">
 				<div class="card">
 					<div class="card-image">
-						<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/smilers-aligners.jpg' ); ?>" alt="Smilers Aligners" width="600" height="400">
+						<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/smilers-aligners-at-dental-art-clinic-by-dr-maria-charalambous-ivanova.webp' ); ?>" alt="Smilers Aligners" width="600" height="400">
 					</div>
 					<div class="card-body">
 						<h3>Smilers Aligners</h3>
@@ -43,7 +43,7 @@ get_header(); ?>
 				</div>
 				<div class="card">
 					<div class="card-image">
-						<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/cosmetic.jpg' ); ?>" alt="Cosmetic Transformations" width="600" height="400">
+						<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/smilers-aligners-at-dental-art-clinic-by-dr-maria-charalambous-ivanova.webp' ); ?>" alt="Cosmetic Transformations" width="600" height="400">
 					</div>
 					<div class="card-body">
 						<h3>Cosmetic Transformations</h3>

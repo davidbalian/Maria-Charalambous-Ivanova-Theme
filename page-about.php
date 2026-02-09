@@ -34,7 +34,7 @@ get_header(); ?>
 		<div class="container">
 			<div class="about-doctor__grid">
 				<div class="about-doctor__image">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/dr-maria.jpg' ); ?>" alt="Dr. Maria Charalambous-Ivanova" width="560" height="700">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/dr-maria-charalambous-ivanova-dental-clinic-in-limassol.webp' ); ?>" alt="Dr. Maria Charalambous-Ivanova" width="560" height="700">
 				</div>
 				<div class="about-doctor__bio">
 					<h2>Dr. Maria Charalambous-Ivanova <span class="text-light">MSD</span></h2>
