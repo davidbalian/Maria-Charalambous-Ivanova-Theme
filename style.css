@@ -825,7 +825,366 @@ hr {
 
 
 /* ==========================================================================
-   16. Responsive
+   16. Page Templates — Home
+   ========================================================================== */
+
+.home-hero {
+	padding: var(--mci-spacing-3xl) 0 var(--mci-spacing-2xl);
+	text-align: center;
+}
+
+.home-hero__title {
+	font-family: var(--mci-font-heading);
+	font-size: clamp(2.4rem, 5.5vw, 3.4rem);
+	font-weight: var(--mci-font-weight-bold);
+	letter-spacing: -0.035em;
+	line-height: 1.1;
+	margin-bottom: var(--mci-spacing-md);
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.home-hero__subtitle {
+	font-size: 1.2rem;
+	color: var(--mci-color-text-light);
+	max-width: 560px;
+	margin: 0 auto var(--mci-spacing-lg);
+	line-height: 1.55;
+	letter-spacing: -0.01em;
+}
+
+.home-philosophy {
+	padding: var(--mci-spacing-3xl) 0;
+	text-align: center;
+	border-top: var(--mci-border-width) solid var(--mci-color-border);
+}
+
+.home-philosophy__title {
+	font-size: 2rem;
+	margin-bottom: var(--mci-spacing-md);
+}
+
+.home-philosophy__text {
+	font-size: 1.1rem;
+	color: var(--mci-color-text-light);
+	max-width: 640px;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 1.65;
+}
+
+.home-services {
+	padding: var(--mci-spacing-3xl) 0;
+	border-top: var(--mci-border-width) solid var(--mci-color-border);
+}
+
+.home-services__title {
+	font-size: 2rem;
+	text-align: center;
+	margin-bottom: var(--mci-spacing-xl);
+}
+
+.home-services .card-body .btn {
+	margin-top: var(--mci-spacing-sm);
+}
+
+.home-trust {
+	padding: var(--mci-spacing-3xl) 0;
+	border-top: var(--mci-border-width) solid var(--mci-color-border);
+	text-align: center;
+}
+
+.home-trust__grid {
+	display: flex;
+	justify-content: center;
+	gap: var(--mci-spacing-2xl);
+}
+
+.home-trust__item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--mci-spacing-xs);
+}
+
+.home-trust__number {
+	font-family: var(--mci-font-heading);
+	font-size: 2rem;
+	font-weight: var(--mci-font-weight-bold);
+	letter-spacing: -0.02em;
+	color: var(--mci-color-text);
+}
+
+.home-trust__label {
+	font-size: 0.875rem;
+	color: var(--mci-color-text-light);
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+}
+
+
+/* ==========================================================================
+   17. Page Templates — About
+   ========================================================================== */
+
+.about-hero {
+	padding: var(--mci-spacing-3xl) 0 var(--mci-spacing-2xl);
+	text-align: center;
+}
+
+.about-hero__title {
+	font-family: var(--mci-font-heading);
+	font-size: clamp(2.2rem, 5vw, 3rem);
+	font-weight: var(--mci-font-weight-bold);
+	letter-spacing: -0.035em;
+	line-height: 1.1;
+	margin-bottom: var(--mci-spacing-md);
+}
+
+.about-hero__subtitle {
+	font-size: 1.2rem;
+	color: var(--mci-color-text-light);
+	max-width: 540px;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 1.5;
+	letter-spacing: -0.01em;
+}
+
+.about-mission {
+	padding: var(--mci-spacing-3xl) 0;
+	border-top: var(--mci-border-width) solid var(--mci-color-border);
+}
+
+.about-mission h2 {
+	font-size: 2rem;
+	margin-bottom: var(--mci-spacing-md);
+}
+
+.about-mission p {
+	font-size: 1.05rem;
+	color: var(--mci-color-text-light);
+	max-width: 720px;
+	line-height: 1.65;
+}
+
+.about-doctor {
+	padding: var(--mci-spacing-3xl) 0;
+	border-top: var(--mci-border-width) solid var(--mci-color-border);
+}
+
+.about-doctor__grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: var(--mci-spacing-2xl);
+	align-items: start;
+}
+
+.about-doctor__image img {
+	width: 100%;
+	border-radius: var(--mci-radius-lg);
+	object-fit: cover;
+}
+
+.about-doctor__bio h2 {
+	font-size: 1.8rem;
+	margin-bottom: var(--mci-spacing-md);
+}
+
+.about-doctor__bio p {
+	color: var(--mci-color-text-light);
+	line-height: 1.65;
+}
+
+.about-experience {
+	padding: var(--mci-spacing-3xl) 0;
+	border-top: var(--mci-border-width) solid var(--mci-color-border);
+}
+
+.about-experience h2 {
+	font-size: 2rem;
+	margin-bottom: var(--mci-spacing-md);
+}
+
+.about-experience p {
+	font-size: 1.05rem;
+	color: var(--mci-color-text-light);
+	max-width: 720px;
+	line-height: 1.65;
+}
+
+
+/* ==========================================================================
+   18. Page Templates — Services
+   ========================================================================== */
+
+.services-hero {
+	padding: var(--mci-spacing-3xl) 0 var(--mci-spacing-2xl);
+	text-align: center;
+}
+
+.services-hero__title {
+	font-family: var(--mci-font-heading);
+	font-size: clamp(2.2rem, 5vw, 3rem);
+	font-weight: var(--mci-font-weight-bold);
+	letter-spacing: -0.035em;
+	line-height: 1.1;
+	margin-bottom: var(--mci-spacing-md);
+}
+
+.services-hero__subtitle {
+	font-size: 1.2rem;
+	color: var(--mci-color-text-light);
+	max-width: 560px;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 1.5;
+	letter-spacing: -0.01em;
+}
+
+.services-item {
+	padding: var(--mci-spacing-3xl) 0;
+	border-top: var(--mci-border-width) solid var(--mci-color-border);
+}
+
+.services-item__grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: var(--mci-spacing-2xl);
+	align-items: center;
+}
+
+.services-item--reverse .services-item__content {
+	order: 2;
+}
+
+.services-item--reverse .services-item__image {
+	order: 1;
+}
+
+.services-item__content .badge {
+	margin-bottom: var(--mci-spacing-sm);
+}
+
+.services-item__content h2 {
+	font-size: 1.8rem;
+	margin-bottom: var(--mci-spacing-md);
+}
+
+.services-item__content p {
+	color: var(--mci-color-text-light);
+	line-height: 1.65;
+}
+
+.services-item__content .btn {
+	margin-top: var(--mci-spacing-md);
+}
+
+.services-item__image img {
+	width: 100%;
+	border-radius: var(--mci-radius-lg);
+	object-fit: cover;
+}
+
+
+/* ==========================================================================
+   19. Page Templates — Contact
+   ========================================================================== */
+
+.contact-hero {
+	padding: var(--mci-spacing-3xl) 0 var(--mci-spacing-2xl);
+	text-align: center;
+}
+
+.contact-hero__title {
+	font-family: var(--mci-font-heading);
+	font-size: clamp(2.2rem, 5vw, 3rem);
+	font-weight: var(--mci-font-weight-bold);
+	letter-spacing: -0.035em;
+	line-height: 1.1;
+	margin-bottom: var(--mci-spacing-md);
+}
+
+.contact-hero__subtitle {
+	font-size: 1.2rem;
+	color: var(--mci-color-text-light);
+	max-width: 540px;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 1.5;
+	letter-spacing: -0.01em;
+}
+
+.contact-content {
+	padding-bottom: var(--mci-spacing-3xl);
+}
+
+.contact-layout {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: var(--mci-spacing-2xl);
+	align-items: start;
+}
+
+.contact-info h2,
+.contact-form-wrap h2 {
+	font-size: 1.6rem;
+	margin-bottom: var(--mci-spacing-lg);
+}
+
+.contact-info__item {
+	margin-bottom: var(--mci-spacing-lg);
+}
+
+.contact-info__item h4 {
+	font-size: 0.875rem;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	color: var(--mci-color-text-light);
+	margin-bottom: var(--mci-spacing-xs);
+}
+
+.contact-info__item p {
+	font-size: 1rem;
+}
+
+.contact-hours {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.contact-hours td {
+	padding: var(--mci-spacing-xs) 0;
+	font-size: 0.9375rem;
+	border-bottom: var(--mci-border-width) solid var(--mci-color-border);
+}
+
+.contact-hours tr:last-child td {
+	border-bottom: none;
+}
+
+.contact-hours td:last-child {
+	text-align: right;
+	color: var(--mci-color-text-light);
+}
+
+.contact-form-wrap form .btn {
+	width: 100%;
+}
+
+.contact-map {
+	line-height: 0;
+}
+
+.contact-map iframe {
+	width: 100%;
+	display: block;
+}
+
+
+/* ==========================================================================
+   20. Responsive
    ========================================================================== */
 
 @media (max-width: 768px) {
@@ -860,5 +1219,55 @@ hr {
 
 	.sg-type-scale__label {
 		flex: none;
+	}
+
+	/* Home */
+	.home-hero {
+		padding: var(--mci-spacing-2xl) 0 var(--mci-spacing-xl);
+	}
+
+	.home-trust__grid {
+		flex-direction: column;
+		gap: var(--mci-spacing-lg);
+	}
+
+	/* About */
+	.about-hero {
+		padding: var(--mci-spacing-2xl) 0 var(--mci-spacing-xl);
+	}
+
+	.about-doctor__grid {
+		grid-template-columns: 1fr;
+	}
+
+	/* Services */
+	.services-hero {
+		padding: var(--mci-spacing-2xl) 0 var(--mci-spacing-xl);
+	}
+
+	.services-item__grid {
+		grid-template-columns: 1fr;
+		gap: var(--mci-spacing-lg);
+	}
+
+	.services-item--reverse .services-item__content {
+		order: 1;
+	}
+
+	.services-item--reverse .services-item__image {
+		order: 2;
+	}
+
+	/* Contact */
+	.contact-hero {
+		padding: var(--mci-spacing-2xl) 0 var(--mci-spacing-xl);
+	}
+
+	.contact-layout {
+		grid-template-columns: 1fr;
+	}
+
+	.contact-map iframe {
+		height: 300px;
 	}
 }

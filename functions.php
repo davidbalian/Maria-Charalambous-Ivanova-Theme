@@ -41,3 +41,34 @@ function mci_enqueue_assets() {
 	wp_enqueue_style( 'mci-style', get_stylesheet_uri(), array(), MCI_THEME_VERSION );
 }
 add_action( 'wp_enqueue_scripts', 'mci_enqueue_assets' );
+
+/**
+ * Handle contact form submission.
+ */
+function mci_handle_contact_form() {
+	if (
+		! isset( $_POST['mci_contact_nonce'] ) ||
+		! wp_verify_nonce( $_POST['mci_contact_nonce'], 'mci_contact_form_nonce' )
+	) {
+		wp_safe_redirect( home_url( '/contact/?contact=error' ) );
+		exit;
+	}
+
+	$name    = sanitize_text_field( $_POST['contact_name'] ?? '' );
+	$phone   = sanitize_text_field( $_POST['contact_phone'] ?? '' );
+	$service = sanitize_text_field( $_POST['contact_service'] ?? '' );
+	$message = sanitize_textarea_field( $_POST['contact_message'] ?? '' );
+
+	$to      = 'info@dentalartcliniclimassol.com';
+	$subject = 'New Appointment Request from ' . $name;
+	$body    = "Name: {$name}\nPhone: {$phone}\nService: {$service}\n\nMessage:\n{$message}";
+	$headers = array( 'Content-Type: text/plain; charset=UTF-8' );
+
+	$sent = wp_mail( $to, $subject, $body, $headers );
+
+	$status = $sent ? 'success' : 'error';
+	wp_safe_redirect( home_url( '/contact/?contact=' . $status ) );
+	exit;
+}
+add_action( 'admin_post_mci_contact_form', 'mci_handle_contact_form' );
+add_action( 'admin_post_nopriv_mci_contact_form', 'mci_handle_contact_form' );
