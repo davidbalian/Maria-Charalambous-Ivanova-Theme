@@ -16,27 +16,19 @@ Text Domain: maria-charalambous-ivanova
    ========================================================================== */
 
 @font-face {
-	font-family: 'Inter';
+	font-family: 'Satoshi';
 	font-style: normal;
-	font-weight: 300 700;
+	font-weight: 300 900;
 	font-display: swap;
-	src: url(fonts/inter-latin.woff2) format('woff2');
+	src: url(fonts/Satoshi-Variable.woff2) format('woff2');
 }
 
 @font-face {
-	font-family: 'Playfair Display';
-	font-style: normal;
-	font-weight: 400 900;
-	font-display: swap;
-	src: url(fonts/playfair-display-latin.woff2) format('woff2');
-}
-
-@font-face {
-	font-family: 'Playfair Display';
+	font-family: 'Satoshi';
 	font-style: italic;
-	font-weight: 400;
+	font-weight: 300 900;
 	font-display: swap;
-	src: url(fonts/playfair-display-italic-latin.woff2) format('woff2');
+	src: url(fonts/Satoshi-VariableItalic.woff2) format('woff2');
 }
 
 
@@ -58,8 +50,8 @@ Text Domain: maria-charalambous-ivanova
 	--mci-color-white: #FFFFFF;
 
 	/* Typography */
-	--mci-font-heading: 'Playfair Display', Georgia, serif;
-	--mci-font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+	--mci-font-heading: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+	--mci-font-body: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
 	--mci-font-size-base: 17px;
 	--mci-font-weight-normal: 400;
 	--mci-font-weight-bold: 600;
