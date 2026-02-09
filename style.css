@@ -238,19 +238,31 @@ blockquote p {
    ========================================================================== */
 
 .site-header {
-	background: rgba(245, 245, 247, 0.72);
-	-webkit-backdrop-filter: saturate(180%) blur(20px);
-	backdrop-filter: saturate(180%) blur(20px);
-	border-bottom: 0.5px solid rgba(0, 0, 0, 0.09);
+	background: transparent;
+	border-bottom: 0.5px solid transparent;
 	padding: var(--mci-spacing-sm) var(--mci-spacing-lg);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	flex-wrap: wrap;
 	gap: var(--mci-spacing-sm);
-	position: sticky;
+	position: fixed;
 	top: 0;
+	left: 0;
+	right: 0;
 	z-index: 200;
+	transition:
+		background 0.3s ease,
+		border-color 0.3s ease,
+		box-shadow 0.3s ease;
+}
+
+.site-header.is-scrolled {
+	background: rgba(255, 255, 255, 0.95);
+	-webkit-backdrop-filter: saturate(180%) blur(20px);
+	backdrop-filter: saturate(180%) blur(20px);
+	border-bottom-color: rgba(0, 0, 0, 0.09);
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
 }
 
 .site-branding {
@@ -266,19 +278,29 @@ blockquote p {
 }
 
 .site-title a {
+	color: var(--mci-color-white);
+	transition:
+		color 0.3s ease,
+		opacity 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.site-header.is-scrolled .site-title a {
 	color: var(--mci-color-text);
-	transition: opacity 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .site-title a:hover {
-	color: var(--mci-color-text);
 	opacity: 0.7;
 }
 
 .site-description {
 	font-size: 0.8125rem;
-	color: var(--mci-color-text-light);
+	color: rgba(255, 255, 255, 0.7);
 	margin-bottom: 0;
+	transition: color 0.3s ease;
+}
+
+.site-header.is-scrolled .site-description {
+	color: var(--mci-color-text-light);
 }
 
 .main-navigation ul {
@@ -290,14 +312,23 @@ blockquote p {
 .main-navigation a {
 	font-size: 0.875rem;
 	font-weight: var(--mci-font-weight-normal);
-	color: var(--mci-color-text);
+	color: rgba(255, 255, 255, 0.9);
 	padding: var(--mci-spacing-xs) 0;
-	transition: color 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
+	transition: color 0.3s ease;
 	letter-spacing: -0.008em;
 }
 
 .main-navigation a:hover,
 .main-navigation .current-menu-item > a {
+	color: var(--mci-color-white);
+}
+
+.site-header.is-scrolled .main-navigation a {
+	color: var(--mci-color-text);
+}
+
+.site-header.is-scrolled .main-navigation a:hover,
+.site-header.is-scrolled .main-navigation .current-menu-item > a {
 	color: var(--mci-color-primary);
 }
 
