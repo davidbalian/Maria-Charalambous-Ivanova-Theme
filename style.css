@@ -578,71 +578,16 @@ hr {
    14. Style Guide
    ========================================================================== */
 
-/* ---- Sticky Sub-Nav (frosted glass) ---- */
-
-.sg-nav {
-	position: sticky;
-	top: 0;
-	z-index: 100;
-	background: rgba(245, 245, 247, 0.72);
-	-webkit-backdrop-filter: saturate(180%) blur(20px);
-	backdrop-filter: saturate(180%) blur(20px);
-	border-bottom: 0.5px solid rgba(0, 0, 0, 0.09);
-	padding: var(--mci-spacing-xs) 0;
-	scroll-padding-top: 80px;
-}
-
-.sg-nav__list {
-	display: flex;
-	gap: 2px;
-	overflow-x: auto;
-	-webkit-overflow-scrolling: touch;
-	scrollbar-width: none;
-}
-
-.sg-nav__list::-webkit-scrollbar {
-	display: none;
-}
-
-.sg-nav__list a {
-	display: block;
-	padding: 6px 14px;
-	font-size: 0.8125rem;
-	font-weight: var(--mci-font-weight-normal);
-	color: var(--mci-color-text-light);
-	white-space: nowrap;
-	border-radius: 980px;
-	transition:
-		background-color 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
-		color 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
-	letter-spacing: -0.008em;
-}
-
-.sg-nav__list a:hover {
-	background-color: rgba(0, 0, 0, 0.05);
-	color: var(--mci-color-text);
-}
-
-
 /* ---- Hero ---- */
 
 .sg-hero {
-	padding: var(--mci-spacing-3xl) 0 var(--mci-spacing-2xl);
+	padding: var(--mci-spacing-2xl) 0 var(--mci-spacing-xl);
 	text-align: center;
-}
-
-.sg-hero__label {
-	font-size: 0.8125rem;
-	font-weight: var(--mci-font-weight-bold);
-	letter-spacing: 0.06em;
-	text-transform: uppercase;
-	color: var(--mci-color-primary);
-	margin-bottom: var(--mci-spacing-md);
 }
 
 .sg-hero__title {
 	font-family: var(--mci-font-heading);
-	font-size: clamp(3rem, 8vw, 5.5rem);
+	font-size: clamp(2rem, 5vw, 3rem);
 	font-weight: var(--mci-font-weight-bold);
 	letter-spacing: -0.04em;
 	line-height: 1;
@@ -671,30 +616,9 @@ hr {
 	border-top: var(--mci-border-width) solid var(--mci-color-border);
 }
 
-.sg-section__header {
-	margin-bottom: var(--mci-spacing-xl);
-}
-
-.sg-section__number {
-	display: block;
-	font-size: 0.8125rem;
-	font-weight: var(--mci-font-weight-bold);
-	font-family: var(--mci-font-body);
-	letter-spacing: 0.05em;
-	color: var(--mci-color-primary);
-	margin-bottom: var(--mci-spacing-xs);
-}
-
 .sg-section__title {
 	font-size: 2rem;
-	margin-bottom: var(--mci-spacing-xs);
-}
-
-.sg-section__desc {
-	font-size: 1.0625rem;
-	color: var(--mci-color-text-light);
-	max-width: 560px;
-	line-height: 1.55;
+	margin-bottom: var(--mci-spacing-lg);
 }
 
 
@@ -807,42 +731,6 @@ hr {
 }
 
 
-/* ---- Form Demo ---- */
-
-.sg-form-demo {
-	max-width: 480px;
-}
-
-
-/* ---- Placeholder Image ---- */
-
-.sg-placeholder-img {
-	width: 100%;
-	aspect-ratio: 16 / 10;
-	background: linear-gradient(135deg, var(--mci-color-border) 0%, var(--mci-color-background) 100%);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: var(--mci-color-text-light);
-	font-size: 0.8125rem;
-	letter-spacing: 0.02em;
-}
-
-
-/* ---- Badge / Alert Rows ---- */
-
-.sg-badge-row {
-	display: flex;
-	flex-wrap: wrap;
-	gap: var(--mci-spacing-sm);
-	align-items: center;
-}
-
-.sg-alert-stack {
-	max-width: 640px;
-}
-
-
 /* ==========================================================================
    15. Utilities
    ========================================================================== */
@@ -889,7 +777,7 @@ hr {
 	}
 
 	.sg-hero__title {
-		font-size: clamp(2.5rem, 10vw, 3.5rem);
+		font-size: clamp(1.75rem, 6vw, 2.5rem);
 	}
 
 	.sg-type-scale__row {
