@@ -38,8 +38,8 @@ Text Domain: maria-charalambous-ivanova
 
 :root {
 	/* Colors */
-	--mci-color-primary: rgb(168, 147, 199);
-	--mci-color-primary-hover: rgb(148, 127, 179);
+	--mci-color-primary: rgb(168, 147, 119);
+	--mci-color-primary-hover: rgb(148, 127, 99);
 	--mci-color-secondary: rgb(61, 52, 47);
 	--mci-color-secondary-hover: rgb(81, 72, 67);
 	--mci-color-text: #1D1D1F;
@@ -372,7 +372,7 @@ blockquote p {
 .btn-primary:hover {
 	background-color: var(--mci-color-primary-hover);
 	color: var(--mci-color-white);
-	box-shadow: 0 4px 12px rgba(168, 147, 199, 0.35);
+	box-shadow: 0 4px 12px rgba(168, 147, 119, 0.35);
 }
 
 .btn-secondary {
@@ -395,7 +395,7 @@ blockquote p {
 .btn-outline:hover {
 	background-color: var(--mci-color-primary);
 	color: var(--mci-color-white);
-	box-shadow: 0 4px 12px rgba(168, 147, 199, 0.35);
+	box-shadow: 0 4px 12px rgba(168, 147, 119, 0.35);
 }
 
 .btn:disabled,
@@ -506,7 +506,7 @@ textarea:focus,
 select:focus {
 	outline: none;
 	border-color: var(--mci-color-primary);
-	box-shadow: 0 0 0 4px rgba(168, 147, 199, 0.2);
+	box-shadow: 0 0 0 4px rgba(168, 147, 119, 0.2);
 }
 
 input::placeholder,
