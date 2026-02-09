@@ -18,7 +18,7 @@ get_header(); ?>
 	</section>
 
 	<!-- Mission -->
-	<section class="about-mission">
+	<section class="about-mission has-grid-lines">
 		<div class="container">
 			<h2>The Masterpiece Philosophy</h2>
 			<p>At Dental Art Clinic, we believe that a beautiful smile is more than straight, white teeth &mdash; it is a reflection of who you are. Our philosophy centres on treating each patient as an individual, designing results that complement their features and express their personality.</p>
@@ -30,7 +30,7 @@ get_header(); ?>
 	</section>
 
 	<!-- Doctor Profile -->
-	<section class="about-doctor">
+	<section class="about-doctor has-grid-lines">
 		<div class="container">
 			<div class="about-doctor__grid">
 				<div class="about-doctor__image">
@@ -47,7 +47,7 @@ get_header(); ?>
 	</section>
 
 	<!-- Clinic Experience -->
-	<section class="about-experience">
+	<section class="about-experience has-grid-lines">
 		<div class="container">
 			<h2>The Clinic Experience</h2>
 			<p>Located in Limassol, Cyprus, Dental Art Clinic offers a modern, welcoming environment designed to put patients at ease. From the moment you step through our doors, you will experience a space where comfort meets cutting-edge dental care.</p>

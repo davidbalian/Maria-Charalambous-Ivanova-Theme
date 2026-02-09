@@ -19,7 +19,7 @@ get_header(); ?>
 	</section>
 
 	<!-- Brand Philosophy -->
-	<section class="home-philosophy">
+	<section class="home-philosophy has-grid-lines">
 		<div class="container">
 			<h2 class="home-philosophy__title">An Artistic Approach to Dentistry</h2>
 			<p class="home-philosophy__text">At Dental Art Clinic, every smile is treated as a unique work of art. Dr. Maria Charalambous-Ivanova combines clinical precision with an aesthetic eye, crafting results that look natural, feel comfortable, and inspire confidence &mdash; often in just one visit.</p>
@@ -27,7 +27,7 @@ get_header(); ?>
 	</section>
 
 	<!-- Featured Services -->
-	<section class="home-services">
+	<section class="home-services has-grid-lines">
 		<div class="container">
 			<h2 class="home-services__title">Featured Services</h2>
 			<div class="card-grid">
@@ -56,7 +56,7 @@ get_header(); ?>
 	</section>
 
 	<!-- Trust Indicators -->
-	<section class="home-trust">
+	<section class="home-trust has-grid-lines">
 		<div class="container">
 			<div class="home-trust__grid">
 				<div class="home-trust__item">

@@ -18,7 +18,7 @@ get_header(); ?>
 	</section>
 
 	<!-- Contact Layout -->
-	<section class="contact-content">
+	<section class="contact-content has-grid-lines">
 		<div class="container">
 
 			<?php if ( isset( $_GET['contact'] ) && $_GET['contact'] === 'success' ) : ?>
