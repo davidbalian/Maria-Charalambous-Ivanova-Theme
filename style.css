@@ -1117,7 +1117,7 @@ hr {
 
 .home-hero__stat {
   flex: 1;
-  text-align: center;
+  text-align: left;
 }
 
 .home-hero__stat-number {
@@ -1794,7 +1794,8 @@ hr {
 
   /* Home */
   .home-hero {
-    min-height: 60vh;
+    height: auto;
+    min-height: 0;
   }
 
   .home-hero__title {
@@ -1806,13 +1807,10 @@ hr {
   }
 
   .home-hero__stats {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
     gap: var(--mci-spacing-md);
-  }
-
-  .home-hero__stat-divider {
-    width: 60%;
-    height: 1px;
   }
 
   .home-services__grid {

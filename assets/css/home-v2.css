@@ -114,18 +114,21 @@
 }
 
 @media (max-width: 768px) {
+  .home-hero-wrapper {
+    height: auto;
+  }
+
   .home-hero {
+    height: auto;
+    min-height: 0;
     padding: var(--mci-spacing-2xl) 0.5rem;
   }
 
   .home-hero__stats {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
     gap: var(--mci-spacing-md);
-  }
-
-  .home-hero__stat-divider {
-    width: 60%;
-    height: 1px;
   }
 }
 
