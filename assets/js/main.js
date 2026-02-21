@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Header scroll toggle
 	var header = document.querySelector('.site-header');
 	if (header) {
-		var scrollThreshold = 50;
+		var scrollThreshold = 25;
 		var hasAdminBar = document.body.classList.contains('admin-bar');
 
 		function getAdminBarOffset() {
