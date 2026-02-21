@@ -13,16 +13,14 @@
 
 <header id="masthead" class="site-header">
 	<div class="site-branding">
-		<?php if ( has_custom_logo() ) : ?>
-			<?php the_custom_logo(); ?>
-		<?php else : ?>
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-		<?php endif; ?>
-		<?php
-		$description = get_bloginfo( 'description', 'display' );
-		if ( $description ) : ?>
-			<p class="site-description"><?php echo $description; ?></p>
-		<?php endif; ?>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-logo-link">
+			<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/horizontal-logo-gold.avif" 
+			     alt="<?php bloginfo( 'name' ); ?>" 
+			     class="site-logo site-logo--desktop">
+			<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/logomark.avif" 
+			     alt="<?php bloginfo( 'name' ); ?>" 
+			     class="site-logo site-logo--mobile">
+		</a>
 	</div>
 
 	<nav id="site-navigation" class="main-navigation">

@@ -257,6 +257,17 @@ blockquote p {
     box-shadow 0.3s ease;
 }
 
+/* WordPress Admin Bar Adjustment */
+.admin-bar .site-header {
+  top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+  .admin-bar .site-header {
+    top: 46px;
+  }
+}
+
 .site-header.is-scrolled {
   background: rgba(255, 255, 255, 0.95);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
@@ -269,6 +280,41 @@ blockquote p {
   flex-shrink: 0;
 }
 
+.site-logo-link {
+  display: block;
+  line-height: 0;
+}
+
+.site-logo {
+  height: auto;
+  display: block;
+  transition: opacity 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.site-logo:hover {
+  opacity: 0.8;
+}
+
+.site-logo--desktop {
+  height: 2.5rem;
+  display: block;
+}
+
+.site-logo--mobile {
+  height: 2rem;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .site-logo--desktop {
+    display: none;
+  }
+  
+  .site-logo--mobile {
+    display: block;
+  }
+}
+
 .site-title {
   font-family: var(--mci-font-heading);
   font-size: 1.35rem;
@@ -278,7 +324,7 @@ blockquote p {
 }
 
 .site-title a {
-  color: var(--mci-color-white);
+  color: var(--mci-color-text);
   transition:
     color 0.3s ease,
     opacity 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -294,7 +340,7 @@ blockquote p {
 
 .site-description {
   font-size: 0.8125rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--mci-color-text-light);
   margin-bottom: 0;
   transition: color 0.3s ease;
 }
@@ -312,7 +358,7 @@ blockquote p {
 .main-navigation a {
   font-size: 0.875rem;
   font-weight: var(--mci-font-weight-normal);
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--mci-color-text);
   padding: var(--mci-spacing-xs) 0;
   transition: color 0.3s ease;
   letter-spacing: -0.008em;
@@ -320,7 +366,7 @@ blockquote p {
 
 .main-navigation a:hover,
 .main-navigation .current-menu-item > a {
-  color: var(--mci-color-white);
+  color: var(--mci-color-primary);
 }
 
 .site-header.is-scrolled .main-navigation a {
