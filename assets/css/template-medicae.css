@@ -1,0 +1,528 @@
+/*
+ * MediCae Demo Template Styles
+ * Purple gradient theme matching the design mockup
+ */
+
+:root {
+	--medicae-purple: #A020F0;
+	--medicae-purple-light: #C060FF;
+	--medicae-purple-dark: #8010D0;
+	--medicae-pink: #FFB6D9;
+	--medicae-pink-light: #FFD9ED;
+}
+
+/* Top Banner */
+.medicae-banner {
+	background: linear-gradient(135deg, var(--medicae-purple) 0%, var(--medicae-purple-light) 100%);
+	padding: var(--mci-spacing-sm) 0;
+	text-align: center;
+}
+
+.medicae-banner__text {
+	color: var(--mci-color-white);
+	font-size: 0.875rem;
+	margin: 0;
+	letter-spacing: -0.006em;
+}
+
+/* Hero */
+.medicae-hero {
+	position: relative;
+	min-height: 70vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(135deg, var(--medicae-purple) 0%, var(--medicae-purple-light) 100%);
+	overflow: hidden;
+	padding: var(--mci-spacing-3xl) 0;
+}
+
+.medicae-hero__overlay {
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+	z-index: 1;
+}
+
+.medicae-hero__inner {
+	position: relative;
+	z-index: 2;
+	text-align: center;
+	max-width: 680px;
+	margin: 0 auto;
+}
+
+.medicae-hero__title {
+	font-size: clamp(2.2rem, 5vw, 3.2rem);
+	color: var(--mci-color-white);
+	margin-bottom: var(--mci-spacing-md);
+	line-height: 1.15;
+	letter-spacing: -0.03em;
+}
+
+.medicae-hero__text {
+	font-size: 1.1rem;
+	color: rgba(255, 255, 255, 0.9);
+	margin-bottom: var(--mci-spacing-lg);
+	line-height: 1.6;
+}
+
+.medicae-hero__buttons {
+	display: flex;
+	gap: var(--mci-spacing-sm);
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.medicae-hero .btn-white {
+	background-color: var(--mci-color-white);
+	color: var(--medicae-purple);
+	border-color: var(--mci-color-white);
+}
+
+.medicae-hero .btn-white:hover {
+	background-color: rgba(255, 255, 255, 0.9);
+	color: var(--medicae-purple);
+}
+
+.medicae-hero .btn-outline-white {
+	background-color: transparent;
+	color: var(--mci-color-white);
+	border-color: var(--mci-color-white);
+}
+
+.medicae-hero .btn-outline-white:hover {
+	background-color: var(--mci-color-white);
+	color: var(--medicae-purple);
+}
+
+/* Stats */
+.medicae-stats {
+	padding: var(--mci-spacing-2xl) 0;
+	background-color: var(--mci-color-background);
+}
+
+.medicae-stats__grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--mci-spacing-lg);
+}
+
+.medicae-stats__card {
+	background-color: var(--mci-color-surface);
+	border-radius: var(--mci-radius-md);
+	padding: var(--mci-spacing-lg);
+	text-align: center;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.medicae-stats__icon {
+	width: 48px;
+	height: 48px;
+	margin: 0 auto var(--mci-spacing-sm);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(135deg, var(--medicae-purple) 0%, var(--medicae-purple-light) 100%);
+	border-radius: 50%;
+	color: var(--mci-color-white);
+}
+
+.medicae-stats__label {
+	font-weight: var(--mci-font-weight-bold);
+	font-size: 1.1rem;
+	color: var(--medicae-purple);
+	margin-bottom: 0;
+}
+
+.medicae-stats__text {
+	font-size: 0.875rem;
+	color: var(--mci-color-text-light);
+	margin: 0;
+}
+
+/* Services */
+.medicae-services {
+	padding: var(--mci-spacing-3xl) 0;
+	background-color: var(--mci-color-surface);
+}
+
+.medicae-services__title {
+	font-size: 2rem;
+	text-align: center;
+	margin-bottom: var(--mci-spacing-sm);
+	color: var(--medicae-purple);
+}
+
+.medicae-services__subtitle {
+	font-size: 1.05rem;
+	color: var(--mci-color-text-light);
+	text-align: center;
+	max-width: 600px;
+	margin: 0 auto var(--mci-spacing-xl);
+	line-height: 1.6;
+}
+
+.medicae-services__grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--mci-spacing-lg);
+}
+
+.medicae-services__card {
+	background: linear-gradient(135deg, var(--medicae-pink-light) 0%, var(--medicae-pink) 100%);
+	border-radius: var(--mci-radius-lg);
+	padding: var(--mci-spacing-lg);
+	text-align: center;
+	transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.medicae-services__card:hover {
+	transform: translateY(-4px);
+}
+
+.medicae-services__card-title {
+	font-size: 1.15rem;
+	font-weight: var(--mci-font-weight-bold);
+	color: var(--medicae-purple);
+	margin-bottom: var(--mci-spacing-xs);
+}
+
+.medicae-services__card-price {
+	font-size: 1.4rem;
+	font-weight: var(--mci-font-weight-bold);
+	color: var(--medicae-purple-dark);
+	margin-bottom: var(--mci-spacing-sm);
+}
+
+.medicae-services__card-btn {
+	display: inline-flex;
+	padding: 8px 20px;
+	background-color: var(--medicae-purple);
+	color: var(--mci-color-white);
+	border-radius: 0.25rem;
+	font-size: 0.875rem;
+	font-weight: var(--mci-font-weight-bold);
+	text-decoration: none;
+	transition: background-color 0.25s ease;
+}
+
+.medicae-services__card-btn:hover {
+	background-color: var(--medicae-purple-dark);
+	color: var(--mci-color-white);
+}
+
+/* Gentle Touch */
+.medicae-gentle {
+	padding: var(--mci-spacing-3xl) 0;
+	background-color: var(--mci-color-background);
+}
+
+.medicae-gentle__title {
+	font-size: 2rem;
+	text-align: center;
+	margin-bottom: var(--mci-spacing-sm);
+	color: var(--medicae-purple);
+}
+
+.medicae-gentle__subtitle {
+	font-size: 1.05rem;
+	color: var(--mci-color-text-light);
+	text-align: center;
+	max-width: 600px;
+	margin: 0 auto var(--mci-spacing-xl);
+	line-height: 1.6;
+}
+
+.medicae-gentle__grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: var(--mci-spacing-lg);
+}
+
+.medicae-gentle__card {
+	background-color: var(--mci-color-surface);
+	border-radius: var(--mci-radius-lg);
+	padding: var(--mci-spacing-xl);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.medicae-gentle__card-icon {
+	width: 56px;
+	height: 56px;
+	margin-bottom: var(--mci-spacing-md);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(135deg, var(--medicae-purple) 0%, var(--medicae-purple-light) 100%);
+	border-radius: var(--mci-radius-sm);
+	color: var(--mci-color-white);
+}
+
+.medicae-gentle__card-title {
+	font-size: 1.25rem;
+	font-weight: var(--mci-font-weight-bold);
+	color: var(--medicae-purple);
+	margin-bottom: var(--mci-spacing-sm);
+}
+
+.medicae-gentle__card-text {
+	font-size: 0.9375rem;
+	color: var(--mci-color-text-light);
+	line-height: 1.6;
+	margin: 0;
+}
+
+/* Comprehensive Services */
+.medicae-comprehensive {
+	padding: var(--mci-spacing-3xl) 0;
+	background-color: var(--mci-color-surface);
+}
+
+.medicae-comprehensive__title {
+	font-size: 2rem;
+	text-align: center;
+	margin-bottom: var(--mci-spacing-xl);
+	color: var(--medicae-purple);
+}
+
+.medicae-comprehensive__grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--mci-spacing-md);
+}
+
+.medicae-comprehensive__box {
+	background-color: var(--mci-color-surface);
+	border: 2px solid var(--medicae-purple);
+	border-radius: var(--mci-radius-md);
+	padding: var(--mci-spacing-lg);
+	text-align: center;
+	transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.medicae-comprehensive__box:hover {
+	background: linear-gradient(135deg, var(--medicae-purple) 0%, var(--medicae-purple-light) 100%);
+	transform: translateY(-4px);
+}
+
+.medicae-comprehensive__box:hover .medicae-comprehensive__box-icon,
+.medicae-comprehensive__box:hover .medicae-comprehensive__box-title,
+.medicae-comprehensive__box:hover .medicae-comprehensive__box-text {
+	color: var(--mci-color-white);
+}
+
+.medicae-comprehensive__box-icon {
+	width: 40px;
+	height: 40px;
+	margin: 0 auto var(--mci-spacing-sm);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--medicae-purple);
+	transition: color 0.3s ease;
+}
+
+.medicae-comprehensive__box-title {
+	font-size: 1rem;
+	font-weight: var(--mci-font-weight-bold);
+	color: var(--medicae-purple);
+	margin-bottom: var(--mci-spacing-xs);
+	transition: color 0.3s ease;
+}
+
+.medicae-comprehensive__box-text {
+	font-size: 0.8125rem;
+	color: var(--mci-color-text-light);
+	margin: 0;
+	line-height: 1.5;
+	transition: color 0.3s ease;
+}
+
+/* Doctor */
+.medicae-doctor {
+	padding: var(--mci-spacing-3xl) 0;
+	background-color: var(--mci-color-background);
+}
+
+.medicae-doctor__title {
+	font-size: 2rem;
+	text-align: center;
+	margin-bottom: var(--mci-spacing-xl);
+	color: var(--medicae-purple);
+}
+
+.medicae-doctor__grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: var(--mci-spacing-lg);
+	margin-bottom: var(--mci-spacing-xl);
+}
+
+.medicae-doctor__card {
+	background-color: var(--mci-color-surface);
+	border-radius: var(--mci-radius-md);
+	overflow: hidden;
+	text-align: center;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+	transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.medicae-doctor__card:hover {
+	transform: translateY(-4px);
+}
+
+.medicae-doctor__card-image {
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	background-color: var(--mci-color-border);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--mci-color-text-light);
+}
+
+.medicae-doctor__card-body {
+	padding: var(--mci-spacing-md);
+}
+
+.medicae-doctor__card-name {
+	font-size: 1rem;
+	font-weight: var(--mci-font-weight-bold);
+	color: var(--medicae-purple);
+	margin-bottom: 4px;
+}
+
+.medicae-doctor__card-specialty {
+	font-size: 0.8125rem;
+	color: var(--mci-color-text-light);
+	margin: 0;
+}
+
+.medicae-doctor__action {
+	text-align: center;
+}
+
+/* Consultation Form */
+.medicae-consultation {
+	padding: var(--mci-spacing-3xl) 0;
+	background-color: var(--mci-color-surface);
+}
+
+.medicae-consultation__grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: var(--mci-spacing-2xl);
+	align-items: center;
+}
+
+.medicae-consultation__image {
+	text-align: center;
+	color: var(--mci-color-text-light);
+}
+
+.medicae-consultation__form-title {
+	font-size: 1.8rem;
+	color: var(--medicae-purple);
+	margin-bottom: var(--mci-spacing-lg);
+}
+
+.medicae-consultation__form .form-group input,
+.medicae-consultation__form .form-group textarea {
+	border-color: var(--medicae-purple);
+}
+
+.medicae-consultation__form .form-group input:focus,
+.medicae-consultation__form .form-group textarea:focus {
+	border-color: var(--medicae-purple);
+	box-shadow: 0 0 0 4px rgba(160, 32, 240, 0.2);
+}
+
+.medicae-consultation__form .btn-primary {
+	width: 100%;
+	background-color: var(--medicae-purple);
+}
+
+.medicae-consultation__form .btn-primary:hover {
+	background-color: var(--medicae-purple-dark);
+}
+
+/* Benefits */
+.medicae-benefits {
+	padding: var(--mci-spacing-3xl) 0;
+	background-color: var(--mci-color-background);
+}
+
+.medicae-benefits__grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--mci-spacing-lg);
+}
+
+.medicae-benefits__card {
+	background: linear-gradient(135deg, var(--medicae-purple) 0%, var(--medicae-purple-light) 100%);
+	border-radius: var(--mci-radius-lg);
+	padding: var(--mci-spacing-xl);
+	text-align: center;
+	color: var(--mci-color-white);
+}
+
+.medicae-benefits__card-icon {
+	width: 48px;
+	height: 48px;
+	margin: 0 auto var(--mci-spacing-md);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 50%;
+}
+
+.medicae-benefits__card-title {
+	font-size: 1.15rem;
+	font-weight: var(--mci-font-weight-bold);
+	margin-bottom: var(--mci-spacing-xs);
+	color: var(--mci-color-white);
+}
+
+.medicae-benefits__card-text {
+	font-size: 0.875rem;
+	margin: 0;
+	line-height: 1.5;
+	color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.medicae-stats__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.medicae-services__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.medicae-gentle__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.medicae-comprehensive__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.medicae-doctor__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.medicae-consultation__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.medicae-consultation__image {
+		order: -1;
+	}
+
+	.medicae-benefits__grid {
+		grid-template-columns: 1fr;
+	}
+}

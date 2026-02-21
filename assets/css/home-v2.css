@@ -1,0 +1,377 @@
+/*
+ * Home V2 Styles
+ * New sections for the restructured homepage with Dr. Maria's content
+ */
+
+/* Top Banner */
+.home-v2-banner {
+	background-color: var(--mci-color-primary);
+	padding: var(--mci-spacing-sm) 0;
+	text-align: center;
+}
+
+.home-v2-banner__text {
+	color: var(--mci-color-white);
+	font-size: 0.875rem;
+	margin: 0;
+	letter-spacing: -0.006em;
+}
+
+/* Stats Row */
+.home-v2-stats {
+	padding: var(--mci-spacing-2xl) 0;
+	background-color: var(--mci-color-background);
+}
+
+.home-v2-stats__grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--mci-spacing-lg);
+}
+
+.home-v2-stats__card {
+	background-color: var(--mci-color-surface);
+	border-radius: var(--mci-radius-md);
+	padding: var(--mci-spacing-lg);
+	text-align: center;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+	transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.home-v2-stats__card:hover {
+	transform: translateY(-4px);
+}
+
+.home-v2-stats__icon {
+	width: 48px;
+	height: 48px;
+	margin: 0 auto var(--mci-spacing-sm);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--mci-color-primary);
+	border-radius: 50%;
+	color: var(--mci-color-white);
+}
+
+.home-v2-stats__label {
+	font-weight: var(--mci-font-weight-bold);
+	font-size: 1.15rem;
+	color: var(--mci-color-primary);
+	margin-bottom: var(--mci-spacing-xs);
+}
+
+.home-v2-stats__text {
+	font-size: 0.875rem;
+	color: var(--mci-color-text-light);
+	margin: 0;
+	line-height: 1.5;
+}
+
+/* Gentle Touch Section */
+.home-v2-gentle {
+	padding: var(--mci-spacing-3xl) 0;
+	background-color: var(--mci-color-surface);
+}
+
+.home-v2-gentle__title {
+	font-size: 2rem;
+	text-align: center;
+	margin-bottom: var(--mci-spacing-sm);
+}
+
+.home-v2-gentle__subtitle {
+	font-size: 1.05rem;
+	color: var(--mci-color-text-light);
+	text-align: center;
+	max-width: 680px;
+	margin: 0 auto var(--mci-spacing-xl);
+	line-height: 1.65;
+}
+
+.home-v2-gentle__grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: var(--mci-spacing-xl);
+}
+
+.home-v2-gentle__card {
+	background-color: var(--mci-color-background);
+	border-radius: var(--mci-radius-lg);
+	padding: var(--mci-spacing-xl);
+	transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.home-v2-gentle__card:hover {
+	transform: translateY(-4px);
+}
+
+.home-v2-gentle__card-icon {
+	width: 56px;
+	height: 56px;
+	margin-bottom: var(--mci-spacing-md);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--mci-color-primary);
+	border-radius: var(--mci-radius-sm);
+	color: var(--mci-color-white);
+}
+
+.home-v2-gentle__card-title {
+	font-size: 1.35rem;
+	font-weight: var(--mci-font-weight-bold);
+	margin-bottom: var(--mci-spacing-sm);
+	color: var(--mci-color-text);
+}
+
+.home-v2-gentle__card-text {
+	font-size: 0.9375rem;
+	color: var(--mci-color-text-light);
+	line-height: 1.65;
+	margin: 0;
+}
+
+/* Comprehensive Services Grid */
+.home-v2-comprehensive {
+	padding: var(--mci-spacing-3xl) 0;
+	background-color: var(--mci-color-background);
+}
+
+.home-v2-comprehensive__title {
+	font-size: 2rem;
+	text-align: center;
+	margin-bottom: var(--mci-spacing-xl);
+}
+
+.home-v2-comprehensive__grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--mci-spacing-md);
+}
+
+.home-v2-comprehensive__box {
+	background-color: var(--mci-color-surface);
+	border: 2px solid var(--mci-color-border);
+	border-radius: var(--mci-radius-md);
+	padding: var(--mci-spacing-lg);
+	text-align: center;
+	transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.home-v2-comprehensive__box:hover {
+	border-color: var(--mci-color-primary);
+	background-color: var(--mci-color-primary);
+	transform: translateY(-4px);
+	box-shadow: 0 8px 24px rgba(168, 147, 119, 0.2);
+}
+
+.home-v2-comprehensive__box:hover .home-v2-comprehensive__box-icon,
+.home-v2-comprehensive__box:hover .home-v2-comprehensive__box-title,
+.home-v2-comprehensive__box:hover .home-v2-comprehensive__box-text {
+	color: var(--mci-color-white);
+}
+
+.home-v2-comprehensive__box-icon {
+	width: 40px;
+	height: 40px;
+	margin: 0 auto var(--mci-spacing-sm);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--mci-color-primary);
+	transition: color 0.3s ease;
+}
+
+.home-v2-comprehensive__box-title {
+	font-size: 1rem;
+	font-weight: var(--mci-font-weight-bold);
+	margin-bottom: var(--mci-spacing-xs);
+	color: var(--mci-color-text);
+	transition: color 0.3s ease;
+}
+
+.home-v2-comprehensive__box-text {
+	font-size: 0.8125rem;
+	color: var(--mci-color-text-light);
+	margin: 0;
+	line-height: 1.5;
+	transition: color 0.3s ease;
+}
+
+/* Doctor Profile Section */
+.home-v2-doctor {
+	padding: var(--mci-spacing-3xl) 0;
+	background-color: var(--mci-color-surface);
+}
+
+.home-v2-doctor__inner {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: var(--mci-spacing-2xl);
+	align-items: center;
+}
+
+.home-v2-doctor__image img {
+	width: 100%;
+	border-radius: var(--mci-radius-lg);
+	object-fit: cover;
+}
+
+.home-v2-doctor__content h2 {
+	font-size: 2rem;
+	margin-bottom: var(--mci-spacing-sm);
+}
+
+.home-v2-doctor__subtitle {
+	font-size: 1.05rem;
+	color: var(--mci-color-primary);
+	font-weight: var(--mci-font-weight-bold);
+	margin-bottom: var(--mci-spacing-md);
+}
+
+.home-v2-doctor__text {
+	font-size: 0.9375rem;
+	color: var(--mci-color-text-light);
+	line-height: 1.65;
+	margin-bottom: var(--mci-spacing-md);
+}
+
+.home-v2-doctor__philosophy {
+	list-style: none;
+	padding: 0;
+	margin: var(--mci-spacing-lg) 0 0;
+	display: flex;
+	flex-direction: column;
+	gap: var(--mci-spacing-xs);
+}
+
+.home-v2-doctor__philosophy li {
+	padding: var(--mci-spacing-xs) var(--mci-spacing-md);
+	border-left: 3px solid var(--mci-color-primary);
+	color: var(--mci-color-text);
+	font-size: 0.875rem;
+	font-weight: 500;
+}
+
+/* Consultation Form */
+.home-v2-consultation {
+	padding: var(--mci-spacing-3xl) 0;
+	background-color: var(--mci-color-background);
+}
+
+.home-v2-consultation__grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: var(--mci-spacing-2xl);
+	align-items: center;
+}
+
+.home-v2-consultation__info h2 {
+	font-size: 2rem;
+	margin-bottom: var(--mci-spacing-lg);
+}
+
+.home-v2-consultation__info p {
+	font-size: 1.05rem;
+	color: var(--mci-color-text-light);
+	line-height: 1.65;
+	margin-bottom: var(--mci-spacing-lg);
+}
+
+.home-v2-consultation__form {
+	background-color: var(--mci-color-surface);
+	border-radius: var(--mci-radius-lg);
+	padding: var(--mci-spacing-xl);
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.home-v2-consultation__form h3 {
+	font-size: 1.4rem;
+	margin-bottom: var(--mci-spacing-lg);
+}
+
+.home-v2-consultation__form .btn {
+	width: 100%;
+}
+
+/* Benefits Row */
+.home-v2-benefits {
+	padding: var(--mci-spacing-3xl) 0;
+	background-color: var(--mci-color-surface);
+}
+
+.home-v2-benefits__grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--mci-spacing-lg);
+}
+
+.home-v2-benefits__card {
+	background-color: var(--mci-color-background);
+	border-radius: var(--mci-radius-lg);
+	padding: var(--mci-spacing-xl);
+	text-align: center;
+	transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.home-v2-benefits__card:hover {
+	transform: translateY(-4px);
+}
+
+.home-v2-benefits__card-icon {
+	width: 56px;
+	height: 56px;
+	margin: 0 auto var(--mci-spacing-md);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--mci-color-primary);
+	border-radius: 50%;
+	color: var(--mci-color-white);
+}
+
+.home-v2-benefits__card-title {
+	font-size: 1.15rem;
+	font-weight: var(--mci-font-weight-bold);
+	margin-bottom: var(--mci-spacing-sm);
+	color: var(--mci-color-text);
+}
+
+.home-v2-benefits__card-text {
+	font-size: 0.875rem;
+	color: var(--mci-color-text-light);
+	margin: 0;
+	line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.home-v2-stats__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.home-v2-gentle__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.home-v2-comprehensive__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.home-v2-doctor__inner {
+		grid-template-columns: 1fr;
+	}
+
+	.home-v2-doctor__image {
+		order: -1;
+	}
+
+	.home-v2-consultation__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.home-v2-benefits__grid {
+		grid-template-columns: 1fr;
+	}
+}
