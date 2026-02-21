@@ -521,7 +521,7 @@ blockquote p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 28px;
+  padding: 12px 32px;
   font-family: var(--mci-font-body);
   font-size: 0.9375rem;
   font-weight: var(--mci-font-weight-bold);
@@ -529,15 +529,11 @@ blockquote p {
   letter-spacing: -0.01em;
   text-align: center;
   text-decoration: none;
-  border: 2px solid transparent;
-  border-radius: 0.25rem;
+  border: none;
+  border-radius: 12px;
   cursor: pointer;
-  transition:
-    background-color 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
-    color 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
-    border-color 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
-    transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
-    box-shadow 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: all 0.13s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.10));
 }
 
 .btn:active {
@@ -545,37 +541,63 @@ blockquote p {
 }
 
 .btn-primary {
-  background-color: var(--mci-color-primary);
+  background: linear-gradient(to bottom, rgb(178, 157, 129) 0%, rgb(158, 137, 109) 100%);
   color: var(--mci-color-white);
+  box-shadow: 
+    inset 0 0 0 1px rgba(188, 167, 139, 0.4),
+    0 0 0 1px rgba(148, 127, 99, 0.3),
+    0 2px 4px rgba(0, 0, 0, 0.10),
+    0 0 0 1px rgba(13, 13, 13, 0.15);
 }
 
 .btn-primary:hover {
-  background-color: var(--mci-color-primary-hover);
+  background: linear-gradient(to bottom, rgb(188, 167, 139) 0%, rgb(168, 147, 119) 100%);
   color: var(--mci-color-white);
-  box-shadow: 0 4px 12px rgba(168, 147, 119, 0.35);
+  box-shadow: 
+    inset 0 0 0 1px rgba(188, 167, 139, 0.4),
+    0 0 0 1px rgba(148, 127, 99, 0.3),
+    0 3px 8px rgba(0, 0, 0, 0.16),
+    0 0 0 1px rgba(13, 13, 13, 0.15);
 }
 
 .btn-secondary {
-  background-color: var(--mci-color-secondary);
+  background: linear-gradient(to bottom, rgb(71, 62, 57) 0%, rgb(51, 42, 37) 100%);
   color: var(--mci-color-white);
+  box-shadow: 
+    inset 0 0 0 1px rgba(91, 82, 77, 0.4),
+    0 0 0 1px rgba(41, 32, 27, 0.3),
+    0 2px 4px rgba(0, 0, 0, 0.10),
+    0 0 0 1px rgba(13, 13, 13, 0.15);
 }
 
 .btn-secondary:hover {
-  background-color: var(--mci-color-secondary-hover);
+  background: linear-gradient(to bottom, rgb(91, 82, 77) 0%, rgb(71, 62, 57) 100%);
   color: var(--mci-color-white);
-  box-shadow: 0 4px 12px rgba(61, 52, 47, 0.25);
+  box-shadow: 
+    inset 0 0 0 1px rgba(91, 82, 77, 0.4),
+    0 0 0 1px rgba(41, 32, 27, 0.3),
+    0 3px 8px rgba(0, 0, 0, 0.16),
+    0 0 0 1px rgba(13, 13, 13, 0.15);
 }
 
 .btn-outline {
   background-color: transparent;
   color: var(--mci-color-primary);
-  border-color: var(--mci-color-primary);
+  box-shadow: 
+    inset 0 0 0 1px rgba(188, 167, 139, 0.5),
+    0 0 0 1px rgba(148, 127, 99, 0.4),
+    0 2px 4px rgba(0, 0, 0, 0.10),
+    0 0 0 1px rgba(13, 13, 13, 0.15);
 }
 
 .btn-outline:hover {
-  background-color: var(--mci-color-primary);
+  background: linear-gradient(to bottom, rgb(178, 157, 129) 0%, rgb(158, 137, 109) 100%);
   color: var(--mci-color-white);
-  box-shadow: 0 4px 12px rgba(168, 147, 119, 0.35);
+  box-shadow: 
+    inset 0 0 0 1px rgba(188, 167, 139, 0.4),
+    0 0 0 1px rgba(148, 127, 99, 0.3),
+    0 3px 8px rgba(0, 0, 0, 0.16),
+    0 0 0 1px rgba(13, 13, 13, 0.15);
 }
 
 .btn:disabled,

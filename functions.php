@@ -44,11 +44,6 @@ function mci_enqueue_assets() {
 	wp_enqueue_style( 'glightbox', 'https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css', array(), '3.3.0' );
 	wp_enqueue_script( 'glightbox', 'https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/js/glightbox.min.js', array(), '3.3.0', true );
 
-	// MediCae Demo Template CSS.
-	if ( is_page_template( 'template-medicae.php' ) ) {
-		wp_enqueue_style( 'mci-medicae', get_template_directory_uri() . '/assets/css/template-medicae.css', array( 'mci-style' ), MCI_THEME_VERSION );
-	}
-
 	// Home V2 CSS.
 	if ( is_front_page() ) {
 		wp_enqueue_style( 'mci-home-v2', get_template_directory_uri() . '/assets/css/home-v2.css', array( 'mci-style' ), MCI_THEME_VERSION );
