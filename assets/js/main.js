@@ -15,6 +15,11 @@ document.addEventListener('DOMContentLoaded', function () {
 	var header = document.querySelector('.site-header');
 	if (header) {
 		var scrollThreshold = 50;
+		var hasAdminBar = document.body.classList.contains('admin-bar');
+
+		function getAdminBarOffset() {
+			return window.innerWidth <= 782 ? 46 : 32;
+		}
 
 		function onScroll() {
 			if (window.scrollY > scrollThreshold) {
@@ -22,16 +27,28 @@ document.addEventListener('DOMContentLoaded', function () {
 			} else {
 				header.classList.remove('is-scrolled');
 			}
+
+			if (hasAdminBar) {
+				var offset = getAdminBarOffset();
+				header.style.top = Math.max(0, offset - window.scrollY) + 'px';
+			}
+		}
+
+		function onResize() {
+			if (hasAdminBar) {
+				var offset = getAdminBarOffset();
+				header.style.top = Math.max(0, offset - window.scrollY) + 'px';
+			}
 		}
 
 		window.addEventListener('scroll', onScroll, { passive: true });
+		window.addEventListener('resize', onResize, { passive: true });
 		onScroll();
 	}
 
 	// Mobile navigation
 	var mobileNavToggle = document.querySelector('.mobile-nav-toggle');
 	var mobileNav = document.getElementById('mobile-nav');
-	var mobileNavClose = document.querySelector('.mobile-nav__close');
 
 	function openMobileNav() {
 		if (!mobileNav || !mobileNavToggle) return;
@@ -61,10 +78,6 @@ document.addEventListener('DOMContentLoaded', function () {
 				openMobileNav();
 			}
 		});
-	}
-
-	if (mobileNavClose && mobileNav) {
-		mobileNavClose.addEventListener('click', closeMobileNav);
 	}
 
 	// Close on escape

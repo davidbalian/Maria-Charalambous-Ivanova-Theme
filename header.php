@@ -43,12 +43,6 @@
 </header>
 
 <div id="mobile-nav" class="mobile-nav-overlay" aria-hidden="true">
-	<button type="button" class="mobile-nav__close" aria-label="<?php esc_attr_e( 'Close menu', 'maria-charalambous-ivanova' ); ?>">
-		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-			<line x1="18" y1="6" x2="6" y2="18"></line>
-			<line x1="6" y1="6" x2="18" y2="18"></line>
-		</svg>
-	</button>
 	<div class="mobile-nav__content">
 		<nav class="mobile-nav__menu">
 			<?php
@@ -61,15 +55,6 @@
 			) );
 			?>
 		</nav>
-		<div class="mobile-nav__search">
-			<input type="search" class="mobile-nav__search-input" placeholder="<?php esc_attr_e( 'Search…', 'maria-charalambous-ivanova' ); ?>" disabled aria-label="<?php esc_attr_e( 'Search', 'maria-charalambous-ivanova' ); ?>">
-			<span class="mobile-nav__search-icon" aria-hidden="true">
-				<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-					<circle cx="11" cy="11" r="8"></circle>
-					<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-				</svg>
-			</span>
-		</div>
 		<div class="mobile-nav__lang">EN</div>
 	</div>
 </div>
