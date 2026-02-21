@@ -67,6 +67,9 @@
 .home-hero__content {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: max-content;
 }
 
 .home-hero__divider {
