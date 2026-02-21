@@ -19,7 +19,7 @@
 
 /* Hero Section */
 .home-hero-wrapper {
-  padding: var(--mci-header-height) 1rem var(--mci-spacing-xl) 1rem;
+  padding: calc(var(--mci-header-height) + 2rem) 1rem 2rem 1rem;
   display: flex;
   height: 100dvh;
   justify-content: center;
@@ -28,10 +28,10 @@
 .home-hero {
   width: 100%;
   max-width: var(--mci-container-width);
+  height: 100%;
   border-radius: 2rem;
   overflow: hidden;
   padding: var(--mci-spacing-3xl) 2rem;
-  min-height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
