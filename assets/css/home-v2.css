@@ -284,6 +284,25 @@
 	font-weight: 500;
 }
 
+.home-v2-doctor__quote {
+	margin: var(--mci-spacing-lg) 0;
+	padding: var(--mci-spacing-lg);
+	background-color: var(--mci-color-background);
+	border-radius: var(--mci-radius-md);
+	border-left: 4px solid var(--mci-color-primary);
+}
+
+.home-v2-doctor__quote p {
+	font-size: 1rem;
+	color: var(--mci-color-text);
+	line-height: 1.7;
+	margin: 0;
+}
+
+.home-v2-doctor__quote p + p {
+	margin-top: var(--mci-spacing-xs);
+}
+
 /* Consultation Form */
 .home-v2-consultation {
 	padding: var(--mci-spacing-3xl) 0;
