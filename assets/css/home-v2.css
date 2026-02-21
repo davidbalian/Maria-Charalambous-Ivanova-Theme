@@ -116,12 +116,13 @@
 @media (max-width: 768px) {
   .home-hero-wrapper {
     height: auto;
+    min-height: 100svh;
   }
 
   .home-hero {
     height: auto;
     min-height: 0;
-    padding: var(--mci-spacing-2xl) 0.5rem;
+    padding: var(--mci-spacing-md);
   }
 
   .home-hero__stats {
