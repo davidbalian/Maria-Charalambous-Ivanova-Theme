@@ -92,10 +92,9 @@
 }
 
 .home-hero__stat-number {
-  font-size: 1.25rem;
+  font-size: 0.9rem;
   font-weight: var(--mci-font-weight-bold);
   color: var(--mci-color-white);
-  margin-bottom: var(--mci-spacing-xs);
   letter-spacing: -0.02em;
 }
 
