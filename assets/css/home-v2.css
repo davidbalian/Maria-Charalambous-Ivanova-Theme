@@ -147,57 +147,6 @@
   }
 }
 
-/* Stats Row */
-.home-v2-stats {
-  padding: var(--mci-spacing-2xl) 0;
-  background-color: var(--mci-color-background);
-}
-
-.home-v2-stats__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--mci-spacing-lg);
-}
-
-.home-v2-stats__card {
-  background-color: var(--mci-color-surface);
-  border-radius: var(--mci-radius-md);
-  padding: var(--mci-spacing-lg);
-  text-align: center;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-
-.home-v2-stats__card:hover {
-  transform: translateY(-4px);
-}
-
-.home-v2-stats__icon {
-  width: 48px;
-  height: 48px;
-  margin: 0 auto var(--mci-spacing-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--mci-color-primary);
-  border-radius: 50%;
-  color: var(--mci-color-white);
-}
-
-.home-v2-stats__label {
-  font-weight: var(--mci-font-weight-bold);
-  font-size: 1.15rem;
-  color: var(--mci-color-primary);
-  margin-bottom: var(--mci-spacing-xs);
-}
-
-.home-v2-stats__text {
-  font-size: 0.875rem;
-  color: var(--mci-color-text-light);
-  margin: 0;
-  line-height: 1.5;
-}
-
 /* Gentle Touch Section */
 .home-v2-gentle {
   padding: var(--mci-spacing-3xl) 0;
@@ -496,10 +445,6 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .home-v2-stats__grid {
-    grid-template-columns: 1fr;
-  }
-
   .home-v2-gentle__grid {
     grid-template-columns: 1fr;
   }

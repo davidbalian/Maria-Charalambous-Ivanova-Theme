@@ -11,8 +11,6 @@ get_header(); ?>
 
 	<?php get_template_part( 'template-parts/home-v2/hero' ); ?>
 	
-	<?php get_template_part( 'template-parts/home-v2/stats' ); ?>
-	
 	<?php get_template_part( 'template-parts/home-v2/services' ); ?>
 	
 	<?php get_template_part( 'template-parts/home-v2/gentle-touch' ); ?>
