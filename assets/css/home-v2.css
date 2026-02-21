@@ -47,7 +47,7 @@
   height: 100%;
   border-radius: 2rem;
   overflow: hidden;
-  padding: var(--mci-spacing-3xl) 2rem;
+  padding: var(--mci-spacing-md) 2rem;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -61,7 +61,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: var(--mci-spacing-xl);
+  gap: var(--mci-spacing-md);
 }
 
 .home-hero__content {
@@ -83,11 +83,12 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--mci-spacing-lg);
+  width: max-content;
 }
 
 .home-hero__stat {
   flex: 1;
-  text-align: center;
+  text-align: left;
 }
 
 .home-hero__stat-number {
@@ -102,6 +103,7 @@
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.75);
   line-height: 1.4;
+  width: max-content;
 }
 
 .home-hero__stat-divider {
