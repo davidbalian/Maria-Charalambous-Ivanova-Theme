@@ -131,6 +131,10 @@
     width: 100%;
     gap: var(--mci-spacing-md);
   }
+
+  .home-hero__stat-divider {
+    display: none;
+  }
 }
 
 /* Stats Row */
