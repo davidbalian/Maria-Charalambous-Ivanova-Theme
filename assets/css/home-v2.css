@@ -3,6 +3,10 @@
  * New sections for the restructured homepage with Dr. Maria's content
  */
 
+:root {
+  --mci-header-height: 72px;
+}
+
 /* Top Banner */
 .home-v2-banner {
   background-color: var(--mci-color-primary);
@@ -19,7 +23,7 @@
 
 /* Hero Section */
 .home-hero-wrapper {
-  padding: calc(var(--mci-header-height) + 2rem) 1rem 2rem 1rem;
+  padding: calc(var(--mci-header-height) + 2rem) 0 2rem 0;
   display: flex;
   height: 100dvh;
   justify-content: center;
@@ -27,7 +31,8 @@
 
 .home-hero {
   width: 100%;
-  max-width: var(--mci-container-width);
+  max-width: calc(var(--mci-container-width) - 2rem);
+  margin: 0 1rem;
   height: 100%;
   border-radius: 2rem;
   overflow: hidden;
