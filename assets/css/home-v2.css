@@ -4,7 +4,7 @@
  */
 
 :root {
-  --mci-header-height: 72px;
+  --mci-header-height: 4rem;
 }
 
 /* Top Banner */
@@ -23,7 +23,7 @@
 
 /* Hero Section */
 .home-hero-wrapper {
-  padding: calc(var(--mci-header-height) + 2rem) 0 2rem 0;
+  padding: var(--mci-header-height) 0 2rem 0;
   display: flex;
   height: 100dvh;
   justify-content: center;

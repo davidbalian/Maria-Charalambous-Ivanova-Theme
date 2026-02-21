@@ -248,7 +248,8 @@ blockquote p {
 .site-header {
   background: transparent;
   border-bottom: 0.5px solid transparent;
-  padding: var(--mci-spacing-sm) var(--mci-spacing-lg);
+  padding: 0 var(--mci-spacing-lg);
+  height: 4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
