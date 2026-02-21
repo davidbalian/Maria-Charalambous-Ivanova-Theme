@@ -12,24 +12,26 @@
 <?php wp_body_open(); ?>
 
 <header id="masthead" class="site-header">
-	<div class="site-branding">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-logo-link">
-			<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/horizontal-logo-gold.avif" 
-			     alt="<?php bloginfo( 'name' ); ?>" 
-			     class="site-logo site-logo--desktop">
-			<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/logomark.avif" 
-			     alt="<?php bloginfo( 'name' ); ?>" 
-			     class="site-logo site-logo--mobile">
-		</a>
-	</div>
+	<div class="site-header__inner">
+		<div class="site-branding">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-logo-link">
+				<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/horizontal-logo-gold.avif" 
+				     alt="<?php bloginfo( 'name' ); ?>" 
+				     class="site-logo site-logo--desktop">
+				<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/logomark.avif" 
+				     alt="<?php bloginfo( 'name' ); ?>" 
+				     class="site-logo site-logo--mobile">
+			</a>
+		</div>
 
-	<nav id="site-navigation" class="main-navigation">
-		<?php
-		wp_nav_menu( array(
-			'theme_location' => 'primary',
-			'menu_id'        => 'primary-menu',
-			'fallback_cb'    => false,
-		) );
-		?>
-	</nav>
+		<nav id="site-navigation" class="main-navigation">
+			<?php
+			wp_nav_menu( array(
+				'theme_location' => 'primary',
+				'menu_id'        => 'primary-menu',
+				'fallback_cb'    => false,
+			) );
+			?>
+		</nav>
+	</div>
 </header>
