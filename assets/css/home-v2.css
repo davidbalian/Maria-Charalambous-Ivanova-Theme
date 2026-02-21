@@ -19,14 +19,17 @@
 
 /* Hero Section */
 .home-hero-wrapper {
-	padding-top: var(--mci-spacing-2xl);
-	padding-bottom: var(--mci-spacing-xl);
+	padding: var(--mci-spacing-2xl) 1rem var(--mci-spacing-xl) 1rem;
+	display: flex;
+	justify-content: center;
 }
 
 .home-hero {
+	width: 100%;
+	max-width: var(--mci-container-width);
 	border-radius: 2rem;
 	overflow: hidden;
-	padding: var(--mci-spacing-3xl) var(--mci-spacing-2xl);
+	padding: var(--mci-spacing-3xl) 2rem;
 	height: calc(100dvh - var(--mci-header-height, 80px));
 	min-height: 500px;
 	display: flex;
@@ -36,6 +39,12 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	position: relative;
+}
+
+@media (max-width: 768px) {
+	.home-hero {
+		padding: var(--mci-spacing-2xl) 0.5rem;
+	}
 }
 
 /* Stats Row */

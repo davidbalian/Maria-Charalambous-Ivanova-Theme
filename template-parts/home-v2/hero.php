@@ -1,5 +1,5 @@
 <!-- Hero Section -->
-<div class="container home-hero-wrapper">
+<div class="home-hero-wrapper">
 	<section class="home-hero" style="background-image: url('http://davidb1646.sg-host.com/wp-content/uploads/2026/02/dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-tv-screen-dental-work.avif');">
 		<div class="home-hero__overlay"></div>
 		<div class="home-hero__inner">
