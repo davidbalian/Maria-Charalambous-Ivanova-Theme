@@ -125,6 +125,16 @@
     padding: var(--mci-spacing-md);
   }
 
+  .home-hero__content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .home-hero__text {
+    width: 100%;
+    max-width: 100%;
+  }
+
   .home-hero__stats {
     flex-direction: row;
     flex-wrap: wrap;
