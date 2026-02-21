@@ -9,8 +9,6 @@ get_header(); ?>
 
 <main id="main" class="site-main">
 
-	<?php get_template_part( 'template-parts/home-v2/top-banner' ); ?>
-	
 	<?php get_template_part( 'template-parts/home-v2/hero' ); ?>
 	
 	<?php get_template_part( 'template-parts/home-v2/stats' ); ?>
