@@ -7,6 +7,17 @@
   --mci-header-height: 4rem;
 }
 
+/* WordPress Admin Bar Offset */
+.admin-bar .home-hero-wrapper {
+  padding-top: calc(var(--mci-header-height) + 32px);
+}
+
+@media screen and (max-width: 782px) {
+  .admin-bar .home-hero-wrapper {
+    padding-top: calc(var(--mci-header-height) + 46px);
+  }
+}
+
 /* Top Banner */
 .home-v2-banner {
   background-color: var(--mci-color-primary);
