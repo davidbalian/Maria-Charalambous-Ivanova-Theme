@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Mobile navigation
 	var mobileNavToggle = document.querySelector('.mobile-nav-toggle');
 	var mobileNav = document.getElementById('mobile-nav');
+	var isToggling = false;
 
 	function openMobileNav() {
 		if (!mobileNav || !mobileNavToggle) return;
@@ -72,11 +73,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	if (mobileNavToggle && mobileNav) {
 		mobileNavToggle.addEventListener('click', function () {
+			if (isToggling) return;
+			
+			isToggling = true;
+			
 			if (mobileNav.classList.contains('is-open')) {
 				closeMobileNav();
 			} else {
 				openMobileNav();
 			}
+			
+			setTimeout(function () {
+				isToggling = false;
+			}, 280);
 		});
 	}
 

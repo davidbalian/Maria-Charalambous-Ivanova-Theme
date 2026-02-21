@@ -429,6 +429,7 @@ blockquote p {
 
   .site-header .mobile-nav-toggle.is-active .mobile-nav-toggle__line:nth-child(2) {
     opacity: 0;
+    transform: scaleX(0);
   }
 
   .site-header .mobile-nav-toggle.is-active .mobile-nav-toggle__line:nth-child(3) {
