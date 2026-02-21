@@ -1250,6 +1250,23 @@ hr {
 	line-height: 1.65;
 }
 
+.about-doctor__philosophy {
+	list-style: none;
+	padding: 0;
+	margin-top: var(--mci-spacing-lg);
+	display: flex;
+	flex-direction: column;
+	gap: var(--mci-spacing-sm);
+}
+
+.about-doctor__philosophy li {
+	padding: var(--mci-spacing-sm) var(--mci-spacing-md);
+	border-left: 3px solid var(--mci-color-primary);
+	color: var(--mci-color-text);
+	font-size: 0.95rem;
+	font-weight: 500;
+}
+
 .about-experience {
 	padding: var(--mci-spacing-3xl) 0;
 	border-top: var(--mci-border-width) solid var(--mci-color-border);

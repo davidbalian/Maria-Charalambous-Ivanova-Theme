@@ -90,8 +90,8 @@ get_header(); ?>
 		<div class="container">
 			<div class="home-about__inner">
 				<div class="home-about__content">
-					<h2 class="home-about__title">An Artistic Approach to Dentistry</h2>
-					<p class="home-about__text">At Dental Art Clinic, every smile is treated as a unique work of art. Dr. Maria Charalambous-Ivanova combines clinical precision with an aesthetic eye, crafting results that look natural, feel comfortable, and inspire confidence &mdash; often in just one visit.</p>
+					<h2 class="home-about__title">Excellence in Dentistry Is Designed &mdash; Not Accidental.</h2>
+					<p class="home-about__text">At DENTAL ART CLINIC LIMASSOL, dentistry is approached as a combination of scientific precision, strategic planning, and aesthetic harmony. Specialising in composite veneers and Emax veneers, Dr. Maria Charalambous-Ivanova also undertakes complex full mouth rehabilitation cases &mdash; treating every patient individually, with no standardised solutions.</p>
 					<a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" class="btn btn-outline">Learn More About Us</a>
 				</div>
 				<div class="home-about__image">

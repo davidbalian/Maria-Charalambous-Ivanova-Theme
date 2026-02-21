@@ -13,7 +13,7 @@ get_header(); ?>
 	<section class="about-hero">
 		<div class="container">
 			<h1 class="about-hero__title">About the Clinic</h1>
-			<p class="about-hero__subtitle">Where clinical excellence meets artistic vision &mdash; in the heart of Limassol.</p>
+			<p class="about-hero__subtitle">Excellence in Dentistry Is Designed &mdash; Not Accidental.</p>
 		</div>
 	</section>
 
@@ -21,11 +21,10 @@ get_header(); ?>
 	<section class="about-mission">
 		<div class="container">
 			<h2>The Masterpiece Philosophy</h2>
-			<p>At Dental Art Clinic, we believe that a beautiful smile is more than straight, white teeth &mdash; it is a reflection of who you are. Our philosophy centres on treating each patient as an individual, designing results that complement their features and express their personality.</p>
+			<p>At DENTAL ART CLINIC LIMASSOL, dentistry is approached as a combination of scientific precision, strategic planning, and aesthetic harmony. The establishment and expansion of the second clinic represent the natural evolution of a career built on trust, consistency, and a commitment to excellence.</p>
 			<blockquote>
-				<p>&ldquo;Every smile we create is a unique masterpiece &mdash; crafted with precision, care, and an artist&rsquo;s eye for detail.&rdquo;</p>
+				<p>&ldquo;Because a smile is not just about appearance. It is function. It is balance. It is confidence. It is quality of life.&rdquo;</p>
 			</blockquote>
-			<p>From the first consultation to the final reveal, we combine advanced dental techniques with a deep commitment to aesthetics, ensuring results that are both clinically sound and naturally beautiful.</p>
 		</div>
 	</section>
 
@@ -37,10 +36,17 @@ get_header(); ?>
 					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/dr-maria-charalambous-ivanova-dental-clinic-in-limassol.webp' ); ?>" alt="Dr. Maria Charalambous-Ivanova" width="560" height="700">
 				</div>
 				<div class="about-doctor__bio">
-					<h2>Dr. Maria Charalambous-Ivanova <span class="text-light">MSD</span></h2>
-					<p>Dr. Maria is a dedicated dental professional with a passion for aesthetic excellence. Holding a Master of Science in Dentistry, she brings years of clinical experience and a meticulous artistic sensibility to every procedure.</p>
-					<p>Her approach blends the latest in dental technology with a personal touch, ensuring every patient feels confident and cared for throughout their journey to a new smile.</p>
-					<p>Whether performing a single-visit cosmetic transformation or guiding a patient through orthodontic treatment with Smilers Aligners, Dr. Maria treats every case as an opportunity to create something truly special.</p>
+					<h2>Dr. Maria Charalambous-Ivanova <span class="text-light">DMD, MSD</span></h2>
+					<p>Dr. Maria Charalambous-Ivanova graduated from the University of Sofia in 2007 and has been practicing since 2008, building a dynamic and continuously evolving professional career. Through constant participation in international congresses and advanced training programs, she remains at the forefront of modern dental techniques.</p>
+					<p>Her specialization in <strong>composite veneers</strong> and <strong>Emax veneers</strong> forms the foundation of her aesthetic philosophy. In addition, she undertakes complex and full mouth rehabilitation cases requiring comprehensive functional analysis, precise diagnosis, and carefully structured treatment planning.</p>
+					<p>Each case is treated individually. There are no standardized solutions &mdash; only the right solution for the specific patient, always focusing on long-term health, proper function, and aesthetic balance.</p>
+					<p>Collaboration with highly skilled and specialized partners ensures optimal, natural, and harmoniously balanced results.</p>
+					<ul class="about-doctor__philosophy">
+						<li>Scientific precision</li>
+						<li>Strategic treatment planning</li>
+						<li>Pain-free experience</li>
+						<li>Absolute transparency and trust</li>
+					</ul>
 				</div>
 			</div>
 		</div>
