@@ -55,9 +55,9 @@
   letter-spacing: -0.006em;
 }
 
-/* Hero Section */
+/* Hero Section – same inner width as .container */
 .home-hero {
-  padding: calc(var(--mci-header-height) + 2rem) 1rem 2rem;
+  padding: calc(var(--mci-header-height) + 2rem) 0 2rem;
   min-height: 60vh;
 }
 
@@ -68,6 +68,8 @@
   gap: 0;
   max-width: var(--mci-container-width);
   margin: 0 auto;
+  padding-left: var(--mci-spacing-lg);
+  padding-right: var(--mci-spacing-lg);
   min-height: 60vh;
   align-items: stretch;
 }
@@ -76,7 +78,7 @@
   grid-area: text;
   display: flex;
   align-items: center;
-  padding: var(--mci-spacing-xl) 2rem;
+  padding: var(--mci-spacing-xl) 0;
   background: transparent;
 }
 
@@ -191,7 +193,7 @@
 
   .home-hero__text-col {
     grid-area: text;
-    padding: var(--mci-spacing-md);
+    padding: var(--mci-spacing-md) 0;
   }
 
   .home-hero__image-col {
