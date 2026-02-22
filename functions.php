@@ -47,16 +47,10 @@ function mci_enqueue_assets() {
 	// Home V2 CSS.
 	if ( is_front_page() ) {
 		wp_enqueue_style( 'mci-home-v2', get_template_directory_uri() . '/assets/css/home-v2.css', array( 'mci-style' ), MCI_THEME_VERSION );
-		// Justified Gallery for The Clinic section.
-		wp_enqueue_style( 'justified-gallery', 'https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css', array(), '3.8.1' );
-		wp_enqueue_script( 'justified-gallery', 'https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js', array( 'jquery' ), '3.8.1', true );
 	}
 
-	// Theme main JS (depends on justified-gallery on front page for clinic grid).
+	// Theme main JS.
 	$mci_main_deps = array( 'glightbox' );
-	if ( is_front_page() ) {
-		$mci_main_deps[] = 'justified-gallery';
-	}
 	wp_enqueue_script( 'mci-main', get_template_directory_uri() . '/assets/js/main.js', $mci_main_deps, MCI_THEME_VERSION, true );
 }
 add_action( 'wp_enqueue_scripts', 'mci_enqueue_assets' );

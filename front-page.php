@@ -42,7 +42,7 @@ get_header(); ?>
 	<section class="home-clinic">
 		<div class="container">
 			<h2 class="home-clinic__title">The Clinic</h2>
-			<div class="home-clinic__grid home-clinic__grid--masonry">
+			<div class="home-clinic__grid">
 				<?php
 				$clinic_images = array(
 					'dental-art-clinic-by-dr-maria-charalambous-ivanova-bathroom-toilet-marble-sink-curtain.avif' => 'Dental Art Clinic bathroom',

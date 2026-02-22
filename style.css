@@ -1231,34 +1231,17 @@ hr {
   gap: var(--mci-spacing-md);
 }
 
-/* Justified Gallery container: row-based justified layout (JS) */
-.home-clinic__grid--masonry {
+.home-clinic__item {
   display: block;
-  position: relative;
-}
-
-/* jg-entry is the wrapper div justified gallery injects around each item */
-.home-clinic__grid--masonry .jg-entry {
+  height: 270px;
   border-radius: var(--mci-radius-md);
   overflow: hidden;
   position: relative;
   z-index: 1;
-  /* Safari/Webkit fixes for smooth clipping during transform */
+  /* Safari/Webkit fixes */
   -webkit-mask-image: -webkit-radial-gradient(white, black);
   mask-image: radial-gradient(white, black);
   transform: translateZ(0);
-}
-
-/* Hide captions injected by justified gallery */
-.home-clinic__grid--masonry .jg-caption {
-  display: none !important;
-}
-
-.home-clinic__item {
-  display: block;
-  line-height: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .home-clinic__item img {

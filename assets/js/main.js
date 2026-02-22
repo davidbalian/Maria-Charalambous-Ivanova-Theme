@@ -12,19 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	}
 
-	// Justified Gallery for The Clinic section (row-based left-to-right layout)
-	if (typeof jQuery !== 'undefined' && jQuery.fn.justifiedGallery) {
-		var $clinicGrid = jQuery('.home-clinic__grid--masonry');
-		if ($clinicGrid.length) {
-			$clinicGrid.justifiedGallery({
-				rowHeight: 270,
-				margins: 12,
-				lastRow: 'nojustify',
-				captions: false,
-			});
-		}
-	}
-
 	// Scroll-triggered fade-in animations
 	var observer = new IntersectionObserver(
 		function (entries) {
