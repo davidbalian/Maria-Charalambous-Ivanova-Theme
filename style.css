@@ -1295,6 +1295,8 @@ hr {
 .home-cases__item {
   display: block;
   line-height: 0;
+  overflow: hidden;
+  border-radius: var(--mci-radius-md);
 }
 
 .home-cases__item img {
@@ -1303,6 +1305,7 @@ hr {
   object-fit: cover;
   display: block;
   border-radius: var(--mci-radius-md);
+  transform: scale(1.04);
 }
 
 .home-cases__action {
