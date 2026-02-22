@@ -1,9 +1,8 @@
-<!-- Hero Section: One container with two columns — text | image -->
 <?php
 $hero_image_url = 'http://davidb1646.sg-host.com/wp-content/uploads/2026/02/dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-tv-screen-dental-work.avif';
 ?>
-<div class="home-hero-wrapper">
-	<div class="home-hero home-hero__grid">
+<section class="home-hero">
+	<div class="home-hero__container">
 		<div class="home-hero__text-col">
 			<div class="home-hero__inner">
 				<div class="home-hero__content">
@@ -38,4 +37,4 @@ $hero_image_url = 'http://davidb1646.sg-host.com/wp-content/uploads/2026/02/dent
 			</div>
 		</div>
 	</div>
-</div>
+</section>

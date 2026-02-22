@@ -8,12 +8,12 @@
 }
 
 /* WordPress Admin Bar Offset */
-.admin-bar .home-hero-wrapper {
+.admin-bar .home-hero {
   padding-top: calc(var(--mci-header-height) + 32px);
 }
 
 @media screen and (max-width: 782px) {
-  .admin-bar .home-hero-wrapper {
+  .admin-bar .home-hero {
     padding-top: calc(var(--mci-header-height) + 46px);
   }
 }
@@ -32,30 +32,21 @@
   letter-spacing: -0.006em;
 }
 
-/* Hero Section — Two-column layout: text (transparent) | image */
-.home-hero-wrapper {
-  padding: calc(var(--mci-header-height) + 2rem) 0 2rem 0;
+/* Hero Section */
+.home-hero {
+  padding: calc(var(--mci-header-height) + 2rem) 1rem 2rem;
   min-height: 60vh;
 }
 
-.home-hero {
-  width: 100%;
-  max-width: var(--mci-container-width);
-  margin: 0 auto;
-  padding: 0 1rem;
-  position: relative;
-}
-
-/* Single hero container with two columns — rounded corners all around */
-.home-hero__grid {
+.home-hero__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "text image";
   gap: 0;
+  max-width: var(--mci-container-width);
+  margin: 0 auto;
   min-height: 60vh;
   align-items: stretch;
-  border-radius: var(--mci-radius-lg);
-  overflow: hidden;
 }
 
 .home-hero__text-col {
@@ -100,9 +91,6 @@
 .home-hero__image {
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  position: relative;
-  border-radius: 0 var(--mci-radius-lg) var(--mci-radius-lg) 0;
 }
 
 .home-hero__image img {
@@ -110,7 +98,7 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: inherit;
+  border-radius: var(--mci-radius-lg);
 }
 
 .home-hero__inner {
@@ -166,11 +154,11 @@
 }
 
 @media (max-width: 768px) {
-  .home-hero-wrapper {
+  .home-hero {
     min-height: 0;
   }
 
-  .home-hero__grid {
+  .home-hero__container {
     grid-template-columns: 1fr;
     min-height: 0;
     grid-template-areas:
@@ -189,7 +177,6 @@
 
   .home-hero__image {
     min-height: 280px;
-    border-radius: 0 0 var(--mci-radius-lg) var(--mci-radius-lg);
   }
 
   .home-hero__image img {
