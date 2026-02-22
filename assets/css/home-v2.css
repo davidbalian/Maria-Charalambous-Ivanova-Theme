@@ -193,8 +193,9 @@
 }
 
 .home-hero__stat-divider {
-  width: 1px;
-  height: 48px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
   flex-shrink: 0;
 }
 
@@ -498,8 +499,9 @@
 }
 
 .home-v2-doctor__philosophy-divider {
-  width: 1px;
-  height: 48px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
   flex-shrink: 0;
   background-color: rgba(0, 0, 0, 0.12);
 }
