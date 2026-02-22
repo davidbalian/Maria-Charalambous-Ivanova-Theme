@@ -1725,13 +1725,8 @@ hr {
 
 .gallery-grid__item img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  transition: transform 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-
-.gallery-grid__item:hover img {
-  transform: scale(1.04);
 }
 
 /* ==========================================================================
