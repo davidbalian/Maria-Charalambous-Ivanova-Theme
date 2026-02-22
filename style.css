@@ -1237,21 +1237,30 @@ hr {
   position: relative;
 }
 
-.home-clinic__item {
-  display: block;
+/* jg-entry is the wrapper div justified gallery injects around each item */
+.home-clinic__grid--masonry .jg-entry {
   border-radius: var(--mci-radius-md);
   overflow: hidden;
+}
+
+/* Hide captions injected by justified gallery */
+.home-clinic__grid--masonry .jg-caption {
+  display: none !important;
+}
+
+.home-clinic__item {
+  display: block;
   line-height: 0;
 }
 
 .home-clinic__item img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
-  border-radius: var(--mci-radius-md);
   object-fit: cover;
+  will-change: transform;
   transform: scale(1);
-  transition: transform 0.45s cubic-bezier(0.33, 1, 0.68, 1);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .home-clinic__item:hover img {
@@ -1314,8 +1323,9 @@ hr {
   object-fit: cover;
   display: block;
   border-radius: var(--mci-radius-md);
+  will-change: transform;
   transform: scale(1);
-  transition: transform 0.45s cubic-bezier(0.33, 1, 0.68, 1);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .home-cases__item:hover img {

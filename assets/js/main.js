@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			selector: '.glightbox',
 			touchNavigation: true,
 			loop: true,
+			descPosition: 'none',
 		});
 	}
 
@@ -16,9 +17,10 @@ document.addEventListener('DOMContentLoaded', function () {
 		var $clinicGrid = jQuery('.home-clinic__grid--masonry');
 		if ($clinicGrid.length) {
 			$clinicGrid.justifiedGallery({
-				rowHeight: 320,
+				rowHeight: 270,
 				margins: 12,
 				lastRow: 'nojustify',
+				captions: false,
 			});
 		}
 	}
