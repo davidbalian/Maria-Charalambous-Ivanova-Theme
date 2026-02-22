@@ -16,14 +16,14 @@ get_header(); ?>
 		<div class="container">
 			<h2 class="home-cases__title">Before &amp; After</h2>
 			<div class="home-cases__grid">
-				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol.webp' ); ?>" class="glightbox home-cases__item" data-gallery="cases">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol.webp' ); ?>" alt="Before and after at Dental Art Clinic" width="400" height="400">
+				<a href="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol.webp" class="glightbox home-cases__item" data-gallery="cases">
+					<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol.webp" alt="Before and after at Dental Art Clinic" width="400" height="400">
 				</a>
-				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp' ); ?>" class="glightbox home-cases__item" data-gallery="cases">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp' ); ?>" alt="Before and after at Dental Art Clinic" width="400" height="400">
+				<a href="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp" class="glightbox home-cases__item" data-gallery="cases">
+					<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp" alt="Before and after at Dental Art Clinic" width="400" height="400">
 				</a>
-				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-2.webp' ); ?>" class="glightbox home-cases__item" data-gallery="cases">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-2.webp' ); ?>" alt="Before and after at Dental Art Clinic" width="400" height="400">
+				<a href="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-2.webp" class="glightbox home-cases__item" data-gallery="cases">
+					<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-2.webp" alt="Before and after at Dental Art Clinic" width="400" height="400">
 				</a>
 			</div>
 			<div class="home-cases__action">
@@ -43,14 +43,14 @@ get_header(); ?>
 		<div class="container">
 			<h2 class="home-clinic__title">The Clinic</h2>
 			<div class="home-clinic__grid">
-				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/smilers-aligners-at-dental-art-clinic-by-dr-maria-charalambous-ivanova.webp' ); ?>" class="glightbox home-clinic__item" data-gallery="clinic">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/smilers-aligners-at-dental-art-clinic-by-dr-maria-charalambous-ivanova.webp' ); ?>" alt="Smilers aligners at Dental Art Clinic" width="400" height="400">
+				<a href="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/smilers-aligners-at-dental-art-clinic-by-dr-maria-charalambous-ivanova.webp" class="glightbox home-clinic__item" data-gallery="clinic">
+					<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/smilers-aligners-at-dental-art-clinic-by-dr-maria-charalambous-ivanova.webp" alt="Smilers aligners at Dental Art Clinic" width="400" height="400">
 				</a>
-				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/smilers-at-dental-art-clinic-in-limassol.webp' ); ?>" class="glightbox home-clinic__item" data-gallery="clinic">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/smilers-at-dental-art-clinic-in-limassol.webp' ); ?>" alt="Smilers at Dental Art Clinic in Limassol" width="400" height="400">
+				<a href="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/smilers-at-dental-art-clinic-in-limassol.webp" class="glightbox home-clinic__item" data-gallery="clinic">
+					<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/smilers-at-dental-art-clinic-in-limassol.webp" alt="Smilers at Dental Art Clinic in Limassol" width="400" height="400">
 				</a>
-				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/dr-maria-charalambous-ivanova-dental-clinic-in-limassol.webp' ); ?>" class="glightbox home-clinic__item" data-gallery="clinic">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/dr-maria-charalambous-ivanova-dental-clinic-in-limassol.webp' ); ?>" alt="Dr. Maria Charalambous-Ivanova at Dental Art Clinic" width="400" height="400">
+				<a href="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/dr-maria-charalambous-ivanova-dental-clinic-in-limassol.webp" class="glightbox home-clinic__item" data-gallery="clinic">
+					<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/dr-maria-charalambous-ivanova-dental-clinic-in-limassol.webp" alt="Dr. Maria Charalambous-Ivanova at Dental Art Clinic" width="400" height="400">
 				</a>
 			</div>
 		</div>
@@ -109,7 +109,7 @@ get_header(); ?>
 	</section>
 
 	<!-- Existing CTA -->
-	<section class="home-cta" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/smilers-at-dental-art-clinic-in-limassol.webp' ); ?>');">
+	<section class="home-cta" style="background-image: url('http://davidb1646.sg-host.com/wp-content/uploads/2026/02/smilers-at-dental-art-clinic-in-limassol.webp');">
 		<div class="home-cta__overlay"></div>
 		<div class="container home-cta__inner">
 			<h2 class="home-cta__title">Ready to Transform Your Smile?</h2>
