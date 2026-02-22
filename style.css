@@ -165,7 +165,7 @@ h4,
 h5,
 h6 {
   font-family: var(--mci-font-heading);
-  font-weight: var(--mci-font-weight-bold);
+  font-weight: 400;
   color: var(--mci-color-text);
   line-height: 1.15;
   letter-spacing: -0.02em;
