@@ -1048,7 +1048,6 @@ hr {
 
 .home-hero {
   position: relative;
-  background-color: var(--mci-color-secondary);
   overflow: hidden;
 }
 
