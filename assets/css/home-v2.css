@@ -94,7 +94,6 @@
 }
 
 .accent-font {
-  font-family: 'STIX Two Text', serif;
   font-style: italic;
   color: var(--mci-color-primary);
 }
