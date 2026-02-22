@@ -286,10 +286,18 @@
   pointer-events: none;
 }
 
-.home-v2-gentle__card-title,
-.home-v2-gentle__card-text {
+.home-v2-gentle__card-content {
   position: relative;
   z-index: 1;
+  transition: transform 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.home-v2-gentle__card:hover .home-v2-gentle__card-content {
+  transform: translateY(-2.75rem);
+}
+
+.home-v2-gentle__card-title,
+.home-v2-gentle__card-text {
   color: var(--mci-color-white);
 }
 
@@ -304,6 +312,26 @@
   line-height: 1.65;
   margin: 0;
   max-width: 60ch;
+}
+
+.home-v2-gentle__card-link {
+  display: inline-block;
+  margin-top: var(--mci-spacing-md);
+  padding: var(--mci-spacing-xs) var(--mci-spacing-md);
+  font-size: 0.9375rem;
+  font-weight: var(--mci-font-weight-semibold);
+  color: var(--mci-color-white);
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: var(--mci-radius-md);
+  text-decoration: none;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.home-v2-gentle__card-link:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.7);
+  color: var(--mci-color-white);
 }
 
 /* Comprehensive Services Grid */
