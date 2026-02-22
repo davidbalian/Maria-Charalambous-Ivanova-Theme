@@ -93,6 +93,12 @@
   color: var(--mci-color-text);
 }
 
+.accent-font {
+  font-family: 'STIX Two Text', serif;
+  font-style: italic;
+  color: var(--mci-color-primary);
+}
+
 .home-hero__text-col .home-hero__text {
   color: var(--mci-color-text-light);
 }

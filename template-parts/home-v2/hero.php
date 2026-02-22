@@ -6,7 +6,7 @@ $hero_image_url = 'http://davidb1646.sg-host.com/wp-content/uploads/2026/02/dent
 		<div class="home-hero__text-col">
 			<div class="home-hero__inner">
 				<div class="home-hero__content">
-					<h1 class="home-hero__title fade-in fade-in-delay-0">Excellence in Dentistry Is Designed — Not Accidental</h1>
+					<h1 class="home-hero__title fade-in fade-in-delay-0">Excellence in Dentistry Is <span class="accent-font">Designed</span> — Not Accidental</h1>
 					<p class="home-hero__text fade-in fade-in-delay-1">At Dental Art Clinic Limassol, dentistry is approached as a combination of scientific precision, strategic planning, and aesthetic harmony.</p>
 					<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-primary fade-in fade-in-delay-2">Book a Consultation</a>
 				</div>

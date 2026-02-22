@@ -1,7 +1,7 @@
 <!-- Comprehensive Services Section -->
 <section class="home-v2-comprehensive">
 	<div class="container">
-		<h2 class="home-v2-comprehensive__title">Comprehensive Dental Care for Every Need</h2>
+		<h2 class="home-v2-comprehensive__title">Comprehensive Dental Care for <span class="accent-font">Every Need</span></h2>
 		<div class="home-v2-comprehensive__grid">
 			<div class="home-v2-comprehensive__box">
 				<div class="home-v2-comprehensive__box-icon home-v2-comprehensive__box-icon--img">
