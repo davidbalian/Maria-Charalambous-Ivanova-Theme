@@ -1294,8 +1294,6 @@ hr {
 
 .home-cases__item {
   display: block;
-  border-radius: var(--mci-radius-md);
-  overflow: hidden;
   line-height: 0;
 }
 
