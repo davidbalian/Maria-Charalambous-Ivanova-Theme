@@ -582,7 +582,7 @@ blockquote p {
 }
 
 .btn-outline {
-  background-color: transparent;
+  background-color: var(--mci-color-white);
   color: var(--mci-color-primary);
   box-shadow: 
     inset 0 0 0 1px rgba(188, 167, 139, 0.5),
