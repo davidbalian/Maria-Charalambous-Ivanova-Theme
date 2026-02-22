@@ -11,8 +11,8 @@
 				<p class="home-v2-comprehensive__box-text">Natural-looking smile transformations</p>
 			</div>
 			<div class="home-v2-comprehensive__box">
-				<div class="home-v2-comprehensive__box-icon home-v2-comprehensive__box-icon--img">
-					<img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/02/emax-logo.avif' ) ); ?>" alt="Emax Veneers" width="64" height="64">
+				<div class="home-v2-comprehensive__box-icon home-v2-comprehensive__box-icon--img home-v2-comprehensive__box-icon--emax">
+					<img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/02/emax-logo.avif' ) ); ?>" alt="Emax Veneers" width="140" height="96">
 				</div>
 				<h3 class="home-v2-comprehensive__box-title">Emax Veneers</h3>
 				<p class="home-v2-comprehensive__box-text">Premium ceramic smile design</p>

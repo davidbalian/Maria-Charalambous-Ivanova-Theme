@@ -385,9 +385,14 @@
 }
 
 .home-v2-comprehensive__box-icon--img img {
-  width: 64px;
-  height: 64px;
+  width: 96px;
+  height: 96px;
   object-fit: contain;
+}
+
+.home-v2-comprehensive__box-icon--emax img {
+  width: 140px;
+  height: auto;
 }
 
 .home-v2-comprehensive__box-title {
