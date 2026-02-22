@@ -10,9 +10,28 @@ get_header(); ?>
 <main id="main" class="site-main">
 
 	<?php get_template_part( 'template-parts/home-v2/hero' ); ?>
-	
-	<?php get_template_part( 'template-parts/home-v2/services' ); ?>
-	
+
+	<!-- Before & After -->
+	<section class="home-cases">
+		<div class="container">
+			<h2 class="home-cases__title">Before &amp; After</h2>
+			<div class="home-cases__grid">
+				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol.webp' ); ?>" class="glightbox home-cases__item" data-gallery="cases">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol.webp' ); ?>" alt="Before and after at Dental Art Clinic" width="400" height="300">
+				</a>
+				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp' ); ?>" class="glightbox home-cases__item" data-gallery="cases">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp' ); ?>" alt="Before and after at Dental Art Clinic" width="400" height="300">
+				</a>
+				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-2.webp' ); ?>" class="glightbox home-cases__item" data-gallery="cases">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-2.webp' ); ?>" alt="Before and after at Dental Art Clinic" width="400" height="300">
+				</a>
+			</div>
+			<div class="home-cases__action">
+				<a href="<?php echo esc_url( home_url( '/gallery/' ) ); ?>" class="btn btn-outline">View All</a>
+			</div>
+		</div>
+	</section>
+
 	<?php get_template_part( 'template-parts/home-v2/gentle-touch' ); ?>
 	
 	<?php get_template_part( 'template-parts/home-v2/comprehensive-services' ); ?>
@@ -47,31 +66,6 @@ get_header(); ?>
 			</div>
 		</div>
 	</section>
-
-	<!-- Existing Case Studies -->
-	<section class="home-cases">
-		<div class="container">
-			<h2 class="home-cases__title">Before &amp; After</h2>
-			<div class="home-cases__grid">
-				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol.webp' ); ?>" class="glightbox home-cases__item" data-gallery="cases">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol.webp' ); ?>" alt="Before and after at Dental Art Clinic" width="400" height="300">
-				</a>
-				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp' ); ?>" class="glightbox home-cases__item" data-gallery="cases">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp' ); ?>" alt="Before and after at Dental Art Clinic" width="400" height="300">
-				</a>
-				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-2.webp' ); ?>" class="glightbox home-cases__item" data-gallery="cases">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-2.webp' ); ?>" alt="Before and after at Dental Art Clinic" width="400" height="300">
-				</a>
-			</div>
-			<div class="home-cases__action">
-				<a href="<?php echo esc_url( home_url( '/gallery/' ) ); ?>" class="btn btn-outline">View All</a>
-			</div>
-		</div>
-	</section>
-
-	<?php get_template_part( 'template-parts/home-v2/consultation' ); ?>
-	
-	<?php get_template_part( 'template-parts/home-v2/benefits' ); ?>
 
 	<!-- Existing Contact -->
 	<section class="home-contact">
@@ -123,6 +117,8 @@ get_header(); ?>
 			<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-primary">Book Your Appointment</a>
 		</div>
 	</section>
+
+	<?php get_template_part( 'template-parts/home-v2/consultation' ); ?>
 
 </main>
 
