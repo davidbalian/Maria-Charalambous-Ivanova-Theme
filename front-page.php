@@ -16,13 +16,13 @@ get_header(); ?>
 		<div class="container">
 			<h2 class="home-cases__title">Before &amp; After</h2>
 			<div class="home-cases__grid">
-				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol.webp' ); ?>" class="glightbox home-cases__item" data-gallery="cases">
+				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol.webp' ); ?>" class="glightbox home-cases__item" data-gallery="cases" title="">
 					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol.webp' ); ?>" alt="Before and after at Dental Art Clinic" width="400" height="400">
 				</a>
-				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp' ); ?>" class="glightbox home-cases__item" data-gallery="cases">
+				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp' ); ?>" class="glightbox home-cases__item" data-gallery="cases" title="">
 					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp' ); ?>" alt="Before and after at Dental Art Clinic" width="400" height="400">
 				</a>
-				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-2.webp' ); ?>" class="glightbox home-cases__item" data-gallery="cases">
+				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-2.webp' ); ?>" class="glightbox home-cases__item" data-gallery="cases" title="">
 					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-2.webp' ); ?>" alt="Before and after at Dental Art Clinic" width="400" height="400">
 				</a>
 			</div>
@@ -80,7 +80,7 @@ get_header(); ?>
 				foreach ( $clinic_images as $file => $alt ) :
 					$url = $clinic_base . $file;
 				?>
-				<a href="<?php echo esc_url( $url ); ?>" class="glightbox home-clinic__item" data-gallery="clinic">
+				<a href="<?php echo esc_url( $url ); ?>" class="glightbox home-clinic__item" data-gallery="clinic" title="">
 					<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" loading="lazy">
 				</a>
 				<?php endforeach; ?>

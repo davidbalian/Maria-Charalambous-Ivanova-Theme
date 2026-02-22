@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		var $clinicGrid = jQuery('.home-clinic__grid--masonry');
 		if ($clinicGrid.length) {
 			$clinicGrid.justifiedGallery({
-				rowHeight: 220,
+				rowHeight: 320,
 				margins: 12,
 				lastRow: 'nojustify',
 			});

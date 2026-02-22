@@ -1250,12 +1250,12 @@ hr {
   display: block;
   border-radius: var(--mci-radius-md);
   object-fit: cover;
-  transform: scale(1.04);
-  transition: transform 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transform: scale(1);
+  transition: transform 0.45s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
 .home-clinic__item:hover img {
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 
 /* ---- 16e. Reviews ---- */
@@ -1314,12 +1314,12 @@ hr {
   object-fit: cover;
   display: block;
   border-radius: var(--mci-radius-md);
-  transform: scale(1.04);
-  transition: transform 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transform: scale(1);
+  transition: transform 0.45s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
 .home-cases__item:hover img {
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 
 .home-cases__action {
