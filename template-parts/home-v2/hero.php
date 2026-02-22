@@ -1,4 +1,4 @@
-<!-- Hero Section -->
+<!-- Hero Section: Two-column layout — text (transparent bg) | image -->
 <?php
 $hero_image_url = 'http://davidb1646.sg-host.com/wp-content/uploads/2026/02/dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-tv-screen-dental-work.avif';
 ?>
@@ -33,8 +33,10 @@ $hero_image_url = 'http://davidb1646.sg-host.com/wp-content/uploads/2026/02/dent
 					</div>
 				</div>
 			</div>
-			<div class="home-hero__image">
-				<img src="<?php echo esc_url( $hero_image_url ); ?>" alt="Dental Art Clinic treatment room with TV screen and dental work." width="800" height="600" />
+			<div class="home-hero__image-col">
+				<div class="home-hero__image">
+					<img src="<?php echo esc_url( $hero_image_url ); ?>" alt="Dental Art Clinic treatment room with TV screen and dental work." width="800" height="600" />
+				</div>
 			</div>
 		</div>
 	</section>
