@@ -289,12 +289,11 @@
 .home-v2-gentle__card-content {
   position: relative;
   z-index: 1;
-  transform: translateY(2.75rem);
   transition: transform 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .home-v2-gentle__card:hover .home-v2-gentle__card-content {
-  transform: translateY(0);
+  transform: translateY(-2.75rem);
 }
 
 .home-v2-gentle__card-title,
@@ -326,7 +325,14 @@
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: var(--mci-radius-md);
   text-decoration: none;
-  transition: background 0.25s ease, border-color 0.25s ease;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, background 0.25s ease, border-color 0.25s ease;
+}
+
+.home-v2-gentle__card:hover .home-v2-gentle__card-link {
+  opacity: 1;
+  visibility: visible;
 }
 
 .home-v2-gentle__card-link:hover {
