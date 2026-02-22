@@ -481,7 +481,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: var(--mci-spacing-lg);
+  gap: var(--mci-spacing-sm);
   margin: var(--mci-spacing-lg) 0 0;
   flex-wrap: wrap;
 }
@@ -631,7 +631,7 @@
   .home-v2-doctor__philosophy {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: var(--mci-spacing-md);
+    gap: var(--mci-spacing-sm);
   }
 
   .home-v2-doctor__philosophy-divider {
