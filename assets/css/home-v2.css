@@ -293,7 +293,7 @@
 }
 
 .home-v2-gentle__card:hover .home-v2-gentle__card-content {
-  transform: translateY(-2.75rem);
+  transform: translateY(calc(-1 * (var(--mci-spacing-md) + var(--mci-spacing-xs) * 2 + 1em + 2px)));
 }
 
 .home-v2-gentle__card-title,
