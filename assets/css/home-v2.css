@@ -374,8 +374,6 @@
 }
 
 .home-v2-comprehensive__box-icon {
-  width: 40px;
-  height: 40px;
   margin: 0 auto var(--mci-spacing-sm);
   display: flex;
   align-items: center;
