@@ -254,12 +254,12 @@
 .home-v2-gentle__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--mci-spacing-xl);
+  gap: var(--mci-spacing-lg);
 }
 
 .home-v2-gentle__card {
   position: relative;
-  min-height: 350px;
+  min-height: 450px;
   background-size: cover;
   background-position: center;
   background-color: var(--mci-color-background);
@@ -269,7 +269,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
-  padding: var(--mci-spacing-xl);
+  padding: var(--mci-spacing-lg);
   transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
@@ -278,16 +278,12 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    135deg,
+    to top right,
     transparent 20%,
     rgba(148, 127, 99, 0.6) 70%,
     rgba(61, 52, 47, 0.85) 100%
   );
   pointer-events: none;
-}
-
-.home-v2-gentle__card:hover {
-  transform: translateY(-4px);
 }
 
 .home-v2-gentle__card-title,
@@ -300,13 +296,14 @@
 .home-v2-gentle__card-title {
   font-size: 1.35rem;
   font-weight: var(--mci-font-weight-bold);
-  margin-bottom: var(--mci-spacing-sm);
+  margin-bottom: var(--mci-spacing-xs);
 }
 
 .home-v2-gentle__card-text {
   font-size: 0.9375rem;
   line-height: 1.65;
   margin: 0;
+  max-width: 60ch;
 }
 
 /* Comprehensive Services Grid */
