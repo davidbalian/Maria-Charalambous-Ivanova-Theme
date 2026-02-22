@@ -16,14 +16,14 @@ get_header(); ?>
 		<div class="container">
 			<h2 class="home-cases__title">Before &amp; After</h2>
 			<div class="home-cases__grid">
-				<a href="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol.webp" class="glightbox home-cases__item" data-gallery="cases">
-					<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol.webp" alt="Before and after at Dental Art Clinic" width="400" height="400">
+				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol.webp' ); ?>" class="glightbox home-cases__item" data-gallery="cases">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol.webp' ); ?>" alt="Before and after at Dental Art Clinic" width="400" height="400">
 				</a>
-				<a href="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp" class="glightbox home-cases__item" data-gallery="cases">
-					<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp" alt="Before and after at Dental Art Clinic" width="400" height="400">
+				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp' ); ?>" class="glightbox home-cases__item" data-gallery="cases">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp' ); ?>" alt="Before and after at Dental Art Clinic" width="400" height="400">
 				</a>
-				<a href="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-2.webp" class="glightbox home-cases__item" data-gallery="cases">
-					<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-2.webp" alt="Before and after at Dental Art Clinic" width="400" height="400">
+				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-2.webp' ); ?>" class="glightbox home-cases__item" data-gallery="cases">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-2.webp' ); ?>" alt="Before and after at Dental Art Clinic" width="400" height="400">
 				</a>
 			</div>
 			<div class="home-cases__action">
@@ -38,20 +38,52 @@ get_header(); ?>
 	
 	<?php get_template_part( 'template-parts/home-v2/doctor' ); ?>
 
-	<!-- Existing Clinic Gallery -->
+	<!-- The Clinic -->
 	<section class="home-clinic">
 		<div class="container">
 			<h2 class="home-clinic__title">The Clinic</h2>
-			<div class="home-clinic__grid">
-				<a href="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/smilers-aligners-at-dental-art-clinic-by-dr-maria-charalambous-ivanova.webp" class="glightbox home-clinic__item" data-gallery="clinic">
-					<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/smilers-aligners-at-dental-art-clinic-by-dr-maria-charalambous-ivanova.webp" alt="Smilers aligners at Dental Art Clinic" width="400" height="400">
+			<div class="home-clinic__grid home-clinic__grid--masonry">
+				<?php
+				$clinic_images = array(
+					'dental-art-clinic-by-dr-maria-charalambous-ivanova-bathroom-toilet-marble-sink-curtain.avif' => 'Dental Art Clinic bathroom',
+					'dental-art-clinic-by-dr-maria-charalambous-ivanova-ceiling-lighting-tv-screen.avif' => 'Dental Art Clinic ceiling and TV',
+					'dental-art-clinic-by-dr-maria-charalambous-ivanova-circular-mirror-orchid-artwork-smile.avif' => 'Dental Art Clinic mirror and orchid',
+					'dental-art-clinic-by-dr-maria-charalambous-ivanova-clinic-name-wall-flowers.avif' => 'Dental Art Clinic name and flowers',
+					'dental-art-clinic-by-dr-maria-charalambous-ivanova-logo-emblem-wall.avif' => 'Dental Art Clinic logo emblem',
+					'dental-art-clinic-by-dr-maria-charalambous-ivanova-mirror-orchid-artwork-screens.avif' => 'Dental Art Clinic mirror and screens',
+					'dental-art-clinic-by-dr-maria-charalambous-ivanova-modern-bathroom-marble-sink.avif' => 'Dental Art Clinic modern bathroom',
+					'dental-art-clinic-by-dr-maria-charalambous-ivanova-pink-flowers-big-smiles-quote.avif' => 'Dental Art Clinic pink flowers and quote',
+					'dental-art-clinic-by-dr-maria-charalambous-ivanova-pink-flowers-clinic-logo.avif' => 'Dental Art Clinic pink flowers and logo',
+					'dental-art-clinic-by-dr-maria-charalambous-ivanova-reception-area-marble-counter.avif' => 'Dental Art Clinic reception marble counter',
+					'dental-art-clinic-by-dr-maria-charalambous-ivanova-reception-desk-view.avif' => 'Dental Art Clinic reception desk',
+					'dental-art-clinic-by-dr-maria-charalambous-ivanova-reception-desk-wooden-panels-alt.avif' => 'Dental Art Clinic reception wooden panels',
+					'dental-art-clinic-by-dr-maria-charalambous-ivanova-reception-desk-wooden-panels.avif' => 'Dental Art Clinic reception desk wooden panels',
+					'dental-art-clinic-by-dr-maria-charalambous-ivanova-reception-lobby-clinic-name.avif' => 'Dental Art Clinic reception lobby',
+					'dental-art-clinic-by-dr-maria-charalambous-ivanova-reception-marble-desk-flowers.avif' => 'Dental Art Clinic reception marble desk',
+					'dental-art-clinic-by-dr-maria-charalambous-ivanova-reception-waiting-area-curved-partitions.avif' => 'Dental Art Clinic waiting area',
+					'dental-art-clinic-by-dr-maria-charalambous-ivanova-smile-3d-letters-closeup.avif' => 'Dental Art Clinic smile quote',
+					'dental-art-clinic-by-dr-maria-charalambous-ivanova-smile-quote-wall-text.avif' => 'Dental Art Clinic smile quote wall',
+					'dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-curtains-desk.avif' => 'Dental Art Clinic treatment room',
+					'dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-dental-chair-screens.avif' => 'Dental Art Clinic treatment room dental chair',
+					'dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-dental-chair.avif' => 'Dental Art Clinic dental chair',
+					'dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-dental-equipment-alt.avif' => 'Dental Art Clinic dental equipment',
+					'dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-dental-equipment.avif' => 'Dental Art Clinic treatment equipment',
+					'dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-desk-curtains.avif' => 'Dental Art Clinic treatment room desk',
+					'dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-smile-quote-wall.avif' => 'Dental Art Clinic treatment room smile quote',
+					'dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-tv-screen-dental-work.avif' => 'Dental Art Clinic treatment room TV',
+					'dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-wide-angle-equipment.avif' => 'Dental Art Clinic treatment room wide angle',
+					'dental-art-clinic-by-dr-maria-charalambous-ivanova-white-orchids-big-smiles-quote.avif' => 'Dental Art Clinic white orchids',
+					'dental-art-clinic-by-dr-maria-charalambous-ivanova-waiting-room-marble-interior.avif' => 'Dental Art Clinic waiting room',
+					'dental-art-clinic-by-dr-maria-charalambous-ivanova-waiting-area-big-smiles-quote.avif' => 'Dental Art Clinic waiting area quote',
+				);
+				$clinic_base = 'http://davidb1646.sg-host.com/wp-content/uploads/2026/02/';
+				foreach ( $clinic_images as $file => $alt ) :
+					$url = $clinic_base . $file;
+				?>
+				<a href="<?php echo esc_url( $url ); ?>" class="glightbox home-clinic__item" data-gallery="clinic">
+					<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" loading="lazy">
 				</a>
-				<a href="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/smilers-at-dental-art-clinic-in-limassol.webp" class="glightbox home-clinic__item" data-gallery="clinic">
-					<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/smilers-at-dental-art-clinic-in-limassol.webp" alt="Smilers at Dental Art Clinic in Limassol" width="400" height="400">
-				</a>
-				<a href="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/dr-maria-charalambous-ivanova-dental-clinic-in-limassol.webp" class="glightbox home-clinic__item" data-gallery="clinic">
-					<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/dr-maria-charalambous-ivanova-dental-clinic-in-limassol.webp" alt="Dr. Maria Charalambous-Ivanova at Dental Art Clinic" width="400" height="400">
-				</a>
+				<?php endforeach; ?>
 			</div>
 		</div>
 	</section>
@@ -109,7 +141,7 @@ get_header(); ?>
 	</section>
 
 	<!-- Existing CTA -->
-	<section class="home-cta" style="background-image: url('http://davidb1646.sg-host.com/wp-content/uploads/2026/02/smilers-at-dental-art-clinic-in-limassol.webp');">
+	<section class="home-cta" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/smilers-at-dental-art-clinic-in-limassol.webp' ); ?>');">
 		<div class="home-cta__overlay"></div>
 		<div class="container home-cta__inner">
 			<h2 class="home-cta__title">Ready to Transform Your Smile?</h2>

@@ -1231,6 +1231,22 @@ hr {
   gap: var(--mci-spacing-md);
 }
 
+/* Justified masonry: same markup/styling as home-cases, native aspect ratio */
+.home-clinic__grid--masonry {
+  display: block;
+  column-count: 3;
+  column-gap: var(--mci-spacing-md);
+}
+
+.home-clinic__grid--masonry .home-clinic__item {
+  break-inside: avoid;
+  margin-bottom: var(--mci-spacing-md);
+}
+
+.home-clinic__grid--masonry .home-clinic__item:last-child {
+  margin-bottom: 0;
+}
+
 .home-clinic__item {
   display: block;
   border-radius: var(--mci-radius-md);
@@ -1240,13 +1256,16 @@ hr {
 
 .home-clinic__item img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: auto;
+  display: block;
+  border-radius: var(--mci-radius-md);
   object-fit: cover;
+  transform: scale(1.04);
   transition: transform 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .home-clinic__item:hover img {
-  transform: scale(1.04);
+  transform: scale(1.1);
 }
 
 /* ---- 16e. Reviews ---- */
@@ -1806,6 +1825,10 @@ hr {
 
   .home-clinic__grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-clinic__grid--masonry {
+    column-count: 1;
   }
 
   .home-cases__grid {

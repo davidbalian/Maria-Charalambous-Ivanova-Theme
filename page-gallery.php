@@ -22,14 +22,14 @@ get_header(); ?>
 		<div class="container">
 			<h2 class="gallery-content__heading">Before &amp; After</h2>
 			<div class="gallery-grid">
-				<a href="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol.webp" class="glightbox gallery-grid__item" data-gallery="gallery">
-					<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol.webp" alt="Before and after at Dental Art Clinic Limassol" width="400" height="300">
+				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol.webp' ); ?>" class="glightbox gallery-grid__item" data-gallery="gallery">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol.webp' ); ?>" alt="Before and after at Dental Art Clinic Limassol" width="400" height="300">
 				</a>
-				<a href="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp" class="glightbox gallery-grid__item" data-gallery="gallery">
-					<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp" alt="Before and after at Dental Art Clinic Limassol" width="400" height="300">
+				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp' ); ?>" class="glightbox gallery-grid__item" data-gallery="gallery">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp' ); ?>" alt="Before and after at Dental Art Clinic Limassol" width="400" height="300">
 				</a>
-				<a href="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-2.webp" class="glightbox gallery-grid__item" data-gallery="gallery">
-					<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-2.webp" alt="Before and after at Dental Art Clinic Limassol" width="400" height="300">
+				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-2.webp' ); ?>" class="glightbox gallery-grid__item" data-gallery="gallery">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-2.webp' ); ?>" alt="Before and after at Dental Art Clinic Limassol" width="400" height="300">
 				</a>
 			</div>
 		</div>
