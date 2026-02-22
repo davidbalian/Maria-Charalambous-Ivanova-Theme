@@ -315,8 +315,11 @@
 }
 
 .home-v2-gentle__card-link {
-  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 100%;
   margin-top: var(--mci-spacing-md);
+  display: inline-block;
   padding: var(--mci-spacing-xs) var(--mci-spacing-md);
   font-size: 0.9375rem;
   font-weight: var(--mci-font-weight-semibold);
@@ -326,13 +329,11 @@
   border-radius: var(--mci-radius-md);
   text-decoration: none;
   opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease, background 0.25s ease, border-color 0.25s ease;
+  transition: opacity 0.3s ease, background 0.25s ease, border-color 0.25s ease;
 }
 
 .home-v2-gentle__card:hover .home-v2-gentle__card-link {
   opacity: 1;
-  visibility: visible;
 }
 
 .home-v2-gentle__card-link:hover {
