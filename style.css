@@ -1277,7 +1277,7 @@ hr {
 
 .home-cases {
   padding: var(--mci-spacing-3xl) 0;
-  background-color: var(--mci-color-background);
+  background-color: var(--mci-color-white);
 }
 
 .home-cases__title {
@@ -1301,7 +1301,7 @@ hr {
 
 .home-cases__item img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   transition: transform 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
