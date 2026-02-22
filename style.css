@@ -1062,7 +1062,7 @@ hr {
 .home-hero__title {
   font-family: var(--mci-font-heading);
   font-size: clamp(2.4rem, 5.5vw, 3.4rem);
-  font-weight: var(--mci-font-weight-bold);
+  font-weight: 400;
   letter-spacing: -0.035em;
   line-height: 1.1;
   margin-bottom: var(--mci-spacing-md);
