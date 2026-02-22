@@ -1231,20 +1231,10 @@ hr {
   gap: var(--mci-spacing-md);
 }
 
-/* Justified masonry: same markup/styling as home-cases, native aspect ratio */
+/* Justified Gallery container: row-based justified layout (JS) */
 .home-clinic__grid--masonry {
   display: block;
-  column-count: 3;
-  column-gap: var(--mci-spacing-md);
-}
-
-.home-clinic__grid--masonry .home-clinic__item {
-  break-inside: avoid;
-  margin-bottom: var(--mci-spacing-md);
-}
-
-.home-clinic__grid--masonry .home-clinic__item:last-child {
-  margin-bottom: 0;
+  position: relative;
 }
 
 .home-clinic__item {
@@ -1825,10 +1815,6 @@ hr {
 
   .home-clinic__grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .home-clinic__grid--masonry {
-    column-count: 1;
   }
 
   .home-cases__grid {
