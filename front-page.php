@@ -77,10 +77,13 @@ get_header(); ?>
 					'dental-art-clinic-by-dr-maria-charalambous-ivanova-waiting-area-big-smiles-quote.avif' => 'Dental Art Clinic waiting area quote',
 				);
 				$clinic_base = 'http://davidb1646.sg-host.com/wp-content/uploads/2026/02/';
+				$clinic_delay = 0;
 				foreach ( $clinic_images as $file => $alt ) :
 					$url = $clinic_base . $file;
+					$delay_class = 'fade-in-delay-' . ( $clinic_delay % 7 );
+					$clinic_delay++;
 				?>
-				<a href="<?php echo esc_url( $url ); ?>" class="glightbox home-clinic__item" data-gallery="clinic" title="" data-title="" data-description="">
+				<a href="<?php echo esc_url( $url ); ?>" class="glightbox home-clinic__item fade-in <?php echo esc_attr( $delay_class ); ?>" data-gallery="clinic" title="" data-title="" data-description="">
 					<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" loading="lazy">
 				</a>
 				<?php endforeach; ?>

@@ -1228,15 +1228,8 @@ hr {
 .home-clinic__grid {
   column-count: 4;
   column-gap: 2px;
-  min-height: 600px;
   border-radius: var(--mci-radius-md);
   overflow: hidden;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.home-clinic__grid.loaded {
-  opacity: 1;
 }
 
 .home-clinic__item {
