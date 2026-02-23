@@ -1212,71 +1212,6 @@ hr {
   object-fit: cover;
 }
 
-/* ---- 16d. The Clinic ---- */
-
-.home-clinic {
-  padding: var(--mci-spacing-3xl) 0;
-  background-color: var(--mci-color-background);
-}
-
-.home-clinic__title {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: var(--mci-spacing-xl);
-}
-
-.home-clinic__grid {
-  position: relative;
-  border-radius: var(--mci-radius-md);
-  overflow: hidden;
-}
-
-/* Fallback before justified layout runs (no JS or images not loaded yet). */
-.home-clinic__grid:not(.home-clinic__grid--justified) {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2px;
-}
-
-.home-clinic__item {
-  display: block;
-  border-radius: 2px;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-  margin: 0;
-  line-height: 0;
-  -webkit-mask-image: -webkit-radial-gradient(white, black);
-  mask-image: radial-gradient(white, black);
-  transform: translateZ(0);
-}
-
-.home-clinic__grid:not(.home-clinic__grid--justified) .home-clinic__item {
-  flex: 1 1 auto;
-  min-width: 200px;
-  max-width: 33%;
-}
-
-.home-clinic__item img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  will-change: transform;
-  transform: scale(1) translateZ(0);
-  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.home-clinic__grid:not(.home-clinic__grid--justified) .home-clinic__item img {
-  height: auto;
-}
-
-.home-clinic__item:hover img {
-  transform: scale(1.08) translateZ(0);
-}
-
 /* ---- 16e. Reviews ---- */
 
 .home-reviews {
@@ -1839,11 +1774,6 @@ hr {
 
   .home-about__image {
     order: -1;
-  }
-
-  .home-clinic__grid:not(.home-clinic__grid--justified) .home-clinic__item {
-    min-width: 140px;
-    max-width: 50%;
   }
 
   .home-cases__grid {

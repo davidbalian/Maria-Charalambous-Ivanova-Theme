@@ -2,105 +2,6 @@
  * Main theme JS.
  */
 
-/** Justified layout: target row height and gap (px). */
-var CLINIC_ROW_HEIGHT = 220;
-var CLINIC_GAP = 2;
-
-/**
- * Compute justified layout boxes for items with given aspect ratios.
- * @param {number} containerWidth - Container width in px.
- * @param {number[]} aspectRatios - Aspect ratio (width/height) per item.
- * @param {number} targetRowHeight - Target row height in px.
- * @param {number} gap - Gap between items in px.
- * @returns {{ boxes: Array<{left: number, top: number, width: number, height: number}>, containerHeight: number }}
- */
-function computeJustifiedLayout(containerWidth, aspectRatios, targetRowHeight, gap) {
-	var boxes = [];
-	var containerHeight = 0;
-	var rowStart = 0;
-	var rowTop = 0;
-
-	while (rowStart < aspectRatios.length) {
-		var rowRatios = [];
-		var rowSum = 0;
-		var i = rowStart;
-		while (i < aspectRatios.length) {
-			var r = aspectRatios[i];
-			var wouldBeWidth = (rowSum + r) * targetRowHeight + (rowRatios.length) * gap;
-			if (rowRatios.length > 0 && wouldBeWidth > containerWidth) break;
-			rowRatios.push(r);
-			rowSum += r;
-			i++;
-		}
-		var n = rowRatios.length;
-		var rowHeight = (containerWidth - (n - 1) * gap) / rowSum;
-		var left = 0;
-		for (var j = 0; j < rowRatios.length; j++) {
-			var w = rowRatios[j] * rowHeight;
-			boxes.push({ left: left, top: rowTop, width: Math.round(w), height: Math.round(rowHeight) });
-			left += Math.round(w) + gap;
-		}
-		rowTop += Math.round(rowHeight) + gap;
-		containerHeight = rowTop - gap;
-		rowStart += rowRatios.length;
-	}
-
-	return { boxes: boxes, containerHeight: containerHeight };
-}
-
-/**
- * Apply justified layout to #clinic-gallery and then init lightGallery on it.
- */
-function initClinicJustifiedGallery() {
-	var container = document.getElementById('clinic-gallery');
-	if (!container) return;
-
-	var links = [].slice.call(container.querySelectorAll('a.home-clinic__item'));
-	if (links.length === 0) return;
-
-	var imgs = links.map(function (a) { return a.querySelector('img'); }).filter(Boolean);
-	if (imgs.length !== links.length) return;
-
-	function runLayout() {
-		var containerWidth = container.getBoundingClientRect().width;
-		var aspectRatios = imgs.map(function (img) {
-			var w = img.naturalWidth || 1;
-			var h = img.naturalHeight || 1;
-			return w / h;
-		});
-		var result = computeJustifiedLayout(containerWidth, aspectRatios, CLINIC_ROW_HEIGHT, CLINIC_GAP);
-		container.classList.add('home-clinic__grid--justified');
-		container.style.height = result.containerHeight + 'px';
-		result.boxes.forEach(function (box, index) {
-			if (links[index]) {
-				links[index].style.position = 'absolute';
-				links[index].style.left = box.left + 'px';
-				links[index].style.top = box.top + 'px';
-				links[index].style.width = box.width + 'px';
-				links[index].style.height = box.height + 'px';
-			}
-		});
-		if (typeof lightGallery !== 'undefined' && typeof lgThumbnail !== 'undefined' && typeof lgZoom !== 'undefined') {
-			lightGallery(container, {
-				plugins: [lgThumbnail, lgZoom],
-				speed: 500,
-				loop: true,
-				selector: 'a',
-			});
-		}
-	}
-
-	var loaded = 0;
-	function maybeRun() {
-		loaded++;
-		if (loaded === imgs.length) runLayout();
-	}
-	imgs.forEach(function (img) {
-		if (img.complete && img.naturalWidth) maybeRun();
-		else img.addEventListener('load', maybeRun);
-	});
-}
-
 document.addEventListener('DOMContentLoaded', function () {
 	// lightGallery for cases and page (immediate).
 	if (typeof lightGallery !== 'undefined' && typeof lgThumbnail !== 'undefined' && typeof lgZoom !== 'undefined') {
@@ -116,9 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		});
 	}
-
-	// Clinic gallery: justified layout then lightGallery.
-	initClinicJustifiedGallery();
 
 	// Scroll-triggered fade-in animations
 	var observer = new IntersectionObserver(
