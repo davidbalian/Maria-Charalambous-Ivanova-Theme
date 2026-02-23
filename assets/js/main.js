@@ -161,20 +161,17 @@ document.addEventListener('DOMContentLoaded', function () {
 			clinicSlidesPerView = getClinicSlidesPerView();
 			clinicMaxIndex = Math.max(0, clinicSlides.length - clinicSlidesPerView);
 			clinicCurrentIndex = Math.min(clinicCurrentIndex, clinicMaxIndex);
-			if (clinicCurrentIndex % clinicSlidesPerView !== 0 && clinicCurrentIndex !== clinicMaxIndex) {
-				clinicCurrentIndex = Math.floor(clinicCurrentIndex / clinicSlidesPerView) * clinicSlidesPerView;
-			}
 			updateClinicSliderPosition();
 		}
 
 		if (clinicPrev && clinicNext && clinicSlides.length > 0) {
 			clinicPrev.addEventListener('click', function () {
-				clinicCurrentIndex = Math.max(0, clinicCurrentIndex - clinicSlidesPerView);
+				clinicCurrentIndex = Math.max(0, clinicCurrentIndex - 1);
 				updateClinicSliderPosition();
 			});
 
 			clinicNext.addEventListener('click', function () {
-				clinicCurrentIndex = Math.min(clinicMaxIndex, clinicCurrentIndex + clinicSlidesPerView);
+				clinicCurrentIndex = Math.min(clinicMaxIndex, clinicCurrentIndex + 1);
 				updateClinicSliderPosition();
 			});
 		}

@@ -628,6 +628,8 @@
 
   .home-v2-doctor__image {
     order: -1;
+    position: static;
+    top: auto;
   }
 
   .home-v2-doctor__philosophy {
