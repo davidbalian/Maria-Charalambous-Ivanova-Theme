@@ -112,4 +112,35 @@ document.addEventListener('DOMContentLoaded', function () {
 			closeMobileNav();
 		}
 	});
+
+	// Clinic gallery: fade in when all images loaded to avoid visible layout shift
+	var clinicGrid = document.querySelector('.home-clinic__grid');
+	if (clinicGrid) {
+		var clinicImgs = clinicGrid.querySelectorAll('img');
+		var pending = 0;
+		function maybeShow() {
+			if (pending <= 0) clinicGrid.classList.add('loaded');
+		}
+		clinicImgs.forEach(function (img) {
+			if (img.complete) return;
+			pending++;
+			img.addEventListener('load', function onLoad() {
+				img.removeEventListener('load', onLoad);
+				img.removeEventListener('error', onErr);
+				pending--;
+				maybeShow();
+			});
+			function onErr() {
+				img.removeEventListener('load', onLoad);
+				img.removeEventListener('error', onErr);
+				pending--;
+				maybeShow();
+			}
+			img.addEventListener('error', onErr);
+		});
+		if (pending === 0) clinicGrid.classList.add('loaded');
+		setTimeout(function () {
+			clinicGrid.classList.add('loaded');
+		}, 8000);
+	}
 });
