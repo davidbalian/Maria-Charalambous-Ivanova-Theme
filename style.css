@@ -1225,18 +1225,29 @@ hr {
   margin-bottom: var(--mci-spacing-xl);
 }
 
-.home-clinic__grid {
-  column-count: 4;
-  column-gap: 2px;
+.home-clinic__source {
+  display: none;
+}
+
+.home-clinic__masonry {
+  --col-count: 4;
+  display: grid;
+  grid-template-columns: repeat(var(--col-count), 1fr);
+  gap: 2px;
   border-radius: var(--mci-radius-md);
   overflow: hidden;
 }
 
+.masonry__column {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
 .home-clinic__item {
-  display: inline-block;
+  display: block;
   width: 100%;
-  margin-bottom: 2px;
-  break-inside: avoid;
+  margin: 0;
   border-radius: 2px;
   overflow: hidden;
   position: relative;
@@ -1759,8 +1770,8 @@ hr {
    ========================================================================== */
 
 @media (max-width: 1024px) {
-  .home-clinic__grid {
-    column-count: 3;
+  .home-clinic__masonry {
+    --col-count: 3;
   }
 }
 
@@ -1832,8 +1843,8 @@ hr {
     order: -1;
   }
 
-  .home-clinic__grid {
-    column-count: 2;
+  .home-clinic__masonry {
+    --col-count: 2;
   }
 
   .home-cases__grid {

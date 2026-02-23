@@ -113,4 +113,39 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	});
 
+	// Clinic masonry: distribute items from source into columns
+	var masonrySource = document.getElementById('masonry-source');
+	var masonryLayout = document.getElementById('masonry-layout');
+	if (masonrySource && masonryLayout) {
+		var masonryColumns = masonryLayout.querySelectorAll('.masonry__column');
+		var masonryItems = Array.from(masonrySource.children);
+		var masonryLastCount;
+
+		function initMasonryLayout() {
+			var colCount = parseInt(
+				getComputedStyle(masonryLayout).getPropertyValue('--col-count').trim(),
+				10
+			) || 4;
+			if (colCount === masonryLastCount) return;
+			masonryLastCount = colCount;
+			for (var c = 0; c < masonryColumns.length; c++) {
+				masonryColumns[c].innerHTML = '';
+			}
+			for (var i = 0; i < masonryItems.length; i++) {
+				var col = masonryColumns[i % colCount];
+				if (col) col.appendChild(masonryItems[i]);
+			}
+		}
+
+		initMasonryLayout();
+
+		var masonryResize = (function () {
+			var timeoutId;
+			return function () {
+				clearTimeout(timeoutId);
+				timeoutId = setTimeout(initMasonryLayout, 100);
+			};
+		})();
+		window.addEventListener('resize', masonryResize);
+	}
 });
