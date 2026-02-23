@@ -49,6 +49,7 @@ function mci_enqueue_assets() {
 	// Home V2 CSS.
 	if ( is_front_page() ) {
 		wp_enqueue_style( 'mci-home-v2', get_template_directory_uri() . '/assets/css/home-v2.css', array( 'mci-style' ), MCI_THEME_VERSION );
+		wp_enqueue_style( 'mci-home-v2-clinic-slider', get_template_directory_uri() . '/assets/css/home-v2-clinic-slider.css', array( 'mci-home-v2' ), MCI_THEME_VERSION );
 	}
 
 	// Theme main JS (includes before/after and page gallery behavior).

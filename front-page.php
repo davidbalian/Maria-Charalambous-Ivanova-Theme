@@ -73,6 +73,42 @@ get_header(); ?>
 	);
 	?>
 
+	<section class="home-v2-clinic" aria-label="The Clinic gallery">
+		<div class="container">
+			<div class="home-v2-clinic__header">
+				<div>
+					<h2 class="home-v2-clinic__title">The Clinic</h2>
+					<p class="home-v2-clinic__subtitle">Step inside Dental Art Clinic Limassol.</p>
+				</div>
+				<div class="home-v2-clinic__nav" aria-label="Clinic gallery navigation">
+					<button type="button" class="home-v2-clinic__button" data-clinic-slider-prev aria-label="Previous clinic photos">
+						<span aria-hidden="true">&#8592;</span>
+					</button>
+					<button type="button" class="home-v2-clinic__button" data-clinic-slider-next aria-label="Next clinic photos">
+						<span aria-hidden="true">&#8594;</span>
+					</button>
+				</div>
+			</div>
+
+			<div class="home-v2-clinic__viewport" data-clinic-slider-viewport>
+				<div class="home-v2-clinic__track" data-clinic-slider-track>
+					<?php foreach ( $clinic_images as $filename => $alt_text ) : ?>
+						<div class="home-v2-clinic__slide">
+							<img
+								src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/' . $filename ); ?>"
+								alt="<?php echo esc_attr( $alt_text ); ?>"
+								loading="lazy"
+								decoding="async"
+								width="640"
+								height="480"
+							>
+						</div>
+					<?php endforeach; ?>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<!-- Existing Reviews -->
 	<section class="home-reviews">
 		<div class="container">

@@ -118,4 +118,68 @@ document.addEventListener('DOMContentLoaded', function () {
 			closeMobileNav();
 		}
 	});
+
+	// Homepage clinic slider
+	var clinicViewport = document.querySelector('[data-clinic-slider-viewport]');
+	if (clinicViewport) {
+		var clinicTrack = clinicViewport.querySelector('[data-clinic-slider-track]');
+		var clinicPrev = document.querySelector('[data-clinic-slider-prev]');
+		var clinicNext = document.querySelector('[data-clinic-slider-next]');
+		var clinicSlides = clinicTrack ? Array.prototype.slice.call(clinicTrack.children) : [];
+		var clinicCurrentIndex = 0;
+		var clinicSlidesPerView = 3;
+		var clinicMaxIndex = 0;
+
+		function getClinicSlidesPerView() {
+			if (window.innerWidth <= 768) return 1;
+			if (window.innerWidth <= 1024) return 2;
+			return 3;
+		}
+
+		function getClinicGap() {
+			if (!clinicTrack) return 0;
+			var computedTrackStyle = window.getComputedStyle(clinicTrack);
+			return parseFloat(computedTrackStyle.columnGap || computedTrackStyle.gap || '0') || 0;
+		}
+
+		function updateClinicNavigationState() {
+			if (!clinicPrev || !clinicNext) return;
+			clinicPrev.disabled = clinicCurrentIndex <= 0;
+			clinicNext.disabled = clinicCurrentIndex >= clinicMaxIndex;
+		}
+
+		function updateClinicSliderPosition() {
+			if (!clinicTrack || !clinicSlides.length) return;
+			var firstSlide = clinicSlides[0];
+			var slideWidth = firstSlide.getBoundingClientRect().width;
+			var offset = clinicCurrentIndex * (slideWidth + getClinicGap());
+			clinicTrack.style.transform = 'translate3d(' + -offset + 'px, 0, 0)';
+			updateClinicNavigationState();
+		}
+
+		function recalculateClinicSliderLayout() {
+			clinicSlidesPerView = getClinicSlidesPerView();
+			clinicMaxIndex = Math.max(0, clinicSlides.length - clinicSlidesPerView);
+			clinicCurrentIndex = Math.min(clinicCurrentIndex, clinicMaxIndex);
+			if (clinicCurrentIndex % clinicSlidesPerView !== 0 && clinicCurrentIndex !== clinicMaxIndex) {
+				clinicCurrentIndex = Math.floor(clinicCurrentIndex / clinicSlidesPerView) * clinicSlidesPerView;
+			}
+			updateClinicSliderPosition();
+		}
+
+		if (clinicPrev && clinicNext && clinicSlides.length > 0) {
+			clinicPrev.addEventListener('click', function () {
+				clinicCurrentIndex = Math.max(0, clinicCurrentIndex - clinicSlidesPerView);
+				updateClinicSliderPosition();
+			});
+
+			clinicNext.addEventListener('click', function () {
+				clinicCurrentIndex = Math.min(clinicMaxIndex, clinicCurrentIndex + clinicSlidesPerView);
+				updateClinicSliderPosition();
+			});
+		}
+
+		window.addEventListener('resize', recalculateClinicSliderLayout, { passive: true });
+		recalculateClinicSliderLayout();
+	}
 });
