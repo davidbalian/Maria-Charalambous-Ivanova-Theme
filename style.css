@@ -1226,18 +1226,23 @@ hr {
 }
 
 .home-clinic__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--mci-spacing-md);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  border-radius: var(--mci-radius-md);
+  overflow: hidden;
 }
 
 .home-clinic__item {
   display: block;
-  height: 270px;
-  border-radius: var(--mci-radius-md);
+  flex: 1 1 24%;
+  min-width: 200px;
+  height: 260px;
+  border-radius: 2px;
   overflow: hidden;
   position: relative;
   z-index: 1;
+  margin: 0;
   /* Safari/Webkit fixes */
   -webkit-mask-image: -webkit-radial-gradient(white, black);
   mask-image: radial-gradient(white, black);
@@ -1246,6 +1251,7 @@ hr {
 
 .home-clinic__item img {
   width: 100%;
+  min-width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
@@ -1824,8 +1830,9 @@ hr {
     order: -1;
   }
 
-  .home-clinic__grid {
-    grid-template-columns: repeat(2, 1fr);
+  .home-clinic__item {
+    height: 180px;
+    min-width: 140px;
   }
 
   .home-cases__grid {
