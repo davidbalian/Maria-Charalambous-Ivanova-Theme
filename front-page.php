@@ -82,35 +82,30 @@ get_header(); ?>
 					<p class="home-v2-clinic__subtitle">Step inside Dental Art Clinic Limassol.</p>
 				</div>
 				<div class="home-v2-clinic__nav" aria-label="Clinic gallery navigation">
-					<button type="button" class="home-v2-clinic__button" data-clinic-slider-prev aria-label="Previous clinic photos">
+					<button type="button" class="home-v2-clinic__button js-clinic-prev" aria-label="Previous clinic photos">
 						<span aria-hidden="true">&#8592;</span>
 					</button>
-					<button type="button" class="home-v2-clinic__button" data-clinic-slider-next aria-label="Next clinic photos">
+					<button type="button" class="home-v2-clinic__button js-clinic-next" aria-label="Next clinic photos">
 						<span aria-hidden="true">&#8594;</span>
 					</button>
 				</div>
 			</div>
 
-			<div class="home-v2-clinic__viewport" data-clinic-slider-viewport>
-				<div class="home-v2-clinic__track" data-clinic-slider-track>
-					<?php foreach ( $clinic_images as $filename => $alt_text ) : ?>
-						<?php
-						$clinic_image_url = preg_match( '#^https?://#i', $filename )
-							? $filename
-							: $clinic_image_base_url . $filename;
-						?>
-						<div class="home-v2-clinic__slide">
-							<img
-								src="<?php echo esc_url( $clinic_image_url ); ?>"
-								alt="<?php echo esc_attr( $alt_text ); ?>"
-								loading="lazy"
-								decoding="async"
-								width="640"
-								height="480"
-							>
-						</div>
-					<?php endforeach; ?>
-				</div>
+			<div class="home-v2-clinic__carousel js-clinic-slick">
+				<?php foreach ( $clinic_images as $filename => $alt_text ) : ?>
+					<?php
+					$clinic_image_url = preg_match( '#^https?://#i', $filename )
+						? $filename
+						: $clinic_image_base_url . $filename;
+					?>
+					<div class="home-v2-clinic__slide">
+						<img
+							src="<?php echo esc_url( $clinic_image_url ); ?>"
+							alt="<?php echo esc_attr( $alt_text ); ?>"
+							decoding="async"
+						>
+					</div>
+				<?php endforeach; ?>
 			</div>
 		</div>
 	</section>

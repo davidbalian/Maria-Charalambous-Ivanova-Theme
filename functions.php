@@ -46,10 +46,15 @@ function mci_enqueue_assets() {
 	wp_enqueue_script( 'lg-thumbnail', 'https://cdn.jsdelivr.net/npm/lightgallery@2.9.0/plugins/thumbnail/lg-thumbnail.umd.js', array( 'lightgallery' ), '2.9.0', true );
 	wp_enqueue_script( 'lg-zoom', 'https://cdn.jsdelivr.net/npm/lightgallery@2.9.0/plugins/zoom/lg-zoom.umd.js', array( 'lightgallery' ), '2.9.0', true );
 
-	// Home V2 CSS.
+	// Home V2 CSS + Slick carousel (clinic section).
 	if ( is_front_page() ) {
 		wp_enqueue_style( 'mci-home-v2', get_template_directory_uri() . '/assets/css/home-v2.css', array( 'mci-style' ), MCI_THEME_VERSION );
-		wp_enqueue_style( 'mci-home-v2-clinic-slider', get_template_directory_uri() . '/assets/css/home-v2-clinic-slider.css', array( 'mci-home-v2' ), MCI_THEME_VERSION );
+		wp_enqueue_style( 'slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css', array(), '1.8.1' );
+		wp_enqueue_style( 'slick-theme', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css', array( 'slick' ), '1.8.1' );
+		wp_enqueue_style( 'mci-home-v2-clinic-slider', get_template_directory_uri() . '/assets/css/home-v2-clinic-slider.css', array( 'mci-home-v2', 'slick-theme' ), MCI_THEME_VERSION );
+
+		wp_enqueue_script( 'slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array( 'jquery' ), '1.8.1', true );
+		wp_enqueue_script( 'mci-clinic-slider', get_template_directory_uri() . '/assets/js/clinic-slider.js', array( 'slick' ), MCI_THEME_VERSION, true );
 	}
 
 	// Theme main JS (includes before/after and page gallery behavior).
