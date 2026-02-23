@@ -1235,14 +1235,15 @@ hr {
 
 .home-clinic__item {
   display: block;
-  flex: 1 1 24%;
+  flex: 1 1 auto;
   min-width: 200px;
-  height: 260px;
+  max-width: 33%;
   border-radius: 2px;
   overflow: hidden;
   position: relative;
   z-index: 1;
   margin: 0;
+  line-height: 0;
   /* Safari/Webkit fixes */
   -webkit-mask-image: -webkit-radial-gradient(white, black);
   mask-image: radial-gradient(white, black);
@@ -1251,10 +1252,8 @@ hr {
 
 .home-clinic__item img {
   width: 100%;
-  min-width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
-  object-fit: cover;
   will-change: transform;
   transform: scale(1) translateZ(0);
   transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
@@ -1831,8 +1830,8 @@ hr {
   }
 
   .home-clinic__item {
-    height: 180px;
     min-width: 140px;
+    max-width: 50%;
   }
 
   .home-cases__grid {
