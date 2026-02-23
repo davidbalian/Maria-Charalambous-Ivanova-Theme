@@ -85,20 +85,22 @@
 }
 
 .home-v2-clinic__slide {
-  flex: 0 0 calc((100% - (var(--mci-spacing-md) * 2)) / 3);
+  flex: 0 0 auto;
+  height: 280px;
   border-radius: var(--mci-radius-lg);
   overflow: hidden;
 }
 
 .home-v2-clinic__slide img {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
+  max-width: none;
   display: block;
 }
 
 @media (max-width: 1024px) {
   .home-v2-clinic__slide {
-    flex-basis: calc((100% - var(--mci-spacing-md)) / 2);
+    height: 240px;
   }
 }
 
@@ -125,7 +127,7 @@
   }
 
   .home-v2-clinic__slide {
-    flex-basis: 100%;
+    height: 220px;
   }
 
 }

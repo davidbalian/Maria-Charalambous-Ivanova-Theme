@@ -127,19 +127,43 @@ document.addEventListener('DOMContentLoaded', function () {
 		var clinicNext = document.querySelector('[data-clinic-slider-next]');
 		var clinicSlides = clinicTrack ? Array.prototype.slice.call(clinicTrack.children) : [];
 		var clinicCurrentIndex = 0;
-		var clinicSlidesPerView = 3;
 		var clinicMaxIndex = 0;
-
-		function getClinicSlidesPerView() {
-			if (window.innerWidth <= 768) return 1;
-			if (window.innerWidth <= 1024) return 2;
-			return 3;
-		}
 
 		function getClinicGap() {
 			if (!clinicTrack) return 0;
 			var computedTrackStyle = window.getComputedStyle(clinicTrack);
 			return parseFloat(computedTrackStyle.columnGap || computedTrackStyle.gap || '0') || 0;
+		}
+
+		function getClinicOffsetForIndex(index) {
+			var offset = 0;
+			var gap = getClinicGap();
+
+			for (var i = 0; i < index; i++) {
+				offset += clinicSlides[i].getBoundingClientRect().width;
+				if (i < index) {
+					offset += gap;
+				}
+			}
+
+			return offset;
+		}
+
+		function calculateClinicMaxIndex() {
+			if (!clinicTrack || !clinicSlides.length) return 0;
+
+			var maxOffset = Math.max(0, clinicTrack.scrollWidth - clinicViewport.clientWidth);
+			var maxIndex = 0;
+
+			for (var i = 0; i < clinicSlides.length; i++) {
+				if (getClinicOffsetForIndex(i) <= maxOffset) {
+					maxIndex = i;
+				} else {
+					break;
+				}
+			}
+
+			return maxIndex;
 		}
 
 		function updateClinicNavigationState() {
@@ -150,16 +174,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		function updateClinicSliderPosition() {
 			if (!clinicTrack || !clinicSlides.length) return;
-			var firstSlide = clinicSlides[0];
-			var slideWidth = firstSlide.getBoundingClientRect().width;
-			var offset = clinicCurrentIndex * (slideWidth + getClinicGap());
+			var offset = getClinicOffsetForIndex(clinicCurrentIndex);
 			clinicTrack.style.transform = 'translate3d(' + -offset + 'px, 0, 0)';
 			updateClinicNavigationState();
 		}
 
 		function recalculateClinicSliderLayout() {
-			clinicSlidesPerView = getClinicSlidesPerView();
-			clinicMaxIndex = Math.max(0, clinicSlides.length - clinicSlidesPerView);
+			clinicMaxIndex = calculateClinicMaxIndex();
 			clinicCurrentIndex = Math.min(clinicCurrentIndex, clinicMaxIndex);
 			updateClinicSliderPosition();
 		}
