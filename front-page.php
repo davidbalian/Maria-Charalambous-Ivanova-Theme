@@ -98,13 +98,11 @@ get_header(); ?>
 						? $filename
 						: $clinic_image_base_url . $filename;
 					?>
-					<div class="home-v2-clinic__slide">
-						<img
-							src="<?php echo esc_url( $clinic_image_url ); ?>"
-							alt="<?php echo esc_attr( $alt_text ); ?>"
-							decoding="async"
-						>
-					</div>
+					<img
+						src="<?php echo esc_url( $clinic_image_url ); ?>"
+						alt="<?php echo esc_attr( $alt_text ); ?>"
+						decoding="async"
+					>
 				<?php endforeach; ?>
 			</div>
 		</div>
