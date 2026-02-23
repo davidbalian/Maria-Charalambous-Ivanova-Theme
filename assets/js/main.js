@@ -2,13 +2,19 @@
  * Main theme JS.
  */
 document.addEventListener('DOMContentLoaded', function () {
-	// GLightbox
-	if (typeof GLightbox !== 'undefined') {
-		GLightbox({
-			selector: '.glightbox',
-			touchNavigation: true,
-			loop: true,
-			descPosition: 'none',
+	// lightGallery
+	if (typeof lightGallery !== 'undefined' && typeof lgThumbnail !== 'undefined' && typeof lgZoom !== 'undefined') {
+		var galleryContainers = ['clinic-gallery', 'cases-gallery', 'page-gallery'];
+		galleryContainers.forEach(function (id) {
+			var el = document.getElementById(id);
+			if (el) {
+				lightGallery(el, {
+					plugins: [lgThumbnail, lgZoom],
+					speed: 500,
+					loop: true,
+					selector: 'a',
+				});
+			}
 		});
 	}
 

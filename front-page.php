@@ -15,14 +15,14 @@ get_header(); ?>
 	<section class="home-cases">
 		<div class="container">
 			<h2 class="home-cases__title">Before &amp; After</h2>
-			<div class="home-cases__grid">
-				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol.webp' ); ?>" class="glightbox home-cases__item" data-gallery="cases" title="" data-title="" data-description="">
+			<div class="home-cases__grid" id="cases-gallery">
+				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol.webp' ); ?>" class="home-cases__item">
 					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol.webp' ); ?>" alt="Before and after at Dental Art Clinic" width="400" height="400">
 				</a>
-				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp' ); ?>" class="glightbox home-cases__item" data-gallery="cases" title="" data-title="" data-description="">
+				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp' ); ?>" class="home-cases__item">
 					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp' ); ?>" alt="Before and after at Dental Art Clinic" width="400" height="400">
 				</a>
-				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-2.webp' ); ?>" class="glightbox home-cases__item" data-gallery="cases" title="" data-title="" data-description="">
+				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-2.webp' ); ?>" class="home-cases__item">
 					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-2.webp' ); ?>" alt="Before and after at Dental Art Clinic" width="400" height="400">
 				</a>
 			</div>
@@ -42,7 +42,7 @@ get_header(); ?>
 	<section class="home-clinic">
 		<div class="container">
 			<h2 class="home-clinic__title">The Clinic</h2>
-			<div class="home-clinic__grid">
+			<div class="home-clinic__grid" id="clinic-gallery">
 				<?php
 				$clinic_images = array(
 					'dental-art-clinic-by-dr-maria-charalambous-ivanova-bathroom-toilet-marble-sink-curtain.avif' => 'Dental Art Clinic bathroom',
@@ -80,7 +80,7 @@ get_header(); ?>
 				foreach ( $clinic_images as $file => $alt ) :
 					$url = $clinic_base . $file;
 				?>
-				<a href="<?php echo esc_url( $url ); ?>" class="glightbox home-clinic__item" data-gallery="clinic" title="" data-title="" data-description="">
+				<a href="<?php echo esc_url( $url ); ?>" class="home-clinic__item">
 					<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" loading="lazy">
 				</a>
 				<?php endforeach; ?>

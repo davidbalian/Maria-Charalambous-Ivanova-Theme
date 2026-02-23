@@ -40,9 +40,11 @@ add_action( 'after_setup_theme', 'mci_theme_setup' );
 function mci_enqueue_assets() {
 	wp_enqueue_style( 'mci-style', get_stylesheet_uri(), array(), MCI_THEME_VERSION );
 
-	// GLightbox.
-	wp_enqueue_style( 'glightbox', 'https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css', array(), '3.3.0' );
-	wp_enqueue_script( 'glightbox', 'https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/js/glightbox.min.js', array(), '3.3.0', true );
+	// lightGallery.
+	wp_enqueue_style( 'lightgallery', 'https://cdn.jsdelivr.net/npm/lightgallery@2.9.0/css/lightgallery-bundle.min.css', array(), '2.9.0' );
+	wp_enqueue_script( 'lightgallery', 'https://cdn.jsdelivr.net/npm/lightgallery@2.9.0/lightgallery.umd.js', array(), '2.9.0', true );
+	wp_enqueue_script( 'lg-thumbnail', 'https://cdn.jsdelivr.net/npm/lightgallery@2.9.0/plugins/thumbnail/lg-thumbnail.umd.js', array( 'lightgallery' ), '2.9.0', true );
+	wp_enqueue_script( 'lg-zoom', 'https://cdn.jsdelivr.net/npm/lightgallery@2.9.0/plugins/zoom/lg-zoom.umd.js', array( 'lightgallery' ), '2.9.0', true );
 
 	// Home V2 CSS.
 	if ( is_front_page() ) {
@@ -50,7 +52,7 @@ function mci_enqueue_assets() {
 	}
 
 	// Theme main JS.
-	$mci_main_deps = array( 'glightbox' );
+	$mci_main_deps = array( 'lightgallery', 'lg-thumbnail', 'lg-zoom' );
 	wp_enqueue_script( 'mci-main', get_template_directory_uri() . '/assets/js/main.js', $mci_main_deps, MCI_THEME_VERSION, true );
 }
 add_action( 'wp_enqueue_scripts', 'mci_enqueue_assets' );
