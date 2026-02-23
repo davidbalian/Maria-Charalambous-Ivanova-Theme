@@ -97,8 +97,6 @@
 
 .home-v2-clinic__slide {
   height: 280px;
-  border-radius: var(--mci-radius-lg);
-  overflow: hidden;
 }
 
 .home-v2-clinic__slide img {
@@ -107,6 +105,7 @@
   max-width: none;
   display: block;
   object-fit: cover;
+  border-radius: var(--mci-radius-lg);
 }
 
 @media (max-width: 1024px) {
