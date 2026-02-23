@@ -42,7 +42,7 @@ get_header(); ?>
 	<section class="home-clinic">
 		<div class="container">
 			<h2 class="home-clinic__title">The Clinic</h2>
-			<div id="masonry-source" class="home-clinic__source" aria-hidden="true">
+			<div class="home-clinic__grid">
 				<?php
 				$clinic_images = array(
 					'dental-art-clinic-by-dr-maria-charalambous-ivanova-bathroom-toilet-marble-sink-curtain.avif' => 'Dental Art Clinic bathroom',
@@ -84,12 +84,6 @@ get_header(); ?>
 					<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" loading="lazy">
 				</a>
 				<?php endforeach; ?>
-			</div>
-			<div id="masonry-layout" class="home-clinic__masonry">
-				<div class="masonry__column"></div>
-				<div class="masonry__column"></div>
-				<div class="masonry__column"></div>
-				<div class="masonry__column"></div>
 			</div>
 		</div>
 	</section>

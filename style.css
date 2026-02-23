@@ -1225,28 +1225,18 @@ hr {
   margin-bottom: var(--mci-spacing-xl);
 }
 
-.home-clinic__source {
-  display: none;
-}
-
-.home-clinic__masonry {
-  --col-count: 4;
-  display: grid;
-  grid-template-columns: repeat(var(--col-count), 1fr);
+.home-clinic__grid {
+  display: flex;
+  flex-wrap: wrap;
   gap: 2px;
   border-radius: var(--mci-radius-md);
   overflow: hidden;
 }
 
-.masonry__column {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
 .home-clinic__item {
+  flex: 1 1 22%;
+  min-width: 180px;
   display: block;
-  width: 100%;
   margin: 0;
   border-radius: 2px;
   overflow: hidden;
@@ -1770,8 +1760,9 @@ hr {
    ========================================================================== */
 
 @media (max-width: 1024px) {
-  .home-clinic__masonry {
-    --col-count: 3;
+  .home-clinic__item {
+    flex: 1 1 30%;
+    min-width: 160px;
   }
 }
 
@@ -1843,8 +1834,9 @@ hr {
     order: -1;
   }
 
-  .home-clinic__masonry {
-    --col-count: 2;
+  .home-clinic__item {
+    flex: 1 1 45%;
+    min-width: 140px;
   }
 
   .home-cases__grid {
