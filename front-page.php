@@ -39,6 +39,7 @@ get_header(); ?>
 	<?php get_template_part( 'template-parts/home-v2/doctor' ); ?>
 
 	<?php
+	$clinic_image_base_url = 'http://davidb1646.sg-host.com/wp-content/uploads/2026/02/';
 	$clinic_images = array(
 		'dental-art-clinic-by-dr-maria-charalambous-ivanova-bathroom-toilet-marble-sink-curtain.avif' => 'Dental Art Clinic bathroom',
 		'dental-art-clinic-by-dr-maria-charalambous-ivanova-ceiling-lighting-tv-screen.avif' => 'Dental Art Clinic ceiling and TV',
@@ -93,9 +94,14 @@ get_header(); ?>
 			<div class="home-v2-clinic__viewport" data-clinic-slider-viewport>
 				<div class="home-v2-clinic__track" data-clinic-slider-track>
 					<?php foreach ( $clinic_images as $filename => $alt_text ) : ?>
+						<?php
+						$clinic_image_url = preg_match( '#^https?://#i', $filename )
+							? $filename
+							: $clinic_image_base_url . $filename;
+						?>
 						<div class="home-v2-clinic__slide">
 							<img
-								src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/' . $filename ); ?>"
+								src="<?php echo esc_url( $clinic_image_url ); ?>"
 								alt="<?php echo esc_attr( $alt_text ); ?>"
 								loading="lazy"
 								decoding="async"
