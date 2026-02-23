@@ -51,7 +51,7 @@ function mci_enqueue_assets() {
 		wp_enqueue_style( 'mci-home-v2', get_template_directory_uri() . '/assets/css/home-v2.css', array( 'mci-style' ), MCI_THEME_VERSION );
 	}
 
-	// Theme main JS.
+	// Theme main JS (includes justified clinic gallery logic on front page).
 	$mci_main_deps = array( 'lightgallery', 'lg-thumbnail', 'lg-zoom' );
 	wp_enqueue_script( 'mci-main', get_template_directory_uri() . '/assets/js/main.js', $mci_main_deps, MCI_THEME_VERSION, true );
 }
