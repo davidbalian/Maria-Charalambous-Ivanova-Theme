@@ -120,14 +120,14 @@
 
 .home-hero__container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   grid-template-areas: "text image";
   gap: 4rem;
   width: 100%;
   max-width: var(--mci-container-width);
   margin: 0 auto;
   padding-left: var(--mci-spacing-lg);
-  padding-right: var(--mci-spacing-lg);
+  padding-right: 0;
   align-items: center;
 }
 
