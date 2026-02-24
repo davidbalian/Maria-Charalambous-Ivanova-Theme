@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				}
 			});
 		},
-		{ root: null, rootMargin: '0px', threshold: 0.1 }
+		{ root: null, rootMargin: '0px', threshold: 0.25 }
 	);
 	document.querySelectorAll('.fade-in').forEach(function (el) {
 		observer.observe(el);
