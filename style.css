@@ -232,6 +232,13 @@ blockquote p {
   padding-right: var(--mci-spacing-lg);
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding-left: var(--mci-spacing-sm);
+    padding-right: var(--mci-spacing-sm);
+  }
+}
+
 /* ==========================================================================
    5. Header & Navigation
    ========================================================================== */
