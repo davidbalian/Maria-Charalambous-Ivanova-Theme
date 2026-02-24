@@ -300,7 +300,7 @@
 /* Gentle Touch Section */
 .home-v2-gentle {
   padding: var(--mci-spacing-3xl) 0;
-  background-color: var(--mci-color-text);
+  background: linear-gradient(to top right, var(--mci-color-text), var(--mci-color-secondary));
 }
 
 .home-v2-gentle__title {

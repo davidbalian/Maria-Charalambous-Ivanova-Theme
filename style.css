@@ -841,7 +841,7 @@ hr {
    ========================================================================== */
 
 .site-footer {
-  background-color: var(--mci-color-text);
+  background: linear-gradient(to top right, var(--mci-color-text), var(--mci-color-secondary));
   padding: var(--mci-spacing-3xl) var(--mci-spacing-lg) 0;
 }
 
