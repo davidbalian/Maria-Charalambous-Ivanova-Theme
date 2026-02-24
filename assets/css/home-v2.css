@@ -124,7 +124,7 @@
   grid-template-areas: "text image";
   gap: 6rem;
   width: 100%;
-  max-width: 1300px;
+  max-width: 1400px;
   margin: 0 auto;
   padding-left: var(--mci-spacing-lg);
   padding-right: var(--mci-spacing-lg);
