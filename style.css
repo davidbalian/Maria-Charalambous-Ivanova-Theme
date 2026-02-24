@@ -322,10 +322,16 @@ blockquote p {
 }
 
 @media (max-width: 768px) {
+  .site-header {
+    background: rgba(255, 255, 255, 0.95);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+  }
+
   .site-logo--desktop {
     display: none;
   }
-  
+
   .site-logo--mobile {
     display: block;
   }

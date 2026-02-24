@@ -252,7 +252,7 @@
     min-height: 0;
     padding-left: var(--mci-spacing-sm);
     padding-right: var(--mci-spacing-sm);
-    gap: var(--mci-spacing-lg);
+    gap: var(--mci-spacing-sm);
     grid-template-areas:
       "image"
       "text";
@@ -260,7 +260,7 @@
 
   .home-hero__text-col {
     grid-area: text;
-    padding: var(--mci-spacing-md) 0;
+    padding: var(--mci-spacing-xs) 0;
   }
 
   .home-hero__image-col {
