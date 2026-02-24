@@ -676,6 +676,13 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .home-v2-gentle__title,
+  .home-v2-comprehensive__title {
+    max-width: 20ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .home-v2-gentle__grid {
     grid-template-columns: 1fr;
   }
