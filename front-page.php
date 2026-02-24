@@ -12,7 +12,7 @@ get_header(); ?>
 	<?php get_template_part( 'template-parts/home-v2/hero' ); ?>
 
 	<!-- Before & After -->
-	<section class="home-cases">
+	<section id="before-after" class="home-cases">
 		<div class="container">
 			<h2 class="home-cases__title fade-in fade-in-delay-0">Before &amp; After</h2>
 			<div class="home-cases__grid" id="cases-gallery">

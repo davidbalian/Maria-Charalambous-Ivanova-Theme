@@ -1,5 +1,5 @@
 <!-- Gentle Touch Section -->
-<section id="next-section" class="home-v2-gentle">
+<section class="home-v2-gentle">
 	<div class="container">
 		<h2 class="home-v2-gentle__title fade-in fade-in-delay-0">Modern Dentistry with a <span class="accent-font">Gentle Touch</span></h2>
 		<p class="home-v2-gentle__subtitle fade-in fade-in-delay-1">We believe dental visits should be stress-free, personalized, and focused entirely on your comfort and long-term health.</p>
