@@ -1,6 +1,6 @@
 .home-v2-clinic {
   padding: var(--mci-spacing-3xl) 0;
-  background-color: var(--mci-color-background);
+  background-color: var(--mci-color-text);
 }
 
 .home-v2-clinic .container {
@@ -19,12 +19,13 @@
 .home-v2-clinic__title {
   font-size: 2rem;
   margin: 0;
+  color: var(--mci-color-white);
 }
 
 .home-v2-clinic__subtitle {
   margin: var(--mci-spacing-xs) 0 0;
   font-size: 1rem;
-  color: var(--mci-color-text-light);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .home-v2-clinic__nav {
@@ -37,13 +38,13 @@
 .home-v2-clinic__button {
   width: 46px;
   height: 46px;
-  border: 1px solid rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--mci-color-surface);
-  color: var(--mci-color-text);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--mci-color-white);
   font-size: 1.125rem;
   cursor: pointer;
   transition:
