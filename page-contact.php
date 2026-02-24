@@ -49,22 +49,22 @@ get_header(); ?>
 
 					<div class="contact-info__item">
 						<h4>Address</h4>
-						<p>Dr. Maria Charalambous Ivanova<br>Limassol, Cyprus, 3027</p>
+						<p>PRIMO AMARI, Walter Gropius 49-49,<br>Floor 1, Apt. 101, Limassol 3076, Cyprus</p>
 					</div>
 
 					<div class="contact-info__item">
 						<h4>Operating Hours</h4>
 						<table class="contact-hours">
 							<tr>
-								<td>Monday &ndash; Friday</td>
-								<td>9:00 AM &ndash; 6:00 PM</td>
+								<td>Monday &ndash; Thursday</td>
+								<td>8:00 AM &ndash; 5:00 PM</td>
 							</tr>
 							<tr>
-								<td>Saturday</td>
-								<td>9:00 AM &ndash; 2:00 PM</td>
+								<td>Friday</td>
+								<td>8:00 AM &ndash; 1:00 PM</td>
 							</tr>
 							<tr>
-								<td>Sunday</td>
+								<td>Saturday &ndash; Sunday</td>
 								<td>Closed</td>
 							</tr>
 						</table>

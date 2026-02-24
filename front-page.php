@@ -128,7 +128,7 @@ get_header(); ?>
 
 					<div class="home-contact__detail">
 						<h4>Phone</h4>
-						<p><a href="tel:+35725123456">+357 25 123 456</a></p>
+						<p><a href="tel:+35725377757">+357 25 377757</a></p>
 					</div>
 
 					<div class="home-contact__detail">
@@ -138,15 +138,15 @@ get_header(); ?>
 
 					<div class="home-contact__detail">
 						<h4>Address</h4>
-						<p>Limassol, Cyprus</p>
+						<p>PRIMO AMARI, Walter Gropius 49-49,<br>Floor 1, Apt. 101, Limassol 3076, Cyprus</p>
 					</div>
 
 					<div class="home-contact__detail">
 						<h4>Hours</h4>
 						<table class="contact-hours">
-							<tr><td>Monday &ndash; Friday</td><td>9:00 &ndash; 18:00</td></tr>
-							<tr><td>Saturday</td><td>9:00 &ndash; 13:00</td></tr>
-							<tr><td>Sunday</td><td>Closed</td></tr>
+						<tr><td>Monday &ndash; Thursday</td><td>8:00 AM &ndash; 5:00 PM</td></tr>
+						<tr><td>Friday</td><td>8:00 AM &ndash; 1:00 PM</td></tr>
+						<tr><td>Saturday &ndash; Sunday</td><td>Closed</td></tr>
 						</table>
 					</div>
 
@@ -154,7 +154,7 @@ get_header(); ?>
 				</div>
 
 				<div class="home-contact__map">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52340.59498705129!2d33.00703!3d34.68406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14e733800000003b%3A0x3a8b0db0024c40d0!2sLimassol%2C%20Cyprus!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Dental Art Clinic location"></iframe>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.5421916025243!2d33.02873507516838!3d34.69150218370725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14e7330f632d0d33%3A0x5cf67fad34f79431!2sDental%20Art%20Clinic%20by%20Dr.%20Maria%20Charalambous-Ivanova%20MSD!5e0!3m2!1sen!2s!4v1771914115199!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Dental Art Clinic location"></iframe>
 				</div>
 			</div>
 		</div>
