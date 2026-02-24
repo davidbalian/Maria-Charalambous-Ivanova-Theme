@@ -3,6 +3,18 @@
  */
 
 document.addEventListener('DOMContentLoaded', function () {
+	// Smooth scroll for anchor links
+	var scrollDown = document.querySelector('.home-hero__scroll-down');
+	if (scrollDown) {
+		scrollDown.addEventListener('click', function (e) {
+			e.preventDefault();
+			var target = document.querySelector(scrollDown.getAttribute('href'));
+			if (target) {
+				target.scrollIntoView({ behavior: 'smooth' });
+			}
+		});
+	}
+
 	// lightGallery for cases and page (immediate).
 	if (typeof lightGallery !== 'undefined' && typeof lgThumbnail !== 'undefined' && typeof lgZoom !== 'undefined') {
 		['cases-gallery', 'page-gallery'].forEach(function (id) {

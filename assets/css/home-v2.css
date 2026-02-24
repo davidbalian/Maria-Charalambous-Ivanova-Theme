@@ -83,10 +83,25 @@
 
 /* Hero Section – same inner width as .container */
 .home-hero {
+  position: relative;
   padding: calc(var(--mci-header-height) + 2rem) 0 2rem;
   min-height: 90vh;
   display: flex;
   align-items: center;
+}
+
+.home-hero__scroll-down {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--mci-color-text-light);
+  opacity: 0.5;
+  transition: opacity 0.25s ease;
+}
+
+.home-hero__scroll-down:hover {
+  opacity: 1;
 }
 
 @media (min-width: 1921px) {
@@ -221,7 +236,7 @@
   flex-shrink: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .home-hero {
     min-height: 0;
   }
