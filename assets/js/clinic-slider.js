@@ -31,7 +31,7 @@ jQuery(window).on('load', function () {
 			{
 				breakpoint: 768,
 				settings: {
-					slidesToShow: 1,
+					slidesToShow: 2,
 					variableWidth: false,
 				},
 			},
