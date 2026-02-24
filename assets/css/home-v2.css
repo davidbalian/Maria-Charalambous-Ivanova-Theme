@@ -56,6 +56,12 @@
   transition-delay: 1s;
 }
 
+@media (max-width: 768px) {
+  [class*="fade-in-delay-"] {
+    transition-delay: 0s !important;
+  }
+}
+
 /* WordPress Admin Bar Offset */
 .admin-bar .home-hero {
   padding-top: calc(var(--mci-header-height) + 32px);
