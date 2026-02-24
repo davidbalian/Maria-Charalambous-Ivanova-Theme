@@ -43,6 +43,18 @@
 .fade-in-delay-6 {
   transition-delay: 0.6s;
 }
+.fade-in-delay-7 {
+  transition-delay: 0.7s;
+}
+.fade-in-delay-8 {
+  transition-delay: 0.8s;
+}
+.fade-in-delay-9 {
+  transition-delay: 0.9s;
+}
+.fade-in-delay-10 {
+  transition-delay: 1s;
+}
 
 /* WordPress Admin Bar Offset */
 .admin-bar .home-hero {
