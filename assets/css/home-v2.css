@@ -127,7 +127,7 @@
   max-width: var(--mci-container-width);
   margin: 0 auto;
   padding-left: var(--mci-spacing-lg);
-  padding-right: 0;
+  padding-right: var(--mci-spacing-lg);
   align-items: center;
 }
 
