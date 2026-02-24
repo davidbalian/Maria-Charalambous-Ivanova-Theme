@@ -15,21 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	}
 
-	// lightGallery for cases and page (immediate).
-	if (typeof lightGallery !== 'undefined' && typeof lgThumbnail !== 'undefined' && typeof lgZoom !== 'undefined') {
-		['cases-gallery', 'page-gallery'].forEach(function (id) {
-			var el = document.getElementById(id);
-			if (el) {
-				lightGallery(el, {
-					plugins: [lgThumbnail, lgZoom],
-					speed: 500,
-					loop: true,
-					selector: 'a',
-				});
-			}
-		});
-	}
-
 	// Scroll-triggered fade-in animations
 	var observer = new IntersectionObserver(
 		function (entries) {

@@ -15,16 +15,16 @@ get_header(); ?>
 	<section id="before-after" class="home-cases">
 		<div class="container">
 			<h2 class="home-cases__title fade-in fade-in-delay-0">Before &amp; After</h2>
-			<div class="home-cases__grid" id="cases-gallery">
-				<a href="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp" class="home-cases__item fade-in fade-in-delay-1">
+			<div class="home-cases__grid">
+				<div class="home-cases__item fade-in fade-in-delay-1">
 					<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp" alt="Before and after at Dental Art Clinic" width="400" height="400">
-				</a>
-				<a href="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-2-e1771955301824.webp" class="home-cases__item fade-in fade-in-delay-2">
+				</div>
+				<div class="home-cases__item fade-in fade-in-delay-2">
 					<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-2-e1771955301824.webp" alt="Before and after at Dental Art Clinic" width="400" height="400">
-				</a>
-				<a href="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-e1771955250456.webp" class="home-cases__item fade-in fade-in-delay-3">
+				</div>
+				<div class="home-cases__item fade-in fade-in-delay-3">
 					<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-e1771955250456.webp" alt="Before and after at Dental Art Clinic" width="400" height="400">
-				</a>
+				</div>
 			</div>
 			<div class="home-cases__action fade-in fade-in-delay-4">
 				<a href="<?php echo esc_url( home_url( '/gallery/' ) ); ?>" class="btn btn-outline">View All</a>
