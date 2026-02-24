@@ -90,7 +90,7 @@
 /* Hero Section – same inner width as .container */
 .home-hero {
   position: relative;
-  padding: calc(var(--mci-header-height) + 2rem) 0 2rem;
+  padding: calc(var(--mci-header-height) + 2rem) 0 4rem;
   min-height: 90vh;
   display: flex;
   align-items: center;
@@ -122,9 +122,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "text image";
-  gap: 4rem;
+  gap: 6rem;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1300px;
   margin: 0 auto;
   padding-left: var(--mci-spacing-lg);
   padding-right: var(--mci-spacing-lg);
