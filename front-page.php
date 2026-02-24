@@ -160,16 +160,6 @@ get_header(); ?>
 		</div>
 	</section>
 
-	<!-- Existing CTA -->
-	<section class="home-cta" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/smilers-at-dental-art-clinic-in-limassol.webp' ); ?>');">
-		<div class="home-cta__overlay"></div>
-		<div class="container home-cta__inner">
-			<h2 class="home-cta__title">Ready to Transform Your Smile?</h2>
-			<p class="home-cta__text">Schedule your appointment today and discover the Dental Art Clinic difference.</p>
-			<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-primary">Book Your Appointment</a>
-		</div>
-	</section>
-
 	<?php get_template_part( 'template-parts/home-v2/consultation' ); ?>
 
 </main>

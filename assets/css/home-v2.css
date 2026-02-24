@@ -523,8 +523,24 @@
 
 /* Consultation Form */
 .home-v2-consultation {
+  position: relative;
   padding: var(--mci-spacing-3xl) 0;
-  background-color: var(--mci-color-background);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--mci-color-secondary);
+}
+
+.home-v2-consultation__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent, #1d1d1f);
+  pointer-events: none;
+}
+
+.home-v2-consultation .container {
+  position: relative;
+  z-index: 1;
 }
 
 .home-v2-consultation__grid {
@@ -537,11 +553,12 @@
 .home-v2-consultation__info h2 {
   font-size: 2rem;
   margin-bottom: var(--mci-spacing-lg);
+  color: var(--mci-color-white);
 }
 
 .home-v2-consultation__info p {
   font-size: 1.05rem;
-  color: var(--mci-color-text-light);
+  color: rgba(255, 255, 255, 0.8);
   line-height: 1.65;
   margin-bottom: var(--mci-spacing-lg);
 }

@@ -1384,44 +1384,6 @@ hr {
   display: block;
 }
 
-/* ---- 16h. CTA ---- */
-
-.home-cta {
-  position: relative;
-  padding: var(--mci-spacing-3xl) 0;
-  background-color: var(--mci-color-secondary);
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  overflow: hidden;
-}
-
-.home-cta__overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.25);
-  z-index: 1;
-}
-
-.home-cta__inner {
-  position: relative;
-  z-index: 2;
-}
-
-.home-cta__title {
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
-  color: var(--mci-color-white);
-  margin-bottom: var(--mci-spacing-md);
-}
-
-.home-cta__text {
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.8);
-  max-width: 520px;
-  margin: 0 auto var(--mci-spacing-lg);
-  line-height: 1.55;
-}
-
 /* ==========================================================================
    17. Page Templates — About
    ========================================================================== */

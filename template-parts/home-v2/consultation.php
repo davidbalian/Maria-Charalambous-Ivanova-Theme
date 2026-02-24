@@ -1,5 +1,6 @@
 <!-- Consultation Section -->
-<section class="home-v2-consultation">
+<section class="home-v2-consultation" style="background-image: url('http://davidb1646.sg-host.com/wp-content/uploads/2026/02/dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-wide-angle-equipment.avif');">
+	<div class="home-v2-consultation__overlay"></div>
 	<div class="container">
 		<div class="home-v2-consultation__grid">
 			<div class="home-v2-consultation__info">
