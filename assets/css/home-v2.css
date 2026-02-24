@@ -303,9 +303,6 @@
   align-items: flex-start;
   justify-content: flex-end;
   padding: var(--mci-spacing-lg);
-  transition:
-    opacity var(--transition-slow),
-    transform var(--transition-slow);
 }
 
 .home-v2-gentle__card::before {
@@ -406,9 +403,6 @@
   border-radius: var(--mci-radius-md);
   padding: var(--mci-spacing-lg);
   text-align: center;
-  transition:
-    opacity var(--transition-slow),
-    transform var(--transition-slow);
 }
 
 .home-v2-comprehensive__box:hover .home-v2-comprehensive__box-icon {
