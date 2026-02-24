@@ -1294,14 +1294,24 @@ hr {
 
 .home-contact {
   padding: var(--mci-spacing-3xl) 0;
-  background-color: var(--mci-color-surface);
+  background-color: var(--mci-color-background);
 }
 
 .home-contact__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--mci-spacing-2xl);
-  align-items: start;
+  align-items: stretch;
+}
+
+.home-contact__info {
+  background-color: var(--mci-color-surface);
+  padding: var(--mci-spacing-xl);
+  border-radius: var(--mci-radius-lg);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .home-contact__title {
@@ -1327,6 +1337,11 @@ hr {
 
 .home-contact__info .btn {
   margin-top: var(--mci-spacing-sm);
+  align-self: flex-start;
+}
+
+.home-contact__map {
+  height: 100%;
 }
 
 .home-contact__map iframe {
