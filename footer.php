@@ -42,7 +42,7 @@
 					<a href="tel:+35725377757">+357 25 377757</a>
 				</li>
 				<li>
-					<a href="https://maps.google.com/?q=Dental+Art+Clinic+by+Dr.+Maria+Charalambous-Ivanova+MSD" target="_blank" rel="noopener noreferrer">
+					<a href="https://maps.google.com/?q=Dental+Art+Clinic+by+Dr.+Maria+Charalambous-Ivanova+MSD" target="_blank" rel="noopener noreferrer" class="site-footer__address">
 						PRIMO AMARI, Walter Gropius 49-49, Floor 1, Apt. 101, Limassol 3076, Cyprus
 					</a>
 				</li>

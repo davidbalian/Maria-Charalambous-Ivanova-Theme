@@ -841,14 +841,18 @@ hr {
 .site-footer__inner {
   max-width: var(--mci-container-width);
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 2fr max-content max-content 1.5fr;
-  gap: var(--mci-spacing-xl);
+  display: flex;
+  justify-content: space-between;
   padding-bottom: var(--mci-spacing-2xl);
+}
+
+.site-footer__col {
+  width: max-content;
 }
 
 .site-footer__logo {
   width: 100%;
+  max-width: 300px;
   height: auto;
   filter: brightness(0) invert(1);
 }
@@ -898,6 +902,11 @@ hr {
 
 .site-footer__contact a:hover {
   color: var(--mci-color-white);
+}
+
+.site-footer__contact .site-footer__address {
+  max-width: 25ch;
+  display: inline-block;
 }
 
 .site-footer__subheading {
@@ -954,7 +963,7 @@ hr {
   }
 
   .site-footer__inner {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: var(--mci-spacing-lg);
   }
 
