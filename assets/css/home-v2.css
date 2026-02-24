@@ -122,9 +122,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "text image";
-  gap: 2rem;
+  gap: 4rem;
   width: 100%;
-  max-width: var(--mci-container-width);
+  max-width: 1400px;
   margin: 0 auto;
   padding-left: var(--mci-spacing-lg);
   padding-right: var(--mci-spacing-lg);
