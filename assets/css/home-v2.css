@@ -244,6 +244,8 @@
   .home-hero__container {
     grid-template-columns: 1fr;
     min-height: 0;
+    padding-left: var(--mci-spacing-sm);
+    padding-right: var(--mci-spacing-sm);
     grid-template-areas:
       "text"
       "image";
@@ -701,6 +703,10 @@
 
   .home-v2-consultation__grid {
     grid-template-columns: 1fr;
+  }
+
+  .home-v2-consultation__form {
+    padding: var(--mci-spacing-md);
   }
 
   .home-v2-benefits__grid {
