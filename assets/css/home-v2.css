@@ -266,18 +266,19 @@
 /* Gentle Touch Section */
 .home-v2-gentle {
   padding: var(--mci-spacing-3xl) 0;
-  background-color: var(--mci-color-surface);
+  background-color: var(--mci-color-text);
 }
 
 .home-v2-gentle__title {
   font-size: 2rem;
   text-align: center;
   margin-bottom: var(--mci-spacing-sm);
+  color: var(--mci-color-white);
 }
 
 .home-v2-gentle__subtitle {
   font-size: 1.05rem;
-  color: var(--mci-color-text-light);
+  color: rgba(255, 255, 255, 0.7);
   text-align: center;
   max-width: 680px;
   margin: 0 auto var(--mci-spacing-xl);
