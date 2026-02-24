@@ -47,12 +47,12 @@
 					</a>
 				</li>
 			</ul>
+			<h4 class="site-footer__subheading">Hours <span class="js-clinic-status" id="footer-clinic-status"></span></h4>
 			<table class="contact-hours contact-hours--footer">
 				<tr><td>Monday &ndash; Thursday</td><td>8:00 AM &ndash; 5:00 PM</td></tr>
 				<tr><td>Friday</td><td>8:00 AM &ndash; 1:00 PM</td></tr>
 				<tr><td>Saturday &ndash; Sunday</td><td>Closed</td></tr>
 			</table>
-			<span class="js-clinic-status" id="footer-clinic-status"></span>
 		</div>
 	</div>
 

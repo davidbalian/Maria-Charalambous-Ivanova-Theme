@@ -842,13 +842,13 @@ hr {
   max-width: var(--mci-container-width);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  grid-template-columns: 2fr max-content max-content 1.5fr;
   gap: var(--mci-spacing-xl);
   padding-bottom: var(--mci-spacing-2xl);
 }
 
 .site-footer__logo {
-  max-width: 200px;
+  width: 100%;
   height: auto;
   filter: brightness(0) invert(1);
 }
@@ -900,6 +900,14 @@ hr {
   color: var(--mci-color-white);
 }
 
+.site-footer__subheading {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: var(--mci-spacing-xs);
+}
+
 .contact-hours--footer {
   font-size: 0.8125rem;
   color: rgba(255, 255, 255, 0.6);
@@ -907,7 +915,12 @@ hr {
 }
 
 .contact-hours--footer td {
-  padding: 0.15em 0;
+  padding: 0.25em 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-hours--footer tr:last-child td {
+  border-bottom: none;
 }
 
 .contact-hours--footer td:first-child {
