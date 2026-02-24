@@ -254,8 +254,8 @@
     padding-right: var(--mci-spacing-sm);
     gap: var(--mci-spacing-lg);
     grid-template-areas:
-      "text"
-      "image";
+      "image"
+      "text";
   }
 
   .home-hero__text-col {
