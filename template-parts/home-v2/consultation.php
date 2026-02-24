@@ -16,11 +16,11 @@
 					
 					<div class="form-group">
 						<label for="contact-name">Full Name</label>
-						<input type="text" id="contact-name" name="contact_name" required>
+						<input type="text" id="contact-name" name="contact_name" placeholder="e.g. Maria Georgiou" required>
 					</div>
 					<div class="form-group">
 						<label for="contact-phone">Phone</label>
-						<input type="tel" id="contact-phone" name="contact_phone" required>
+						<input type="tel" id="contact-phone" name="contact_phone" placeholder="+357 99 123 456" required>
 					</div>
 					<div class="form-group">
 						<label for="contact-service">Service Interested In</label>
@@ -36,7 +36,7 @@
 					</div>
 					<div class="form-group">
 						<label for="contact-message">Message</label>
-						<textarea id="contact-message" name="contact_message" rows="4"></textarea>
+						<textarea id="contact-message" name="contact_message" rows="4" placeholder="Tell us about your smile goals..."></textarea>
 					</div>
 					<button type="submit" class="btn btn-primary">Submit</button>
 				</form>
