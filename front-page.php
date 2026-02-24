@@ -16,14 +16,14 @@ get_header(); ?>
 		<div class="container">
 			<h2 class="home-cases__title fade-in fade-in-delay-0">Before &amp; After</h2>
 			<div class="home-cases__grid" id="cases-gallery">
-				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol.webp' ); ?>" class="home-cases__item fade-in fade-in-delay-1">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol.webp' ); ?>" alt="Before and after at Dental Art Clinic" width="400" height="400">
+				<a href="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp" class="home-cases__item fade-in fade-in-delay-1">
+					<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp" alt="Before and after at Dental Art Clinic" width="400" height="400">
 				</a>
-				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp' ); ?>" class="home-cases__item fade-in fade-in-delay-2">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp' ); ?>" alt="Before and after at Dental Art Clinic" width="400" height="400">
+				<a href="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-2-e1771955301824.webp" class="home-cases__item fade-in fade-in-delay-2">
+					<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-2-e1771955301824.webp" alt="Before and after at Dental Art Clinic" width="400" height="400">
 				</a>
-				<a href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-2.webp' ); ?>" class="home-cases__item fade-in fade-in-delay-3">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-and-after-at-dental-art-clinic-limassol-2.webp' ); ?>" alt="Before and after at Dental Art Clinic" width="400" height="400">
+				<a href="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-e1771955250456.webp" class="home-cases__item fade-in fade-in-delay-3">
+					<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-e1771955250456.webp" alt="Before and after at Dental Art Clinic" width="400" height="400">
 				</a>
 			</div>
 			<div class="home-cases__action fade-in fade-in-delay-4">
@@ -163,5 +163,15 @@ get_header(); ?>
 	<?php get_template_part( 'template-parts/home-v2/consultation' ); ?>
 
 </main>
+
+<!-- TODO: Remove this script before launch -->
+<script>
+document.addEventListener('click', function(e) {
+	var link = e.target.closest('a');
+	if (link && link.getAttribute('href') !== '#' && !link.getAttribute('href').startsWith('#')) {
+		e.preventDefault();
+	}
+});
+</script>
 
 <?php get_footer(); ?>
