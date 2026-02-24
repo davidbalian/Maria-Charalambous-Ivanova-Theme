@@ -29,7 +29,7 @@ jQuery(window).on('load', function () {
 				},
 			},
 			{
-				breakpoint: 600,
+				breakpoint: 768,
 				settings: {
 					slidesToShow: 1,
 					variableWidth: false,
