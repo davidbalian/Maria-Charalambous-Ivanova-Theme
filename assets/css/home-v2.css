@@ -122,7 +122,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "text image";
-  gap: 2rem;
+  gap: 4rem;
   width: 100%;
   max-width: var(--mci-container-width);
   margin: 0 auto;
@@ -142,7 +142,7 @@
 .home-hero__image-col {
   grid-area: image;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   overflow: hidden;
 }
 
@@ -266,6 +266,7 @@
 
   .home-hero__image-col {
     grid-area: image;
+    justify-content: center;
   }
 
   .home-hero__image {
