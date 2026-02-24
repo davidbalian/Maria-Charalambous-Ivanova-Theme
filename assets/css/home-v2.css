@@ -84,7 +84,17 @@
 /* Hero Section – same inner width as .container */
 .home-hero {
   padding: calc(var(--mci-header-height) + 2rem) 0 2rem;
-  min-height: 60vh;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 1921px) {
+  .home-hero {
+    min-height: 0;
+    max-height: 1080px;
+    height: 1080px;
+  }
 }
 
 .home-hero__container {
@@ -92,12 +102,12 @@
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "text image";
   gap: 2rem;
+  width: 100%;
   max-width: var(--mci-container-width);
   margin: 0 auto;
   padding-left: var(--mci-spacing-lg);
   padding-right: var(--mci-spacing-lg);
-  min-height: 60vh;
-  align-items: stretch;
+  align-items: center;
 }
 
 .home-hero__text-col {
