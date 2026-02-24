@@ -1,5 +1,5 @@
 <?php
-$hero_image_url = 'http://davidb1646.sg-host.com/wp-content/uploads/2026/02/dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-tv-screen-dental-work.avif';
+$hero_image_url = 'http://davidb1646.sg-host.com/wp-content/uploads/2026/02/dr-maria-charalambous-ivanova-portrait-08.webp';
 ?>
 <section class="home-hero">
 	<div class="home-hero__container">
