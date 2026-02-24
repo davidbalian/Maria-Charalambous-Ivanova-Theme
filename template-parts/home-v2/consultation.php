@@ -3,12 +3,12 @@
 	<div class="home-v2-consultation__overlay"></div>
 	<div class="container">
 		<div class="home-v2-consultation__grid">
-			<div class="home-v2-consultation__info">
+			<div class="home-v2-consultation__info fade-in fade-in-delay-0">
 				<h2>Ready to Transform Your Smile?</h2>
 				<p>Book a consultation with Dr. Maria Charalambous-Ivanova and discover how scientific precision and aesthetic harmony can create the smile you've always wanted.</p>
 				<p>Each case is treated individually with no standardized solutions — only the right solution for the specific patient, always focusing on long-term health, proper function, and aesthetic balance.</p>
 			</div>
-			<div class="home-v2-consultation__form">
+			<div class="home-v2-consultation__form fade-in fade-in-delay-1">
 				<h3>Book Your Consultation</h3>
 				<form action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post">
 					<?php wp_nonce_field( 'mci_contact_nonce', 'mci_contact_nonce' ); ?>

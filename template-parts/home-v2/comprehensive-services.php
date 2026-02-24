@@ -1,8 +1,8 @@
 <!-- Comprehensive Services Section -->
 <section class="home-v2-comprehensive">
 	<div class="container">
-		<h2 class="home-v2-comprehensive__title">Comprehensive Dental Care for <span class="accent-font">Every Need</span></h2>
-		<div class="home-v2-comprehensive__grid">
+		<h2 class="home-v2-comprehensive__title fade-in fade-in-delay-0">Comprehensive Dental Care for <span class="accent-font">Every Need</span></h2>
+		<div class="home-v2-comprehensive__grid fade-in fade-in-delay-1">
 			<div class="home-v2-comprehensive__box">
 				<div class="home-v2-comprehensive__box-icon home-v2-comprehensive__box-icon--img">
 					<img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/02/dental-veneer.avif' ) ); ?>" alt="Composite Veneers" width="64" height="64">

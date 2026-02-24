@@ -1,8 +1,8 @@
 <!-- Services Section -->
 <section class="home-services">
 	<div class="container">
-		<h2 class="home-services__title">Our Services</h2>
-		<div class="home-services__grid">
+		<h2 class="home-services__title fade-in fade-in-delay-0">Our Services</h2>
+		<div class="home-services__grid fade-in fade-in-delay-1">
 
 			<a href="<?php echo esc_url( home_url( '/services/' ) ); ?>" class="home-services__card">
 				<div class="home-services__icon">
