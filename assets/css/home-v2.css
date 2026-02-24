@@ -252,6 +252,7 @@
     min-height: 0;
     padding-left: var(--mci-spacing-sm);
     padding-right: var(--mci-spacing-sm);
+    gap: var(--mci-spacing-lg);
     grid-template-areas:
       "text"
       "image";
