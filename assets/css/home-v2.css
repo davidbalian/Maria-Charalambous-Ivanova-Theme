@@ -303,7 +303,9 @@
   align-items: flex-start;
   justify-content: flex-end;
   padding: var(--mci-spacing-lg);
-  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition:
+    opacity var(--transition-slow),
+    transform var(--transition-slow);
 }
 
 .home-v2-gentle__card::before {
@@ -404,7 +406,9 @@
   border-radius: var(--mci-radius-md);
   padding: var(--mci-spacing-lg);
   text-align: center;
-  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition:
+    opacity var(--transition-slow),
+    transform var(--transition-slow);
 }
 
 .home-v2-comprehensive__box:hover .home-v2-comprehensive__box-icon {
