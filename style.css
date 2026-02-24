@@ -851,7 +851,7 @@ hr {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 4rem;
+  gap: 8rem;
   padding-bottom: var(--mci-spacing-2xl);
 }
 
@@ -897,7 +897,7 @@ hr {
 .site-footer__contact {
   list-style: none;
   padding: 0;
-  margin: 0 0 var(--mci-spacing-sm);
+  margin: 0 0 var(--mci-spacing-md);
   display: flex;
   flex-direction: column;
   gap: var(--mci-spacing-xs);
