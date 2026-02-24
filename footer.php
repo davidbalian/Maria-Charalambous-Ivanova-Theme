@@ -1,15 +1,64 @@
 <footer id="colophon" class="site-footer">
-	<nav class="footer-navigation">
-		<?php
-		wp_nav_menu( array(
-			'theme_location' => 'footer',
-			'menu_id'        => 'footer-menu',
-			'fallback_cb'    => false,
-		) );
-		?>
-	</nav>
-	<div class="site-info">
-		<p>&copy; <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?>. All rights reserved.</p>
+	<div class="site-footer__inner">
+		<div class="site-footer__col site-footer__col--logo">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-footer__logo-link">
+				<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/horizontal-logo-gold.avif"
+				     alt="<?php bloginfo( 'name' ); ?>"
+				     class="site-footer__logo">
+			</a>
+		</div>
+
+		<div class="site-footer__col">
+			<h4 class="site-footer__heading">Navigation</h4>
+			<?php
+			wp_nav_menu( array(
+				'theme_location' => 'primary',
+				'menu_id'        => 'footer-primary-menu',
+				'container'      => 'nav',
+				'container_class'=> 'footer-navigation',
+				'fallback_cb'    => false,
+			) );
+			?>
+		</div>
+
+		<div class="site-footer__col">
+			<h4 class="site-footer__heading">Services</h4>
+			<nav class="footer-navigation">
+				<ul>
+					<li><a href="<?php echo esc_url( home_url( '/services/' ) ); ?>">Composite Veneers</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/services/' ) ); ?>">Emax Veneers</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/services/' ) ); ?>">Dental Implants</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/services/' ) ); ?>">Orthodontics</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/services/' ) ); ?>">Endodontics</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/services/' ) ); ?>">Full Mouth Rehabilitation</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<div class="site-footer__col">
+			<h4 class="site-footer__heading">Contact</h4>
+			<ul class="site-footer__contact">
+				<li>
+					<a href="tel:+35725377757">+357 25 377757</a>
+				</li>
+				<li>
+					<a href="https://maps.google.com/?q=Dental+Art+Clinic+by+Dr.+Maria+Charalambous-Ivanova+MSD" target="_blank" rel="noopener noreferrer">
+						PRIMO AMARI, Walter Gropius 49-49, Floor 1, Apt. 101, Limassol 3076, Cyprus
+					</a>
+				</li>
+			</ul>
+			<table class="contact-hours contact-hours--footer">
+				<tr><td>Monday &ndash; Thursday</td><td>8:00 AM &ndash; 5:00 PM</td></tr>
+				<tr><td>Friday</td><td>8:00 AM &ndash; 1:00 PM</td></tr>
+				<tr><td>Saturday &ndash; Sunday</td><td>Closed</td></tr>
+			</table>
+			<span class="js-clinic-status" id="footer-clinic-status"></span>
+		</div>
+	</div>
+
+	<div class="site-footer__bottom">
+		<p>&copy; <?php echo date( 'Y' ); ?> Dental Art Clinic. All rights reserved.</p>
+		<p>Website designed and developed by <a href="https://balian.cy" target="_blank" rel="noopener noreferrer">Balian Web Dev Co.</a></p>
 	</div>
 </footer>
 

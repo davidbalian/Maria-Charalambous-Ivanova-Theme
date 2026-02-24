@@ -120,11 +120,11 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 
 	// Clinic Open/Closed Logic (Cyprus Timezone)
-	var clinicStatusEl = document.getElementById('clinic-open-status');
-	if (clinicStatusEl) {
+	var clinicStatusEls = document.querySelectorAll('.js-clinic-status');
+	if (clinicStatusEls.length) {
 		function updateClinicStatus() {
 			var now = new Date();
-			
+
 			// Get Cyprus time components
 			var cyprusTime = new Intl.DateTimeFormat('en-US', {
 				timeZone: 'Europe/Nicosia',
@@ -133,26 +133,26 @@ document.addEventListener('DOMContentLoaded', function () {
 				hour12: false,
 				weekday: 'long'
 			});
-			
+
 			var parts = cyprusTime.formatToParts(now);
 			var hour = 0;
 			var minute = 0;
 			var weekday = '';
-			
+
 			parts.forEach(function(part) {
 				if (part.type === 'hour') hour = parseInt(part.value, 10);
 				if (part.type === 'minute') minute = parseInt(part.value, 10);
 				if (part.type === 'weekday') weekday = part.value;
 			});
-			
+
 			var isOpen = false;
 			var currentMinutes = hour * 60 + minute;
-			
+
 			// Schedule:
 			// Mon-Thu: 8:00 (480) - 17:00 (1020)
 			// Fri: 8:00 (480) - 13:00 (780)
 			// Sat-Sun: Closed
-			
+
 			if (['Monday', 'Tuesday', 'Wednesday', 'Thursday'].includes(weekday)) {
 				if (currentMinutes >= 480 && currentMinutes < 1020) {
 					isOpen = true;
@@ -162,16 +162,18 @@ document.addEventListener('DOMContentLoaded', function () {
 					isOpen = true;
 				}
 			}
-			
-			if (isOpen) {
-				clinicStatusEl.textContent = 'OPEN NOW';
-				clinicStatusEl.className = 'clinic-status--open';
-			} else {
-				clinicStatusEl.textContent = 'CLOSED NOW';
-				clinicStatusEl.className = 'clinic-status--closed';
-			}
+
+			clinicStatusEls.forEach(function(el) {
+				if (isOpen) {
+					el.textContent = 'OPEN NOW';
+					el.className = 'js-clinic-status clinic-status--open';
+				} else {
+					el.textContent = 'CLOSED NOW';
+					el.className = 'js-clinic-status clinic-status--closed';
+				}
+			});
 		}
-		
+
 		updateClinicStatus();
 		// Update every minute
 		setInterval(updateClinicStatus, 60000);
