@@ -142,7 +142,7 @@ get_header(); ?>
 					</div>
 
 					<div class="home-contact__detail">
-						<h4>Hours</h4>
+						<h4>Hours <span id="clinic-open-status"></span></h4>
 						<table class="contact-hours">
 						<tr><td>Monday &ndash; Thursday</td><td>8:00 AM &ndash; 5:00 PM</td></tr>
 						<tr><td>Friday</td><td>8:00 AM &ndash; 1:00 PM</td></tr>

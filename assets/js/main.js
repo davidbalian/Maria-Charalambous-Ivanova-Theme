@@ -118,4 +118,62 @@ document.addEventListener('DOMContentLoaded', function () {
 			closeMobileNav();
 		}
 	});
+
+	// Clinic Open/Closed Logic (Cyprus Timezone)
+	var clinicStatusEl = document.getElementById('clinic-open-status');
+	if (clinicStatusEl) {
+		function updateClinicStatus() {
+			var now = new Date();
+			
+			// Get Cyprus time components
+			var cyprusTime = new Intl.DateTimeFormat('en-US', {
+				timeZone: 'Europe/Nicosia',
+				hour: 'numeric',
+				minute: 'numeric',
+				hour12: false,
+				weekday: 'long'
+			});
+			
+			var parts = cyprusTime.formatToParts(now);
+			var hour = 0;
+			var minute = 0;
+			var weekday = '';
+			
+			parts.forEach(function(part) {
+				if (part.type === 'hour') hour = parseInt(part.value, 10);
+				if (part.type === 'minute') minute = parseInt(part.value, 10);
+				if (part.type === 'weekday') weekday = part.value;
+			});
+			
+			var isOpen = false;
+			var currentMinutes = hour * 60 + minute;
+			
+			// Schedule:
+			// Mon-Thu: 8:00 (480) - 17:00 (1020)
+			// Fri: 8:00 (480) - 13:00 (780)
+			// Sat-Sun: Closed
+			
+			if (['Monday', 'Tuesday', 'Wednesday', 'Thursday'].includes(weekday)) {
+				if (currentMinutes >= 480 && currentMinutes < 1020) {
+					isOpen = true;
+				}
+			} else if (weekday === 'Friday') {
+				if (currentMinutes >= 480 && currentMinutes < 780) {
+					isOpen = true;
+				}
+			}
+			
+			if (isOpen) {
+				clinicStatusEl.textContent = 'OPEN NOW';
+				clinicStatusEl.className = 'clinic-status--open';
+			} else {
+				clinicStatusEl.textContent = 'CLOSED NOW';
+				clinicStatusEl.className = 'clinic-status--closed';
+			}
+		}
+		
+		updateClinicStatus();
+		// Update every minute
+		setInterval(updateClinicStatus, 60000);
+	}
 });
