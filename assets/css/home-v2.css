@@ -448,6 +448,10 @@
   line-height: 1.6;
 }
 
+.home-v2-comprehensive .services-list__grid {
+  gap: 1rem;
+}
+
 
 /* Doctor Profile Section */
 .home-v2-doctor {
