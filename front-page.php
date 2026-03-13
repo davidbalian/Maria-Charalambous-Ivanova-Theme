@@ -13,8 +13,6 @@ get_header(); ?>
 
 	<?php get_template_part( 'template-parts/home-v2/welcome' ); ?>
 
-	<?php get_template_part( 'template-parts/home-v2/benefits' ); ?>
-
 	<!-- Before & After -->
 	<section id="before-after" class="home-cases">
 		<div class="container">
@@ -35,6 +33,8 @@ get_header(); ?>
 			</div>
 		</div>
 	</section>
+
+	<?php get_template_part( 'template-parts/home-v2/benefits' ); ?>
 
 	<?php get_template_part( 'template-parts/home-v2/gentle-touch' ); ?>
 	
