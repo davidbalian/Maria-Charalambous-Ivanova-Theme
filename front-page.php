@@ -169,14 +169,4 @@ get_header(); ?>
 
 </main>
 
-<!-- TODO: Remove this script before launch -->
-<script>
-document.addEventListener('click', function(e) {
-	var link = e.target.closest('a');
-	if (link && link.getAttribute('href') !== '#' && !link.getAttribute('href').startsWith('#')) {
-		e.preventDefault();
-	}
-});
-</script>
-
 <?php get_footer(); ?>
