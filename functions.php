@@ -35,6 +35,16 @@ function mci_theme_setup() {
 add_action( 'after_setup_theme', 'mci_theme_setup' );
 
 /**
+ * Add meta description for front page.
+ */
+function mci_meta_description() {
+	if ( is_front_page() ) {
+		echo '<meta name="description" content="Modern dental clinic offering high-quality dental care, preventive treatments, cosmetic dentistry, implants, and emergency dental services. Providing personalized dental care in a comfortable and professional environment.">' . "\n";
+	}
+}
+add_action( 'wp_head', 'mci_meta_description', 1 );
+
+/**
  * Enqueue styles and scripts.
  */
 function mci_enqueue_assets() {

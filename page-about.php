@@ -13,7 +13,7 @@ get_header(); ?>
 	<section class="about-hero">
 		<div class="container">
 			<h1 class="about-hero__title">About the Clinic</h1>
-			<p class="about-hero__subtitle">Excellence in Dentistry Is Designed &mdash; Not Accidental.</p>
+			<p class="about-hero__subtitle">Welcome to our dental clinic, where your oral health and smile are our top priorities.</p>
 		</div>
 	</section>
 
@@ -55,9 +55,10 @@ get_header(); ?>
 	<!-- Clinic Experience -->
 	<section class="about-experience">
 		<div class="container">
-			<h2>The Clinic Experience</h2>
-			<p>Located in Limassol, Cyprus, Dental Art Clinic offers a modern, welcoming environment designed to put patients at ease. From the moment you step through our doors, you will experience a space where comfort meets cutting-edge dental care.</p>
-			<p>Our clinic is equipped with the latest technology, allowing us to deliver precise diagnoses and exceptional results. We take pride in creating an atmosphere where every visit feels personal, professional, and reassuring.</p>
+			<h2>About the Clinic</h2>
+			<p>Our dental clinic is dedicated to providing comprehensive dental care for patients of all ages. We focus on prevention, accurate diagnosis, and high-quality treatment to ensure the best possible results for every patient.</p>
+			<p>We believe that visiting the dentist should be a comfortable and positive experience. For this reason, we create a friendly and relaxed environment while offering personalized care tailored to each patient's needs.</p>
+			<p>Our priority is to build long-term relationships with our patients based on trust, professionalism, and excellent dental care.</p>
 		</div>
 	</section>
 

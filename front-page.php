@@ -11,6 +11,10 @@ get_header(); ?>
 
 	<?php get_template_part( 'template-parts/home-v2/hero' ); ?>
 
+	<?php get_template_part( 'template-parts/home-v2/welcome' ); ?>
+
+	<?php get_template_part( 'template-parts/home-v2/benefits' ); ?>
+
 	<!-- Before & After -->
 	<section id="before-after" class="home-cases">
 		<div class="container">
@@ -124,7 +128,7 @@ get_header(); ?>
 		<div class="container">
 			<div class="home-contact__grid">
 				<div class="home-contact__info">
-					<h2 class="home-contact__title fade-in fade-in-delay-0">Get in Touch</h2>
+					<h2 class="home-contact__title fade-in fade-in-delay-0">Contact Us</h2>
 
 					<div class="home-contact__detail fade-in fade-in-delay-1">
 						<h4>Phone</h4>
@@ -144,7 +148,7 @@ get_header(); ?>
 					<div class="home-contact__detail fade-in fade-in-delay-4">
 						<h4>Hours <span id="clinic-open-status" class="js-clinic-status"></span></h4>
 						<table class="contact-hours">
-						<tr><td>Monday &ndash; Thursday</td><td>8:00 AM &ndash; 5:00 PM</td></tr>
+						<tr><td>Monday &ndash; Thursday</td><td>8:00 AM &ndash; 5:30 PM</td></tr>
 						<tr><td>Friday</td><td>8:00 AM &ndash; 1:00 PM</td></tr>
 						<tr><td>Saturday &ndash; Sunday</td><td>Closed</td></tr>
 						</table>

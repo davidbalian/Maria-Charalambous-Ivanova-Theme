@@ -12,8 +12,9 @@ get_header(); ?>
 	<!-- Hero -->
 	<section class="contact-hero">
 		<div class="container">
-			<h1 class="contact-hero__title">Get in Touch</h1>
-			<p class="contact-hero__subtitle">We would love to hear from you &mdash; book a consultation or ask us anything.</p>
+			<h1 class="contact-hero__title">Contact Us</h1>
+			<p class="contact-hero__subtitle">If you would like to schedule an appointment or need more information about our dental services, please feel free to contact us.</p>
+			<p class="contact-hero__intro">Our team will be happy to assist you and help you achieve a healthy and beautiful smile. You can also fill out the contact form on our website and we will get back to you as soon as possible.</p>
 		</div>
 	</section>
 
@@ -57,7 +58,7 @@ get_header(); ?>
 						<table class="contact-hours">
 							<tr>
 								<td>Monday &ndash; Thursday</td>
-								<td>8:00 AM &ndash; 5:00 PM</td>
+								<td>8:00 AM &ndash; 5:30 PM</td>
 							</tr>
 							<tr>
 								<td>Friday</td>
@@ -92,10 +93,19 @@ get_header(); ?>
 							<label for="contact-service">Service</label>
 							<select id="contact-service" name="contact_service" required>
 								<option value="" disabled selected>Select a service</option>
+								<option value="General Dental Examination & Prevention">General Dental Examination &amp; Prevention</option>
+								<option value="Professional Teeth Cleaning">Professional Teeth Cleaning</option>
+								<option value="Dental Fillings">Dental Fillings</option>
+								<option value="Root Canal Treatment">Root Canal Treatment (Endodontics)</option>
+								<option value="Tooth Extractions">Tooth Extractions</option>
+								<option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
+								<option value="Crowns & Bridges">Crowns &amp; Bridges</option>
+								<option value="Dental Implants">Dental Implants</option>
+								<option value="Dentures">Dentures</option>
+								<option value="Periodontal Treatment">Periodontal Treatment</option>
+								<option value="Emergency Dental Care">Emergency Dental Care</option>
 								<option value="Smilers Aligners">Smilers Aligners</option>
 								<option value="One-Visit Transformations">One-Visit Transformations</option>
-								<option value="Cosmetic Masterpieces">Cosmetic Masterpieces</option>
-								<option value="Preventative & Restorative Care">Preventative &amp; Restorative Care</option>
 								<option value="General Inquiry">General Inquiry</option>
 							</select>
 						</div>

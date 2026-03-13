@@ -9,36 +9,45 @@
 				<p>Each case is treated individually with no standardized solutions — only the right solution for the specific patient, always focusing on long-term health, proper function, and aesthetic balance.</p>
 			</div>
 			<div class="home-v2-consultation__form fade-in fade-in-delay-1">
-				<h3>Book Your Consultation</h3>
+				<h3>Book Appointment</h3>
 				<form action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post">
-					<?php wp_nonce_field( 'mci_contact_nonce', 'mci_contact_nonce' ); ?>
+					<?php wp_nonce_field( 'mci_contact_form_nonce', 'mci_contact_nonce' ); ?>
 					<input type="hidden" name="action" value="mci_contact_form">
 					
 					<div class="form-group">
-						<label for="contact-name">Full Name</label>
-						<input type="text" id="contact-name" name="contact_name" placeholder="e.g. Maria Georgiou" required>
+						<label for="consultation-name">Full Name</label>
+						<input type="text" id="consultation-name" name="contact_name" placeholder="e.g. Maria Georgiou" required>
 					</div>
 					<div class="form-group">
-						<label for="contact-phone">Phone</label>
-						<input type="tel" id="contact-phone" name="contact_phone" placeholder="+357 99 123 456" required>
+						<label for="consultation-phone">Phone</label>
+						<input type="tel" id="consultation-phone" name="contact_phone" placeholder="+357 99 123 456" required>
 					</div>
 					<div class="form-group">
-						<label for="contact-service">Service Interested In</label>
-						<select id="contact-service" name="contact_service" required>
+						<label for="consultation-service">Service Interested In</label>
+						<select id="consultation-service" name="contact_service" required>
 							<option value="">Select a service</option>
+							<option value="General Dental Examination & Prevention">General Dental Examination &amp; Prevention</option>
+							<option value="Professional Teeth Cleaning">Professional Teeth Cleaning</option>
+							<option value="Dental Fillings">Dental Fillings</option>
+							<option value="Root Canal Treatment">Root Canal Treatment (Endodontics)</option>
+							<option value="Tooth Extractions">Tooth Extractions</option>
+							<option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
+							<option value="Crowns & Bridges">Crowns &amp; Bridges</option>
+							<option value="Dental Implants">Dental Implants</option>
+							<option value="Dentures">Dentures</option>
+							<option value="Periodontal Treatment">Periodontal Treatment</option>
+							<option value="Emergency Dental Care">Emergency Dental Care</option>
 							<option value="Composite Veneers">Composite Veneers</option>
 							<option value="Emax Veneers">Emax Veneers</option>
-							<option value="Dental Implants">Dental Implants</option>
-							<option value="Orthodontics">Orthodontics</option>
 							<option value="Full Mouth Rehabilitation">Full Mouth Rehabilitation</option>
 							<option value="General Consultation">General Consultation</option>
 						</select>
 					</div>
 					<div class="form-group">
-						<label for="contact-message">Message</label>
-						<textarea id="contact-message" name="contact_message" rows="4" placeholder="Tell us about your smile goals..."></textarea>
+						<label for="consultation-message">Message</label>
+						<textarea id="consultation-message" name="contact_message" rows="4" placeholder="Tell us about your smile goals..."></textarea>
 					</div>
-					<button type="submit" class="btn btn-primary">Submit</button>
+					<button type="submit" class="btn btn-primary">Book Appointment</button>
 				</form>
 			</div>
 		</div>

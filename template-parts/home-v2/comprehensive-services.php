@@ -2,6 +2,7 @@
 <section class="home-v2-comprehensive">
 	<div class="container">
 		<h2 class="home-v2-comprehensive__title fade-in fade-in-delay-0">Comprehensive Dental Care for <span class="accent-font">Every Need</span></h2>
+		<p class="home-v2-comprehensive__subtitle fade-in fade-in-delay-1">At our dental clinic, we are committed to providing high-quality dental care in a comfortable and welcoming environment. Our goal is to help patients maintain excellent oral health while enhancing the beauty and function of their smile.</p>
 		<div class="home-v2-comprehensive__grid">
 			<div class="home-v2-comprehensive__box fade-in fade-in-delay-2">
 				<div class="home-v2-comprehensive__box-icon home-v2-comprehensive__box-icon--img">

@@ -146,12 +146,12 @@ document.addEventListener('DOMContentLoaded', function () {
 			var currentMinutes = hour * 60 + minute;
 
 			// Schedule:
-			// Mon-Thu: 8:00 (480) - 17:00 (1020)
+			// Mon-Thu: 8:00 (480) - 17:30 (1050)
 			// Fri: 8:00 (480) - 13:00 (780)
 			// Sat-Sun: Closed
 
 			if (['Monday', 'Tuesday', 'Wednesday', 'Thursday'].includes(weekday)) {
-				if (currentMinutes >= 480 && currentMinutes < 1020) {
+				if (currentMinutes >= 480 && currentMinutes < 1050) {
 					isOpen = true;
 				}
 			} else if (weekday === 'Friday') {

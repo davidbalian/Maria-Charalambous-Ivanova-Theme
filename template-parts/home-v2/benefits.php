@@ -1,27 +1,37 @@
-<!-- Benefits Section -->
+<!-- Why Choose Our Dental Clinic -->
 <section class="home-v2-benefits">
 	<div class="container">
+		<h2 class="home-v2-benefits__title fade-in fade-in-delay-0">Why Choose Our Dental Clinic</h2>
 		<div class="home-v2-benefits__grid">
-			<div class="home-v2-benefits__card fade-in fade-in-delay-0">
-				<div class="home-v2-benefits__card-icon">
-					<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
-				</div>
-				<h3 class="home-v2-benefits__card-title">Scientific Precision</h3>
-				<p class="home-v2-benefits__card-text">Every treatment is based on comprehensive analysis and evidence-based protocols.</p>
-			</div>
 			<div class="home-v2-benefits__card fade-in fade-in-delay-1">
 				<div class="home-v2-benefits__card-icon">
-					<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+					<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
 				</div>
-				<h3 class="home-v2-benefits__card-title">Strategic Planning</h3>
-				<p class="home-v2-benefits__card-text">Carefully structured treatment plans designed for long-term success and health.</p>
+				<h3 class="home-v2-benefits__card-title">Modern dental technology</h3>
 			</div>
 			<div class="home-v2-benefits__card fade-in fade-in-delay-2">
 				<div class="home-v2-benefits__card-icon">
-					<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z"/></svg>
+					<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
 				</div>
-				<h3 class="home-v2-benefits__card-title">Pain-Free Experience</h3>
-				<p class="home-v2-benefits__card-text">Stress-free, comfortable care focused entirely on your well-being.</p>
+				<h3 class="home-v2-benefits__card-title">Personalized treatment for every patient</h3>
+			</div>
+			<div class="home-v2-benefits__card fade-in fade-in-delay-3">
+				<div class="home-v2-benefits__card-icon">
+					<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+				</div>
+				<h3 class="home-v2-benefits__card-title">Comfortable and friendly environment</h3>
+			</div>
+			<div class="home-v2-benefits__card fade-in fade-in-delay-4">
+				<div class="home-v2-benefits__card-icon">
+					<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>
+				</div>
+				<h3 class="home-v2-benefits__card-title">High-quality dental materials</h3>
+			</div>
+			<div class="home-v2-benefits__card fade-in fade-in-delay-5">
+				<div class="home-v2-benefits__card-icon">
+					<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+				</div>
+				<h3 class="home-v2-benefits__card-title">Experienced and professional</h3>
 			</div>
 		</div>
 	</div>
