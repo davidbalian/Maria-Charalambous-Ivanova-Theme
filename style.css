@@ -1520,6 +1520,61 @@ hr {
 }
 
 /* ==========================================================================
+   16b. Shared Page Hero (About, Services, Contact, Gallery)
+   ========================================================================== */
+
+.page-hero {
+  padding: var(--mci-spacing-3xl) 0 var(--mci-spacing-2xl);
+  text-align: center;
+}
+
+.page-hero__title {
+  font-family: var(--mci-font-heading);
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-weight: var(--mci-font-weight-bold);
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+  margin-bottom: var(--mci-spacing-md);
+}
+
+.page-hero__subtitle {
+  font-size: 1.2rem;
+  color: var(--mci-color-text-light);
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+
+.page-hero__intro {
+  font-size: 1.1rem;
+  color: var(--mci-color-text-light);
+  max-width: 540px;
+  margin: var(--mci-spacing-md) auto 0;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+
+/* Shared section styling for inner pages (alternating backgrounds) */
+.page-section {
+  border-top: none;
+}
+
+.page-section--background {
+  background-color: var(--mci-color-background);
+}
+
+.page-section--surface {
+  background-color: var(--mci-color-surface);
+}
+
+.page-section.page-section--background,
+.page-section.page-section--surface {
+  padding: var(--mci-spacing-3xl) 0;
+}
+
+/* ==========================================================================
    17. Page Templates — About
    ========================================================================== */
 

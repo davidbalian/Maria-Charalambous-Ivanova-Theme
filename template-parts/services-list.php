@@ -52,11 +52,16 @@ $services = array(
 	),
 );
 ?>
-<section class="services-list">
+<section class="services-list page-section page-section--surface">
 	<div class="container">
-		<div class="services-list__grid">
-			<?php foreach ( $services as $service ) : ?>
-				<div class="services-list__item">
+		<div class="services-list__grid" data-fade-stagger>
+			<?php
+			$delay = 0;
+			foreach ( $services as $service ) :
+				$delay_class = 'fade-in-delay-' . min( $delay, 10 );
+				$delay++;
+				?>
+				<div class="services-list__item fade-in <?php echo esc_attr( $delay_class ); ?>">
 					<h3 class="services-list__title"><?php echo esc_html( $service['title'] ); ?></h3>
 					<p class="services-list__desc"><?php echo esc_html( $service['desc'] ); ?></p>
 				</div>
