@@ -1,51 +1,71 @@
+<?php
+/**
+ * Services data shared with services-list template.
+ *
+ * @package Maria_Charalambous_Ivanova
+ */
+
+$comprehensive_services = array(
+	array(
+		'title' => 'General Dental Examination & Prevention',
+		'desc'  => 'Regular dental check-ups help detect potential problems early and maintain optimal oral health through preventive care and professional advice.',
+	),
+	array(
+		'title' => 'Professional Teeth Cleaning',
+		'desc'  => 'Removal of plaque, tartar, and stains to promote healthy gums and a brighter, healthier smile.',
+	),
+	array(
+		'title' => 'Dental Fillings',
+		'desc'  => 'Treatment of tooth decay using modern, aesthetic materials that restore both function and natural appearance.',
+	),
+	array(
+		'title' => 'Root Canal Treatment (Endodontics)',
+		'desc'  => 'Advanced treatment for infected or inflamed tooth nerves, allowing the natural tooth to be preserved and pain to be relieved.',
+	),
+	array(
+		'title' => 'Tooth Extractions',
+		'desc'  => 'Safe and gentle removal of teeth when they cannot be restored, always prioritizing patient comfort.',
+	),
+	array(
+		'title' => 'Cosmetic Dentistry',
+		'desc'  => 'A range of treatments designed to enhance the appearance of your smile, including teeth whitening and aesthetic restorations.',
+	),
+	array(
+		'title' => 'Crowns & Bridges',
+		'desc'  => 'Durable restorations used to repair damaged teeth or replace missing ones, improving both function and aesthetics.',
+	),
+	array(
+		'title' => 'Dental Implants',
+		'desc'  => 'A modern and long-lasting solution for replacing missing teeth, restoring both confidence and oral function.',
+	),
+	array(
+		'title' => 'Dentures',
+		'desc'  => 'Full or partial removable dentures designed to restore chewing ability, speech, and smile aesthetics.',
+	),
+	array(
+		'title' => 'Periodontal Treatment',
+		'desc'  => 'Diagnosis and treatment of gum diseases such as gingivitis and periodontitis to protect the health of your gums and supporting bone.',
+	),
+	array(
+		'title' => 'Emergency Dental Care',
+		'desc'  => 'Prompt care for dental emergencies including severe toothache, broken teeth, infections, or other urgent dental conditions.',
+	),
+);
+
+$stagger_delays = array( 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10 );
+?>
 <!-- Comprehensive Services Section -->
 <section class="home-v2-comprehensive">
 	<div class="container">
 		<h2 class="home-v2-comprehensive__title fade-in fade-in-delay-0">Comprehensive Dental Care for <span class="accent-font">Every Need</span></h2>
 		<p class="home-v2-comprehensive__subtitle fade-in fade-in-delay-1">At our dental clinic, we are committed to providing high-quality dental care in a comfortable and welcoming environment. Our goal is to help patients maintain excellent oral health while enhancing the beauty and function of their smile.</p>
-		<div class="home-v2-comprehensive__grid">
-			<div class="home-v2-comprehensive__box fade-in fade-in-delay-2">
-				<div class="home-v2-comprehensive__box-icon home-v2-comprehensive__box-icon--img">
-					<img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/02/dental-veneer.avif' ) ); ?>" alt="Composite Veneers" width="64" height="64">
+		<div class="services-list__grid home-v2-comprehensive__services-grid">
+			<?php foreach ( $comprehensive_services as $i => $service ) : ?>
+				<div class="services-list__item fade-in fade-in-delay-<?php echo esc_attr( $stagger_delays[ $i ] ); ?>">
+					<h3 class="services-list__title"><?php echo esc_html( $service['title'] ); ?></h3>
+					<p class="services-list__desc"><?php echo esc_html( $service['desc'] ); ?></p>
 				</div>
-				<h3 class="home-v2-comprehensive__box-title">Composite Veneers</h3>
-				<p class="home-v2-comprehensive__box-text">Natural-looking smile transformations</p>
-			</div>
-			<div class="home-v2-comprehensive__box fade-in fade-in-delay-4">
-				<div class="home-v2-comprehensive__box-icon home-v2-comprehensive__box-icon--img home-v2-comprehensive__box-icon--emax">
-					<img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/02/emax-logo.avif' ) ); ?>" alt="Emax Veneers" width="140" height="96">
-				</div>
-				<h3 class="home-v2-comprehensive__box-title">Emax Veneers</h3>
-				<p class="home-v2-comprehensive__box-text">Premium ceramic smile design</p>
-			</div>
-			<div class="home-v2-comprehensive__box fade-in fade-in-delay-6">
-				<div class="home-v2-comprehensive__box-icon home-v2-comprehensive__box-icon--img">
-					<img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/02/dental-implant.avif' ) ); ?>" alt="Dental Implants" width="64" height="64">
-				</div>
-				<h3 class="home-v2-comprehensive__box-title">Dental Implants</h3>
-				<p class="home-v2-comprehensive__box-text">Permanent tooth replacement solutions</p>
-			</div>
-			<div class="home-v2-comprehensive__box fade-in fade-in-delay-8">
-				<div class="home-v2-comprehensive__box-icon home-v2-comprehensive__box-icon--img">
-					<img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/02/orthodontic.avif' ) ); ?>" alt="Orthodontics" width="64" height="64">
-				</div>
-				<h3 class="home-v2-comprehensive__box-title">Orthodontics</h3>
-				<p class="home-v2-comprehensive__box-text">Braces and alignment correction</p>
-			</div>
-			<div class="home-v2-comprehensive__box fade-in fade-in-delay-9">
-				<div class="home-v2-comprehensive__box-icon home-v2-comprehensive__box-icon--img">
-					<img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/02/tooth-filling.avif' ) ); ?>" alt="Endodontics" width="64" height="64">
-				</div>
-				<h3 class="home-v2-comprehensive__box-title">Endodontics</h3>
-				<p class="home-v2-comprehensive__box-text">Root canal and pulp treatments</p>
-			</div>
-			<div class="home-v2-comprehensive__box fade-in fade-in-delay-10">
-				<div class="home-v2-comprehensive__box-icon home-v2-comprehensive__box-icon--img">
-					<img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/02/dental-care.avif' ) ); ?>" alt="Full Mouth Rehabilitation" width="64" height="64">
-				</div>
-				<h3 class="home-v2-comprehensive__box-title">Full Mouth Rehabilitation</h3>
-				<p class="home-v2-comprehensive__box-text">Complete restoration and reconstruction</p>
-			</div>
+			<?php endforeach; ?>
 		</div>
 	</div>
 </section>
