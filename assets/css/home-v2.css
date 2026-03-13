@@ -60,6 +60,13 @@
   [class*="fade-in-delay-"] {
     transition-delay: 0s !important;
   }
+
+  /* Preserve staggered fade-in for Why Choose Our Dental Clinic cards */
+  .home-v2-benefits__card.fade-in-delay-2 { transition-delay: 0.2s !important; }
+  .home-v2-benefits__card.fade-in-delay-4 { transition-delay: 0.4s !important; }
+  .home-v2-benefits__card.fade-in-delay-6 { transition-delay: 0.6s !important; }
+  .home-v2-benefits__card.fade-in-delay-8 { transition-delay: 0.8s !important; }
+  .home-v2-benefits__card.fade-in-delay-10 { transition-delay: 1s !important; }
 }
 
 /* WordPress Admin Bar Offset */
