@@ -7,7 +7,7 @@ $hero_image_url = 'http://davidb1646.sg-host.com/wp-content/uploads/2026/02/dr-m
 			<div class="home-hero__inner">
 				<div class="home-hero__content">
 					<h1 class="home-hero__title fade-in fade-in-delay-0">Beautiful Smiles <span class="accent-font">Start Here</span></h1>
-					<p class="home-hero__text fade-in fade-in-delay-1">Modern dentistry with personalized care.</p>
+					<p class="home-hero__text fade-in fade-in-delay-1">Professional dental care with modern technology, personalized treatment, and a focus on long-term oral health.</p>
 					<div class="home-hero__ctas fade-in fade-in-delay-2">
 						<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-primary">Book Appointment</a>
 						<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-outline">Contact Us</a>
