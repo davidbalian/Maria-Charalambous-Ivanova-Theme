@@ -28,7 +28,37 @@ document.addEventListener('DOMContentLoaded', function () {
 		{ root: null, rootMargin: '0px', threshold: 0.25 }
 	);
 	document.querySelectorAll('.fade-in').forEach(function (el) {
+		if (el.closest('[data-fade-stagger]')) return;
 		observer.observe(el);
+	});
+
+	// Staggered cascade for children inside [data-fade-stagger] (e.g. benefits cards)
+	document.querySelectorAll('[data-fade-stagger]').forEach(function (container) {
+		var staggerObserver = new IntersectionObserver(
+			function (entries) {
+				entries.forEach(function (entry) {
+					if (entry.isIntersecting) {
+						var children = container.querySelectorAll('.fade-in');
+						children.forEach(function (child) {
+							var delayClass = Array.from(child.classList).find(function (c) {
+								return c.indexOf('fade-in-delay-') === 0;
+							});
+							var delayMs = 100;
+							if (delayClass) {
+								var n = parseInt(delayClass.replace('fade-in-delay-', ''), 10);
+								delayMs = n * 100;
+							}
+							setTimeout(function () {
+								child.classList.add('visible');
+							}, delayMs);
+						});
+						staggerObserver.unobserve(container);
+					}
+				});
+			},
+			{ root: null, rootMargin: '0px', threshold: 0.25 }
+		);
+		staggerObserver.observe(container);
 	});
 
 	// Header scroll toggle

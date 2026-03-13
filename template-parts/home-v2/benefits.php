@@ -2,7 +2,7 @@
 <section class="home-v2-benefits">
 	<div class="container">
 		<h2 class="home-v2-benefits__title fade-in fade-in-delay-0">Why Choose Our Dental Clinic</h2>
-		<div class="home-v2-benefits__grid">
+		<div class="home-v2-benefits__grid" data-fade-stagger>
 			<div class="home-v2-benefits__card fade-in fade-in-delay-1">
 				<div class="home-v2-benefits__card-icon">
 					<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
