@@ -1,5 +1,5 @@
 <!-- Welcome Section -->
-<section class="home-v2-welcome">
+<section id="welcome" class="home-v2-welcome">
 	<div class="container">
 		<div class="home-v2-welcome__grid">
 			<div class="home-v2-welcome__image fade-in fade-in-delay-1">
