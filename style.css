@@ -1955,27 +1955,95 @@ hr {
    ========================================================================== */
 
 .services-hero {
-  padding: var(--mci-spacing-3xl) 0 var(--mci-spacing-2xl);
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  margin-top: -6.5rem;
+  padding: calc(6.5rem + var(--mci-spacing-3xl)) 0 var(--mci-spacing-3xl);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--mci-color-secondary);
+}
+
+.services-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(29, 29, 31, 0.45), rgba(29, 29, 31, 0.7));
+  pointer-events: none;
+}
+
+.services-hero__content {
+  position: relative;
+  z-index: 1;
 }
 
 .services-hero__title {
   font-family: var(--mci-font-heading);
-  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-size: clamp(2.4rem, 5.5vw, 3.4rem);
   font-weight: var(--mci-font-weight-bold);
   letter-spacing: -0.035em;
   line-height: 1.1;
   margin-bottom: var(--mci-spacing-md);
+  color: var(--mci-color-white);
 }
 
 .services-hero__subtitle {
   font-size: 1.2rem;
-  color: var(--mci-color-text-light);
-  max-width: 720px;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 540px;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.5;
   letter-spacing: -0.01em;
+  margin-bottom: var(--mci-spacing-lg);
+}
+
+/* --- Services CTA Banner --- */
+.services-cta {
+  position: relative;
+  padding: var(--mci-spacing-3xl) 0;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--mci-color-secondary);
+}
+
+.services-cta__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(29, 29, 31, 0.35), #1d1d1f);
+  pointer-events: none;
+}
+
+.services-cta__content {
+  position: relative;
+  z-index: 1;
+}
+
+.services-cta__content h2 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  color: var(--mci-color-white);
+  margin-bottom: var(--mci-spacing-md);
+}
+
+.services-cta__content > p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 540px;
+  margin: 0 auto var(--mci-spacing-lg);
+  line-height: 1.6;
+}
+
+.services-cta__buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--mci-spacing-sm);
+  flex-wrap: wrap;
 }
 
 .services-list {
@@ -2361,7 +2429,8 @@ hr {
 
   /* Services */
   .services-hero {
-    padding: var(--mci-spacing-2xl) 0 var(--mci-spacing-xl);
+    min-height: 320px;
+    padding: calc(6.5rem + var(--mci-spacing-2xl)) 0 var(--mci-spacing-2xl);
   }
 
   .services-item__grid {

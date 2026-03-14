@@ -5,20 +5,22 @@
  * @package Maria_Charalambous_Ivanova
  */
 
-get_header(); ?>
+get_header();
+
+$clinic_image_base = 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/';
+?>
 
 <main id="main" class="site-main">
 
-	<?php
-	get_template_part(
-		'template-parts/page-hero',
-		null,
-		array(
-			'title'    => 'Our Services',
-			'subtitle' => 'At our dental clinic, we are committed to providing high-quality dental care in a comfortable and welcoming environment. Our goal is to help patients maintain excellent oral health while enhancing the beauty and function of their smile. Using modern technology and evidence-based treatments, we offer personalized dental care tailored to the needs of every patient.',
-		)
-	);
-	?>
+	<!-- Hero with background image -->
+	<section class="services-hero" style="background-image: url('<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-dental-chair-screens.avif' ); ?>');">
+		<div class="services-hero__overlay"></div>
+		<div class="container services-hero__content">
+			<h1 class="services-hero__title fade-in fade-in-delay-0">Our Services</h1>
+			<p class="services-hero__subtitle fade-in fade-in-delay-1">Comprehensive dental care using modern technology and evidence-based treatments, tailored to every patient.</p>
+			<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-primary fade-in fade-in-delay-2">Book Appointment</a>
+		</div>
+	</section>
 
 	<?php get_template_part( 'template-parts/services-list' ); ?>
 
@@ -90,6 +92,19 @@ get_header(); ?>
 				<div class="services-item__image fade-in fade-in-delay-2">
 					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/smilers-aligners-at-dental-art-clinic-by-dr-maria-charalambous-ivanova.webp' ); ?>" alt="Preventative and Restorative Care" width="560" height="420">
 				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Banner -->
+	<section class="services-cta" style="background-image: url('<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-waiting-room-marble-interior.avif' ); ?>');">
+		<div class="services-cta__overlay"></div>
+		<div class="container services-cta__content">
+			<h2 class="fade-in fade-in-delay-0">Ready to Transform <span class="accent-font">Your Smile?</span></h2>
+			<p class="fade-in fade-in-delay-1">Book a consultation and discover the difference personalized dental care can make.</p>
+			<div class="services-cta__buttons fade-in fade-in-delay-2">
+				<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-primary">Book Appointment</a>
+				<a href="tel:+35725377757" class="btn btn-outline-light">Call +357 25 377757</a>
 			</div>
 		</div>
 	</section>
