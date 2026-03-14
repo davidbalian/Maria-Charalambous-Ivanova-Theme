@@ -1929,6 +1929,34 @@ hr {
   filter: none;
 }
 
+/* --- About page: transparent white header (before scroll) --- */
+.page-template-page-about .site-header:not(.is-scrolled) {
+  background: transparent;
+}
+
+.page-template-page-about .site-header:not(.is-scrolled) .site-logo {
+  filter: brightness(0) invert(1);
+}
+
+.page-template-page-about .site-header:not(.is-scrolled) .main-navigation a {
+  color: var(--mci-color-white);
+}
+
+.page-template-page-about .site-header:not(.is-scrolled) .main-navigation a:hover,
+.page-template-page-about .site-header:not(.is-scrolled) .main-navigation .current-menu-item > a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.page-template-page-about .site-header:not(.is-scrolled) .site-top-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .page-template-page-about .site-header:not(.is-scrolled) .mobile-nav-toggle {
+    color: var(--mci-color-white);
+  }
+}
+
 /* ==========================================================================
    18. Page Templates — Services
    ========================================================================== */
