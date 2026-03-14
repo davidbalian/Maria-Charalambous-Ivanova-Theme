@@ -1699,7 +1699,7 @@ hr {
   text-align: center;
   /* Pull hero up behind the in-flow header (nav 5rem + top bar ~1.5rem) */
   margin-top: -6.5rem;
-  padding: calc(6.5rem + var(--mci-spacing-3xl)) 0 var(--mci-spacing-3xl);
+  padding: calc(4.5rem + var(--mci-spacing-3xl)) 0 var(--mci-spacing-3xl);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
