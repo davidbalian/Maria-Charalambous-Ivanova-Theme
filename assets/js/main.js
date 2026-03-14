@@ -75,28 +75,26 @@ document.addEventListener('DOMContentLoaded', function () {
 			return 0;
 		}
 
+		function updateHeaderOffset() {
+			var offset = getAdminBarOffset();
+			if (offset > 0) {
+				header.style.top = offset + 'px';
+			} else {
+				header.style.top = '';
+			}
+		}
+
 		function onScroll() {
 			if (window.scrollY > scrollThreshold) {
 				header.classList.add('is-scrolled');
 			} else {
 				header.classList.remove('is-scrolled');
 			}
-
-			var offset = getAdminBarOffset();
-			if (offset > 0) {
-				header.style.top = Math.max(0, offset - window.scrollY) + 'px';
-			} else {
-				header.style.top = '';
-			}
+			updateHeaderOffset();
 		}
 
 		function onResize() {
-			var offset = getAdminBarOffset();
-			if (offset > 0) {
-				header.style.top = Math.max(0, offset - window.scrollY) + 'px';
-			} else {
-				header.style.top = '';
-			}
+			updateHeaderOffset();
 		}
 
 		window.addEventListener('scroll', onScroll, { passive: true });
