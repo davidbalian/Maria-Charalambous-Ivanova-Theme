@@ -899,6 +899,11 @@ select {
   color: var(--mci-color-white);
 }
 
+.badge-gold {
+  background-color: var(--mci-color-secondary);
+  color: var(--mci-color-white);
+}
+
 /* ==========================================================================
    11. Dividers
    ========================================================================== */
