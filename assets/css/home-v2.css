@@ -35,7 +35,7 @@
 .home-hero {
   position: relative;
   padding: 0 0 3rem;
-  min-height: 90vh;
+  min-height: calc(100vh - 6.5rem);
   display: flex;
   align-items: center;
 }
