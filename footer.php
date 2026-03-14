@@ -2,9 +2,11 @@
 	<div class="site-footer__inner">
 		<div class="site-footer__col site-footer__col--logo">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-footer__logo-link">
-				<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/horizontal-logo-gold.avif"
+				<img src="https://davidb1646.sg-host.com/wp-content/uploads/2026/02/horizontal-logo-gold.avif"
 				     alt="<?php bloginfo( 'name' ); ?>"
-				     class="site-footer__logo">
+				     class="site-footer__logo"
+				     width="200" height="40"
+				     loading="lazy">
 			</a>
 		</div>
 

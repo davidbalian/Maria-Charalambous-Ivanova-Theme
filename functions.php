@@ -51,11 +51,13 @@ function mci_enqueue_assets() {
 	wp_enqueue_style( 'mci-style', get_stylesheet_uri(), array(), MCI_THEME_VERSION );
 	wp_enqueue_style( 'mci-animations', get_template_directory_uri() . '/assets/css/animations.css', array( 'mci-style' ), MCI_THEME_VERSION );
 
-	// lightGallery.
-	wp_enqueue_style( 'lightgallery', 'https://cdn.jsdelivr.net/npm/lightgallery@2.9.0/css/lightgallery-bundle.min.css', array(), '2.9.0' );
-	wp_enqueue_script( 'lightgallery', 'https://cdn.jsdelivr.net/npm/lightgallery@2.9.0/lightgallery.umd.js', array(), '2.9.0', true );
-	wp_enqueue_script( 'lg-thumbnail', 'https://cdn.jsdelivr.net/npm/lightgallery@2.9.0/plugins/thumbnail/lg-thumbnail.umd.js', array( 'lightgallery' ), '2.9.0', true );
-	wp_enqueue_script( 'lg-zoom', 'https://cdn.jsdelivr.net/npm/lightgallery@2.9.0/plugins/zoom/lg-zoom.umd.js', array( 'lightgallery' ), '2.9.0', true );
+	// lightGallery — only on pages that use it (gallery page and front page before/after).
+	if ( is_page_template( 'page-gallery.php' ) || is_page( 'gallery' ) ) {
+		wp_enqueue_style( 'lightgallery', 'https://cdn.jsdelivr.net/npm/lightgallery@2.9.0/css/lightgallery-bundle.min.css', array(), '2.9.0' );
+		wp_enqueue_script( 'lightgallery', 'https://cdn.jsdelivr.net/npm/lightgallery@2.9.0/lightgallery.umd.js', array(), '2.9.0', true );
+		wp_enqueue_script( 'lg-thumbnail', 'https://cdn.jsdelivr.net/npm/lightgallery@2.9.0/plugins/thumbnail/lg-thumbnail.umd.js', array( 'lightgallery' ), '2.9.0', true );
+		wp_enqueue_script( 'lg-zoom', 'https://cdn.jsdelivr.net/npm/lightgallery@2.9.0/plugins/zoom/lg-zoom.umd.js', array( 'lightgallery' ), '2.9.0', true );
+	}
 
 	// Home V2 CSS + Slick carousel (clinic section).
 	if ( is_front_page() ) {
@@ -68,11 +70,40 @@ function mci_enqueue_assets() {
 		wp_enqueue_script( 'mci-clinic-slider', get_template_directory_uri() . '/assets/js/clinic-slider.js', array( 'slick' ), MCI_THEME_VERSION, true );
 	}
 
-	// Theme main JS (includes before/after and page gallery behavior).
-	$mci_main_deps = array( 'lightgallery', 'lg-thumbnail', 'lg-zoom' );
-	wp_enqueue_script( 'mci-main', get_template_directory_uri() . '/assets/js/main.js', $mci_main_deps, MCI_THEME_VERSION, true );
+	// Theme main JS — no dependencies (vanilla JS).
+	wp_enqueue_script( 'mci-main', get_template_directory_uri() . '/assets/js/main.js', array(), MCI_THEME_VERSION, true );
 }
 add_action( 'wp_enqueue_scripts', 'mci_enqueue_assets' );
+
+/**
+ * Dequeue jQuery and jQuery Migrate on front-end when not needed.
+ * Slick (front page) still needs jQuery, so only dequeue on non-front pages
+ * that don't have other jQuery dependencies.
+ */
+function mci_dequeue_jquery() {
+	if ( is_admin() ) {
+		return;
+	}
+	if ( ! is_front_page() && ! is_page( 'gallery' ) ) {
+		wp_dequeue_script( 'jquery' );
+		wp_deregister_script( 'jquery' );
+		wp_dequeue_script( 'jquery-migrate' );
+		wp_deregister_script( 'jquery-migrate' );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'mci_dequeue_jquery', 20 );
+
+/**
+ * Add defer attribute to non-critical scripts.
+ */
+function mci_defer_scripts( $tag, $handle, $src ) {
+	$defer_handles = array( 'slick', 'mci-clinic-slider', 'lightgallery', 'lg-thumbnail', 'lg-zoom' );
+	if ( in_array( $handle, $defer_handles, true ) ) {
+		return str_replace( ' src=', ' defer src=', $tag );
+	}
+	return $tag;
+}
+add_filter( 'script_loader_tag', 'mci_defer_scripts', 10, 3 );
 
 /**
  * Handle contact form submission.

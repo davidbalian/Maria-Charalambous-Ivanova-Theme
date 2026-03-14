@@ -5,7 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet"></noscript>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -15,12 +17,15 @@
 	<div class="site-header__inner">
 		<div class="site-branding">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-logo-link">
-				<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/horizontal-logo-gold.avif" 
-				     alt="<?php bloginfo( 'name' ); ?>" 
-				     class="site-logo site-logo--desktop">
-				<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/logomark.avif" 
-				     alt="<?php bloginfo( 'name' ); ?>" 
-				     class="site-logo site-logo--mobile">
+				<img src="https://davidb1646.sg-host.com/wp-content/uploads/2026/02/horizontal-logo-gold.avif"
+				     alt="<?php bloginfo( 'name' ); ?>"
+				     class="site-logo site-logo--desktop"
+				     width="200" height="40">
+				<img src="https://davidb1646.sg-host.com/wp-content/uploads/2026/02/logomark.avif"
+				     alt="<?php bloginfo( 'name' ); ?>"
+				     class="site-logo site-logo--mobile"
+				     width="31" height="32"
+				     fetchpriority="high">
 			</a>
 		</div>
 

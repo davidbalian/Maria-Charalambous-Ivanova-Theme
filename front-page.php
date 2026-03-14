@@ -19,13 +19,13 @@ get_header(); ?>
 			<h2 class="home-cases__title fade-in fade-in-delay-0">Before &amp; After</h2>
 			<div class="home-cases__grid">
 				<div class="home-cases__item fade-in fade-in-delay-1">
-					<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp" alt="Before and after at Dental Art Clinic" width="400" height="400">
+					<img src="https://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp" alt="Before and after at Dental Art Clinic" width="400" height="400" loading="lazy">
 				</div>
 				<div class="home-cases__item fade-in fade-in-delay-2">
-					<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-2-e1771955301824.webp" alt="Before and after at Dental Art Clinic" width="400" height="400">
+					<img src="https://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-2-e1771955301824.webp" alt="Before and after at Dental Art Clinic" width="400" height="400" loading="lazy">
 				</div>
 				<div class="home-cases__item fade-in fade-in-delay-3">
-					<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-e1771955250456.webp" alt="Before and after at Dental Art Clinic" width="400" height="400">
+					<img src="https://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-e1771955250456.webp" alt="Before and after at Dental Art Clinic" width="400" height="400" loading="lazy">
 				</div>
 			</div>
 			<div class="home-cases__action fade-in fade-in-delay-4">
@@ -43,7 +43,7 @@ get_header(); ?>
 	<?php get_template_part( 'template-parts/home-v2/doctor' ); ?>
 
 	<?php
-	$clinic_image_base_url = 'http://davidb1646.sg-host.com/wp-content/uploads/2026/02/';
+	$clinic_image_base_url = 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/';
 	$clinic_images = array(
 		// Mixed: treatment, reception, decor (bathrooms last)
 		'dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-wide-angle-equipment.avif' => 'Dental Art Clinic treatment room wide angle',
@@ -106,6 +106,8 @@ get_header(); ?>
 					<img
 						src="<?php echo esc_url( $clinic_image_url ); ?>"
 						alt="<?php echo esc_attr( $alt_text ); ?>"
+						width="600" height="400"
+						loading="lazy"
 						decoding="async"
 					>
 				<?php endforeach; ?>
@@ -132,23 +134,24 @@ get_header(); ?>
 					<h2 class="home-contact__title fade-in fade-in-delay-0">Contact Us</h2>
 
 					<div class="home-contact__detail fade-in fade-in-delay-1">
-						<h4>Phone</h4>
+						<h3>Phone</h3>
 						<p><a href="tel:+35725377757">+357 25 377757</a></p>
 					</div>
 
 					<div class="home-contact__detail fade-in fade-in-delay-2">
-						<h4>Email</h4>
+						<h3>Email</h3>
 						<p><a href="mailto:info@dentalartcliniclimassol.com">info@dentalartcliniclimassol.com</a></p>
 					</div>
 
 					<div class="home-contact__detail fade-in fade-in-delay-3">
-						<h4>Address</h4>
+						<h3>Address</h3>
 						<p>PRIMO AMARI, Walter Gropius 49-49,<br>Floor 1, Apt. 101, Limassol 3076, Cyprus</p>
 					</div>
 
 					<div class="home-contact__detail fade-in fade-in-delay-4">
 						<?php get_template_part( 'template-parts/hours-table', null, array(
-							'status_id' => 'clinic-open-status',
+							'heading_tag' => 'h3',
+							'status_id'   => 'clinic-open-status',
 						) ); ?>
 					</div>
 

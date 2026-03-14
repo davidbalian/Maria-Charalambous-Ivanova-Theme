@@ -1,5 +1,5 @@
 <?php
-$hero_image_url = 'http://davidb1646.sg-host.com/wp-content/uploads/2026/02/dr-maria-charalambous-ivanova-portrait-08-e1771938361770.avif';
+$hero_image_url = 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/dr-maria-charalambous-ivanova-portrait-08-e1771938361770.avif';
 ?>
 <section class="home-hero">
 	<div class="home-hero__container">

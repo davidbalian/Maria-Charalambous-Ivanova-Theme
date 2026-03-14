@@ -3,7 +3,7 @@
 	<div class="container">
 		<div class="home-v2-welcome__grid">
 			<div class="home-v2-welcome__image fade-in fade-in-delay-1">
-				<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/02/dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-dental-chair-screens.avif" alt="Dental Art Clinic treatment room with dental chair and screens" width="560" height="420">
+				<img src="https://davidb1646.sg-host.com/wp-content/uploads/2026/02/dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-dental-chair-screens.avif" alt="Dental Art Clinic treatment room with dental chair and screens" width="560" height="420" loading="lazy">
 			</div>
 			<div class="home-v2-welcome__content fade-in fade-in-delay-2">
 				<h2 class="home-v2-welcome__title fade-in fade-in-delay-0">Welcome to Our Dental Clinic</h2>
