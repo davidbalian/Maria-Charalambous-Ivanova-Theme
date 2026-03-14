@@ -11,7 +11,7 @@
 					<a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" class="home-v2-gentle__card-link">Learn More</a>
 				</div>
 			</div>
-			<div class="home-v2-gentle__card fade-in fade-in-delay-8" style="background-image: url('http://davidb1646.sg-host.com/wp-content/uploads/2026/02/dr-maria-charalambous-ivanova-portrait-09.webp');">
+			<div class="home-v2-gentle__card fade-in fade-in-delay-4" style="background-image: url('http://davidb1646.sg-host.com/wp-content/uploads/2026/02/dr-maria-charalambous-ivanova-portrait-09.webp');">
 				<div class="home-v2-gentle__card-content">
 					<h3 class="home-v2-gentle__card-title">Aesthetic Harmony</h3>
 					<p class="home-v2-gentle__card-text">Specializing in composite veneers and Emax veneers, we create naturally balanced results that harmonize function with aesthetics.</p>
