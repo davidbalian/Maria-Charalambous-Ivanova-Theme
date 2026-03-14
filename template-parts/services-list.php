@@ -52,8 +52,9 @@ $services = array(
 	),
 );
 ?>
-<section class="services-list page-section page-section--surface">
+<section class="services-list page-section page-section--background">
 	<div class="container">
+		<h2 class="services-list__heading fade-in fade-in-delay-0">Explore All Our Services</h2>
 		<div class="services-list__grid" data-fade-stagger>
 			<?php
 			$delay = 0;

@@ -2054,7 +2054,12 @@ hr {
 
 .services-list {
   padding: var(--mci-spacing-2xl) 0 var(--mci-spacing-3xl);
-  border-top: var(--mci-border-width) solid var(--mci-color-border);
+}
+
+.services-list__heading {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: var(--mci-spacing-xl);
 }
 
 .services-list__grid {
@@ -2117,7 +2122,6 @@ hr {
 
 .services-item {
   padding: var(--mci-spacing-3xl) 0;
-  border-top: var(--mci-border-width) solid var(--mci-color-border);
 }
 
 .services-item__grid {
