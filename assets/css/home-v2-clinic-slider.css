@@ -1,6 +1,8 @@
+/* Disable double-tap zoom so quick taps advance slides on mobile */
 .home-v2-clinic {
   padding: var(--mci-spacing-3xl) 0;
   background: linear-gradient(to top right, var(--mci-color-text), var(--mci-color-secondary));
+  touch-action: manipulation;
 }
 
 .home-v2-clinic .container {

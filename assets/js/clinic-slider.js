@@ -13,6 +13,7 @@ jQuery(window).on('load', function () {
 	$slider.slick({
 		variableWidth: true,
 		infinite: true,
+		waitForAnimate: false,
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		prevArrow: jQuery('.js-clinic-prev'),
