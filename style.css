@@ -65,6 +65,18 @@ Text Domain: maria-charalambous-ivanova
 }
 
 /* ==========================================================================
+   0c. Press Feedback Utility
+   ========================================================================== */
+
+/* Apply to any clickable element for consistent tactile response */
+.press-feedback:active {
+  transform: scale(0.97);
+}
+.press-feedback {
+  transition: transform 0.13s ease;
+}
+
+/* ==========================================================================
    1. Reset
    ========================================================================== */
 
@@ -419,7 +431,7 @@ blockquote p {
     border: none;
     cursor: pointer;
     color: var(--mci-color-text);
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, transform 0.13s ease;
   }
 
   .mobile-nav-toggle:hover,
@@ -1296,6 +1308,10 @@ hr {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   color: var(--mci-color-text);
+}
+
+.home-services__card:active {
+  transform: scale(0.97);
 }
 
 .home-services__icon {

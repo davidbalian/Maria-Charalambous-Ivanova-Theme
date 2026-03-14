@@ -34,7 +34,7 @@
 			?>
 		</nav>
 
-		<button type="button" class="mobile-nav-toggle" aria-label="<?php esc_attr_e( 'Open menu', 'maria-charalambous-ivanova' ); ?>" aria-expanded="false" aria-controls="mobile-nav">
+		<button type="button" class="mobile-nav-toggle press-feedback" aria-label="<?php esc_attr_e( 'Open menu', 'maria-charalambous-ivanova' ); ?>" aria-expanded="false" aria-controls="mobile-nav">
 			<span class="mobile-nav-toggle__line"></span>
 			<span class="mobile-nav-toggle__line"></span>
 			<span class="mobile-nav-toggle__line"></span>

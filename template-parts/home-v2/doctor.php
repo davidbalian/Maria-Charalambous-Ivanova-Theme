@@ -23,7 +23,7 @@
 					<p><em>Because a smile is not just about appearance.</em></p>
 					<p><em>It is function. It is balance. It is confidence. It is quality of life.</em></p>
 				</div>
-				<a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" class="btn btn-outline fade-in fade-in-delay-7" style="margin-top: var(--mci-spacing-lg);">More About Dr. Charalambous-Ivanova</a>
+				<a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" class="btn btn-outline fade-in fade-in-delay-7">More About Dr. Charalambous-Ivanova</a>
 			</div>
 		</div>
 	</div>
