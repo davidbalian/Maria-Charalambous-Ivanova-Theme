@@ -50,52 +50,6 @@
   align-items: center;
 }
 
-/* -- Background image hero variant -- */
-
-.home-hero--bg {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.home-hero--bg .home-hero__overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.65) 0%,
-    rgba(0, 0, 0, 0.4) 50%,
-    rgba(0, 0, 0, 0.25) 100%
-  );
-  z-index: 1;
-}
-
-.home-hero--bg .home-hero__container {
-  position: relative;
-  z-index: 2;
-}
-
-.home-hero--bg .home-hero__title {
-  color: #fff;
-}
-
-.home-hero--bg .home-hero__text {
-  color: rgba(255, 255, 255, 0.85);
-}
-
-.home-hero--bg .home-hero__scroll-down {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.home-hero--bg .btn-outline {
-  color: #fff;
-  border-color: rgba(255, 255, 255, 0.5);
-}
-
-.home-hero--bg .btn-outline:hover {
-  border-color: #fff;
-}
-
 .home-hero__scroll-down {
   position: absolute;
   bottom: 1rem;
