@@ -147,12 +147,9 @@ get_header(); ?>
 					</div>
 
 					<div class="home-contact__detail fade-in fade-in-delay-4">
-						<h4>Hours <span id="clinic-open-status" class="js-clinic-status"></span></h4>
-						<table class="contact-hours">
-						<tr><td>Monday &ndash; Thursday</td><td>8:00 AM &ndash; 5:30 PM</td></tr>
-						<tr><td>Friday</td><td>8:00 AM &ndash; 1:00 PM</td></tr>
-						<tr><td>Saturday &ndash; Sunday</td><td>Closed</td></tr>
-						</table>
+						<?php get_template_part( 'template-parts/hours-table', null, array(
+							'status_id' => 'clinic-open-status',
+						) ); ?>
 					</div>
 
 					<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-primary fade-in fade-in-delay-5">Contact Us</a>

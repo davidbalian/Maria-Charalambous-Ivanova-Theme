@@ -57,21 +57,10 @@ get_header(); ?>
 					</div>
 
 					<div class="contact-info__item fade-in fade-in-delay-4">
-						<h4>Operating Hours</h4>
-						<table class="contact-hours">
-							<tr>
-								<td>Monday &ndash; Thursday</td>
-								<td>8:00 AM &ndash; 5:30 PM</td>
-							</tr>
-							<tr>
-								<td>Friday</td>
-								<td>8:00 AM &ndash; 1:00 PM</td>
-							</tr>
-							<tr>
-								<td>Saturday &ndash; Sunday</td>
-								<td>Closed</td>
-							</tr>
-						</table>
+						<?php get_template_part( 'template-parts/hours-table', null, array(
+							'heading_text' => 'Operating Hours',
+							'status_id'    => 'contact-clinic-status',
+						) ); ?>
 					</div>
 				</div>
 
