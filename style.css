@@ -2064,15 +2064,15 @@ hr {
 
 .services-list__grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: var(--mci-spacing-xl);
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--mci-spacing-md);
 }
 
 .services-list__item {
-  grid-column: span 3; /* 4 columns by default; assumes 11 items for last-row overrides */
-  padding: var(--mci-spacing-lg);
+  padding: var(--mci-spacing-lg) var(--mci-spacing-md);
   background-color: var(--mci-color-surface);
-  border-radius: var(--mci-radius-lg);
+  border-radius: var(--mci-radius-md);
+  box-shadow: var(--mci-shadow-sm);
 }
 
 .services-list__title {
@@ -2089,34 +2089,15 @@ hr {
   margin: 0;
 }
 
-/* Last-row flush: when last row has fewer items, span to fill row (11 items) */
-@media (min-width: 1100px) {
-  .services-list__item:nth-last-child(-n + 3) {
-    grid-column: span 4;
+@media (max-width: 768px) {
+  .services-list__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 800px) and (max-width: 1099px) {
-  .services-list__item {
-    grid-column: span 4;
-  }
-  .services-list__item:nth-last-child(-n + 2) {
-    grid-column: span 6;
-  }
-}
-
-@media (min-width: 641px) and (max-width: 799px) {
-  .services-list__item {
-    grid-column: span 6;
-  }
-  .services-list__item:nth-last-child(-n + 1) {
-    grid-column: span 12;
-  }
-}
-
-@media (max-width: 640px) {
-  .services-list__item {
-    grid-column: span 12;
+@media (max-width: 480px) {
+  .services-list__grid {
+    grid-template-columns: 1fr;
   }
 }
 
