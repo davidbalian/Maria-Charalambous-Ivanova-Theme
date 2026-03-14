@@ -106,7 +106,6 @@ get_header(); ?>
 					<img
 						src="<?php echo esc_url( $clinic_image_url ); ?>"
 						alt="<?php echo esc_attr( $alt_text ); ?>"
-						width="600" height="400"
 						loading="lazy"
 						decoding="async"
 					>
