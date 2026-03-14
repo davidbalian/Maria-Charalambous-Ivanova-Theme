@@ -97,7 +97,7 @@ $clinic_image_base = 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/
 	</section>
 
 	<!-- CTA Banner -->
-	<section class="services-cta" style="background-image: url('<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-waiting-room-marble-interior.avif' ); ?>');">
+	<section class="services-cta" style="background-image: url('<?php echo esc_url( $clinic_image_base . 'dr-maria-charalambous-ivanova-portrait-09.webp' ); ?>');">
 		<div class="services-cta__overlay"></div>
 		<div class="container services-cta__content">
 			<h2 class="fade-in fade-in-delay-0">Ready to Transform <span class="accent-font">Your Smile?</span></h2>
