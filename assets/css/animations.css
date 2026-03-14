@@ -20,6 +20,15 @@
   transform: translateY(0);
 }
 
+/* Once revealed, let interactive elements use their own transitions & transforms */
+.btn.fade-in.visible {
+  transition: transform 0.13s ease, filter 0.13s ease, background 0.13s ease;
+}
+
+.btn.fade-in.visible:active {
+  transform: scale(0.97);
+}
+
 .fade-in-delay-0 {
   transition-delay: 0s;
 }

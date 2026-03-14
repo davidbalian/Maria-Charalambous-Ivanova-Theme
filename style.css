@@ -569,8 +569,7 @@ body:has(#wpadminbar) .site-header {
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.10));
 }
 
-.btn:active,
-.btn.visible:active {
+.btn:active {
   transform: scale(0.97);
 }
 
