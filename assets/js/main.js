@@ -65,10 +65,14 @@ document.addEventListener('DOMContentLoaded', function () {
 	var header = document.querySelector('.site-header');
 	if (header) {
 		var scrollThreshold = 25;
-		var hasAdminBar = document.body.classList.contains('admin-bar');
 
 		function getAdminBarOffset() {
-			return window.innerWidth <= 782 ? 46 : 32;
+			var wpAdminBar = document.getElementById('wpadminbar');
+			if (wpAdminBar) {
+				var height = wpAdminBar.offsetHeight;
+				return height > 0 ? height : (window.innerWidth <= 782 ? 46 : 32);
+			}
+			return 0;
 		}
 
 		function onScroll() {
@@ -78,16 +82,20 @@ document.addEventListener('DOMContentLoaded', function () {
 				header.classList.remove('is-scrolled');
 			}
 
-			if (hasAdminBar) {
-				var offset = getAdminBarOffset();
+			var offset = getAdminBarOffset();
+			if (offset > 0) {
 				header.style.top = Math.max(0, offset - window.scrollY) + 'px';
+			} else {
+				header.style.top = '';
 			}
 		}
 
 		function onResize() {
-			if (hasAdminBar) {
-				var offset = getAdminBarOffset();
+			var offset = getAdminBarOffset();
+			if (offset > 0) {
 				header.style.top = Math.max(0, offset - window.scrollY) + 'px';
+			} else {
+				header.style.top = '';
 			}
 		}
 

@@ -285,13 +285,15 @@ blockquote p {
   gap: var(--mci-spacing-sm);
 }
 
-/* WordPress Admin Bar Adjustment */
-.admin-bar .site-header {
+/* WordPress Admin Bar Adjustment – header offset by #wpadminbar height when present */
+.admin-bar .site-header,
+body:has(#wpadminbar) .site-header {
   top: 32px;
 }
 
 @media screen and (max-width: 782px) {
-  .admin-bar .site-header {
+  .admin-bar .site-header,
+  body:has(#wpadminbar) .site-header {
     top: 46px;
   }
 }
