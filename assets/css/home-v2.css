@@ -399,6 +399,10 @@
   gap: 1rem;
 }
 
+.home-v2-comprehensive__cta {
+  text-align: center;
+  margin-top: var(--mci-spacing-xl);
+}
 
 /* Doctor Profile Section */
 .home-v2-doctor {

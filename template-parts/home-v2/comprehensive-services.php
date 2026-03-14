@@ -67,5 +67,8 @@ $stagger_delays = array( 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10 );
 				</div>
 			<?php endforeach; ?>
 		</div>
+		<div class="home-v2-comprehensive__cta fade-in fade-in-delay-10">
+			<a href="<?php echo esc_url( home_url( '/services/' ) ); ?>" class="btn btn-outline">View All Services</a>
+		</div>
 	</div>
 </section>
