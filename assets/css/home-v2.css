@@ -16,16 +16,6 @@
   .home-v2-benefits__card.fade-in-delay-5 { transition-delay: 0.5s !important; }
 }
 
-/* WordPress Admin Bar Offset */
-.admin-bar .home-hero {
-  padding-top: calc(var(--mci-header-height) + 32px);
-}
-
-@media screen and (max-width: 782px) {
-  .admin-bar .home-hero {
-    padding-top: calc(var(--mci-header-height) + 46px);
-  }
-}
 
 /* Top Banner */
 .home-v2-banner {
@@ -44,7 +34,7 @@
 /* Hero Section – same inner width as .container */
 .home-hero {
   position: relative;
-  padding: calc(var(--mci-header-height) + 4.5rem) 0 5rem;
+  padding: 4.5rem 0 5rem;
   min-height: 90vh;
   display: flex;
   align-items: center;

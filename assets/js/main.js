@@ -61,30 +61,10 @@ document.addEventListener('DOMContentLoaded', function () {
 		staggerObserver.observe(container);
 	});
 
-	// Header scroll toggle
+	// Header scroll toggle — top bar scrolls away naturally, nav is sticky
 	var header = document.querySelector('.site-header');
 	if (header) {
 		var scrollThreshold = 5;
-
-		function getAdminBarOffset() {
-			var wpAdminBar = document.getElementById('wpadminbar');
-			if (!wpAdminBar) return 0;
-
-			// On mobile (<=782px), the admin bar is not fixed — it scrolls away
-			if (window.innerWidth <= 782) {
-				var adminBarBottom = wpAdminBar.getBoundingClientRect().bottom;
-				return Math.max(0, adminBarBottom);
-			}
-
-			// On desktop, admin bar is fixed
-			var height = wpAdminBar.offsetHeight;
-			return height > 0 ? height : 32;
-		}
-
-		function updateHeaderOffset() {
-			var offset = getAdminBarOffset();
-			header.style.top = offset + 'px';
-		}
 
 		function onScroll() {
 			if (window.scrollY > scrollThreshold) {
@@ -92,15 +72,9 @@ document.addEventListener('DOMContentLoaded', function () {
 			} else {
 				header.classList.remove('is-scrolled');
 			}
-			updateHeaderOffset();
-		}
-
-		function onResize() {
-			updateHeaderOffset();
 		}
 
 		window.addEventListener('scroll', onScroll, { passive: true });
-		window.addEventListener('resize', onResize, { passive: true });
 		onScroll();
 	}
 
