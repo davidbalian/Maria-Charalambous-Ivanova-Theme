@@ -351,12 +351,13 @@ blockquote p {
   margin-right: auto;
   padding-left: var(--mci-spacing-lg);
   padding-right: var(--mci-spacing-lg);
-  height: 4rem;
+  height: 5.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: var(--mci-spacing-sm);
+  transition: height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 /* WordPress Admin Bar Adjustment – header offset by #wpadminbar height when present */
@@ -380,6 +381,14 @@ body:has(#wpadminbar) .site-header {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
 }
 
+.site-header.is-scrolled .site-header__inner {
+  height: 4rem;
+}
+
+.site-header.is-scrolled .site-logo--desktop {
+  height: 2.5rem;
+}
+
 .site-header.is-scrolled .site-top-bar {
   display: none;
 }
@@ -396,7 +405,8 @@ body:has(#wpadminbar) .site-header {
 .site-logo {
   height: auto;
   display: block;
-  transition: opacity 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: opacity 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
+    height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .site-logo:hover {
@@ -405,7 +415,7 @@ body:has(#wpadminbar) .site-header {
 
 .site-logo--desktop {
   width: auto;
-  height: 2.5rem;
+  height: 3.2rem;
   display: block;
 }
 
