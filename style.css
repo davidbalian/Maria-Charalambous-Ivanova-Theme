@@ -263,14 +263,14 @@ blockquote p {
 /* -- Top Bar -- */
 
 .site-top-bar {
-  background: var(--mci-color-primary);
+  background: var(--mci-color-text);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .site-top-bar__inner {
   max-width: var(--mci-container-width);
   margin: 0 auto;
-  padding: 6px var(--mci-spacing-lg);
+  padding: 4px var(--mci-spacing-lg);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -303,16 +303,16 @@ blockquote p {
 }
 
 .site-top-bar__cta {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.85);
   font-weight: 600;
   text-decoration: none;
   font-size: 0.75rem;
   letter-spacing: 0.08em;
-  transition: opacity 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .site-top-bar__cta:hover {
-  opacity: 0.8;
+  color: #fff;
 }
 
 @media (max-width: 768px) {
@@ -403,6 +403,7 @@ body:has(#wpadminbar) .site-header {
 }
 
 .site-logo--desktop {
+  width: auto;
   height: 2.5rem;
   display: block;
 }
