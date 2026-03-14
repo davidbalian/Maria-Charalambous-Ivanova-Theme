@@ -1873,7 +1873,7 @@ hr {
 /* --- About CTA Banner (full-width background image) --- */
 .about-cta {
   position: relative;
-  padding: var(--mci-spacing-3xl) 0;
+  padding: calc(var(--mci-spacing-3xl) * 2) 0;
   text-align: center;
   background-size: cover;
   background-position: center;
@@ -2016,7 +2016,7 @@ hr {
 /* --- Services CTA Banner --- */
 .services-cta {
   position: relative;
-  padding: var(--mci-spacing-3xl) 0;
+  padding: calc(var(--mci-spacing-3xl) * 2) 0;
   text-align: center;
   background-size: cover;
   background-position: center;
@@ -2068,12 +2068,14 @@ hr {
 }
 
 .services-list__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--mci-spacing-md);
 }
 
 .services-list__item {
+  width: calc(25% - var(--mci-spacing-md) * 3 / 4);
   padding: var(--mci-spacing-lg) var(--mci-spacing-md);
   background-color: var(--mci-color-surface);
   border-radius: var(--mci-radius-md);
@@ -2095,14 +2097,14 @@ hr {
 }
 
 @media (max-width: 768px) {
-  .services-list__grid {
-    grid-template-columns: repeat(2, 1fr);
+  .services-list__item {
+    width: calc(50% - var(--mci-spacing-md) / 2);
   }
 }
 
 @media (max-width: 480px) {
-  .services-list__grid {
-    grid-template-columns: 1fr;
+  .services-list__item {
+    width: 100%;
   }
 }
 
