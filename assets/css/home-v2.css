@@ -678,6 +678,10 @@
     grid-template-columns: 1fr;
   }
 
+  .home-v2-comprehensive .services-list__item {
+    grid-column: span 1;
+  }
+
   .home-v2-doctor__inner {
     grid-template-columns: 1fr;
   }
