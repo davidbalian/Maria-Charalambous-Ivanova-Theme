@@ -25,18 +25,13 @@ $clinic_image_base = 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/
 	<!-- Mission -->
 	<section class="about-mission page-section page-section--surface">
 		<div class="container">
-			<div class="about-mission__grid">
-				<div class="about-mission__content">
-					<h2 class="fade-in fade-in-delay-0">The Masterpiece Philosophy</h2>
-					<p class="fade-in fade-in-delay-1">At DENTAL ART CLINIC LIMASSOL, dentistry is approached as a combination of scientific precision, strategic planning, and aesthetic harmony. The establishment and expansion of the second clinic represent the natural evolution of a career built on trust, consistency, and a commitment to excellence.</p>
-					<blockquote class="fade-in fade-in-delay-2">
-						<p>&ldquo;Because a smile is not just about appearance. It is function. It is balance. It is confidence. It is quality of life.&rdquo;</p>
-					</blockquote>
-				</div>
-				<div class="about-mission__images fade-in fade-in-delay-3">
-					<img src="<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-reception-area-marble-counter.avif' ); ?>" alt="Dental Art Clinic reception area" width="560" height="380" loading="lazy">
-					<img src="<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-dental-chair-screens.avif' ); ?>" alt="Dental Art Clinic treatment room" width="560" height="380" loading="lazy">
-				</div>
+			<div class="about-mission__header">
+				<h2 class="fade-in fade-in-delay-0">The Masterpiece Philosophy</h2>
+				<p class="fade-in fade-in-delay-1">At DENTAL ART CLINIC LIMASSOL, dentistry is approached as a combination of scientific precision, strategic planning, and aesthetic harmony. The establishment and expansion of the second clinic represent the natural evolution of a career built on trust, consistency, and a commitment to excellence.</p>
+			</div>
+			<div class="about-mission__images fade-in fade-in-delay-2">
+				<img src="<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-reception-area-marble-counter.avif' ); ?>" alt="Dental Art Clinic reception area" width="560" height="380" loading="lazy">
+				<img src="<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-dental-chair-screens.avif' ); ?>" alt="Dental Art Clinic treatment room" width="560" height="380" loading="lazy">
 			</div>
 		</div>
 	</section>

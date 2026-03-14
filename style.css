@@ -1698,7 +1698,7 @@ hr {
 /* --- About Hero (full-width background image) --- */
 .about-hero {
   position: relative;
-  min-height: 420px;
+  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1743,32 +1743,27 @@ hr {
   margin-bottom: var(--mci-spacing-lg);
 }
 
-/* --- About Mission (text + images grid) --- */
-.about-mission__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--mci-spacing-2xl);
-  align-items: center;
+/* --- About Mission (centered text + two-column images) --- */
+.about-mission__header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto var(--mci-spacing-xl);
 }
 
-.about-mission__content h2 {
+.about-mission__header h2 {
   font-size: 2rem;
   margin-bottom: var(--mci-spacing-md);
 }
 
-.about-mission__content p {
+.about-mission__header p {
   font-size: 1.05rem;
   color: var(--mci-color-text-light);
   line-height: 1.65;
 }
 
-.about-mission__content blockquote {
-  margin-top: var(--mci-spacing-lg);
-}
-
 .about-mission__images {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: var(--mci-spacing-md);
 }
 
@@ -1888,7 +1883,7 @@ hr {
 .about-cta__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(29, 29, 31, 0.5), rgba(29, 29, 31, 0.8));
+  background: linear-gradient(to bottom, rgba(29, 29, 31, 0.35), #1d1d1f);
   pointer-events: none;
 }
 
@@ -1919,16 +1914,19 @@ hr {
 }
 
 .btn-outline-light {
-  background-color: transparent;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   color: var(--mci-color-white);
-  box-shadow:
-    inset 0 0 0 1px rgba(255, 255, 255, 0.5),
-    0 2px 4px rgba(0, 0, 0, 0.10);
+  box-shadow: none;
+  filter: none;
 }
 
 .btn-outline-light:hover {
-  background-color: var(--mci-color-white);
-  color: var(--mci-color-text);
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.7);
+  color: var(--mci-color-white);
+  box-shadow: none;
+  filter: none;
 }
 
 /* ==========================================================================
@@ -2319,7 +2317,7 @@ hr {
     padding: calc(var(--mci-header-height) + var(--mci-spacing-2xl)) 0 var(--mci-spacing-2xl);
   }
 
-  .about-mission__grid {
+  .about-mission__images {
     grid-template-columns: 1fr;
   }
 
