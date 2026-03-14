@@ -42,7 +42,7 @@
 
 .home-hero__scroll-down {
   position: absolute;
-  bottom: 1rem;
+  bottom: 3rem;
   left: 50%;
   transform: translateX(-50%);
   color: var(--mci-color-text-light);
