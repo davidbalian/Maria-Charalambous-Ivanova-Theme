@@ -1948,7 +1948,8 @@ hr {
 }
 
 .page-template-page-about .site-header:not(.is-scrolled) .site-top-bar {
-  display: none;
+  background: transparent;
+  border-bottom-color: rgba(255, 255, 255, 0.15);
 }
 
 @media (max-width: 768px) {
