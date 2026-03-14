@@ -68,20 +68,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		function getAdminBarOffset() {
 			var wpAdminBar = document.getElementById('wpadminbar');
-			if (wpAdminBar) {
-				var height = wpAdminBar.offsetHeight;
-				return height > 0 ? height : (window.innerWidth <= 782 ? 46 : 32);
+			if (!wpAdminBar) return 0;
+
+			// On mobile (<=782px), the admin bar is not fixed — it scrolls away
+			if (window.innerWidth <= 782) {
+				var adminBarBottom = wpAdminBar.getBoundingClientRect().bottom;
+				return Math.max(0, adminBarBottom);
 			}
-			return 0;
+
+			// On desktop, admin bar is fixed
+			var height = wpAdminBar.offsetHeight;
+			return height > 0 ? height : 32;
 		}
 
 		function updateHeaderOffset() {
 			var offset = getAdminBarOffset();
-			if (offset > 0) {
-				header.style.top = offset + 'px';
-			} else {
-				header.style.top = '';
-			}
+			header.style.top = offset + 'px';
 		}
 
 		function onScroll() {
