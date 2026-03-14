@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Header scroll toggle
 	var header = document.querySelector('.site-header');
 	if (header) {
-		var scrollThreshold = 25;
+		var scrollThreshold = 5;
 
 		function getAdminBarOffset() {
 			var wpAdminBar = document.getElementById('wpadminbar');
