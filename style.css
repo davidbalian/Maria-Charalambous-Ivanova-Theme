@@ -1371,6 +1371,11 @@ hr {
   margin: 0 auto;
 }
 
+.home-reviews__widget,
+.home-reviews__widget * {
+  font-family: var(--mci-font-body) !important;
+}
+
 /* ---- 16f. Case Studies ---- */
 
 .home-cases {
