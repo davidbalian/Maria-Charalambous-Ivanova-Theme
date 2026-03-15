@@ -1108,155 +1108,93 @@ hr {
 }
 
 /* ==========================================================================
-   14. Style Guide
+   14. Privacy Policy
    ========================================================================== */
 
-/* ---- Hero ---- */
-
-.sg-hero {
-  padding: var(--mci-spacing-2xl) 0 var(--mci-spacing-xl);
+.privacy-hero {
+  position: relative;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
   text-align: center;
 }
 
-.sg-hero__title {
+.privacy-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.45) 100%);
+}
+
+.privacy-hero__content {
+  position: relative;
+  z-index: 1;
+  padding: var(--mci-spacing-3xl) 0;
+}
+
+.privacy-hero__title {
   font-family: var(--mci-font-heading);
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: var(--mci-font-weight-bold);
+  color: var(--mci-color-white);
   letter-spacing: -0.04em;
-  line-height: 1;
-  color: var(--mci-color-text);
-  margin-bottom: var(--mci-spacing-lg);
+  line-height: 1.1;
+  margin-bottom: var(--mci-spacing-sm);
 }
 
-.sg-hero__subtitle {
-  font-size: 1.25rem;
-  color: var(--mci-color-text-light);
+.privacy-hero__subtitle {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.85);
   max-width: 540px;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.5;
-  letter-spacing: -0.01em;
 }
 
-/* ---- Sections ---- */
-
-.sg-section {
-  padding: var(--mci-spacing-3xl) 0;
+.privacy-content {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.sg-section + .sg-section {
-  border-top: var(--mci-border-width) solid var(--mci-color-border);
-}
-
-.sg-section__title {
-  font-size: 2rem;
-  margin-bottom: var(--mci-spacing-lg);
-}
-
-/* ---- Color Swatches ---- */
-
-.sg-swatches {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: var(--mci-spacing-lg);
-}
-
-.sg-swatch {
-  text-align: left;
-}
-
-.sg-swatch__color {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  border-radius: var(--mci-radius-md);
+.privacy-content h2 {
+  font-size: 1.5rem;
+  margin-top: var(--mci-spacing-2xl);
   margin-bottom: var(--mci-spacing-sm);
-  box-shadow:
-    inset 0 0 0 1px rgba(0, 0, 0, 0.06),
-    0 1px 3px rgba(0, 0, 0, 0.05);
-}
-
-.sg-swatch__label {
-  display: block;
-  font-weight: var(--mci-font-weight-bold);
-  font-size: 0.875rem;
   color: var(--mci-color-text);
-  letter-spacing: -0.006em;
-  margin-bottom: 2px;
 }
 
-.sg-swatch__hex {
-  display: block;
-  font-size: 0.8125rem;
+.privacy-content h3 {
+  font-size: 1.125rem;
+  margin-top: var(--mci-spacing-lg);
+  margin-bottom: var(--mci-spacing-xs);
+  color: var(--mci-color-text);
+}
+
+.privacy-content p,
+.privacy-content ul {
   color: var(--mci-color-text-light);
-  font-variant-numeric: tabular-nums;
+  line-height: 1.7;
+  margin-bottom: var(--mci-spacing-md);
 }
 
-.sg-swatch__var {
-  display: block;
-  font-size: 0.6875rem;
-  font-family: "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
-  color: var(--mci-color-text-light);
-  opacity: 0.7;
-  margin-top: 2px;
+.privacy-content ul {
+  padding-left: var(--mci-spacing-lg);
 }
 
-/* ---- Typography Showcase ---- */
-
-.sg-type-specimen {
-  margin-bottom: var(--mci-spacing-2xl);
-}
-
-.sg-type-specimen__name {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  letter-spacing: -0.03em;
-  line-height: 1.1;
+.privacy-content li {
   margin-bottom: var(--mci-spacing-xs);
 }
 
-.sg-type-specimen__meta {
-  font-size: 0.8125rem;
-  color: var(--mci-color-text-light);
-  letter-spacing: -0.006em;
+.privacy-content a {
+  color: var(--mci-color-primary);
+  text-decoration: underline;
 }
 
-.sg-type-scale {
-  margin-top: var(--mci-spacing-xl);
-}
-
-.sg-type-scale__row {
-  display: flex;
-  align-items: baseline;
-  gap: var(--mci-spacing-lg);
-  padding: var(--mci-spacing-md) 0;
-  border-bottom: var(--mci-border-width) solid var(--mci-color-border);
-}
-
-.sg-type-scale__row:last-child {
-  border-bottom: none;
-}
-
-.sg-type-scale__label {
-  flex: 0 0 80px;
-  font-size: 0.75rem;
-  font-weight: var(--mci-font-weight-bold);
-  color: var(--mci-color-text-light);
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
-
-.sg-type-scale__sample {
-  flex: 1;
-  min-width: 0;
-}
-
-/* ---- Button Row ---- */
-
-.sg-button-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--mci-spacing-sm);
-  align-items: center;
-  margin-bottom: var(--mci-spacing-lg);
+.privacy-content a:hover {
+  color: var(--mci-color-primary-hover);
 }
 
 /* ==========================================================================
@@ -2481,19 +2419,6 @@ hr {
 
   .card-grid {
     grid-template-columns: 1fr;
-  }
-
-  .sg-hero__title {
-    font-size: clamp(1.75rem, 6vw, 2.5rem);
-  }
-
-  .sg-type-scale__row {
-    flex-direction: column;
-    gap: var(--mci-spacing-xs);
-  }
-
-  .sg-type-scale__label {
-    flex: none;
   }
 
   /* Home */
