@@ -133,6 +133,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		var dropdown = toggle.nextElementSibling;
 
 		toggle.addEventListener('click', function (e) {
+			e.preventDefault();
 			e.stopPropagation();
 			var isOpen = dropdown.classList.contains('is-open');
 
@@ -150,6 +151,11 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		});
 
+		// Stop clicks inside dropdown from closing it via document listener
+		dropdown.addEventListener('click', function (e) {
+			e.stopPropagation();
+		});
+
 		dropdown.querySelectorAll('.lang-switcher__option').forEach(function (option) {
 			option.addEventListener('click', function (e) {
 				e.preventDefault();
@@ -164,9 +170,13 @@ document.addEventListener('DOMContentLoaded', function () {
 					o.classList.toggle('is-active', o.getAttribute('data-lang') === lang);
 				});
 
-				// Close dropdown
-				dropdown.classList.remove('is-open');
-				toggle.setAttribute('aria-expanded', 'false');
+				// Close all dropdowns
+				document.querySelectorAll('.lang-switcher__dropdown').forEach(function (d) {
+					d.classList.remove('is-open');
+				});
+				document.querySelectorAll('.lang-switcher__toggle').forEach(function (t) {
+					t.setAttribute('aria-expanded', 'false');
+				});
 			});
 		});
 	});
@@ -180,6 +190,16 @@ document.addEventListener('DOMContentLoaded', function () {
 			t.setAttribute('aria-expanded', 'false');
 		});
 	});
+
+	// Prevent mobile overlay clicks from closing lang dropdown
+	var mobileNavOverlay = document.getElementById('mobile-nav');
+	if (mobileNavOverlay) {
+		mobileNavOverlay.addEventListener('click', function (e) {
+			if (e.target.closest('.mobile-nav__lang')) {
+				e.stopPropagation();
+			}
+		});
+	}
 
 	// Cookie Banner
 	var cookieBanner = document.getElementById('mci-cookie-banner');
