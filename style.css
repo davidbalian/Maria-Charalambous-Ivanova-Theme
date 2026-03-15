@@ -2015,6 +2015,14 @@ hr {
   .page-template-page-privacy-policy .site-header:not(.is-scrolled) .mobile-nav-toggle {
     color: var(--mci-color-white);
   }
+
+  .page-template-page-about .site-header:not(.is-scrolled) .mobile-nav-toggle.is-active,
+  .page-template-page-services .site-header:not(.is-scrolled) .mobile-nav-toggle.is-active,
+  .page-template-page-contact .site-header:not(.is-scrolled) .mobile-nav-toggle.is-active,
+  .page-template-page-gallery .site-header:not(.is-scrolled) .mobile-nav-toggle.is-active,
+  .page-template-page-privacy-policy .site-header:not(.is-scrolled) .mobile-nav-toggle.is-active {
+    color: var(--mci-color-text);
+  }
 }
 
 /* ==========================================================================
