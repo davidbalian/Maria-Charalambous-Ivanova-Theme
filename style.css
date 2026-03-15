@@ -540,14 +540,9 @@ body:has(#wpadminbar) .site-header {
   transform: rotate(180deg);
 }
 
-.lang-switcher__dropdown {
-  position: absolute;
-  top: calc(100% + 8px);
-  right: 0;
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
-  min-width: 56px;
+/* Shared dropdown styles (desktop + mobile) */
+.lang-switcher__dropdown,
+.lang-switcher__dropdown--mobile {
   list-style: none;
   margin: 0;
   padding: 4px;
@@ -555,6 +550,16 @@ body:has(#wpadminbar) .site-header {
   border: var(--mci-border-width) solid var(--mci-color-border);
   border-radius: var(--mci-radius-sm);
   box-shadow: var(--mci-shadow-md);
+  min-width: 56px;
+}
+
+.lang-switcher__dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   opacity: 0;
   visibility: hidden;
@@ -568,7 +573,8 @@ body:has(#wpadminbar) .site-header {
   transform: translateY(0);
 }
 
-.lang-switcher__dropdown li {
+.lang-switcher__dropdown li,
+.lang-switcher__dropdown--mobile li {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -584,7 +590,7 @@ body:has(#wpadminbar) .site-header {
   text-align: center;
   white-space: nowrap;
   border-radius: 6px;
-  transition: background 0.15s ease, color 0.15s ease;
+  transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .lang-switcher__option:hover,
@@ -596,15 +602,25 @@ body:has(#wpadminbar) .site-header {
 
 .lang-switcher__option.is-active {
   font-weight: var(--mci-font-weight-bold);
-  background: var(--mci-color-secondary);
+  background: linear-gradient(to bottom, rgb(178, 157, 129) 0%, rgb(158, 137, 109) 100%);
   color: var(--mci-color-white);
+  box-shadow:
+    inset 0 0 0 1px rgba(188, 167, 139, 0.4),
+    0 0 0 1px rgba(148, 127, 99, 0.3),
+    0 2px 4px rgba(0, 0, 0, 0.10),
+    0 0 0 1px rgba(13, 13, 13, 0.15);
 }
 
 .lang-switcher__option.is-active:hover,
 .lang-switcher__option.is-active:active,
 .lang-switcher__option.is-active:focus {
-  background: var(--mci-color-secondary);
+  background: linear-gradient(to bottom, rgb(188, 167, 139) 0%, rgb(168, 147, 119) 100%);
   color: var(--mci-color-white);
+  box-shadow:
+    inset 0 0 0 1px rgba(188, 167, 139, 0.4),
+    0 0 0 1px rgba(148, 127, 99, 0.3),
+    0 3px 8px rgba(0, 0, 0, 0.16),
+    0 0 0 1px rgba(13, 13, 13, 0.15);
 }
 
 /* Scrolled header — keep matching nav link colors */
@@ -652,13 +668,6 @@ body:has(#wpadminbar) .site-header {
   z-index: 100;
   display: flex;
   flex-direction: column;
-  min-width: 56px;
-  list-style: none;
-  margin: 0;
-  padding: 4px;
-  background: var(--mci-color-background);
-  border: var(--mci-border-width) solid var(--mci-color-border);
-  border-radius: var(--mci-radius-sm);
   box-sizing: border-box;
   opacity: 0;
   visibility: hidden;
