@@ -1113,13 +1113,15 @@ hr {
 
 .privacy-hero {
   position: relative;
-  min-height: 320px;
+  min-height: 75vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background-size: cover;
   background-position: center;
   text-align: center;
+  margin-top: -6.5rem;
+  padding: calc(6.5rem + var(--mci-spacing-3xl)) 0 var(--mci-spacing-3xl);
 }
 
 .privacy-hero__overlay {
@@ -1131,7 +1133,6 @@ hr {
 .privacy-hero__content {
   position: relative;
   z-index: 1;
-  padding: var(--mci-spacing-3xl) 0;
 }
 
 .privacy-hero__title {

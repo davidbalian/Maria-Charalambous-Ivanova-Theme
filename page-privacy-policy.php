@@ -24,7 +24,7 @@ $clinic_image_base = 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/
 	<!-- Privacy Content -->
 	<section class="page-section page-section--surface">
 		<div class="container">
-			<div class="privacy-content fade-in fade-in-delay-0">
+			<div class="privacy-content">
 
 				<p>Dental Art Clinic by Dr. Maria Charalambous-Ivanova ("we", "us", or "our") operates the website dentalartcliniclimassol.com. This Privacy Policy explains how we collect, use, and safeguard your personal data when you visit our website or use our services, in accordance with the General Data Protection Regulation (GDPR) and the Cyprus Processing of Personal Data (Protection of the Individual) Law.</p>
 
