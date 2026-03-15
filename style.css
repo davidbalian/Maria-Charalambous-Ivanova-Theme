@@ -626,14 +626,11 @@ body:has(#wpadminbar) .site-header {
 .lang-switcher__dropdown--mobile {
   position: absolute;
   left: calc(100% + var(--mci-spacing-sm));
-  top: 50%;
-  transform: translateY(-50%) translateX(-8px);
-  display: flex;
-  flex-direction: column;
-  gap: 0;
+  top: 0;
+  transform: translateX(-8px);
   list-style: none;
   margin: 0;
-  padding: 6px 8px;
+  padding: 4px;
   background: var(--mci-color-background);
   border: var(--mci-border-width) solid var(--mci-color-border);
   border-radius: var(--mci-radius-sm);
@@ -645,7 +642,7 @@ body:has(#wpadminbar) .site-header {
 .lang-switcher__dropdown--mobile.is-open {
   opacity: 1;
   visibility: visible;
-  transform: translateY(-50%) translateX(0);
+  transform: translateX(0);
 }
 
 /* Mobile navigation: hide desktop nav, show hamburger */
