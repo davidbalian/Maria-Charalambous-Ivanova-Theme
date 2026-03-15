@@ -128,6 +128,26 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	});
 
+	// Cookie Banner
+	var cookieBanner = document.getElementById('mci-cookie-banner');
+	if (cookieBanner && !localStorage.getItem('mci_cookies_accepted')) {
+		cookieBanner.removeAttribute('hidden');
+		// Trigger reflow then animate in
+		cookieBanner.offsetHeight;
+		cookieBanner.classList.add('is-visible');
+
+		function dismissBanner() {
+			cookieBanner.classList.remove('is-visible');
+			cookieBanner.addEventListener('transitionend', function () {
+				cookieBanner.setAttribute('hidden', '');
+			}, { once: true });
+			localStorage.setItem('mci_cookies_accepted', '1');
+		}
+
+		cookieBanner.querySelector('.cookie-banner__accept').addEventListener('click', dismissBanner);
+		cookieBanner.querySelector('.cookie-banner__close').addEventListener('click', dismissBanner);
+	}
+
 	// Clinic Open/Closed Logic (Cyprus Timezone)
 	var clinicStatusEls = document.querySelectorAll('.js-clinic-status');
 	if (clinicStatusEls.length) {

@@ -1198,6 +1198,105 @@ hr {
 }
 
 /* ==========================================================================
+   14b. Cookie Banner
+   ========================================================================== */
+
+.cookie-banner {
+  position: fixed;
+  bottom: var(--mci-spacing-md);
+  left: var(--mci-spacing-md);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: var(--mci-spacing-sm);
+  max-width: 480px;
+  padding: var(--mci-spacing-sm) var(--mci-spacing-md);
+  background: var(--mci-color-surface);
+  border: var(--mci-border-width) solid var(--mci-color-border);
+  border-radius: var(--mci-radius-md);
+  box-shadow: var(--mci-shadow-lg);
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.cookie-banner[hidden] {
+  display: none;
+}
+
+.cookie-banner.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cookie-banner__text {
+  flex: 1;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--mci-color-text-light);
+  margin: 0;
+}
+
+.cookie-banner__text a {
+  color: var(--mci-color-primary);
+  text-decoration: underline;
+}
+
+.cookie-banner__text a:hover {
+  color: var(--mci-color-primary-hover);
+}
+
+.cookie-banner__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--mci-spacing-xs);
+  flex-shrink: 0;
+}
+
+.cookie-banner__accept {
+  font-size: 0.8125rem;
+  padding: 8px 20px;
+  white-space: nowrap;
+}
+
+.cookie-banner__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: var(--mci-radius-sm);
+  background: transparent;
+  color: var(--mci-color-text-light);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.cookie-banner__close:hover {
+  background: var(--mci-color-background);
+  color: var(--mci-color-text);
+}
+
+@media (max-width: 540px) {
+  .cookie-banner {
+    left: var(--mci-spacing-sm);
+    right: var(--mci-spacing-sm);
+    max-width: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--mci-spacing-xs);
+  }
+
+  .cookie-banner__actions {
+    justify-content: flex-end;
+  }
+}
+
+/* ==========================================================================
    15. Utilities
    ========================================================================== */
 

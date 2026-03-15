@@ -63,6 +63,15 @@
 	</div>
 </footer>
 
+<!-- Cookie Banner -->
+<div id="mci-cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie consent" hidden>
+	<p class="cookie-banner__text">We use cookies to analyse site traffic and improve your experience. By continuing, you agree to our <a href="<?php echo esc_url( home_url( '/privacy-policy/' ) ); ?>">Privacy Policy</a>.</p>
+	<div class="cookie-banner__actions">
+		<button type="button" class="cookie-banner__accept btn btn-primary">Accept</button>
+		<button type="button" class="cookie-banner__close" aria-label="Dismiss cookie banner">&times;</button>
+	</div>
+</div>
+
 <?php wp_footer(); ?>
 </body>
 </html>
