@@ -498,6 +498,14 @@ body:has(#wpadminbar) .site-header {
   color: var(--mci-color-primary);
 }
 
+/* ---- Nav + Language group ---- */
+
+.header-nav-group {
+  display: flex;
+  align-items: center;
+  gap: var(--mci-spacing-md);
+}
+
 /* ---- Language Switcher (desktop) ---- */
 
 .lang-switcher {
@@ -638,11 +646,7 @@ body:has(#wpadminbar) .site-header {
 
 /* Mobile navigation: hide desktop nav, show hamburger */
 @media (max-width: 768px) {
-  .lang-switcher {
-    display: none;
-  }
-
-  .main-navigation {
+  .header-nav-group {
     display: none;
   }
 
