@@ -2155,41 +2155,67 @@ hr {
    19. Page Templates — Contact
    ========================================================================== */
 
+/* --- Contact Hero (full-width background image) --- */
 .contact-hero {
-  padding: var(--mci-spacing-3xl) 0 var(--mci-spacing-2xl);
+  position: relative;
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  margin-top: -6.5rem;
+  padding: calc(6.5rem + var(--mci-spacing-3xl)) 0 var(--mci-spacing-3xl);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--mci-color-secondary);
+}
+
+.contact-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(29, 29, 31, 0.45), rgba(29, 29, 31, 0.7));
+  pointer-events: none;
+}
+
+.contact-hero__content {
+  position: relative;
+  z-index: 1;
 }
 
 .contact-hero__title {
   font-family: var(--mci-font-heading);
-  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-size: clamp(2.4rem, 5.5vw, 3.4rem);
   font-weight: var(--mci-font-weight-bold);
   letter-spacing: -0.035em;
   line-height: 1.1;
   margin-bottom: var(--mci-spacing-md);
+  color: var(--mci-color-white);
 }
 
 .contact-hero__subtitle {
   font-size: 1.2rem;
-  color: var(--mci-color-text-light);
+  color: rgba(255, 255, 255, 0.85);
   max-width: 540px;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.5;
   letter-spacing: -0.01em;
-}
-
-.contact-hero__intro {
-  font-size: 1.1rem;
-  color: var(--mci-color-text-light);
-  max-width: 540px;
-  margin: var(--mci-spacing-md) auto 0;
-  line-height: 1.5;
-  letter-spacing: -0.01em;
+  margin-bottom: var(--mci-spacing-lg);
 }
 
 .contact-content {
   padding-bottom: var(--mci-spacing-3xl);
+}
+
+/* --- Contact Cards --- */
+.contact-card {
+  background-color: var(--mci-color-surface);
+  border-radius: var(--mci-radius-lg);
+  padding: var(--mci-spacing-xl);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    var(--mci-shadow-md);
 }
 
 .contact-layout {
@@ -2243,6 +2269,50 @@ hr {
 
 .contact-form-wrap form .btn {
   width: 100%;
+}
+
+/* --- Contact CTA Banner --- */
+.contact-cta {
+  position: relative;
+  padding: calc(var(--mci-spacing-3xl) * 2) 0;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--mci-color-secondary);
+}
+
+.contact-cta__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(29, 29, 31, 0.35), #1d1d1f);
+  pointer-events: none;
+}
+
+.contact-cta__content {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-cta__content h2 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  color: var(--mci-color-white);
+  margin-bottom: var(--mci-spacing-md);
+}
+
+.contact-cta__content > p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 540px;
+  margin: 0 auto var(--mci-spacing-lg);
+  line-height: 1.6;
+}
+
+.contact-cta__buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--mci-spacing-sm);
+  flex-wrap: wrap;
 }
 
 .contact-map {
@@ -2446,7 +2516,8 @@ hr {
 
   /* Contact */
   .contact-hero {
-    padding: var(--mci-spacing-2xl) 0 var(--mci-spacing-xl);
+    min-height: 320px;
+    padding: calc(6.5rem + var(--mci-spacing-2xl)) 0 var(--mci-spacing-2xl);
   }
 
   .contact-layout {

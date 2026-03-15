@@ -5,21 +5,22 @@
  * @package Maria_Charalambous_Ivanova
  */
 
-get_header(); ?>
+get_header();
+
+$clinic_image_base = 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/';
+?>
 
 <main id="main" class="site-main">
 
-	<?php
-	get_template_part(
-		'template-parts/page-hero',
-		null,
-		array(
-			'title'    => 'Contact Us',
-			'subtitle' => 'If you would like to schedule an appointment or need more information about our dental services, please feel free to contact us.',
-			'intro'    => 'Our team will be happy to assist you and help you achieve a healthy and beautiful smile. You can also fill out the contact form on our website and we will get back to you as soon as possible.',
-		)
-	);
-	?>
+	<!-- Hero with background image -->
+	<section class="contact-hero" style="background-image: url('<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-reception-lobby-clinic-name.avif' ); ?>');">
+		<div class="contact-hero__overlay"></div>
+		<div class="container contact-hero__content">
+			<h1 class="contact-hero__title fade-in fade-in-delay-0">Contact Us</h1>
+			<p class="contact-hero__subtitle fade-in fade-in-delay-1">We would love to hear from you. Reach out to schedule an appointment or learn more about our services.</p>
+			<a href="tel:+35725377757" class="btn btn-primary fade-in fade-in-delay-2">Call +357 25 377757</a>
+		</div>
+	</section>
 
 	<!-- Contact Layout -->
 	<section class="contact-content page-section page-section--background">
@@ -38,25 +39,25 @@ get_header(); ?>
 			<div class="contact-layout">
 
 				<!-- Contact Info -->
-				<div class="contact-info">
-					<h2 class="fade-in fade-in-delay-0">Contact Information</h2>
+				<div class="contact-info contact-card fade-in fade-in-delay-0">
+					<h2>Contact Information</h2>
 
-					<div class="contact-info__item fade-in fade-in-delay-1">
+					<div class="contact-info__item">
 						<h4>Phone</h4>
 						<p><a href="tel:+35725377757">+357 25 377757</a></p>
 					</div>
 
-					<div class="contact-info__item fade-in fade-in-delay-2">
+					<div class="contact-info__item">
 						<h4>Email</h4>
 						<p><a href="mailto:info@dentalartcliniclimassol.com">info@dentalartcliniclimassol.com</a></p>
 					</div>
 
-					<div class="contact-info__item fade-in fade-in-delay-3">
+					<div class="contact-info__item">
 						<h4>Address</h4>
 						<p>PRIMO AMARI, Walter Gropius 49-49,<br>Floor 1, Apt. 101, Limassol 3076, Cyprus</p>
 					</div>
 
-					<div class="contact-info__item fade-in fade-in-delay-4">
+					<div class="contact-info__item">
 						<?php get_template_part( 'template-parts/hours-table', null, array(
 							'heading_text' => 'Operating Hours',
 							'status_id'    => 'contact-clinic-status',
@@ -65,9 +66,9 @@ get_header(); ?>
 				</div>
 
 				<!-- Appointment Form -->
-				<div class="contact-form-wrap">
-					<h2 class="fade-in fade-in-delay-0">Book an Appointment</h2>
-					<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" class="fade-in fade-in-delay-1">
+				<div class="contact-form-wrap contact-card fade-in fade-in-delay-1">
+					<h2>Book an Appointment</h2>
+					<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
 						<input type="hidden" name="action" value="mci_contact_form">
 						<?php wp_nonce_field( 'mci_contact_form_nonce', 'mci_contact_nonce' ); ?>
 
@@ -111,6 +112,19 @@ get_header(); ?>
 					</form>
 				</div>
 
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Banner -->
+	<section class="contact-cta" style="background-image: url('<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-wide-angle-equipment.avif' ); ?>');">
+		<div class="contact-cta__overlay"></div>
+		<div class="container contact-cta__content">
+			<h2 class="fade-in fade-in-delay-0">Ready to Transform <span class="accent-font">Your Smile?</span></h2>
+			<p class="fade-in fade-in-delay-1">Book a consultation and discover the difference personalized dental care can make.</p>
+			<div class="contact-cta__buttons fade-in fade-in-delay-2">
+				<a href="tel:+35725377757" class="btn btn-primary">Call +357 25 377757</a>
+				<a href="mailto:info@dentalartcliniclimassol.com" class="btn btn-outline-light">Email Us</a>
 			</div>
 		</div>
 	</section>
