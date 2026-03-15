@@ -597,9 +597,10 @@ body:has(#wpadminbar) .site-header {
 /* ---- Language Switcher (mobile) ---- */
 
 .mobile-nav__lang {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: var(--mci-spacing-sm);
+  justify-content: center;
 }
 
 .lang-switcher__toggle--mobile {
@@ -623,9 +624,13 @@ body:has(#wpadminbar) .site-header {
 }
 
 .lang-switcher__dropdown--mobile {
+  position: absolute;
+  left: calc(100% + var(--mci-spacing-sm));
+  top: 50%;
+  transform: translateY(-50%) translateX(-8px);
   display: flex;
-  align-items: center;
-  gap: 4px;
+  flex-direction: column;
+  gap: 0;
   list-style: none;
   margin: 0;
   padding: 6px 8px;
@@ -634,14 +639,13 @@ body:has(#wpadminbar) .site-header {
   border-radius: var(--mci-radius-sm);
   opacity: 0;
   visibility: hidden;
-  transform: translateX(-8px);
   transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
 }
 
 .lang-switcher__dropdown--mobile.is-open {
   opacity: 1;
   visibility: visible;
-  transform: translateX(0);
+  transform: translateY(-50%) translateX(0);
 }
 
 /* Mobile navigation: hide desktop nav, show hamburger */
