@@ -16,7 +16,7 @@ $theme_image_base  = get_template_directory_uri() . '/assets/images/';
 <main id="main" class="site-main">
 
 	<!-- Hero with background image -->
-	<section class="gallery-hero" style="background-image: url('<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-clinic-name-wall-flowers.avif' ); ?>');">
+	<section class="gallery-hero" style="background-image: url('<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-reception-area-marble-counter.avif' ); ?>');">
 		<div class="gallery-hero__overlay"></div>
 		<div class="container gallery-hero__content">
 			<h1 class="gallery-hero__title fade-in fade-in-delay-0">Gallery</h1>
