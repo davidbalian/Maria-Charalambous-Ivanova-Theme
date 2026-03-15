@@ -587,14 +587,24 @@ body:has(#wpadminbar) .site-header {
   transition: background 0.15s ease, color 0.15s ease;
 }
 
-.lang-switcher__option:hover {
+.lang-switcher__option:hover,
+.lang-switcher__option:active,
+.lang-switcher__option:focus {
   background: var(--mci-color-background);
   color: var(--mci-color-text);
 }
 
 .lang-switcher__option.is-active {
   font-weight: var(--mci-font-weight-bold);
-  color: var(--mci-color-text);
+  background: var(--mci-color-secondary);
+  color: var(--mci-color-white);
+}
+
+.lang-switcher__option.is-active:hover,
+.lang-switcher__option.is-active:active,
+.lang-switcher__option.is-active:focus {
+  background: var(--mci-color-secondary);
+  color: var(--mci-color-white);
 }
 
 /* Scrolled header — keep matching nav link colors */
