@@ -128,6 +128,59 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	});
 
+	// Language Switcher
+	document.querySelectorAll('.lang-switcher__toggle').forEach(function (toggle) {
+		var dropdown = toggle.nextElementSibling;
+
+		toggle.addEventListener('click', function (e) {
+			e.stopPropagation();
+			var isOpen = dropdown.classList.contains('is-open');
+
+			// Close all dropdowns first
+			document.querySelectorAll('.lang-switcher__dropdown').forEach(function (d) {
+				d.classList.remove('is-open');
+			});
+			document.querySelectorAll('.lang-switcher__toggle').forEach(function (t) {
+				t.setAttribute('aria-expanded', 'false');
+			});
+
+			if (!isOpen) {
+				dropdown.classList.add('is-open');
+				toggle.setAttribute('aria-expanded', 'true');
+			}
+		});
+
+		dropdown.querySelectorAll('.lang-switcher__option').forEach(function (option) {
+			option.addEventListener('click', function (e) {
+				e.preventDefault();
+				var lang = option.getAttribute('data-lang');
+				var label = option.textContent.trim();
+
+				// Update all switcher instances (desktop + mobile)
+				document.querySelectorAll('.lang-switcher__current').forEach(function (el) {
+					el.textContent = label;
+				});
+				document.querySelectorAll('.lang-switcher__option').forEach(function (o) {
+					o.classList.toggle('is-active', o.getAttribute('data-lang') === lang);
+				});
+
+				// Close dropdown
+				dropdown.classList.remove('is-open');
+				toggle.setAttribute('aria-expanded', 'false');
+			});
+		});
+	});
+
+	// Close lang dropdown on outside click
+	document.addEventListener('click', function () {
+		document.querySelectorAll('.lang-switcher__dropdown').forEach(function (d) {
+			d.classList.remove('is-open');
+		});
+		document.querySelectorAll('.lang-switcher__toggle').forEach(function (t) {
+			t.setAttribute('aria-expanded', 'false');
+		});
+	});
+
 	// Cookie Banner
 	var cookieBanner = document.getElementById('mci-cookie-banner');
 	if (cookieBanner && !localStorage.getItem('mci_cookies_accepted')) {

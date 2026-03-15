@@ -55,6 +55,18 @@
 			?>
 		</nav>
 
+		<div class="lang-switcher">
+			<button type="button" class="lang-switcher__toggle" aria-expanded="false" aria-haspopup="true">
+				<span class="lang-switcher__current">EN</span>
+				<svg class="lang-switcher__chevron" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+			</button>
+			<ul class="lang-switcher__dropdown" role="menu">
+				<li role="menuitem"><a href="#" data-lang="en" class="lang-switcher__option is-active">EN</a></li>
+				<li role="menuitem"><a href="#" data-lang="ru" class="lang-switcher__option">RU</a></li>
+				<li role="menuitem"><a href="#" data-lang="gr" class="lang-switcher__option">GR</a></li>
+			</ul>
+		</div>
+
 		<button type="button" class="mobile-nav-toggle press-feedback" aria-label="<?php esc_attr_e( 'Open menu', 'maria-charalambous-ivanova' ); ?>" aria-expanded="false" aria-controls="mobile-nav">
 			<span class="mobile-nav-toggle__line"></span>
 			<span class="mobile-nav-toggle__line"></span>
@@ -76,6 +88,16 @@
 			) );
 			?>
 		</nav>
-		<div class="mobile-nav__lang">EN</div>
+		<div class="mobile-nav__lang">
+			<button type="button" class="lang-switcher__toggle lang-switcher__toggle--mobile" aria-expanded="false" aria-haspopup="true">
+				<span class="lang-switcher__current">EN</span>
+				<svg class="lang-switcher__chevron" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+			</button>
+			<ul class="lang-switcher__dropdown lang-switcher__dropdown--mobile" role="menu">
+				<li role="menuitem"><a href="#" data-lang="en" class="lang-switcher__option is-active">EN</a></li>
+				<li role="menuitem"><a href="#" data-lang="ru" class="lang-switcher__option">RU</a></li>
+				<li role="menuitem"><a href="#" data-lang="gr" class="lang-switcher__option">GR</a></li>
+			</ul>
+		</div>
 	</div>
 </div>
