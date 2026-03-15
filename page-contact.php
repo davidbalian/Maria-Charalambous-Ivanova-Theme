@@ -116,19 +116,6 @@ $clinic_image_base = 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/
 		</div>
 	</section>
 
-	<!-- CTA Banner -->
-	<section class="contact-cta" style="background-image: url('<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-wide-angle-equipment.avif' ); ?>');">
-		<div class="contact-cta__overlay"></div>
-		<div class="container contact-cta__content">
-			<h2 class="fade-in fade-in-delay-0">Ready to Transform <span class="accent-font">Your Smile?</span></h2>
-			<p class="fade-in fade-in-delay-1">Book a consultation and discover the difference personalized dental care can make.</p>
-			<div class="contact-cta__buttons fade-in fade-in-delay-2">
-				<a href="tel:+35725377757" class="btn btn-primary">Call +357 25 377757</a>
-				<a href="mailto:info@dentalartcliniclimassol.com" class="btn btn-outline-light">Email Us</a>
-			</div>
-		</div>
-	</section>
-
 	<!-- Map -->
 	<section class="contact-map">
 		<div class="fade-in fade-in-delay-0">
@@ -142,6 +129,19 @@ $clinic_image_base = 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/
 				referrerpolicy="no-referrer-when-downgrade"
 				title="Dental Art Clinic Location">
 			</iframe>
+		</div>
+	</section>
+
+	<!-- CTA Banner -->
+	<section class="contact-cta" style="background-image: url('<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-wide-angle-equipment.avif' ); ?>');">
+		<div class="contact-cta__overlay"></div>
+		<div class="container contact-cta__content">
+			<h2 class="fade-in fade-in-delay-0">Ready to Transform <span class="accent-font">Your Smile?</span></h2>
+			<p class="fade-in fade-in-delay-1">Book a consultation and discover the difference personalized dental care can make.</p>
+			<div class="contact-cta__buttons fade-in fade-in-delay-2">
+				<a href="tel:+35725377757" class="btn btn-primary">Call +357 25 377757</a>
+				<a href="mailto:info@dentalartcliniclimassol.com" class="btn btn-outline-light">Email Us</a>
+			</div>
 		</div>
 	</section>
 
