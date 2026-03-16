@@ -1,3 +1,17 @@
+<?php
+$mci_lang = mci_get_current_lang();
+$mci_lang_labels = array( 'en' => 'EN', 'ru' => 'RU', 'el' => 'GR' );
+$mci_current_label = isset( $mci_lang_labels[ $mci_lang ] ) ? $mci_lang_labels[ $mci_lang ] : 'EN';
+
+// Pick menu location based on language.
+$mci_primary_menu = 'primary';
+if ( $mci_lang !== 'en' ) {
+	$lang_menu = 'primary-' . $mci_lang;
+	if ( has_nav_menu( $lang_menu ) ) {
+		$mci_primary_menu = $lang_menu;
+	}
+}
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> prefix="og: https://ogp.me/ns#">
 <head>
@@ -25,14 +39,14 @@
 				info@dentalartcliniclimassol.com
 			</a>
 		</div>
-		<a href="/book-appointment" class="site-top-bar__cta">BOOK APPOINTMENT</a>
+		<a href="<?php echo esc_url( mci_url( '/book-appointment' ) ); ?>" class="site-top-bar__cta"><?php mci_te( 'BOOK APPOINTMENT' ); ?></a>
 	</div>
 </div>
 
 <header id="masthead" class="site-header">
 	<div class="site-header__inner">
 		<div class="site-branding">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-logo-link">
+			<a href="<?php echo esc_url( mci_url( '/' ) ); ?>" class="site-logo-link">
 				<img src="https://davidb1646.sg-host.com/wp-content/uploads/2026/02/horizontal-logo-gold.avif"
 				     alt="<?php bloginfo( 'name' ); ?>"
 				     class="site-logo site-logo--desktop"
@@ -49,7 +63,7 @@
 			<nav id="site-navigation" class="main-navigation">
 				<?php
 				wp_nav_menu( array(
-					'theme_location' => 'primary',
+					'theme_location' => $mci_primary_menu,
 					'menu_id'        => 'primary-menu',
 					'fallback_cb'    => false,
 				) );
@@ -58,13 +72,13 @@
 
 			<div class="lang-switcher">
 				<button type="button" class="lang-switcher__toggle" aria-expanded="false" aria-haspopup="true">
-					<span class="lang-switcher__current">EN</span>
+					<span class="lang-switcher__current"><?php echo esc_html( $mci_current_label ); ?></span>
 					<svg class="lang-switcher__chevron" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
 				</button>
 				<ul class="lang-switcher__dropdown" role="menu">
-					<li role="menuitem"><a href="#" data-lang="en" class="lang-switcher__option is-active">EN</a></li>
-					<li role="menuitem"><a href="#" data-lang="ru" class="lang-switcher__option">RU</a></li>
-					<li role="menuitem"><a href="#" data-lang="gr" class="lang-switcher__option">GR</a></li>
+					<li role="menuitem"><a href="<?php echo esc_url( mci_lang_url( 'en' ) ); ?>" data-lang="en" class="lang-switcher__option<?php echo $mci_lang === 'en' ? ' is-active' : ''; ?>">EN</a></li>
+					<li role="menuitem"><a href="<?php echo esc_url( mci_lang_url( 'ru' ) ); ?>" data-lang="ru" class="lang-switcher__option<?php echo $mci_lang === 'ru' ? ' is-active' : ''; ?>">RU</a></li>
+					<li role="menuitem"><a href="<?php echo esc_url( mci_lang_url( 'el' ) ); ?>" data-lang="gr" class="lang-switcher__option<?php echo $mci_lang === 'el' ? ' is-active' : ''; ?>">GR</a></li>
 				</ul>
 			</div>
 		</div>
@@ -82,7 +96,7 @@
 		<nav class="mobile-nav__menu">
 			<?php
 			wp_nav_menu( array(
-				'theme_location' => 'primary',
+				'theme_location' => $mci_primary_menu,
 				'menu_id'        => 'mobile-menu',
 				'menu_class'     => 'mobile-nav__links',
 				'container'      => false,
@@ -92,13 +106,13 @@
 		</nav>
 		<div class="mobile-nav__lang">
 			<button type="button" class="lang-switcher__toggle lang-switcher__toggle--mobile" aria-expanded="false" aria-haspopup="true">
-				<span class="lang-switcher__current">EN</span>
+				<span class="lang-switcher__current"><?php echo esc_html( $mci_current_label ); ?></span>
 				<svg class="lang-switcher__chevron" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
 			</button>
 			<ul class="lang-switcher__dropdown lang-switcher__dropdown--mobile" role="menu">
-				<li role="menuitem"><a href="#" data-lang="en" class="lang-switcher__option is-active">EN</a></li>
-				<li role="menuitem"><a href="#" data-lang="ru" class="lang-switcher__option">RU</a></li>
-				<li role="menuitem"><a href="#" data-lang="gr" class="lang-switcher__option">GR</a></li>
+				<li role="menuitem"><a href="<?php echo esc_url( mci_lang_url( 'en' ) ); ?>" data-lang="en" class="lang-switcher__option<?php echo $mci_lang === 'en' ? ' is-active' : ''; ?>">EN</a></li>
+				<li role="menuitem"><a href="<?php echo esc_url( mci_lang_url( 'ru' ) ); ?>" data-lang="ru" class="lang-switcher__option<?php echo $mci_lang === 'ru' ? ' is-active' : ''; ?>">RU</a></li>
+				<li role="menuitem"><a href="<?php echo esc_url( mci_lang_url( 'el' ) ); ?>" data-lang="gr" class="lang-switcher__option<?php echo $mci_lang === 'el' ? ' is-active' : ''; ?>">GR</a></li>
 			</ul>
 		</div>
 	</div>

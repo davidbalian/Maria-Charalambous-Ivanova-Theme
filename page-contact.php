@@ -16,9 +16,9 @@ $clinic_image_base = 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/
 	<section class="contact-hero" style="background-image: url('<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-reception-lobby-clinic-name.avif' ); ?>');">
 		<div class="contact-hero__overlay"></div>
 		<div class="container contact-hero__content">
-			<h1 class="contact-hero__title fade-in fade-in-delay-0">Contact Us</h1>
-			<p class="contact-hero__subtitle fade-in fade-in-delay-1">We would love to hear from you. Reach out to schedule an appointment or learn more about our services.</p>
-			<a href="tel:+35725377757" class="btn btn-primary fade-in fade-in-delay-2">Call +357 25 377757</a>
+			<h1 class="contact-hero__title fade-in fade-in-delay-0"><?php mci_te( 'Contact Us' ); ?></h1>
+			<p class="contact-hero__subtitle fade-in fade-in-delay-1"><?php mci_te( 'We would love to hear from you. Reach out to schedule an appointment or learn more about our services.' ); ?></p>
+			<a href="tel:+35725377757" class="btn btn-primary fade-in fade-in-delay-2"><?php mci_te( 'Call +357 25 377757' ); ?></a>
 		</div>
 	</section>
 
@@ -30,26 +30,26 @@ $clinic_image_base = 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/
 
 				<!-- Contact Info -->
 				<div class="contact-info contact-card fade-in fade-in-delay-0">
-					<h2>Contact Information</h2>
+					<h2><?php mci_te( 'Contact Information' ); ?></h2>
 
 					<div class="contact-info__item">
-						<h4>Phone</h4>
+						<h4><?php mci_te( 'Phone' ); ?></h4>
 						<p><a href="tel:+35725377757">+357 25 377757</a></p>
 					</div>
 
 					<div class="contact-info__item">
-						<h4>Email</h4>
+						<h4><?php mci_te( 'Email' ); ?></h4>
 						<p><a href="mailto:info@dentalartcliniclimassol.com">info@dentalartcliniclimassol.com</a></p>
 					</div>
 
 					<div class="contact-info__item">
-						<h4>Address</h4>
+						<h4><?php mci_te( 'Address' ); ?></h4>
 						<p>PRIMO AMARI, Walter Gropius 49-49,<br>Floor 1, Apt. 101, Limassol 3076, Cyprus</p>
 					</div>
 
 					<div class="contact-info__item">
 						<?php get_template_part( 'template-parts/hours-table', null, array(
-							'heading_text' => 'Operating Hours',
+							'heading_text' => mci_t( 'Operating Hours' ),
 							'status_id'    => 'contact-clinic-status',
 						) ); ?>
 					</div>
@@ -57,32 +57,33 @@ $clinic_image_base = 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/
 
 				<!-- Appointment Form -->
 				<div class="contact-form-wrap contact-card fade-in fade-in-delay-1">
-					<h2>Book an Appointment</h2>
+					<h2><?php mci_te( 'Book an Appointment' ); ?></h2>
 					<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
 						<input type="hidden" name="action" value="mci_contact_form">
+						<input type="hidden" name="mci_form_lang" value="<?php echo esc_attr( mci_get_current_lang() ); ?>">
 						<?php wp_nonce_field( 'mci_contact_form_nonce', 'mci_contact_nonce' ); ?>
 
 						<div class="form-group">
-							<label for="contact-name">Name</label>
-							<input type="text" id="contact-name" name="contact_name" placeholder="e.g. Maria Georgiou" required>
+							<label for="contact-name"><?php mci_te( 'Name' ); ?></label>
+							<input type="text" id="contact-name" name="contact_name" placeholder="<?php echo esc_attr( mci_t( 'e.g. Maria Georgiou' ) ); ?>" required>
 						</div>
 
 						<div class="form-group">
-							<label for="contact-phone">Phone</label>
-							<input type="tel" id="contact-phone" name="contact_phone" placeholder="+357 99 123 456" required>
+							<label for="contact-phone"><?php mci_te( 'Phone' ); ?></label>
+							<input type="tel" id="contact-phone" name="contact_phone" placeholder="<?php echo esc_attr( mci_t( '+357 99 123 456' ) ); ?>" required>
 						</div>
 
 						<div class="form-group">
-							<label for="contact-email">Email</label>
-							<input type="email" id="contact-email" name="contact_email" placeholder="your@email.com" required>
+							<label for="contact-email"><?php mci_te( 'Email' ); ?></label>
+							<input type="email" id="contact-email" name="contact_email" placeholder="<?php echo esc_attr( mci_t( 'your@email.com' ) ); ?>" required>
 						</div>
 
 						<div class="form-group">
-							<label for="contact-message">Message</label>
-							<textarea id="contact-message" name="contact_message" rows="5" placeholder="Tell us about your smile goals..."></textarea>
+							<label for="contact-message"><?php mci_te( 'Message' ); ?></label>
+							<textarea id="contact-message" name="contact_message" rows="5" placeholder="<?php echo esc_attr( mci_t( 'Tell us about your smile goals...' ) ); ?>"></textarea>
 						</div>
 
-						<button type="submit" class="btn btn-primary">Send Message</button>
+						<button type="submit" class="btn btn-primary"><?php mci_te( 'Send Message' ); ?></button>
 					</form>
 				</div>
 
@@ -110,11 +111,11 @@ $clinic_image_base = 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/
 	<section class="contact-cta" style="background-image: url('<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-wide-angle-equipment.avif' ); ?>');">
 		<div class="contact-cta__overlay"></div>
 		<div class="container contact-cta__content">
-			<h2 class="fade-in fade-in-delay-0">Ready to Transform <span class="accent-font">Your Smile?</span></h2>
-			<p class="fade-in fade-in-delay-1">Book a consultation and discover the difference personalized dental care can make.</p>
+			<h2 class="fade-in fade-in-delay-0"><?php echo mci_t( 'Ready to Transform' ); ?> <span class="accent-font"><?php echo mci_t( 'Your Smile?' ); ?></span></h2>
+			<p class="fade-in fade-in-delay-1"><?php mci_te( 'Book a consultation and discover the difference personalized dental care can make.' ); ?></p>
 			<div class="contact-cta__buttons fade-in fade-in-delay-2">
-				<a href="tel:+35725377757" class="btn btn-primary">Call +357 25 377757</a>
-				<a href="mailto:info@dentalartcliniclimassol.com" class="btn btn-outline-light">Email Us</a>
+				<a href="tel:+35725377757" class="btn btn-primary"><?php mci_te( 'Call +357 25 377757' ); ?></a>
+				<a href="mailto:info@dentalartcliniclimassol.com" class="btn btn-outline-light"><?php mci_te( 'Email Us' ); ?></a>
 			</div>
 		</div>
 	</section>

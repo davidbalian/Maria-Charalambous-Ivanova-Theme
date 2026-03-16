@@ -19,16 +19,16 @@ $theme_image_base  = get_template_directory_uri() . '/assets/images/';
 	<section class="gallery-hero" style="background-image: url('<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-reception-area-marble-counter.avif' ); ?>');">
 		<div class="gallery-hero__overlay"></div>
 		<div class="container gallery-hero__content">
-			<h1 class="gallery-hero__title fade-in fade-in-delay-0">Gallery</h1>
-			<p class="gallery-hero__subtitle fade-in fade-in-delay-1">Browse our collection of before &amp; after transformations and clinic photos.</p>
-			<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-primary fade-in fade-in-delay-2">Book Appointment</a>
+			<h1 class="gallery-hero__title fade-in fade-in-delay-0"><?php mci_te( 'Gallery' ); ?></h1>
+			<p class="gallery-hero__subtitle fade-in fade-in-delay-1"><?php echo mci_t( 'Browse our collection of before &amp; after transformations and clinic photos.' ); ?></p>
+			<a href="<?php echo esc_url( mci_url( '/contact/' ) ); ?>" class="btn btn-primary fade-in fade-in-delay-2"><?php mci_te( 'Book Appointment' ); ?></a>
 		</div>
 	</section>
 
 	<!-- Before & After -->
 	<section class="gallery-section page-section page-section--background">
 		<div class="container">
-			<h2 class="gallery-section__heading fade-in fade-in-delay-0">Before &amp; After</h2>
+			<h2 class="gallery-section__heading fade-in fade-in-delay-0"><?php echo mci_t( 'Before &amp; After' ); ?></h2>
 			<div class="gallery-grid" id="page-gallery" data-fade-stagger>
 				<a href="<?php echo esc_url( $theme_image_base . 'before-and-after-at-dental-art-clinic-limassol.webp' ); ?>" class="gallery-grid__item fade-in">
 					<img src="<?php echo esc_url( $theme_image_base . 'before-and-after-at-dental-art-clinic-limassol.webp' ); ?>" alt="Before and after smile transformation" width="400" height="300" loading="lazy">
@@ -46,7 +46,7 @@ $theme_image_base  = get_template_directory_uri() . '/assets/images/';
 	<!-- Clinic Photos -->
 	<section class="gallery-section page-section page-section--surface">
 		<div class="container">
-			<h2 class="gallery-section__heading fade-in fade-in-delay-0">The Clinic</h2>
+			<h2 class="gallery-section__heading fade-in fade-in-delay-0"><?php mci_te( 'The Clinic' ); ?></h2>
 			<div class="gallery-grid" data-fade-stagger>
 				<a href="<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-reception-lobby-clinic-name.avif' ); ?>" class="gallery-grid__item fade-in">
 					<img src="<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-reception-lobby-clinic-name.avif' ); ?>" alt="Reception lobby" width="400" height="300" loading="lazy">
@@ -92,11 +92,11 @@ $theme_image_base  = get_template_directory_uri() . '/assets/images/';
 	<section class="gallery-cta" style="background-image: url('<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-wide-angle-equipment.avif' ); ?>');">
 		<div class="gallery-cta__overlay"></div>
 		<div class="container gallery-cta__content">
-			<h2 class="fade-in fade-in-delay-0">Ready to Transform <span class="accent-font">Your Smile?</span></h2>
-			<p class="fade-in fade-in-delay-1">Book a consultation and discover the difference personalized dental care can make.</p>
+			<h2 class="fade-in fade-in-delay-0"><?php echo mci_t( 'Ready to Transform' ); ?> <span class="accent-font"><?php echo mci_t( 'Your Smile?' ); ?></span></h2>
+			<p class="fade-in fade-in-delay-1"><?php mci_te( 'Book a consultation and discover the difference personalized dental care can make.' ); ?></p>
 			<div class="gallery-cta__buttons fade-in fade-in-delay-2">
-				<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-primary">Book Appointment</a>
-				<a href="tel:+35725377757" class="btn btn-outline-light">Call +357 25 377757</a>
+				<a href="<?php echo esc_url( mci_url( '/contact/' ) ); ?>" class="btn btn-primary"><?php mci_te( 'Book Appointment' ); ?></a>
+				<a href="tel:+35725377757" class="btn btn-outline-light"><?php mci_te( 'Call +357 25 377757' ); ?></a>
 			</div>
 		</div>
 	</section>

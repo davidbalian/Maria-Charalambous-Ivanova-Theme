@@ -28,11 +28,20 @@ function mci_theme_setup() {
 	add_theme_support( 'automatic-feed-links' );
 
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'maria-charalambous-ivanova' ),
-		'footer'  => __( 'Footer Menu', 'maria-charalambous-ivanova' ),
+		'primary'    => __( 'Primary Menu', 'maria-charalambous-ivanova' ),
+		'footer'     => __( 'Footer Menu', 'maria-charalambous-ivanova' ),
+		'primary-ru' => __( 'Primary Menu (Russian)', 'maria-charalambous-ivanova' ),
+		'primary-el' => __( 'Primary Menu (Greek)', 'maria-charalambous-ivanova' ),
+		'footer-ru'  => __( 'Footer Menu (Russian)', 'maria-charalambous-ivanova' ),
+		'footer-el'  => __( 'Footer Menu (Greek)', 'maria-charalambous-ivanova' ),
 	) );
 }
 add_action( 'after_setup_theme', 'mci_theme_setup' );
+
+/**
+ * Multilingual support — must load before SEO so translations are available.
+ */
+require get_template_directory() . '/inc/i18n.php';
 
 /**
  * SEO — meta tags, Open Graph, Twitter Cards, JSON-LD structured data.
@@ -68,8 +77,15 @@ function mci_enqueue_assets() {
 	// Theme main JS — no dependencies (vanilla JS).
 	wp_enqueue_script( 'mci-main', get_template_directory_uri() . '/assets/js/main.js', array(), MCI_THEME_VERSION, true );
 	wp_localize_script( 'mci-main', 'mciAjax', array(
-		'url'   => admin_url( 'admin-ajax.php' ),
-		'nonce' => wp_create_nonce( 'mci_contact_form_nonce' ),
+		'url'     => admin_url( 'admin-ajax.php' ),
+		'nonce'   => wp_create_nonce( 'mci_contact_form_nonce' ),
+		'lang'    => mci_get_current_lang(),
+		'strings' => array(
+			'sent'       => mci_t( 'Sent!' ),
+			'failed'     => mci_t( 'Failed!' ),
+			'open_now'   => mci_t( 'OPEN NOW' ),
+			'closed_now' => mci_t( 'CLOSED NOW' ),
+		),
 	) );
 }
 add_action( 'wp_enqueue_scripts', 'mci_enqueue_assets' );
@@ -230,8 +246,10 @@ function mci_handle_contact_form() {
 		$success ? wp_send_json_success() : wp_send_json_error();
 	}
 
-	$status = $success ? 'success' : 'error';
-	wp_safe_redirect( home_url( '/contact/?contact=' . $status ) );
+	$status    = $success ? 'success' : 'error';
+	$form_lang = sanitize_text_field( $_POST['mci_form_lang'] ?? 'en' );
+	$prefix    = ( $form_lang && $form_lang !== 'en' ) ? '/' . $form_lang : '';
+	wp_safe_redirect( home_url( $prefix . '/contact/?contact=' . $status ) );
 	exit;
 }
 add_action( 'admin_post_mci_contact_form', 'mci_handle_contact_form' );

@@ -16,7 +16,7 @@ get_header(); ?>
 	<!-- Before & After -->
 	<section id="before-after" class="home-cases">
 		<div class="container">
-			<h2 class="home-cases__title fade-in fade-in-delay-0">Before &amp; After</h2>
+			<h2 class="home-cases__title fade-in fade-in-delay-0"><?php echo mci_t( 'Before &amp; After' ); ?></h2>
 			<div class="home-cases__grid">
 				<div class="home-cases__item fade-in fade-in-delay-1">
 					<img src="https://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp" alt="Before and after at Dental Art Clinic" width="400" height="400" loading="lazy">
@@ -29,7 +29,7 @@ get_header(); ?>
 				</div>
 			</div>
 			<div class="home-cases__action fade-in fade-in-delay-4">
-				<a href="<?php echo esc_url( home_url( '/gallery/' ) ); ?>" class="btn btn-outline">View All</a>
+				<a href="<?php echo esc_url( mci_url( '/gallery/' ) ); ?>" class="btn btn-outline"><?php mci_te( 'View All' ); ?></a>
 			</div>
 		</div>
 	</section>
@@ -37,15 +37,14 @@ get_header(); ?>
 	<?php get_template_part( 'template-parts/home-v2/benefits' ); ?>
 
 	<?php get_template_part( 'template-parts/home-v2/gentle-touch' ); ?>
-	
+
 	<?php get_template_part( 'template-parts/home-v2/comprehensive-services' ); ?>
-	
+
 	<?php get_template_part( 'template-parts/home-v2/doctor' ); ?>
 
 	<?php
 	$clinic_image_base_url = 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/';
 	$clinic_images = array(
-		// Mixed: treatment, reception, decor (bathrooms last)
 		'dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-wide-angle-equipment.avif' => 'Dental Art Clinic treatment room wide angle',
 		'dental-art-clinic-by-dr-maria-charalambous-ivanova-reception-lobby-clinic-name.avif' => 'Dental Art Clinic reception lobby',
 		'dental-art-clinic-by-dr-maria-charalambous-ivanova-clinic-name-wall-flowers.avif' => 'Dental Art Clinic name and flowers',
@@ -83,8 +82,8 @@ get_header(); ?>
 		<div class="container">
 			<div class="home-v2-clinic__header">
 				<div>
-					<h2 class="home-v2-clinic__title fade-in fade-in-delay-0">The Clinic</h2>
-					<p class="home-v2-clinic__subtitle fade-in fade-in-delay-1">Step inside Dental Art Clinic Limassol.</p>
+					<h2 class="home-v2-clinic__title fade-in fade-in-delay-0"><?php mci_te( 'The Clinic' ); ?></h2>
+					<p class="home-v2-clinic__subtitle fade-in fade-in-delay-1"><?php mci_te( 'Step inside Dental Art Clinic Limassol.' ); ?></p>
 				</div>
 				<div class="home-v2-clinic__nav fade-in fade-in-delay-2" aria-label="Clinic gallery navigation">
 					<button type="button" class="home-v2-clinic__button js-clinic-prev" aria-label="Previous clinic photos">
@@ -117,8 +116,8 @@ get_header(); ?>
 	<!-- Existing Reviews -->
 	<section class="home-reviews">
 		<div class="container">
-			<h2 class="home-reviews__title fade-in fade-in-delay-0">What Our Patients Say</h2>
-			<p class="home-reviews__text fade-in fade-in-delay-1">Real reviews from our community of patients in Limassol and beyond.</p>
+			<h2 class="home-reviews__title fade-in fade-in-delay-0"><?php mci_te( 'What Our Patients Say' ); ?></h2>
+			<p class="home-reviews__text fade-in fade-in-delay-1"><?php mci_te( 'Real reviews from our community of patients in Limassol and beyond.' ); ?></p>
 			<div class="home-reviews__widget fade-in fade-in-delay-2">
 				<?php echo do_shortcode( '[trustindex no-registration=google]' ); ?>
 			</div>
@@ -130,20 +129,20 @@ get_header(); ?>
 		<div class="container">
 			<div class="home-contact__grid">
 				<div class="home-contact__info">
-					<h2 class="home-contact__title fade-in fade-in-delay-0">Contact Us</h2>
+					<h2 class="home-contact__title fade-in fade-in-delay-0"><?php mci_te( 'Contact Us' ); ?></h2>
 
 					<div class="home-contact__detail fade-in fade-in-delay-1">
-						<h3>Phone</h3>
+						<h3><?php mci_te( 'Phone' ); ?></h3>
 						<p><a href="tel:+35725377757">+357 25 377757</a></p>
 					</div>
 
 					<div class="home-contact__detail fade-in fade-in-delay-2">
-						<h3>Email</h3>
+						<h3><?php mci_te( 'Email' ); ?></h3>
 						<p><a href="mailto:info@dentalartcliniclimassol.com">info@dentalartcliniclimassol.com</a></p>
 					</div>
 
 					<div class="home-contact__detail fade-in fade-in-delay-3">
-						<h3>Address</h3>
+						<h3><?php mci_te( 'Address' ); ?></h3>
 						<p>PRIMO AMARI, Walter Gropius 49-49,<br>Floor 1, Apt. 101, Limassol 3076, Cyprus</p>
 					</div>
 
@@ -154,7 +153,7 @@ get_header(); ?>
 						) ); ?>
 					</div>
 
-					<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-primary fade-in fade-in-delay-5">Contact Us</a>
+					<a href="<?php echo esc_url( mci_url( '/contact/' ) ); ?>" class="btn btn-primary fade-in fade-in-delay-5"><?php mci_te( 'Contact Us' ); ?></a>
 				</div>
 
 				<div class="home-contact__map fade-in fade-in-delay-2">

@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	});
 
-	// Language Switcher
+	// Language Switcher — dropdown toggle only; links navigate naturally via href
 	document.querySelectorAll('.lang-switcher__toggle').forEach(function (toggle) {
 		var dropdown = toggle.nextElementSibling;
 
@@ -149,35 +149,6 @@ document.addEventListener('DOMContentLoaded', function () {
 				dropdown.classList.add('is-open');
 				toggle.setAttribute('aria-expanded', 'true');
 			}
-		});
-
-		// Stop clicks inside dropdown from closing it via document listener
-		dropdown.addEventListener('click', function (e) {
-			e.stopPropagation();
-		});
-
-		dropdown.querySelectorAll('.lang-switcher__option').forEach(function (option) {
-			option.addEventListener('click', function (e) {
-				e.preventDefault();
-				var lang = option.getAttribute('data-lang');
-				var label = option.textContent.trim();
-
-				// Update all switcher instances (desktop + mobile)
-				document.querySelectorAll('.lang-switcher__current').forEach(function (el) {
-					el.textContent = label;
-				});
-				document.querySelectorAll('.lang-switcher__option').forEach(function (o) {
-					o.classList.toggle('is-active', o.getAttribute('data-lang') === lang);
-				});
-
-				// Close all dropdowns
-				document.querySelectorAll('.lang-switcher__dropdown').forEach(function (d) {
-					d.classList.remove('is-open');
-				});
-				document.querySelectorAll('.lang-switcher__toggle').forEach(function (t) {
-					t.setAttribute('aria-expanded', 'false');
-				});
-			});
 		});
 	});
 
@@ -250,11 +221,11 @@ document.addEventListener('DOMContentLoaded', function () {
 					btn.classList.remove('is-loading');
 					if (data.success) {
 						btn.classList.add('is-success');
-						btn.textContent = 'Sent!';
+						btn.textContent = (typeof mciAjax !== 'undefined' && mciAjax.strings) ? mciAjax.strings.sent : 'Sent!';
 						form.reset();
 					} else {
 						btn.classList.add('is-error');
-						btn.textContent = 'Failed!';
+						btn.textContent = (typeof mciAjax !== 'undefined' && mciAjax.strings) ? mciAjax.strings.failed : 'Failed!';
 					}
 					setTimeout(function () {
 						btn.classList.remove('is-success', 'is-error');
@@ -265,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				.catch(function () {
 					btn.classList.remove('is-loading');
 					btn.classList.add('is-error');
-					btn.textContent = 'Failed!';
+					btn.textContent = (typeof mciAjax !== 'undefined' && mciAjax.strings) ? mciAjax.strings.failed : 'Failed!';
 					setTimeout(function () {
 						btn.classList.remove('is-error');
 						btn.textContent = originalText;
@@ -321,10 +292,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			clinicStatusEls.forEach(function(el) {
 				if (isOpen) {
-					el.textContent = 'OPEN NOW';
+					el.textContent = (typeof mciAjax !== 'undefined' && mciAjax.strings) ? mciAjax.strings.open_now : 'OPEN NOW';
 					el.className = 'js-clinic-status clinic-status--open';
 				} else {
-					el.textContent = 'CLOSED NOW';
+					el.textContent = (typeof mciAjax !== 'undefined' && mciAjax.strings) ? mciAjax.strings.closed_now : 'CLOSED NOW';
 					el.className = 'js-clinic-status clinic-status--closed';
 				}
 			});

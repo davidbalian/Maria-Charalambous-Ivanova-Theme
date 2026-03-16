@@ -58,7 +58,7 @@ function mci_seo_get_business_data() {
 }
 
 /* =========================================================================
-   2. Shared Services Data
+   2. Shared Services Data (language-aware)
    ========================================================================= */
 
 /**
@@ -67,48 +67,48 @@ function mci_seo_get_business_data() {
 function mci_get_services_data() {
 	return array(
 		array(
-			'title' => 'General Dental Examination & Prevention',
-			'desc'  => 'Regular dental check-ups help detect potential problems early and maintain optimal oral health through preventive care and professional advice.',
+			'title' => mci_t( 'General Dental Examination & Prevention' ),
+			'desc'  => mci_t( 'Regular dental check-ups help detect potential problems early and maintain optimal oral health through preventive care and professional advice.' ),
 		),
 		array(
-			'title' => 'Professional Teeth Cleaning',
-			'desc'  => 'Removal of plaque, tartar, and stains to promote healthy gums and a brighter, healthier smile.',
+			'title' => mci_t( 'Professional Teeth Cleaning' ),
+			'desc'  => mci_t( 'Removal of plaque, tartar, and stains to promote healthy gums and a brighter, healthier smile.' ),
 		),
 		array(
-			'title' => 'Dental Fillings',
-			'desc'  => 'Treatment of tooth decay using modern, aesthetic materials that restore both function and natural appearance.',
+			'title' => mci_t( 'Dental Fillings' ),
+			'desc'  => mci_t( 'Treatment of tooth decay using modern, aesthetic materials that restore both function and natural appearance.' ),
 		),
 		array(
-			'title' => 'Root Canal Treatment (Endodontics)',
-			'desc'  => 'Advanced treatment for infected or inflamed tooth nerves, allowing the natural tooth to be preserved and pain to be relieved.',
+			'title' => mci_t( 'Root Canal Treatment (Endodontics)' ),
+			'desc'  => mci_t( 'Advanced treatment for infected or inflamed tooth nerves, allowing the natural tooth to be preserved and pain to be relieved.' ),
 		),
 		array(
-			'title' => 'Tooth Extractions',
-			'desc'  => 'Safe and gentle removal of teeth when they cannot be restored, always prioritizing patient comfort.',
+			'title' => mci_t( 'Tooth Extractions' ),
+			'desc'  => mci_t( 'Safe and gentle removal of teeth when they cannot be restored, always prioritizing patient comfort.' ),
 		),
 		array(
-			'title' => 'Cosmetic Dentistry',
-			'desc'  => 'A range of treatments designed to enhance the appearance of your smile, including teeth whitening and aesthetic restorations.',
+			'title' => mci_t( 'Cosmetic Dentistry' ),
+			'desc'  => mci_t( 'A range of treatments designed to enhance the appearance of your smile, including teeth whitening and aesthetic restorations.' ),
 		),
 		array(
-			'title' => 'Crowns & Bridges',
-			'desc'  => 'Durable restorations used to repair damaged teeth or replace missing ones, improving both function and aesthetics.',
+			'title' => mci_t( 'Crowns & Bridges' ),
+			'desc'  => mci_t( 'Durable restorations used to repair damaged teeth or replace missing ones, improving both function and aesthetics.' ),
 		),
 		array(
-			'title' => 'Dental Implants',
-			'desc'  => 'A modern and long-lasting solution for replacing missing teeth, restoring both confidence and oral function.',
+			'title' => mci_t( 'Dental Implants' ),
+			'desc'  => mci_t( 'A modern and long-lasting solution for replacing missing teeth, restoring both confidence and oral function.' ),
 		),
 		array(
-			'title' => 'Dentures',
-			'desc'  => 'Full or partial removable dentures designed to restore chewing ability, speech, and smile aesthetics.',
+			'title' => mci_t( 'Dentures' ),
+			'desc'  => mci_t( 'Full or partial removable dentures designed to restore chewing ability, speech, and smile aesthetics.' ),
 		),
 		array(
-			'title' => 'Periodontal Treatment',
-			'desc'  => 'Diagnosis and treatment of gum diseases such as gingivitis and periodontitis to protect the health of your gums and supporting bone.',
+			'title' => mci_t( 'Periodontal Treatment' ),
+			'desc'  => mci_t( 'Diagnosis and treatment of gum diseases such as gingivitis and periodontitis to protect the health of your gums and supporting bone.' ),
 		),
 		array(
-			'title' => 'Emergency Dental Care',
-			'desc'  => 'Prompt care for dental emergencies including severe toothache, broken teeth, infections, or other urgent dental conditions.',
+			'title' => mci_t( 'Emergency Dental Care' ),
+			'desc'  => mci_t( 'Prompt care for dental emergencies including severe toothache, broken teeth, infections, or other urgent dental conditions.' ),
 		),
 	);
 }
@@ -126,31 +126,44 @@ function mci_seo_is_page( $slug ) {
    ========================================================================= */
 
 function mci_seo_document_title_parts( $title_parts ) {
-	$site_tag = 'Dental Art Clinic Limassol';
+	$lang     = mci_get_current_lang();
+	$site_tag = mci_t( 'seo_site_name' );
+	// Fallback if key isn't translated.
+	if ( $site_tag === 'seo_site_name' ) {
+		$site_tag = 'Dental Art Clinic Limassol';
+	}
 
 	if ( is_front_page() ) {
-		$title_parts['title'] = 'Dentist in Limassol | Dental Art Clinic by Dr. Maria Charalambous-Ivanova';
+		$t = mci_t( 'seo_title_home' );
+		$title_parts['title'] = ( $t !== 'seo_title_home' )
+			? $t
+			: 'Dentist in Limassol | Dental Art Clinic by Dr. Maria Charalambous-Ivanova';
 		unset( $title_parts['tagline'] );
 		return $title_parts;
 	}
 
 	if ( mci_seo_is_page( 'about' ) ) {
-		$title_parts['title'] = 'About Dr. Maria Charalambous-Ivanova';
-		$title_parts['site']  = 'Dentist in Limassol';
+		$t = mci_t( 'seo_title_about' );
+		$title_parts['title'] = ( $t !== 'seo_title_about' ) ? $t : 'About Dr. Maria Charalambous-Ivanova';
+		$title_parts['site']  = ( $lang !== 'en' ) ? $site_tag : 'Dentist in Limassol';
 	} elseif ( mci_seo_is_page( 'services' ) ) {
-		$title_parts['title'] = 'Dental Services in Limassol';
+		$t = mci_t( 'seo_title_services' );
+		$title_parts['title'] = ( $t !== 'seo_title_services' ) ? $t : 'Dental Services in Limassol';
 		$title_parts['site']  = $site_tag;
 	} elseif ( mci_seo_is_page( 'gallery' ) ) {
-		$title_parts['title'] = 'Smile Transformations Gallery';
+		$t = mci_t( 'seo_title_gallery' );
+		$title_parts['title'] = ( $t !== 'seo_title_gallery' ) ? $t : 'Smile Transformations Gallery';
 		$title_parts['site']  = $site_tag;
 	} elseif ( mci_seo_is_page( 'contact' ) ) {
-		$title_parts['title'] = 'Contact & Book Appointment';
+		$t = mci_t( 'seo_title_contact' );
+		$title_parts['title'] = ( $t !== 'seo_title_contact' ) ? $t : 'Contact & Book Appointment';
 		$title_parts['site']  = $site_tag;
 	} elseif ( mci_seo_is_page( 'privacy-policy' ) ) {
-		$title_parts['title'] = 'Privacy Policy';
+		$t = mci_t( 'seo_title_privacy' );
+		$title_parts['title'] = ( $t !== 'seo_title_privacy' ) ? $t : 'Privacy Policy';
 		$title_parts['site']  = $site_tag;
 	} elseif ( is_404() ) {
-		$title_parts['title'] = 'Page Not Found';
+		$title_parts['title'] = mci_t( 'Page Not Found' );
 		$title_parts['site']  = $site_tag;
 	} elseif ( is_search() ) {
 		$title_parts['title'] = 'Search Results';
@@ -174,19 +187,26 @@ function mci_seo_document_title_separator( $sep ) {
 
 function mci_seo_meta_description() {
 	$desc = '';
+	$lang = mci_get_current_lang();
 
 	if ( is_front_page() ) {
-		$desc = 'Dental Art Clinic Limassol — modern dental clinic by Dr. Maria Charalambous-Ivanova offering cosmetic dentistry, dental implants, veneers, aligners, and emergency dental care. Book your appointment today.';
+		$t = mci_t( 'seo_desc_home' );
+		$desc = ( $t !== 'seo_desc_home' ) ? $t : 'Dental Art Clinic Limassol — modern dental clinic by Dr. Maria Charalambous-Ivanova offering cosmetic dentistry, dental implants, veneers, aligners, and emergency dental care. Book your appointment today.';
 	} elseif ( mci_seo_is_page( 'about' ) ) {
-		$desc = 'Meet Dr. Maria Charalambous-Ivanova, DMD, MSD — founder of Dental Art Clinic in Limassol. Practicing since 2008, specializing in composite veneers, Emax veneers, and full mouth rehabilitation.';
+		$t = mci_t( 'seo_desc_about' );
+		$desc = ( $t !== 'seo_desc_about' ) ? $t : 'Meet Dr. Maria Charalambous-Ivanova, DMD, MSD — founder of Dental Art Clinic in Limassol. Practicing since 2008, specializing in composite veneers, Emax veneers, and full mouth rehabilitation.';
 	} elseif ( mci_seo_is_page( 'services' ) ) {
-		$desc = 'Full range of dental services at Dental Art Clinic Limassol — general check-ups, teeth cleaning, cosmetic dentistry, dental implants, crowns, bridges, veneers, aligners, and emergency care.';
+		$t = mci_t( 'seo_desc_services' );
+		$desc = ( $t !== 'seo_desc_services' ) ? $t : 'Full range of dental services at Dental Art Clinic Limassol — general check-ups, teeth cleaning, cosmetic dentistry, dental implants, crowns, bridges, veneers, aligners, and emergency care.';
 	} elseif ( mci_seo_is_page( 'gallery' ) ) {
-		$desc = 'View before and after smile transformations and clinic photos from Dental Art Clinic Limassol. See results of our cosmetic dentistry, veneers, and smile makeover treatments.';
+		$t = mci_t( 'seo_desc_gallery' );
+		$desc = ( $t !== 'seo_desc_gallery' ) ? $t : 'View before and after smile transformations and clinic photos from Dental Art Clinic Limassol. See results of our cosmetic dentistry, veneers, and smile makeover treatments.';
 	} elseif ( mci_seo_is_page( 'contact' ) ) {
-		$desc = 'Contact Dental Art Clinic Limassol to book an appointment. Call +357 25 377757 or visit us at PRIMO AMARI, Limassol 3076, Cyprus. Mon–Thu 8AM–5:30PM, Fri 8AM–1PM.';
+		$t = mci_t( 'seo_desc_contact' );
+		$desc = ( $t !== 'seo_desc_contact' ) ? $t : 'Contact Dental Art Clinic Limassol to book an appointment. Call +357 25 377757 or visit us at PRIMO AMARI, Limassol 3076, Cyprus. Mon–Thu 8AM–5:30PM, Fri 8AM–1PM.';
 	} elseif ( mci_seo_is_page( 'privacy-policy' ) ) {
-		$desc = 'Privacy policy for Dental Art Clinic Limassol. How we collect, use, and protect your personal data in compliance with GDPR.';
+		$t = mci_t( 'seo_desc_privacy' );
+		$desc = ( $t !== 'seo_desc_privacy' ) ? $t : 'Privacy policy for Dental Art Clinic Limassol. How we collect, use, and protect your personal data in compliance with GDPR.';
 	} elseif ( is_singular() && ! is_front_page() ) {
 		$post = get_queried_object();
 		if ( $post && has_excerpt( $post->ID ) ) {
@@ -205,7 +225,7 @@ function mci_seo_meta_description() {
 }
 
 /* =========================================================================
-   6. Canonical URLs — wp_head hook
+   6. Canonical URLs — wp_head hook (language-aware)
    ========================================================================= */
 
 function mci_seo_canonical() {
@@ -213,15 +233,7 @@ function mci_seo_canonical() {
 		return;
 	}
 
-	$url = '';
-
-	if ( is_front_page() ) {
-		$url = home_url( '/' );
-	} elseif ( is_singular() ) {
-		$url = get_permalink();
-	} elseif ( is_archive() || is_home() ) {
-		$url = get_pagenum_link();
-	}
+	$url = mci_seo_current_url();
 
 	if ( $url ) {
 		echo '<link rel="canonical" href="' . esc_url( $url ) . '">' . "\n";
@@ -251,16 +263,45 @@ function mci_seo_robots() {
 }
 
 /* =========================================================================
-   8. Open Graph Tags — wp_head hook
+   8. Hreflang Tags — wp_head hook
+   ========================================================================= */
+
+function mci_seo_hreflang() {
+	// Get the current path without language prefix.
+	$uri      = trim( parse_url( $_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH ), '/' );
+	$segments = explode( '/', $uri );
+	if ( ! empty( $segments[0] ) && in_array( $segments[0], array( 'ru', 'el' ), true ) ) {
+		array_shift( $segments );
+	}
+	$clean_path = implode( '/', $segments );
+	$suffix     = $clean_path ? $clean_path . '/' : '';
+
+	$hreflang_map = array(
+		'en' => 'en',
+		'ru' => 'ru',
+		'el' => 'el',
+	);
+
+	foreach ( $hreflang_map as $lang => $hreflang ) {
+		$prefix = ( $lang === 'en' ) ? '' : $lang . '/';
+		$href   = home_url( '/' . $prefix . $suffix );
+		echo '<link rel="alternate" hreflang="' . esc_attr( $hreflang ) . '" href="' . esc_url( $href ) . '">' . "\n";
+	}
+
+	// x-default points to English.
+	echo '<link rel="alternate" hreflang="x-default" href="' . esc_url( home_url( '/' . $suffix ) ) . '">' . "\n";
+}
+
+/* =========================================================================
+   9. Open Graph Tags — wp_head hook (language-aware)
    ========================================================================= */
 
 function mci_seo_open_graph() {
-	$biz = mci_seo_get_business_data();
+	$biz  = mci_seo_get_business_data();
+	$lang = mci_get_current_lang();
 
-	// Determine OG title — reuse the document title logic.
 	$og_title = wp_get_document_title();
 
-	// Determine OG description.
 	ob_start();
 	mci_seo_meta_description();
 	$meta_tag = ob_get_clean();
@@ -269,20 +310,17 @@ function mci_seo_open_graph() {
 		$og_desc = $m[1];
 	}
 
-	// Determine OG URL.
-	if ( is_front_page() ) {
-		$og_url = home_url( '/' );
-	} elseif ( is_singular() ) {
-		$og_url = get_permalink();
-	} else {
-		$og_url = get_pagenum_link();
-	}
-
-	// Determine OG type.
+	$og_url  = mci_seo_current_url();
 	$og_type = is_singular( 'post' ) ? 'article' : 'website';
-
-	// Determine OG image.
 	$og_image = mci_seo_get_og_image( $biz );
+
+	// Language → OG locale map.
+	$locale_map = array(
+		'en' => 'en_US',
+		'ru' => 'ru_RU',
+		'el' => 'el_GR',
+	);
+	$current_locale = isset( $locale_map[ $lang ] ) ? $locale_map[ $lang ] : 'en_US';
 
 	echo '<meta property="og:title" content="' . esc_attr( $og_title ) . '">' . "\n";
 	if ( $og_desc ) {
@@ -294,19 +332,24 @@ function mci_seo_open_graph() {
 	if ( $og_image ) {
 		echo '<meta property="og:image" content="' . esc_url( $og_image ) . '">' . "\n";
 	}
-	echo '<meta property="og:locale" content="en_US">' . "\n";
+	echo '<meta property="og:locale" content="' . esc_attr( $current_locale ) . '">' . "\n";
+
+	// Alternate locales.
+	foreach ( $locale_map as $l => $locale ) {
+		if ( $l !== $lang ) {
+			echo '<meta property="og:locale:alternate" content="' . esc_attr( $locale ) . '">' . "\n";
+		}
+	}
 }
 
 /**
  * Pick the best OG image for the current page.
  */
 function mci_seo_get_og_image( $biz ) {
-	// Singular with featured image.
 	if ( is_singular() && has_post_thumbnail() ) {
 		return get_the_post_thumbnail_url( null, 'large' );
 	}
 
-	// Per-template defaults.
 	if ( mci_seo_is_page( 'about' ) ) {
 		return $biz['image_doctor'];
 	}
@@ -314,12 +357,11 @@ function mci_seo_get_og_image( $biz ) {
 		return $biz['image_gallery'];
 	}
 
-	// Fallback: clinic reception image.
 	return $biz['image_clinic'];
 }
 
 /* =========================================================================
-   9. Twitter Card Tags — wp_head hook
+   10. Twitter Card Tags — wp_head hook
    ========================================================================= */
 
 function mci_seo_twitter_cards() {
@@ -347,12 +389,21 @@ function mci_seo_twitter_cards() {
 }
 
 /* =========================================================================
-   10. JSON-LD Structured Data — wp_footer hook
+   11. JSON-LD Structured Data — wp_footer hook
    ========================================================================= */
 
 function mci_seo_json_ld() {
 	$biz   = mci_seo_get_business_data();
+	$lang  = mci_get_current_lang();
 	$graph = array();
+
+	// Language code map for inLanguage field.
+	$in_language_map = array(
+		'en' => 'en-US',
+		'ru' => 'ru',
+		'el' => 'el',
+	);
+	$in_language = isset( $in_language_map[ $lang ] ) ? $in_language_map[ $lang ] : 'en-US';
 
 	// --- Dentist / MedicalBusiness schema (every page) ---
 	$dentist = array(
@@ -429,13 +480,15 @@ function mci_seo_json_ld() {
 	);
 
 	// --- WebSite schema ---
-	$graph[] = array(
-		'@type'     => 'WebSite',
-		'@id'       => $biz['url'] . '#website',
-		'name'      => $biz['name'],
-		'url'       => $biz['url'],
-		'publisher' => array( '@id' => $biz['url'] . '#dentist' ),
+	$website = array(
+		'@type'      => 'WebSite',
+		'@id'        => $biz['url'] . '#website',
+		'name'       => $biz['name'],
+		'url'        => $biz['url'],
+		'inLanguage' => $in_language,
+		'publisher'  => array( '@id' => $biz['url'] . '#dentist' ),
 	);
+	$graph[] = $website;
 
 	// --- WebPage schema ---
 	$webpage_type = 'WebPage';
@@ -449,11 +502,14 @@ function mci_seo_json_ld() {
 		$webpage_type = 'CollectionPage';
 	}
 
+	$current_url = mci_seo_current_url();
+
 	$webpage = array(
 		'@type'      => $webpage_type,
-		'@id'        => mci_seo_current_url() . '#webpage',
-		'url'        => mci_seo_current_url(),
+		'@id'        => $current_url . '#webpage',
+		'url'        => $current_url,
 		'name'       => wp_get_document_title(),
+		'inLanguage' => $in_language,
 		'isPartOf'   => array( '@id' => $biz['url'] . '#website' ),
 	);
 
@@ -466,6 +522,7 @@ function mci_seo_json_ld() {
 			'@type'         => 'BlogPosting',
 			'headline'      => get_the_title( $post ),
 			'url'           => get_permalink( $post ),
+			'inLanguage'    => $in_language,
 			'datePublished' => get_the_date( 'c', $post ),
 			'dateModified'  => get_the_modified_date( 'c', $post ),
 			'author'        => array( '@id' => $biz['url'] . '#doctor' ),
@@ -484,20 +541,19 @@ function mci_seo_json_ld() {
 			array(
 				'@type'    => 'ListItem',
 				'position' => 1,
-				'name'     => 'Home',
-				'item'     => $biz['url'],
+				'name'     => mci_t( 'Home' ),
+				'item'     => mci_url( '/' ),
 			),
 		);
 
 		$current_name = wp_get_document_title();
-		// Strip the site suffix for breadcrumb name.
 		$current_name = preg_replace( '/\s*\|.*$/', '', $current_name );
 
 		$breadcrumb_items[] = array(
 			'@type'    => 'ListItem',
 			'position' => 2,
 			'name'     => $current_name,
-			'item'     => mci_seo_current_url(),
+			'item'     => $current_url,
 		);
 
 		$graph[] = array(
@@ -517,26 +573,37 @@ function mci_seo_json_ld() {
 }
 
 /**
- * Get the current page URL for JSON-LD.
+ * Get the current page URL for JSON-LD (language-aware).
  */
 function mci_seo_current_url() {
+	$lang = mci_get_current_lang();
+
 	if ( is_front_page() ) {
-		return home_url( '/' );
+		return mci_url( '/' );
 	}
 	if ( is_singular() ) {
-		return get_permalink();
+		$permalink = get_permalink();
+		if ( $lang !== 'en' ) {
+			$home = untrailingslashit( home_url() );
+			$path = substr( $permalink, strlen( $home ) );
+			if ( ! preg_match( '#^/(ru|el)(/|$)#', $path ) ) {
+				return $home . '/' . $lang . $path;
+			}
+		}
+		return $permalink;
 	}
 	return home_url( $_SERVER['REQUEST_URI'] ?? '/' );
 }
 
 /* =========================================================================
-   11. Hook Registration
+   12. Hook Registration
    ========================================================================= */
 
 // Meta tags — early priority.
 add_action( 'wp_head', 'mci_seo_meta_description', 1 );
 add_action( 'wp_head', 'mci_seo_canonical', 1 );
 add_action( 'wp_head', 'mci_seo_robots', 1 );
+add_action( 'wp_head', 'mci_seo_hreflang', 1 );
 
 // Open Graph & Twitter Cards — priority 2.
 add_action( 'wp_head', 'mci_seo_open_graph', 2 );
