@@ -67,6 +67,10 @@ function mci_enqueue_assets() {
 
 	// Theme main JS — no dependencies (vanilla JS).
 	wp_enqueue_script( 'mci-main', get_template_directory_uri() . '/assets/js/main.js', array(), MCI_THEME_VERSION, true );
+	wp_localize_script( 'mci-main', 'mciAjax', array(
+		'url'   => admin_url( 'admin-ajax.php' ),
+		'nonce' => wp_create_nonce( 'mci_contact_form_nonce' ),
+	) );
 }
 add_action( 'wp_enqueue_scripts', 'mci_enqueue_assets' );
 
@@ -104,10 +108,15 @@ add_filter( 'script_loader_tag', 'mci_defer_scripts', 10, 3 );
  * Handle contact form submission.
  */
 function mci_handle_contact_form() {
+	$is_ajax = defined( 'DOING_AJAX' ) && DOING_AJAX;
+
 	if (
 		! isset( $_POST['mci_contact_nonce'] ) ||
 		! wp_verify_nonce( $_POST['mci_contact_nonce'], 'mci_contact_form_nonce' )
 	) {
+		if ( $is_ajax ) {
+			wp_send_json_error( 'Invalid nonce.' );
+		}
 		wp_safe_redirect( home_url( '/contact/?contact=error' ) );
 		exit;
 	}
@@ -213,9 +222,17 @@ function mci_handle_contact_form() {
 		);
 	}
 
-	$status = ( $admin_sent && ( $user_sent || ! $email ) ) ? 'success' : 'error';
+	$success = $admin_sent && ( $user_sent || ! $email );
+
+	if ( $is_ajax ) {
+		$success ? wp_send_json_success() : wp_send_json_error();
+	}
+
+	$status = $success ? 'success' : 'error';
 	wp_safe_redirect( home_url( '/contact/?contact=' . $status ) );
 	exit;
 }
 add_action( 'admin_post_mci_contact_form', 'mci_handle_contact_form' );
 add_action( 'admin_post_nopriv_mci_contact_form', 'mci_handle_contact_form' );
+add_action( 'wp_ajax_mci_contact_form', 'mci_handle_contact_form' );
+add_action( 'wp_ajax_nopriv_mci_contact_form', 'mci_handle_contact_form' );

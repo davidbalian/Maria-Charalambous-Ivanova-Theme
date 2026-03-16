@@ -221,6 +221,60 @@ document.addEventListener('DOMContentLoaded', function () {
 		cookieBanner.querySelector('.cookie-banner__close').addEventListener('click', dismissBanner);
 	}
 
+	// AJAX Contact Form Submission
+	document.querySelectorAll('form[action*="admin-post.php"]').forEach(function (form) {
+		var actionInput = form.querySelector('input[name="action"]');
+		if (!actionInput || actionInput.value !== 'mci_contact_form') return;
+
+		form.addEventListener('submit', function (e) {
+			e.preventDefault();
+
+			var btn = form.querySelector('button[type="submit"]');
+			if (!btn || btn.disabled) return;
+
+			var originalText = btn.textContent;
+			btn.disabled = true;
+			btn.classList.add('is-loading');
+			btn.innerHTML = '<span class="btn-spinner"></span>';
+
+			var formData = new FormData(form);
+			// Override nonce with fresh AJAX nonce and point to admin-ajax.php
+			formData.set('mci_contact_nonce', mciAjax.nonce);
+
+			fetch(mciAjax.url, {
+				method: 'POST',
+				body: formData,
+			})
+				.then(function (res) { return res.json(); })
+				.then(function (data) {
+					btn.classList.remove('is-loading');
+					if (data.success) {
+						btn.classList.add('is-success');
+						btn.textContent = 'Sent!';
+						form.reset();
+					} else {
+						btn.classList.add('is-error');
+						btn.textContent = 'Failed!';
+					}
+					setTimeout(function () {
+						btn.classList.remove('is-success', 'is-error');
+						btn.textContent = originalText;
+						btn.disabled = false;
+					}, 5000);
+				})
+				.catch(function () {
+					btn.classList.remove('is-loading');
+					btn.classList.add('is-error');
+					btn.textContent = 'Failed!';
+					setTimeout(function () {
+						btn.classList.remove('is-error');
+						btn.textContent = originalText;
+						btn.disabled = false;
+					}, 5000);
+				});
+		});
+	});
+
 	// Clinic Open/Closed Logic (Cyprus Timezone)
 	var clinicStatusEls = document.querySelectorAll('.js-clinic-status');
 	if (clinicStatusEls.length) {

@@ -26,16 +26,6 @@ $clinic_image_base = 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/
 	<section class="contact-content page-section page-section--background">
 		<div class="container">
 
-			<?php if ( isset( $_GET['contact'] ) && $_GET['contact'] === 'success' ) : ?>
-				<div class="alert alert-success fade-in fade-in-delay-0">
-					<strong>Thank you!</strong> Your message has been sent. We will get back to you shortly.
-				</div>
-			<?php elseif ( isset( $_GET['contact'] ) && $_GET['contact'] === 'error' ) : ?>
-				<div class="alert alert-warning fade-in fade-in-delay-0">
-					<strong>Something went wrong.</strong> Please try again or contact us directly by phone.
-				</div>
-			<?php endif; ?>
-
 			<div class="contact-layout">
 
 				<!-- Contact Info -->
