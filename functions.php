@@ -193,9 +193,9 @@ function mci_handle_contact_form() {
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-top:1px solid #e5e5e7;padding-top:20px;">
 <tr><td style="padding-top:20px;">
 <p style="margin:0 0 8px;font-size:14px;line-height:1.6;color:#6e6e73;">If you need to reach us directly:</p>
-<p style="margin:0 0 4px;font-size:14px;color:#3d342f;">&#128222; +357 25 251 820</p>
+<p style="margin:0 0 4px;font-size:14px;color:#3d342f;">&#128222; +357 25 377757</p>
 <p style="margin:0 0 4px;font-size:14px;color:#3d342f;">&#9993; info@dentalartcliniclimassol.com</p>
-<p style="margin:0;font-size:14px;color:#3d342f;">&#128205; 28th October Street 316, Shop 3, CY-3105 Limassol</p>
+<p style="margin:0;font-size:14px;color:#3d342f;">&#128205; PRIMO AMARI, Walter Gropius 49-49, Floor 1, Apt. 101, Limassol 3076, Cyprus</p>
 </td></tr>
 </table>
 </td></tr>
