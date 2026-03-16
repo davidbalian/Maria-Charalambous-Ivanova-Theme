@@ -149,7 +149,7 @@ function mci_handle_contact_form() {
 
 		$html_body = '<!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"></head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="color-scheme" content="light dark"><meta name="supported-color-schemes" content="light dark"><style>:root{color-scheme:light dark}@media(prefers-color-scheme:dark){.email-logo{filter:brightness(0) invert(1)!important}}</style></head>
 <body style="margin:0;padding:0;background-color:#f5f5f7;font-family:\'Manrope\',\'Helvetica Neue\',Arial,sans-serif;color:#1d1d1f;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f5f5f7;">
 <tr><td align="center" style="padding:40px 20px;">
@@ -160,7 +160,7 @@ function mci_handle_contact_form() {
 
 <!-- Logo -->
 <tr><td align="center" style="padding:32px 40px 24px;">
-<img src="https://davidb1646.sg-host.com/wp-content/uploads/2026/02/horizontal-logo-gold.avif" alt="Dental Art Clinic" width="220" style="display:block;max-width:220px;height:auto;" />
+<img class="email-logo" src="https://davidb1646.sg-host.com/wp-content/uploads/2026/02/horizontal-logo-gold.avif" alt="Dental Art Clinic" width="220" style="display:block;max-width:220px;height:auto;" />
 </td></tr>
 
 <!-- Greeting & body -->
