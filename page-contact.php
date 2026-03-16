@@ -83,24 +83,8 @@ $clinic_image_base = 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/
 						</div>
 
 						<div class="form-group">
-							<label for="contact-service">Service</label>
-							<select id="contact-service" name="contact_service" required>
-								<option value="" disabled selected>Select a service</option>
-								<option value="General Dental Examination & Prevention">General Dental Examination &amp; Prevention</option>
-								<option value="Professional Teeth Cleaning">Professional Teeth Cleaning</option>
-								<option value="Dental Fillings">Dental Fillings</option>
-								<option value="Root Canal Treatment">Root Canal Treatment (Endodontics)</option>
-								<option value="Tooth Extractions">Tooth Extractions</option>
-								<option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
-								<option value="Crowns & Bridges">Crowns &amp; Bridges</option>
-								<option value="Dental Implants">Dental Implants</option>
-								<option value="Dentures">Dentures</option>
-								<option value="Periodontal Treatment">Periodontal Treatment</option>
-								<option value="Emergency Dental Care">Emergency Dental Care</option>
-								<option value="Smilers Aligners">Smilers Aligners</option>
-								<option value="One-Visit Transformations">One-Visit Transformations</option>
-								<option value="General Inquiry">General Inquiry</option>
-							</select>
+							<label for="contact-email">Email</label>
+							<input type="email" id="contact-email" name="contact_email" placeholder="your@email.com" required>
 						</div>
 
 						<div class="form-group">

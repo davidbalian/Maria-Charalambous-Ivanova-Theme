@@ -23,25 +23,8 @@
 						<input type="tel" id="consultation-phone" name="contact_phone" placeholder="+357 99 123 456" required>
 					</div>
 					<div class="form-group">
-						<label for="consultation-service">Service Interested In</label>
-						<select id="consultation-service" name="contact_service" required>
-							<option value="">Select a service</option>
-							<option value="General Dental Examination & Prevention">General Dental Examination &amp; Prevention</option>
-							<option value="Professional Teeth Cleaning">Professional Teeth Cleaning</option>
-							<option value="Dental Fillings">Dental Fillings</option>
-							<option value="Root Canal Treatment">Root Canal Treatment (Endodontics)</option>
-							<option value="Tooth Extractions">Tooth Extractions</option>
-							<option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
-							<option value="Crowns & Bridges">Crowns &amp; Bridges</option>
-							<option value="Dental Implants">Dental Implants</option>
-							<option value="Dentures">Dentures</option>
-							<option value="Periodontal Treatment">Periodontal Treatment</option>
-							<option value="Emergency Dental Care">Emergency Dental Care</option>
-							<option value="Composite Veneers">Composite Veneers</option>
-							<option value="Emax Veneers">Emax Veneers</option>
-							<option value="Full Mouth Rehabilitation">Full Mouth Rehabilitation</option>
-							<option value="General Consultation">General Consultation</option>
-						</select>
+						<label for="consultation-email">Email</label>
+						<input type="email" id="consultation-email" name="contact_email" placeholder="your@email.com" required>
 					</div>
 					<div class="form-group">
 						<label for="consultation-message">Message</label>

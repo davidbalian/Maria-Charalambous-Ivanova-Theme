@@ -114,13 +114,17 @@ function mci_handle_contact_form() {
 
 	$name    = sanitize_text_field( $_POST['contact_name'] ?? '' );
 	$phone   = sanitize_text_field( $_POST['contact_phone'] ?? '' );
-	$service = sanitize_text_field( $_POST['contact_service'] ?? '' );
+	$email   = sanitize_email( $_POST['contact_email'] ?? '' );
 	$message = sanitize_textarea_field( $_POST['contact_message'] ?? '' );
 
 	$to      = 'info@dentalartcliniclimassol.com';
 	$subject = 'New Appointment Request from ' . $name;
-	$body    = "Name: {$name}\nPhone: {$phone}\nService: {$service}\n\nMessage:\n{$message}";
+	$body    = "Name: {$name}\nPhone: {$phone}\nEmail: {$email}\n\nMessage:\n{$message}";
 	$headers = array( 'Content-Type: text/plain; charset=UTF-8' );
+
+	if ( $email ) {
+		$headers[] = 'Reply-To: ' . $name . ' <' . $email . '>';
+	}
 
 	$sent = wp_mail( $to, $subject, $body, $headers );
 
