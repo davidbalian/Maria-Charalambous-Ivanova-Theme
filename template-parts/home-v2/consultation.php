@@ -9,7 +9,7 @@
 				<p>Each case is treated individually with no standardized solutions — only the right solution for the specific patient, always focusing on long-term health, proper function, and aesthetic balance.</p>
 			</div>
 			<div class="home-v2-consultation__form fade-in fade-in-delay-1">
-				<h3>Book Appointment</h3>
+				<h3>Send Message</h3>
 				<form action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post">
 					<?php wp_nonce_field( 'mci_contact_form_nonce', 'mci_contact_nonce' ); ?>
 					<input type="hidden" name="action" value="mci_contact_form">
@@ -30,7 +30,7 @@
 						<label for="consultation-message">Message</label>
 						<textarea id="consultation-message" name="contact_message" rows="4" placeholder="Tell us about your smile goals..."></textarea>
 					</div>
-					<button type="submit" class="btn btn-primary">Book Appointment</button>
+					<button type="submit" class="btn btn-primary">Send Message</button>
 				</form>
 			</div>
 		</div>
