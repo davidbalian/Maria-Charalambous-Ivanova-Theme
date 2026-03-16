@@ -64,12 +64,12 @@ $clinic_image_base = 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/
 
 						<div class="form-group">
 							<label for="contact-name">Name</label>
-							<input type="text" id="contact-name" name="contact_name" placeholder="Your full name" required>
+							<input type="text" id="contact-name" name="contact_name" placeholder="e.g. Maria Georgiou" required>
 						</div>
 
 						<div class="form-group">
 							<label for="contact-phone">Phone</label>
-							<input type="tel" id="contact-phone" name="contact_phone" placeholder="+357 ..." required>
+							<input type="tel" id="contact-phone" name="contact_phone" placeholder="+357 99 123 456" required>
 						</div>
 
 						<div class="form-group">
@@ -79,7 +79,7 @@ $clinic_image_base = 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/
 
 						<div class="form-group">
 							<label for="contact-message">Message</label>
-							<textarea id="contact-message" name="contact_message" rows="5" placeholder="Tell us how we can help..."></textarea>
+							<textarea id="contact-message" name="contact_message" rows="5" placeholder="Tell us about your smile goals..."></textarea>
 						</div>
 
 						<button type="submit" class="btn btn-primary">Send Message</button>
