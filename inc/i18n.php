@@ -190,6 +190,20 @@ function mci_te( $key ) {
 	echo esc_html( mci_t( $key ) );
 }
 
+/**
+ * Translate a string that contains {accent}...{/accent} markers.
+ * Returns the translated string with the marked portion wrapped in
+ * <span class="accent-font">...</span>.
+ */
+function mci_t_accent( $key ) {
+	$text = mci_t( $key );
+	return preg_replace(
+		'/\{accent\}(.+?)\{\/accent\}/',
+		'<span class="accent-font">$1</span>',
+		$text
+	);
+}
+
 /* =========================================================================
    6. Language-Aware URL Helpers
    ========================================================================= */

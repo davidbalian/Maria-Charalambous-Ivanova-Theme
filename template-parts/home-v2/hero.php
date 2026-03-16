@@ -6,7 +6,7 @@ $hero_image_url = 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/dr-
 		<div class="home-hero__text-col">
 			<div class="home-hero__inner">
 				<div class="home-hero__content">
-					<h1 class="home-hero__title fade-in fade-in-delay-0"><?php echo mci_t( 'Beautiful Smiles' ); ?> <span class="accent-font"><?php mci_te( 'Start Here' ); ?></span></h1>
+					<h1 class="home-hero__title fade-in fade-in-delay-0"><?php echo mci_t_accent( 'Beautiful Smiles {accent}Start Here{/accent}' ); ?></h1>
 					<p class="home-hero__text fade-in fade-in-delay-1"><?php mci_te( 'Professional dental care with modern technology, personalized treatment, and a focus on long-term oral health.' ); ?></p>
 					<div class="home-hero__ctas fade-in fade-in-delay-2">
 						<a href="<?php echo esc_url( mci_url( '/contact/' ) ); ?>" class="btn btn-primary"><?php mci_te( 'Book Appointment' ); ?></a>

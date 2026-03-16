@@ -12,7 +12,7 @@ $stagger_delays = array( 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10 );
 <!-- Comprehensive Services Section -->
 <section class="home-v2-comprehensive">
 	<div class="container">
-		<h2 class="home-v2-comprehensive__title fade-in fade-in-delay-0"><?php echo mci_t( 'Comprehensive Dental Care for' ); ?> <span class="accent-font"><?php mci_te( 'Every Need' ); ?></span></h2>
+		<h2 class="home-v2-comprehensive__title fade-in fade-in-delay-0"><?php echo mci_t_accent( 'Comprehensive Dental Care for {accent}Every Need{/accent}' ); ?></h2>
 		<p class="home-v2-comprehensive__subtitle fade-in fade-in-delay-1"><?php mci_te( 'At our dental clinic, we are committed to providing high-quality dental care in a comfortable and welcoming environment. Our goal is to help patients maintain excellent oral health while enhancing the beauty and function of their smile.' ); ?></p>
 		<div class="services-list__grid home-v2-comprehensive__services-grid">
 			<?php foreach ( $comprehensive_services as $i => $service ) : ?>

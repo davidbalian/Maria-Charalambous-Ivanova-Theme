@@ -28,8 +28,7 @@ return array(
 	/* =====================================================================
 	   Homepage Hero
 	   ===================================================================== */
-	'Beautiful Smiles'                        => 'Όμορφα Χαμόγελα',
-	'Start Here'                              => 'Ξεκινήστε Εδώ',
+	'Beautiful Smiles {accent}Start Here{/accent}' => 'Τα Όμορφα Χαμόγελα {accent}Ξεκινούν Εδώ{/accent}',
 	'Professional dental care with modern technology, personalized treatment, and a focus on long-term oral health.' => 'Επαγγελματική οδοντιατρική φροντίδα με σύγχρονη τεχνολογία, εξατομικευμένη θεραπεία και εστίαση στη μακροπρόθεσμη στοματική υγεία.',
 
 	/* =====================================================================
@@ -59,8 +58,7 @@ return array(
 	/* =====================================================================
 	   Gentle Touch
 	   ===================================================================== */
-	'Modern Dentistry with a'                 => 'Σύγχρονη Οδοντιατρική με',
-	'Gentle Touch'                            => 'Απαλό Άγγιγμα',
+	'Modern Dentistry with a {accent}Gentle Touch{/accent}' => 'Σύγχρονη Οδοντιατρική με {accent}Απαλό Άγγιγμα{/accent}',
 	'We believe dental visits should be stress-free, personalized, and focused entirely on your comfort and long-term health.' => 'Πιστεύουμε ότι η επίσκεψη στον οδοντίατρο πρέπει να είναι χωρίς άγχος, εξατομικευμένη και εστιασμένη αποκλειστικά στην άνεσή σας και τη μακροπρόθεσμη υγεία σας.',
 	'Scientific Precision'                    => 'Επιστημονική Ακρίβεια',
 	'Every treatment is based on comprehensive functional analysis, precise diagnosis, and carefully structured planning for long-term health.' => 'Κάθε θεραπεία βασίζεται σε ολοκληρωμένη λειτουργική ανάλυση, ακριβή διάγνωση και προσεκτικά δομημένο σχεδιασμό για μακροπρόθεσμη υγεία.',
@@ -70,8 +68,7 @@ return array(
 	/* =====================================================================
 	   Comprehensive Services
 	   ===================================================================== */
-	'Comprehensive Dental Care for'           => 'Ολοκληρωμένη Οδοντιατρική Φροντίδα για',
-	'Every Need'                              => 'Κάθε Ανάγκη',
+	'Comprehensive Dental Care for {accent}Every Need{/accent}' => 'Ολοκληρωμένη Οδοντιατρική Φροντίδα για {accent}Κάθε Ανάγκη{/accent}',
 	'At our dental clinic, we are committed to providing high-quality dental care in a comfortable and welcoming environment. Our goal is to help patients maintain excellent oral health while enhancing the beauty and function of their smile.' => 'Στο οδοντιατρείο μας, δεσμευόμαστε να παρέχουμε υψηλής ποιότητας οδοντιατρική φροντίδα σε ένα άνετο και φιλόξενο περιβάλλον. Στόχος μας είναι να βοηθήσουμε τους ασθενείς να διατηρήσουν άριστη στοματική υγεία, ενισχύοντας παράλληλα την ομορφιά και τη λειτουργία του χαμόγελού τους.',
 
 	/* =====================================================================
@@ -199,8 +196,7 @@ return array(
 	'Preventative &amp; Restorative Care'     => 'Προληπτική &amp; Επανορθωτική Φροντίδα',
 	'A beautiful smile starts with a healthy foundation. Our preventative and restorative services ensure your teeth and gums stay in excellent condition — so your smile looks great and lasts a lifetime.' => 'Ένα όμορφο χαμόγελο ξεκινά με υγιή βάση. Οι προληπτικές και επανορθωτικές υπηρεσίες μας εξασφαλίζουν ότι τα δόντια και τα ούλα σας παραμένουν σε άριστη κατάσταση — ώστε το χαμόγελό σας να δείχνει υπέροχο και να διαρκεί μια ζωή.',
 	'From routine check-ups and professional cleanings to fillings and crowns, we provide comprehensive care with the same attention to detail that defines everything we do.' => 'Από τους τακτικούς ελέγχους και τους επαγγελματικούς καθαρισμούς έως τα σφραγίσματα και τις στεφάνες, παρέχουμε ολοκληρωμένη φροντίδα με την ίδια προσοχή στη λεπτομέρεια που χαρακτηρίζει ό,τι κάνουμε.',
-	'Ready to Transform'                      => 'Έτοιμοι να Μεταμορφώσετε',
-	'Your Smile?'                             => 'το Χαμόγελό σας;',
+	'Ready to Transform {accent}Your Smile?{/accent}' => 'Έτοιμοι να Μεταμορφώσετε {accent}το Χαμόγελό σας;{/accent}',
 
 	/* =====================================================================
 	   Gallery Page
@@ -272,8 +268,7 @@ return array(
 	'Changes to This Policy'                  => 'Αλλαγές στην Παρούσα Πολιτική',
 	'We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date.' => 'Ενδέχεται να ενημερώνουμε αυτήν την Πολιτική Απορρήτου κατά καιρούς. Οποιεσδήποτε αλλαγές θα δημοσιεύονται σε αυτήν τη σελίδα με ενημερωμένη ημερομηνία αναθεώρησης.',
 	'Last updated:'                           => 'Τελευταία ενημέρωση:',
-	'Have Questions About'                    => 'Έχετε Ερωτήσεις Σχετικά με',
-	'Your Data?'                              => 'τα Δεδομένα σας;',
+	'Have Questions About {accent}Your Data?{/accent}' => 'Έχετε Ερωτήσεις Σχετικά με {accent}τα Δεδομένα σας;{/accent}',
 
 	/* =====================================================================
 	   404 Page

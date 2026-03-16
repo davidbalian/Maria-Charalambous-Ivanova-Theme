@@ -28,8 +28,7 @@ return array(
 	/* =====================================================================
 	   Homepage Hero
 	   ===================================================================== */
-	'Beautiful Smiles'                        => 'Красивые улыбки',
-	'Start Here'                              => 'начинаются здесь',
+	'Beautiful Smiles {accent}Start Here{/accent}' => 'Красивые улыбки {accent}начинаются здесь{/accent}',
 	'Professional dental care with modern technology, personalized treatment, and a focus on long-term oral health.' => 'Профессиональная стоматологическая помощь с использованием современных технологий, индивидуальный подход к лечению и забота о долгосрочном здоровье полости рта.',
 
 	/* =====================================================================
@@ -59,8 +58,7 @@ return array(
 	/* =====================================================================
 	   Gentle Touch
 	   ===================================================================== */
-	'Modern Dentistry with a'                 => 'Современная стоматология с',
-	'Gentle Touch'                            => 'бережным подходом',
+	'Modern Dentistry with a {accent}Gentle Touch{/accent}' => 'Современная стоматология с {accent}бережным подходом{/accent}',
 	'We believe dental visits should be stress-free, personalized, and focused entirely on your comfort and long-term health.' => 'Мы убеждены, что посещение стоматолога должно быть свободным от стресса, индивидуальным и полностью сосредоточенным на Вашем комфорте и долгосрочном здоровье.',
 	'Scientific Precision'                    => 'Научная точность',
 	'Every treatment is based on comprehensive functional analysis, precise diagnosis, and carefully structured planning for long-term health.' => 'Каждое лечение основано на комплексном функциональном анализе, точной диагностике и тщательно структурированном планировании для долгосрочного здоровья.',
@@ -70,8 +68,7 @@ return array(
 	/* =====================================================================
 	   Comprehensive Services
 	   ===================================================================== */
-	'Comprehensive Dental Care for'           => 'Комплексная стоматологическая помощь для',
-	'Every Need'                              => 'любых потребностей',
+	'Comprehensive Dental Care for {accent}Every Need{/accent}' => 'Комплексная стоматологическая помощь для {accent}любых потребностей{/accent}',
 	'At our dental clinic, we are committed to providing high-quality dental care in a comfortable and welcoming environment. Our goal is to help patients maintain excellent oral health while enhancing the beauty and function of their smile.' => 'В нашей стоматологической клинике мы стремимся оказывать высококачественную стоматологическую помощь в комфортной и гостеприимной обстановке. Наша цель — помочь пациентам поддерживать отличное здоровье полости рта, одновременно улучшая красоту и функциональность их улыбки.',
 
 	/* =====================================================================
@@ -199,8 +196,7 @@ return array(
 	'Preventative &amp; Restorative Care'     => 'Профилактика и реставрация',
 	'A beautiful smile starts with a healthy foundation. Our preventative and restorative services ensure your teeth and gums stay in excellent condition — so your smile looks great and lasts a lifetime.' => 'Красивая улыбка начинается со здоровой основы. Наши профилактические и реставрационные услуги обеспечивают отличное состояние Ваших зубов и дёсен — чтобы Ваша улыбка выглядела великолепно и сохранялась на всю жизнь.',
 	'From routine check-ups and professional cleanings to fillings and crowns, we provide comprehensive care with the same attention to detail that defines everything we do.' => 'От плановых осмотров и профессиональных чисток до пломбирования и коронок — мы оказываем комплексную помощь с тем же вниманием к деталям, которое определяет всё, что мы делаем.',
-	'Ready to Transform'                      => 'Готовы преобразить',
-	'Your Smile?'                             => 'свою улыбку?',
+	'Ready to Transform {accent}Your Smile?{/accent}' => 'Готовы преобразить {accent}свою улыбку?{/accent}',
 
 	/* =====================================================================
 	   Gallery Page
@@ -287,8 +283,7 @@ return array(
 	'We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. Any changes will be posted on this page with an updated revision date. We encourage you to review this page periodically.' => 'Мы можем время от времени обновлять настоящую Политику конфиденциальности для отражения изменений в нашей практике или нормативных требованиях. Все изменения будут опубликованы на этой странице с обновлённой датой. Мы рекомендуем Вам периодически просматривать эту страницу.',
 
 	'Last updated:'                           => 'Последнее обновление:',
-	'Have Questions About'                    => 'Есть вопросы о',
-	'Your Data?'                              => 'Ваших данных?',
+	'Have Questions About {accent}Your Data?{/accent}' => 'Есть вопросы о {accent}Ваших данных?{/accent}',
 	'We are happy to answer any questions about how we handle your personal information.' => 'Мы с радостью ответим на любые вопросы о том, как мы обрабатываем Вашу персональную информацию.',
 
 	/* =====================================================================

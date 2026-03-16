@@ -1,7 +1,7 @@
 <!-- Gentle Touch Section -->
 <section class="home-v2-gentle">
 	<div class="container">
-		<h2 class="home-v2-gentle__title fade-in fade-in-delay-0"><?php echo mci_t( 'Modern Dentistry with a' ); ?> <span class="accent-font"><?php mci_te( 'Gentle Touch' ); ?></span></h2>
+		<h2 class="home-v2-gentle__title fade-in fade-in-delay-0"><?php echo mci_t_accent( 'Modern Dentistry with a {accent}Gentle Touch{/accent}' ); ?></h2>
 		<p class="home-v2-gentle__subtitle fade-in fade-in-delay-1"><?php mci_te( 'We believe dental visits should be stress-free, personalized, and focused entirely on your comfort and long-term health.' ); ?></p>
 		<div class="home-v2-gentle__grid">
 			<div class="home-v2-gentle__card fade-in fade-in-delay-2" style="background-image: url('https://davidb1646.sg-host.com/wp-content/uploads/2026/02/dr-maria-charalambous-ivanova-portrait-04.webp');">
