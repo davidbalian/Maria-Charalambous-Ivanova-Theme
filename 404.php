@@ -8,15 +8,23 @@
 get_header(); ?>
 
 <main id="main" class="site-main">
-	<article class="error-404 not-found">
-		<header class="entry-header">
-			<h1 class="entry-title"><?php mci_te( 'Page Not Found' ); ?></h1>
-		</header>
-		<div class="entry-content">
-			<p><?php mci_te( 'The page you are looking for could not be found. Try searching or return to the homepage.' ); ?></p>
-			<?php get_search_form(); ?>
+	<section class="error-404-hero">
+		<img
+			src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/dr-maria-charalambous-ivanova-dental-clinic-in-limassol.webp' ); ?>"
+			alt="Dental Art Clinic Limassol"
+			class="error-404-hero__bg"
+			fetchpriority="high"
+		>
+		<div class="error-404-hero__overlay"></div>
+		<div class="error-404-hero__content">
+			<span class="error-404-hero__code">404</span>
+			<h1 class="error-404-hero__title"><?php mci_te( 'Page Not Found' ); ?></h1>
+			<p class="error-404-hero__text"><?php mci_te( 'The page you are looking for does not exist or has been moved.' ); ?></p>
+			<a href="<?php echo esc_url( mci_url( '/' ) ); ?>" class="btn btn-primary error-404-hero__btn">
+				<?php mci_te( 'Return to Homepage' ); ?>
+			</a>
 		</div>
-	</article>
+	</section>
 </main>
 
 <?php get_footer(); ?>

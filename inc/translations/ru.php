@@ -295,7 +295,8 @@ return array(
 	   404 Page
 	   ===================================================================== */
 	'Page Not Found'                          => 'Страница не найдена',
-	'The page you are looking for could not be found. Try searching or return to the homepage.' => 'Запрашиваемая страница не найдена. Попробуйте воспользоваться поиском или вернитесь на главную страницу.',
+	'The page you are looking for does not exist or has been moved.' => 'Запрашиваемая страница не существует или была перемещена.',
+	'Return to Homepage'                      => 'Вернуться на главную',
 
 	/* =====================================================================
 	   Footer

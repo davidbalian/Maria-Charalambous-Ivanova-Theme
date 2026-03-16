@@ -279,7 +279,8 @@ return array(
 	   404 Page
 	   ===================================================================== */
 	'Page Not Found'                          => 'Η Σελίδα Δεν Βρέθηκε',
-	'The page you are looking for could not be found. Try searching or return to the homepage.' => 'Η σελίδα που αναζητάτε δεν βρέθηκε. Δοκιμάστε αναζήτηση ή επιστρέψτε στην αρχική σελίδα.',
+	'The page you are looking for does not exist or has been moved.' => 'Η σελίδα που αναζητάτε δεν υπάρχει ή έχει μετακινηθεί.',
+	'Return to Homepage'                      => 'Επιστροφή στην Αρχική',
 
 	/* =====================================================================
 	   Footer
