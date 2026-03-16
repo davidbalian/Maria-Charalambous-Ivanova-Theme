@@ -41,9 +41,10 @@ function mci_seo_get_business_data() {
 		'doctor_alumni'  => 'Medical University of Sofia',
 		'doctor_grad'    => 2007,
 		'logo'           => 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/horizontal-logo-gold.avif',
-		'image_clinic'   => 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/clinic-reception.avif',
-		'image_doctor'   => 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/dr-maria-portrait.avif',
-		'image_gallery'  => 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/smile-transformation.avif',
+		// OG/Twitter images must be JPEG or PNG for broad social platform compatibility (AVIF/WebP often fail on LinkedIn, X, Discord, Slack).
+		'image_clinic'   => 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-wide-angle-equipment.jpg',
+		'image_doctor'   => 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/dr-maria-charalambous-ivanova-portrait-08-e1771938361770.jpg',
+		'image_gallery'  => 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-1.jpg',
 		'maps_url'       => 'https://maps.app.goo.gl/JNcaT74bPoj6v4e57',
 		'opening_hours'  => array(
 			'Mo-Th 08:00-17:30',
