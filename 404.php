@@ -10,7 +10,7 @@ get_header(); ?>
 <main id="main" class="site-main">
 	<section class="error-404-hero">
 		<img
-			src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/dr-maria-charalambous-ivanova-dental-clinic-in-limassol.webp' ); ?>"
+			src="https://davidb1646.sg-host.com/wp-content/uploads/2026/02/dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-dental-chair-screens.avif"
 			alt="Dental Art Clinic Limassol"
 			class="error-404-hero__bg"
 			fetchpriority="high"
