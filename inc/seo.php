@@ -38,10 +38,13 @@ function mci_seo_get_business_data() {
 		'doctor_name'    => 'Dr. Maria Charalambous-Ivanova',
 		'doctor_title'   => 'DMD, MSD',
 		'doctor_since'   => 2008,
+		'doctor_alumni'  => 'Medical University of Sofia',
+		'doctor_grad'    => 2007,
 		'logo'           => 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/horizontal-logo-gold.avif',
 		'image_clinic'   => 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/clinic-reception.avif',
 		'image_doctor'   => 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/dr-maria-portrait.avif',
 		'image_gallery'  => 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/smile-transformation.avif',
+		'maps_url'       => 'https://maps.app.goo.gl/JNcaT74bPoj6v4e57',
 		'opening_hours'  => array(
 			'Mo-Th 08:00-17:30',
 			'Fr 08:00-13:00',
@@ -53,6 +56,15 @@ function mci_seo_get_business_data() {
 		'social'         => array(
 			'facebook'  => 'https://www.facebook.com/dentalartcliniclimassol',
 			'instagram' => 'https://www.instagram.com/dentalartcliniclimassol',
+		),
+		'languages'      => array( 'English', 'Russian', 'Greek' ),
+		'medical_specialties' => array(
+			'General Dentistry',
+			'Cosmetic Dentistry',
+			'Endodontics',
+			'Prosthodontics',
+			'Periodontics',
+			'Orthodontics',
 		),
 	);
 }
@@ -331,6 +343,10 @@ function mci_seo_open_graph() {
 	echo '<meta property="og:type" content="' . esc_attr( $og_type ) . '">' . "\n";
 	if ( $og_image ) {
 		echo '<meta property="og:image" content="' . esc_url( $og_image ) . '">' . "\n";
+		echo '<meta property="og:image:width" content="1200">' . "\n";
+		echo '<meta property="og:image:height" content="630">' . "\n";
+		$og_image_alt = mci_seo_get_og_image_alt();
+		echo '<meta property="og:image:alt" content="' . esc_attr( $og_image_alt ) . '">' . "\n";
 	}
 	echo '<meta property="og:locale" content="' . esc_attr( $current_locale ) . '">' . "\n";
 
@@ -340,6 +356,27 @@ function mci_seo_open_graph() {
 			echo '<meta property="og:locale:alternate" content="' . esc_attr( $locale ) . '">' . "\n";
 		}
 	}
+}
+
+/**
+ * Get alt text for the OG image based on current page.
+ */
+function mci_seo_get_og_image_alt() {
+	$biz = mci_seo_get_business_data();
+
+	if ( is_singular() && has_post_thumbnail() ) {
+		$alt = get_post_meta( get_post_thumbnail_id(), '_wp_attachment_image_alt', true );
+		return $alt ? $alt : $biz['name'];
+	}
+
+	if ( mci_seo_is_page( 'about' ) ) {
+		return $biz['doctor_name'] . ' — ' . $biz['name'];
+	}
+	if ( mci_seo_is_page( 'gallery' ) ) {
+		return mci_t( 'Smile Transformations Gallery' ) . ' — ' . $biz['name'];
+	}
+
+	return $biz['name'] . ' — ' . mci_t( 'Dentist in Limassol' );
 }
 
 /**
@@ -385,6 +422,7 @@ function mci_seo_twitter_cards() {
 	}
 	if ( $og_image ) {
 		echo '<meta name="twitter:image" content="' . esc_url( $og_image ) . '">' . "\n";
+		echo '<meta name="twitter:image:alt" content="' . esc_attr( mci_seo_get_og_image_alt() ) . '">' . "\n";
 	}
 }
 
@@ -433,8 +471,26 @@ function mci_seo_json_ld() {
 			'latitude'  => $biz['lat'],
 			'longitude' => $biz['lng'],
 		),
+		'hasMap'          => $biz['maps_url'],
 		'openingHoursSpecification' => array(),
 		'sameAs'          => array_values( $biz['social'] ),
+		'areaServed'      => array(
+			array(
+				'@type' => 'City',
+				'name'  => 'Limassol',
+			),
+			array(
+				'@type' => 'Country',
+				'name'  => 'Cyprus',
+			),
+		),
+		'availableLanguage' => array_map( function( $lang_name ) {
+			return array(
+				'@type' => 'Language',
+				'name'  => $lang_name,
+			);
+		}, $biz['languages'] ),
+		'medicalSpecialty' => $biz['medical_specialties'],
 	);
 
 	foreach ( $biz['opening_spec'] as $spec ) {
@@ -466,27 +522,46 @@ function mci_seo_json_ld() {
 
 	// --- Person schema (Dr. Maria) ---
 	$graph[] = array(
-		'@type'       => 'Person',
-		'@id'         => $biz['url'] . '#doctor',
-		'name'        => $biz['doctor_name'],
-		'jobTitle'    => 'Dentist',
-		'honorificSuffix' => $biz['doctor_title'],
-		'image'       => $biz['image_doctor'],
-		'worksFor'    => array( '@id' => $biz['url'] . '#dentist' ),
-		'memberOf'    => array(
+		'@type'             => 'Person',
+		'@id'               => $biz['url'] . '#doctor',
+		'name'              => $biz['doctor_name'],
+		'jobTitle'          => 'Dentist',
+		'honorificSuffix'   => $biz['doctor_title'],
+		'image'             => $biz['image_doctor'],
+		'worksFor'          => array( '@id' => $biz['url'] . '#dentist' ),
+		'memberOf'          => array(
 			'@type' => 'Organization',
 			'name'  => $biz['name'],
+		),
+		'alumniOf'          => array(
+			'@type' => 'CollegeOrUniversity',
+			'name'  => $biz['doctor_alumni'],
+		),
+		'knowsLanguage'     => array( 'en', 'ru', 'el', 'bg' ),
+		'hasOccupation'     => array(
+			'@type'            => 'Occupation',
+			'name'             => 'Dentist',
+			'occupationLocation' => array(
+				'@type' => 'Country',
+				'name'  => 'Cyprus',
+			),
+			'educationRequirements' => 'DMD, MSD',
 		),
 	);
 
 	// --- WebSite schema ---
 	$website = array(
-		'@type'      => 'WebSite',
-		'@id'        => $biz['url'] . '#website',
-		'name'       => $biz['name'],
-		'url'        => $biz['url'],
-		'inLanguage' => $in_language,
-		'publisher'  => array( '@id' => $biz['url'] . '#dentist' ),
+		'@type'             => 'WebSite',
+		'@id'               => $biz['url'] . '#website',
+		'name'              => $biz['name'],
+		'url'               => $biz['url'],
+		'inLanguage'        => array( 'en-US', 'ru', 'el' ),
+		'publisher'         => array( '@id' => $biz['url'] . '#dentist' ),
+		'potentialAction'   => array(
+			'@type'       => 'SearchAction',
+			'target'      => $biz['url'] . '?s={search_term_string}',
+			'query-input' => 'required name=search_term_string',
+		),
 	);
 	$graph[] = $website;
 
@@ -504,6 +579,15 @@ function mci_seo_json_ld() {
 
 	$current_url = mci_seo_current_url();
 
+	// Get meta description for WebPage schema.
+	ob_start();
+	mci_seo_meta_description();
+	$meta_tag_wp = ob_get_clean();
+	$wp_desc     = '';
+	if ( preg_match( '/content="([^"]*)"/', $meta_tag_wp, $wp_m ) ) {
+		$wp_desc = $wp_m[1];
+	}
+
 	$webpage = array(
 		'@type'      => $webpage_type,
 		'@id'        => $current_url . '#webpage',
@@ -512,6 +596,10 @@ function mci_seo_json_ld() {
 		'inLanguage' => $in_language,
 		'isPartOf'   => array( '@id' => $biz['url'] . '#website' ),
 	);
+
+	if ( $wp_desc ) {
+		$webpage['description'] = $wp_desc;
+	}
 
 	$graph[] = $webpage;
 
@@ -599,7 +687,22 @@ function mci_seo_current_url() {
    12. Hook Registration
    ========================================================================= */
 
+/**
+ * Output content-language meta tag for crawlers.
+ */
+function mci_seo_content_language() {
+	$lang = mci_get_current_lang();
+	$map  = array(
+		'en' => 'en-US',
+		'ru' => 'ru',
+		'el' => 'el',
+	);
+	$content_lang = isset( $map[ $lang ] ) ? $map[ $lang ] : 'en-US';
+	echo '<meta http-equiv="content-language" content="' . esc_attr( $content_lang ) . '">' . "\n";
+}
+
 // Meta tags — early priority.
+add_action( 'wp_head', 'mci_seo_content_language', 1 );
 add_action( 'wp_head', 'mci_seo_meta_description', 1 );
 add_action( 'wp_head', 'mci_seo_canonical', 1 );
 add_action( 'wp_head', 'mci_seo_robots', 1 );
