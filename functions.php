@@ -133,7 +133,7 @@ function mci_handle_contact_form() {
 	}
 	$admin_body = "Name: {$name}\nPhone: {$phone}\nEmail: {$email}\n\nMessage:\n{$message}";
 	$admin_sent = wp_mail(
-		'david@balian.cy',
+		array( 'david@balian.cy', 'info@dentalartcliniclimassol.com' ),
 		'Dental Art Clinic Has a New Form Submission',
 		$admin_body,
 		$admin_headers
