@@ -117,18 +117,103 @@ function mci_handle_contact_form() {
 	$email   = sanitize_email( $_POST['contact_email'] ?? '' );
 	$message = sanitize_textarea_field( $_POST['contact_message'] ?? '' );
 
-	$to      = 'info@dentalartcliniclimassol.com';
-	$subject = 'New Appointment Request from ' . $name;
-	$body    = "Name: {$name}\nPhone: {$phone}\nEmail: {$email}\n\nMessage:\n{$message}";
-	$headers = array( 'Content-Type: text/plain; charset=UTF-8' );
-
+	// Email 1: Admin notification (plain-text).
+	$admin_headers = array( 'Content-Type: text/plain; charset=UTF-8' );
 	if ( $email ) {
-		$headers[] = 'Reply-To: ' . $name . ' <' . $email . '>';
+		$admin_headers[] = 'Reply-To: ' . $name . ' <' . $email . '>';
+	}
+	$admin_body = "Name: {$name}\nPhone: {$phone}\nEmail: {$email}\n\nMessage:\n{$message}";
+	$admin_sent = wp_mail(
+		'david@balian.cy',
+		'Dental Art Clinic Has a New Form Submission',
+		$admin_body,
+		$admin_headers
+	);
+
+	// Email 2: User confirmation (HTML).
+	$user_sent = false;
+	if ( $email ) {
+		$esc_name    = esc_html( $name );
+		$esc_phone   = esc_html( $phone );
+		$esc_email   = esc_html( $email );
+		$esc_message = nl2br( esc_html( $message ) );
+
+		$html_body = '<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"></head>
+<body style="margin:0;padding:0;background-color:#f5f5f7;font-family:\'Manrope\',\'Helvetica Neue\',Arial,sans-serif;color:#1d1d1f;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f5f5f7;">
+<tr><td align="center" style="padding:40px 20px;">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+
+<!-- Gold accent line -->
+<tr><td style="height:4px;background-color:#a89377;font-size:0;line-height:0;">&nbsp;</td></tr>
+
+<!-- Logo -->
+<tr><td align="center" style="padding:32px 40px 24px;">
+<img src="https://davidb1646.sg-host.com/wp-content/uploads/2026/02/horizontal-logo-gold.avif" alt="Dental Art Clinic" width="220" style="display:block;max-width:220px;height:auto;" />
+</td></tr>
+
+<!-- Greeting & body -->
+<tr><td style="padding:0 40px 24px;">
+<p style="margin:0 0 16px;font-size:16px;line-height:1.6;color:#1d1d1f;">Dear ' . $esc_name . ',</p>
+<p style="margin:0 0 24px;font-size:16px;line-height:1.6;color:#1d1d1f;">Thank you for reaching out to Dental Art Clinic. We have received your message and will get back to you as soon as possible.</p>
+</td></tr>
+
+<!-- Submitted details -->
+<tr><td style="padding:0 40px 24px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #e5e5e7;border-radius:8px;overflow:hidden;">
+<tr><td style="padding:16px 20px 12px;border-bottom:1px solid #e5e5e7;background-color:#fafafa;">
+<p style="margin:0;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;color:#6e6e73;">Your Submission</p>
+</td></tr>
+<tr><td style="padding:16px 20px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+<tr><td style="padding:4px 0;font-size:14px;color:#6e6e73;width:80px;vertical-align:top;">Name</td><td style="padding:4px 0;font-size:14px;color:#1d1d1f;">' . $esc_name . '</td></tr>
+<tr><td style="padding:4px 0;font-size:14px;color:#6e6e73;vertical-align:top;">Phone</td><td style="padding:4px 0;font-size:14px;color:#1d1d1f;">' . $esc_phone . '</td></tr>
+<tr><td style="padding:4px 0;font-size:14px;color:#6e6e73;vertical-align:top;">Email</td><td style="padding:4px 0;font-size:14px;color:#1d1d1f;">' . $esc_email . '</td></tr>
+<tr><td style="padding:8px 0 4px;font-size:14px;color:#6e6e73;vertical-align:top;">Message</td><td style="padding:8px 0 4px;font-size:14px;color:#1d1d1f;line-height:1.5;">' . $esc_message . '</td></tr>
+</table>
+</td></tr>
+</table>
+</td></tr>
+
+<!-- Contact info -->
+<tr><td style="padding:0 40px 32px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-top:1px solid #e5e5e7;padding-top:20px;">
+<tr><td style="padding-top:20px;">
+<p style="margin:0 0 8px;font-size:14px;line-height:1.6;color:#6e6e73;">If you need to reach us directly:</p>
+<p style="margin:0 0 4px;font-size:14px;color:#3d342f;">&#128222; +357 25 251 820</p>
+<p style="margin:0 0 4px;font-size:14px;color:#3d342f;">&#9993; info@dentalartcliniclimassol.com</p>
+<p style="margin:0;font-size:14px;color:#3d342f;">&#128205; 28th October Street 316, Shop 3, CY-3105 Limassol</p>
+</td></tr>
+</table>
+</td></tr>
+
+<!-- Footer -->
+<tr><td style="padding:20px 40px;background-color:#fafafa;border-top:1px solid #e5e5e7;">
+<p style="margin:0;font-size:12px;color:#6e6e73;text-align:center;">Dental Art Clinic &mdash; Limassol, Cyprus</p>
+</td></tr>
+
+</table>
+</td></tr>
+</table>
+</body>
+</html>';
+
+		$user_headers = array(
+			'Content-Type: text/html; charset=UTF-8',
+			'From: Dental Art Clinic <info@dentalartcliniclimassol.com>',
+		);
+
+		$user_sent = wp_mail(
+			$email,
+			'Thank you for contacting Dental Art Clinic',
+			$html_body,
+			$user_headers
+		);
 	}
 
-	$sent = wp_mail( $to, $subject, $body, $headers );
-
-	$status = $sent ? 'success' : 'error';
+	$status = ( $admin_sent && ( $user_sent || ! $email ) ) ? 'success' : 'error';
 	wp_safe_redirect( home_url( '/contact/?contact=' . $status ) );
 	exit;
 }
