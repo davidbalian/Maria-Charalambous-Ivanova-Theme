@@ -47,11 +47,11 @@ if ( $mci_lang !== 'en' ) {
 	<div class="site-header__inner">
 		<div class="site-branding">
 			<a href="<?php echo esc_url( mci_url( '/' ) ); ?>" class="site-logo-link">
-				<img src="https://davidb1646.sg-host.com/wp-content/uploads/2026/02/horizontal-logo-gold.avif"
+				<img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/02/horizontal-logo-gold.avif' ) ); ?>"
 				     alt="<?php bloginfo( 'name' ); ?>"
 				     class="site-logo site-logo--desktop"
 				     width="200" height="40">
-				<img src="https://davidb1646.sg-host.com/wp-content/uploads/2026/02/logomark.avif"
+				<img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/02/logomark.avif' ) ); ?>"
 				     alt="<?php bloginfo( 'name' ); ?>"
 				     class="site-logo site-logo--mobile"
 				     width="31" height="32"

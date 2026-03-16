@@ -177,7 +177,7 @@ function mci_handle_contact_form() {
 <!-- Logo -->
 <tr><td align="center" style="padding:32px 40px 24px;">
 <div style="display:inline-block;background-color:#ffffff;border-radius:8px;padding:12px 16px;">
-<img src="https://davidb1646.sg-host.com/wp-content/uploads/2026/02/horizontal-logo-gold.avif" alt="Dental Art Clinic" width="220" style="display:block;max-width:220px;height:auto;" />
+<img src="' . esc_url( home_url( '/wp-content/uploads/2026/02/horizontal-logo-gold.avif' ) ) . '" alt="Dental Art Clinic" width="220" style="display:block;max-width:220px;height:auto;" />
 </div>
 </td></tr>
 

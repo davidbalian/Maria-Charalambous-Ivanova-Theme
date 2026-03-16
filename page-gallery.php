@@ -9,7 +9,7 @@
 
 get_header();
 
-$clinic_image_base = 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/';
+$clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
 $theme_image_base  = get_template_directory_uri() . '/assets/images/';
 ?>
 

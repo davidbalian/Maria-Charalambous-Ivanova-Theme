@@ -12,7 +12,7 @@ if ( $mci_lang !== 'en' ) {
 	<div class="site-footer__inner">
 		<div class="site-footer__col site-footer__col--logo">
 			<a href="<?php echo esc_url( mci_url( '/' ) ); ?>" class="site-footer__logo-link">
-				<img src="https://davidb1646.sg-host.com/wp-content/uploads/2026/02/horizontal-logo-gold.avif"
+				<img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/02/horizontal-logo-gold.avif' ) ); ?>"
 				     alt="<?php bloginfo( 'name' ); ?>"
 				     class="site-footer__logo"
 				     width="200" height="40"

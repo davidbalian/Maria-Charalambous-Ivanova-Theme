@@ -19,13 +19,13 @@ get_header(); ?>
 			<h2 class="home-cases__title fade-in fade-in-delay-0"><?php echo mci_t( 'Before &amp; After' ); ?></h2>
 			<div class="home-cases__grid">
 				<div class="home-cases__item fade-in fade-in-delay-1">
-					<img src="https://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp" alt="Before and after at Dental Art Clinic" width="400" height="400" loading="lazy">
+					<img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp' ) ); ?>" alt="Before and after at Dental Art Clinic" width="400" height="400" loading="lazy">
 				</div>
 				<div class="home-cases__item fade-in fade-in-delay-2">
-					<img src="https://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-2-e1771955301824.webp" alt="Before and after at Dental Art Clinic" width="400" height="400" loading="lazy">
+					<img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-2-e1771955301824.webp' ) ); ?>" alt="Before and after at Dental Art Clinic" width="400" height="400" loading="lazy">
 				</div>
 				<div class="home-cases__item fade-in fade-in-delay-3">
-					<img src="https://davidb1646.sg-host.com/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-e1771955250456.webp" alt="Before and after at Dental Art Clinic" width="400" height="400" loading="lazy">
+					<img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-e1771955250456.webp' ) ); ?>" alt="Before and after at Dental Art Clinic" width="400" height="400" loading="lazy">
 				</div>
 			</div>
 			<div class="home-cases__action fade-in fade-in-delay-4">
@@ -43,7 +43,7 @@ get_header(); ?>
 	<?php get_template_part( 'template-parts/home-v2/doctor' ); ?>
 
 	<?php
-	$clinic_image_base_url = 'https://davidb1646.sg-host.com/wp-content/uploads/2026/02/';
+	$clinic_image_base_url = home_url( '/wp-content/uploads/2026/02/' );
 	$clinic_images = array(
 		'dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-wide-angle-equipment.avif' => 'Dental Art Clinic treatment room wide angle',
 		'dental-art-clinic-by-dr-maria-charalambous-ivanova-reception-lobby-clinic-name.avif' => 'Dental Art Clinic reception lobby',
