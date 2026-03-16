@@ -112,6 +112,34 @@ function mci_i18n_flush_rewrites() {
 }
 add_action( 'after_switch_theme', 'mci_i18n_flush_rewrites' );
 
+/**
+ * Auto-flush rewrite rules once when i18n version changes.
+ * This ensures rules are registered even when the theme is already active.
+ */
+function mci_i18n_maybe_flush_rewrites() {
+	if ( get_option( 'mci_i18n_rewrite_version' ) !== '1.0' ) {
+		flush_rewrite_rules();
+		update_option( 'mci_i18n_rewrite_version', '1.0' );
+	}
+}
+add_action( 'init', 'mci_i18n_maybe_flush_rewrites', 20 );
+
+/**
+ * Prevent WordPress canonical redirect from sending /ru/ and /el/ URLs
+ * back to their English equivalents.
+ */
+function mci_i18n_prevent_canonical_redirect( $redirect_url, $requested_url ) {
+	$path = trim( parse_url( $requested_url, PHP_URL_PATH ), '/' );
+	$segments = explode( '/', $path );
+
+	if ( ! empty( $segments[0] ) && in_array( $segments[0], array( 'ru', 'el' ), true ) ) {
+		return false;
+	}
+
+	return $redirect_url;
+}
+add_filter( 'redirect_canonical', 'mci_i18n_prevent_canonical_redirect', 10, 2 );
+
 /* =========================================================================
    5. Translation Helpers
    ========================================================================= */
