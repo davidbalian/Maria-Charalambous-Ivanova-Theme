@@ -275,19 +275,23 @@ document.addEventListener('DOMContentLoaded', function () {
 			var isOpen = false;
 			var currentMinutes = hour * 60 + minute;
 
-			// Schedule:
-			// Mon-Thu: 8:00 (480) - 17:30 (1050)
-			// Fri: 8:00 (480) - 13:00 (780)
-			// Sat-Sun: Closed
+			// Schedule (Cyprus): closes 17:30 (1050) Mon–Thu, 13:00 (780) Fri.
+			// Mon & Wed open 8:00 (480); Tue & Thu & Fri open 8:30 (510).
 
-			if (['Monday', 'Tuesday', 'Wednesday', 'Thursday'].includes(weekday)) {
-				if (currentMinutes >= 480 && currentMinutes < 1050) {
-					isOpen = true;
-				}
+			var openStart = null;
+			var closeMinutes = null;
+			if (weekday === 'Monday' || weekday === 'Wednesday') {
+				openStart = 480;
+				closeMinutes = 1050;
+			} else if (weekday === 'Tuesday' || weekday === 'Thursday') {
+				openStart = 510;
+				closeMinutes = 1050;
 			} else if (weekday === 'Friday') {
-				if (currentMinutes >= 480 && currentMinutes < 780) {
-					isOpen = true;
-				}
+				openStart = 510;
+				closeMinutes = 780;
+			}
+			if (openStart !== null && currentMinutes >= openStart && currentMinutes < closeMinutes) {
+				isOpen = true;
 			}
 
 			clinicStatusEls.forEach(function(el) {

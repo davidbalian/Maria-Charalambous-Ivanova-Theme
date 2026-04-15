@@ -35,7 +35,8 @@ $status_id     = $args['status_id'] ? ' id="' . esc_attr( $args['status_id'] ) .
 ?>
 <<?php echo $tag . $heading_class; ?>><?php echo esc_html( $args['heading_text'] ); ?><?php if ( $args['show_status'] ) : ?> <span class="js-clinic-status"<?php echo $status_id; ?>></span><?php endif; ?></<?php echo $tag; ?>>
 <table class="<?php echo esc_attr( $table_class ); ?>">
-<tr><td><?php echo mci_t( 'Monday &ndash; Thursday' ); ?></td><td><?php echo mci_t( '8:00 AM &ndash; 5:30 PM' ); ?></td></tr>
-<tr><td><?php echo mci_t( 'Friday' ); ?></td><td><?php echo mci_t( '8:00 AM &ndash; 1:00 PM' ); ?></td></tr>
+<tr><td><?php echo mci_t( 'Monday &ndash; Wednesday' ); ?></td><td><?php echo mci_t( '8:00 AM &ndash; 5:30 PM' ); ?></td></tr>
+<tr><td><?php echo mci_t( 'Tuesday &ndash; Thursday' ); ?></td><td><?php echo mci_t( '8:30 AM &ndash; 5:30 PM' ); ?></td></tr>
+<tr><td><?php echo mci_t( 'Friday' ); ?></td><td><?php echo mci_t( '8:30 AM &ndash; 1:00 PM' ); ?></td></tr>
 <tr><td><?php echo mci_t( 'Saturday &ndash; Sunday' ); ?></td><td><?php mci_te( 'Closed' ); ?></td></tr>
 </table>

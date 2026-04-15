@@ -47,12 +47,16 @@ function mci_seo_get_business_data() {
 		'image_gallery'  => home_url( '/wp-content/uploads/2026/03/before-and-after-at-dental-art-clinic-limassol-1-1.png' ),
 		'maps_url'       => 'https://maps.app.goo.gl/JNcaT74bPoj6v4e57',
 		'opening_hours'  => array(
-			'Mo-Th 08:00-17:30',
-			'Fr 08:00-13:00',
+			'Mo 08:00-17:30',
+			'We 08:00-17:30',
+			'Tu 08:30-17:30',
+			'Th 08:30-17:30',
+			'Fr 08:30-13:00',
 		),
 		'opening_spec'   => array(
-			array( 'days' => array( 'Monday', 'Tuesday', 'Wednesday', 'Thursday' ), 'opens' => '08:00', 'closes' => '17:30' ),
-			array( 'days' => array( 'Friday' ), 'opens' => '08:00', 'closes' => '13:00' ),
+			array( 'days' => array( 'Monday', 'Wednesday' ), 'opens' => '08:00', 'closes' => '17:30' ),
+			array( 'days' => array( 'Tuesday', 'Thursday' ), 'opens' => '08:30', 'closes' => '17:30' ),
+			array( 'days' => array( 'Friday' ), 'opens' => '08:30', 'closes' => '13:00' ),
 		),
 		'social'         => array(
 			'facebook'  => 'https://www.facebook.com/dentalartcliniclimassol',
@@ -216,7 +220,7 @@ function mci_seo_meta_description() {
 		$desc = ( $t !== 'seo_desc_gallery' ) ? $t : 'View before and after smile transformations and clinic photos from Dental Art Clinic Limassol. See results of our cosmetic dentistry, veneers, and smile makeover treatments.';
 	} elseif ( mci_seo_is_page( 'contact' ) ) {
 		$t = mci_t( 'seo_desc_contact' );
-		$desc = ( $t !== 'seo_desc_contact' ) ? $t : 'Contact Dental Art Clinic Limassol to book an appointment. Call +357 25 377757 or visit us at PRIMO AMARI, Limassol 3076, Cyprus. Mon–Thu 8AM–5:30PM, Fri 8AM–1PM.';
+		$desc = ( $t !== 'seo_desc_contact' ) ? $t : 'Contact Dental Art Clinic Limassol to book an appointment. Call +357 25 377757 or visit us at PRIMO AMARI, Limassol 3076, Cyprus. Mon & Wed 8AM–5:30PM, Tue & Thu 8:30AM–5:30PM, Fri 8:30AM–1PM.';
 	} elseif ( mci_seo_is_page( 'privacy-policy' ) ) {
 		$t = mci_t( 'seo_desc_privacy' );
 		$desc = ( $t !== 'seo_desc_privacy' ) ? $t : 'Privacy policy for Dental Art Clinic Limassol. How we collect, use, and protect your personal data in compliance with GDPR.';
