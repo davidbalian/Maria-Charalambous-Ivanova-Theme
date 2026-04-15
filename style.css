@@ -921,6 +921,37 @@ body:has(#wpadminbar) .site-header {
     0 0 0 1px rgba(13, 13, 13, 0.15);
 }
 
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #25d366;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+.btn-whatsapp:hover {
+  background-color: #20bd5a;
+  color: #fff;
+}
+
+.btn-whatsapp:focus-visible {
+  outline: 2px solid var(--mci-color-secondary, #c9a227);
+  outline-offset: 2px;
+}
+
+.btn-whatsapp__icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
+
+.btn-whatsapp__label {
+  font-weight: var(--mci-font-weight-semibold, 600);
+  letter-spacing: 0.01em;
+}
+
 .btn:disabled,
 .btn[disabled] {
   opacity: 0.42;
@@ -1865,9 +1896,17 @@ hr {
   font-size: 1rem;
 }
 
-.home-contact__info .btn {
-  margin-top: var(--mci-spacing-sm);
+.home-contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--mci-spacing-sm);
+  margin-top: var(--mci-spacing-md);
   align-self: flex-start;
+  align-items: center;
+}
+
+.home-contact__actions .btn {
+  margin-top: 0;
 }
 
 .home-contact__map {

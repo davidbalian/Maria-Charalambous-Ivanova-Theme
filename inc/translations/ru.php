@@ -17,6 +17,7 @@ return array(
 	'Contact'                                 => 'Контакты',
 	'Book Appointment'                        => 'Записаться на приём',
 	'Contact Us'                              => 'Свяжитесь с нами',
+	'Chat on WhatsApp'                        => 'Написать в WhatsApp',
 	'Send Message'                            => 'Отправить сообщение',
 	'Learn More'                              => 'Подробнее',
 	'View All'                                => 'Смотреть все',

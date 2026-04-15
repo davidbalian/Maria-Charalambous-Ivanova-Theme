@@ -17,6 +17,7 @@ return array(
 	'Contact'                                 => 'Επικοινωνία',
 	'Book Appointment'                        => 'Κλείστε Ραντεβού',
 	'Contact Us'                              => 'Επικοινωνήστε μαζί μας',
+	'Chat on WhatsApp'                        => 'Συνομιλία στο WhatsApp',
 	'Send Message'                            => 'Αποστολή Μηνύματος',
 	'Learn More'                              => 'Μάθετε Περισσότερα',
 	'View All'                                => 'Δείτε Όλα',

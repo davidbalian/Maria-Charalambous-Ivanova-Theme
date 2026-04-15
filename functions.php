@@ -44,6 +44,11 @@ add_action( 'after_setup_theme', 'mci_theme_setup' );
 require get_template_directory() . '/inc/i18n.php';
 
 /**
+ * WhatsApp chat URLs and display helpers.
+ */
+require get_template_directory() . '/inc/whatsapp.php';
+
+/**
  * SEO — meta tags, Open Graph, Twitter Cards, JSON-LD structured data.
  */
 require get_template_directory() . '/inc/seo.php';
