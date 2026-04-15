@@ -1,0 +1,55 @@
+/* Homepage hero — Slick full-bleed, no gutters, no radius */
+.home-hero__slider-bleed {
+  touch-action: manipulation;
+}
+
+.home-hero__carousel {
+  width: 100%;
+  height: 100%;
+}
+
+.home-hero__carousel .slick-list {
+  overflow: hidden;
+  margin: 0;
+  height: 100%;
+}
+
+.home-hero__carousel .slick-track {
+  display: flex;
+  align-items: stretch;
+}
+
+.home-hero__carousel .slick-slide {
+  margin: 0;
+  height: 100%;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.home-hero__carousel .slick-arrow {
+  display: none !important;
+}
+
+.home-hero__slide {
+  width: 50vw;
+  height: 100%;
+}
+
+.home-hero__slide img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .home-hero__slide {
+    width: 100vw;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-hero__carousel .slick-track {
+    transition: none !important;
+  }
+}

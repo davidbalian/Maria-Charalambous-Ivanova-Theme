@@ -31,12 +31,12 @@
   letter-spacing: -0.006em;
 }
 
-/* Hero Section – same inner width as .container */
+/* Hero Section — full-bleed slider + text band */
 .home-hero {
   --mci-home-hero-viewport: calc(100vh - 6.5rem);
   position: relative;
   box-sizing: border-box;
-  padding: 0 0 3rem;
+  padding: 0;
   min-height: var(--mci-home-hero-viewport);
   height: var(--mci-home-hero-viewport);
   max-height: var(--mci-home-hero-viewport);
@@ -45,14 +45,41 @@
   align-items: stretch;
 }
 
+.home-hero__slider-bleed {
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  position: relative;
+}
+
+.home-hero__carousel {
+  height: 100%;
+}
+
+.home-hero__bottom {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--mci-spacing-md);
+  padding: var(--mci-spacing-lg) var(--mci-spacing-lg) var(--mci-spacing-xl);
+  box-sizing: border-box;
+}
+
+.home-hero__text-band {
+  width: 100%;
+  max-width: 1400px;
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+
 .home-hero__scroll-down {
-  position: absolute;
-  bottom: 3rem;
-  left: 50%;
-  transform: translateX(-50%);
   color: var(--mci-color-text-light);
   opacity: 0.5;
   transition: opacity 0.25s ease, transform 0.13s ease;
+  flex-shrink: 0;
 }
 
 .home-hero__scroll-down:hover {
@@ -60,7 +87,7 @@
 }
 
 .home-hero__scroll-down:active {
-  transform: translateX(-50%) scale(0.97);
+  transform: scale(0.97);
 }
 
 @media (min-width: 1921px) {
@@ -132,6 +159,15 @@
 
 .home-hero__text-col .home-hero__stat-divider {
   background-color: rgba(0, 0, 0, 0.12);
+}
+
+/* Text band below hero slider (same colors as former text column) */
+.home-hero__text-band .home-hero__title {
+  color: var(--mci-color-text);
+}
+
+.home-hero__text-band .home-hero__text {
+  color: var(--mci-color-text-light);
 }
 
 .home-hero__image {
@@ -209,12 +245,25 @@
   flex-shrink: 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .home-hero {
     --mci-home-hero-viewport: auto;
     min-height: 0;
     height: auto;
     max-height: none;
+  }
+
+  .home-hero__slider-bleed {
+    flex: 0 0 auto;
+    height: 50vh;
+    min-height: 50vh;
+    max-height: 50vh;
+  }
+
+  .home-hero__bottom {
+    padding-left: var(--mci-spacing-sm);
+    padding-right: var(--mci-spacing-sm);
+    padding-top: var(--mci-spacing-md);
   }
 
   .home-hero__container {
