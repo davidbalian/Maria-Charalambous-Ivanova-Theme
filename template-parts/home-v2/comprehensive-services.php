@@ -14,11 +14,23 @@ $stagger_delays = array( 2, 3, 4, 5 );
 	<div class="container">
 		<h2 class="home-v2-comprehensive__title fade-in fade-in-delay-0"><?php echo mci_t_accent( 'Comprehensive Dental Care for {accent}Every Need{/accent}' ); ?></h2>
 		<p class="home-v2-comprehensive__subtitle fade-in fade-in-delay-1"><?php mci_te( 'At our dental clinic, we are committed to providing high-quality dental care in a comfortable and welcoming environment. Our goal is to help patients maintain excellent oral health while enhancing the beauty and function of their smile.' ); ?></p>
-	</div>
 
-	<?php get_template_part( 'template-parts/services-smilers-row' ); ?>
+		<!-- Smilers Aligners (same content as services page; transparent, constrained to .container) -->
+		<div class="home-v2-comprehensive__smilers">
+			<div class="services-item__grid">
+				<div class="services-item__content">
+					<span class="badge badge-gold fade-in fade-in-delay-0"><?php mci_te( 'Orthodontics' ); ?></span>
+					<h2 class="fade-in fade-in-delay-1"><?php mci_te( 'Smilers Aligners' ); ?></h2>
+					<p class="fade-in fade-in-delay-2"><?php mci_te( 'Discreet and tough dental aligners designed for modern lifestyles. Smilers offer a virtually invisible way to straighten your teeth and correct your bite — without the look and feel of traditional braces.' ); ?></p>
+					<p class="fade-in fade-in-delay-3"><?php mci_te( 'Ideal for protecting gutters and correcting smiles invisibly, Smilers Aligners let you go about your day with complete confidence while your teeth gently move into place.' ); ?></p>
+					<a href="<?php echo esc_url( mci_url( '/contact/' ) ); ?>" class="btn btn-primary fade-in fade-in-delay-4"><?php mci_te( 'Book Appointment' ); ?></a>
+				</div>
+				<div class="services-item__image fade-in fade-in-delay-2">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/smilers-aligners-at-dental-art-clinic-by-dr-maria-charalambous-ivanova.webp' ); ?>" alt="Smilers Aligners" width="560" height="420">
+				</div>
+			</div>
+		</div>
 
-	<div class="container">
 		<div class="services-list__grid home-v2-comprehensive__services-grid">
 			<?php foreach ( $comprehensive_services as $i => $service ) : ?>
 				<div class="services-list__item fade-in fade-in-delay-<?php echo esc_attr( $stagger_delays[ $i ] ); ?>">

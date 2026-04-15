@@ -414,6 +414,12 @@
   line-height: 1.6;
 }
 
+/* Smilers row: no surface band; same width as rest of comprehensive content */
+.home-v2-comprehensive__smilers {
+  background: transparent;
+  margin-bottom: var(--mci-spacing-2xl);
+}
+
 .home-v2-comprehensive .services-list__grid {
   gap: 1rem;
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * Smilers Aligners featured row (services page and home comprehensive section).
+ * Smilers Aligners featured row (services page).
  *
  * @package Maria_Charalambous_Ivanova
  */
