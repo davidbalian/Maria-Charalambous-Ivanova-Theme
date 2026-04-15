@@ -21,7 +21,7 @@ $theme_image_base  = get_template_directory_uri() . '/assets/images/';
 		<div class="container gallery-hero__content">
 			<h1 class="gallery-hero__title fade-in fade-in-delay-0"><?php mci_te( 'Gallery' ); ?></h1>
 			<p class="gallery-hero__subtitle fade-in fade-in-delay-1"><?php echo mci_t( 'Browse our collection of before &amp; after transformations and clinic photos.' ); ?></p>
-			<a href="<?php echo esc_url( mci_url( '/contact/' ) ); ?>" class="btn btn-primary fade-in fade-in-delay-2"><?php mci_te( 'Book Appointment' ); ?></a>
+			<?php get_template_part( 'template-parts/whatsapp-cta', null, array( 'extra_class' => 'fade-in fade-in-delay-2' ) ); ?>
 		</div>
 	</section>
 

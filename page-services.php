@@ -18,7 +18,7 @@ $clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
 		<div class="container services-hero__content">
 			<h1 class="services-hero__title fade-in fade-in-delay-0"><?php mci_te( 'Our Services' ); ?></h1>
 			<p class="services-hero__subtitle fade-in fade-in-delay-1"><?php mci_te( 'Comprehensive dental care using modern technology and evidence-based treatments, tailored to every patient.' ); ?></p>
-			<a href="<?php echo esc_url( mci_url( '/contact/' ) ); ?>" class="btn btn-primary fade-in fade-in-delay-2"><?php mci_te( 'Book Appointment' ); ?></a>
+			<?php get_template_part( 'template-parts/whatsapp-cta', null, array( 'extra_class' => 'fade-in fade-in-delay-2' ) ); ?>
 		</div>
 	</section>
 

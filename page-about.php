@@ -18,7 +18,7 @@ $clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
 		<div class="container about-hero__content">
 			<h1 class="about-hero__title fade-in fade-in-delay-0"><?php mci_te( 'About the Clinic' ); ?></h1>
 			<p class="about-hero__subtitle fade-in fade-in-delay-1"><?php mci_te( 'Where your oral health and smile are our top priorities.' ); ?></p>
-			<a href="<?php echo esc_url( mci_url( '/contact/' ) ); ?>" class="btn btn-primary fade-in fade-in-delay-2"><?php mci_te( 'Book Appointment' ); ?></a>
+			<?php get_template_part( 'template-parts/whatsapp-cta', null, array( 'extra_class' => 'fade-in fade-in-delay-2' ) ); ?>
 		</div>
 	</section>
 

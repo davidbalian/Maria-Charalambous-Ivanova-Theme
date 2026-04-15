@@ -18,7 +18,7 @@ $clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
 		<div class="container contact-hero__content">
 			<h1 class="contact-hero__title fade-in fade-in-delay-0"><?php mci_te( 'Contact Us' ); ?></h1>
 			<p class="contact-hero__subtitle fade-in fade-in-delay-1"><?php mci_te( 'We would love to hear from you. Reach out to schedule an appointment or learn more about our services.' ); ?></p>
-			<a href="tel:+35725377757" class="btn btn-primary fade-in fade-in-delay-2"><?php mci_te( 'Call +357 25 377757' ); ?></a>
+			<?php get_template_part( 'template-parts/whatsapp-cta', null, array( 'extra_class' => 'fade-in fade-in-delay-2' ) ); ?>
 		</div>
 	</section>
 
