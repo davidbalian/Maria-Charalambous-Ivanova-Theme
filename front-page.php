@@ -11,6 +11,19 @@ get_header(); ?>
 
 	<?php get_template_part( 'template-parts/home-v2/hero' ); ?>
 
+	<?php get_template_part( 'template-parts/home-v2/benefits' ); ?>
+
+	<!-- Existing Reviews -->
+	<section id="reviews" class="home-reviews">
+		<div class="container">
+			<h2 class="home-reviews__title fade-in fade-in-delay-0"><?php mci_te( 'What Our Patients Say' ); ?></h2>
+			<p class="home-reviews__text fade-in fade-in-delay-1"><?php mci_te( 'Real reviews from our community of patients in Limassol and beyond.' ); ?></p>
+			<div class="home-reviews__widget fade-in fade-in-delay-2">
+				<?php echo do_shortcode( '[trustindex no-registration=google]' ); ?>
+			</div>
+		</div>
+	</section>
+
 	<?php get_template_part( 'template-parts/home-v2/welcome' ); ?>
 
 	<!-- Before & After -->
@@ -33,8 +46,6 @@ get_header(); ?>
 			</div>
 		</div>
 	</section>
-
-	<?php get_template_part( 'template-parts/home-v2/benefits' ); ?>
 
 	<?php get_template_part( 'template-parts/home-v2/gentle-touch' ); ?>
 
@@ -109,17 +120,6 @@ get_header(); ?>
 						decoding="async"
 					>
 				<?php endforeach; ?>
-			</div>
-		</div>
-	</section>
-
-	<!-- Existing Reviews -->
-	<section class="home-reviews">
-		<div class="container">
-			<h2 class="home-reviews__title fade-in fade-in-delay-0"><?php mci_te( 'What Our Patients Say' ); ?></h2>
-			<p class="home-reviews__text fade-in fade-in-delay-1"><?php mci_te( 'Real reviews from our community of patients in Limassol and beyond.' ); ?></p>
-			<div class="home-reviews__widget fade-in fade-in-delay-2">
-				<?php echo do_shortcode( '[trustindex no-registration=google]' ); ?>
 			</div>
 		</div>
 	</section>

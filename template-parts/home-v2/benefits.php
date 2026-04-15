@@ -1,5 +1,5 @@
 <!-- Why Choose Our Dental Clinic -->
-<section class="home-v2-benefits">
+<section id="why-choose-us" class="home-v2-benefits">
 	<div class="container">
 		<h2 class="home-v2-benefits__title fade-in fade-in-delay-0"><?php mci_te( 'Why Choose Our Dental Clinic' ); ?></h2>
 		<div class="home-v2-benefits__grid" data-fade-stagger>
