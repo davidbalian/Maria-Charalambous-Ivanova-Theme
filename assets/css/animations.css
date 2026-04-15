@@ -20,13 +20,28 @@
   transform: translateY(0);
 }
 
-/* Once revealed, let interactive elements use their own transitions & transforms */
-.btn.fade-in.visible {
-  transition: transform 0.13s ease, filter 0.13s ease, background 0.13s ease;
+/*
+ * Buttons with .fade-in must animate opacity + translateY like every other element.
+ * Do NOT narrow transition on .visible — that snaps opacity and reads “early” / harsh.
+ * Keep short timings only for hover paint (background, shadow, filter).
+ */
+.btn.fade-in {
+  transition:
+    opacity var(--transition-slow),
+    transform var(--transition-slow),
+    filter 0.13s ease,
+    background 0.13s ease,
+    box-shadow 0.13s ease;
 }
 
-.btn.fade-in.visible:active {
+.btn.fade-in:active {
   transform: scale(0.97);
+  transition:
+    opacity var(--transition-slow),
+    transform 0.13s ease,
+    filter 0.13s ease,
+    background 0.13s ease,
+    box-shadow 0.13s ease;
 }
 
 .fade-in-delay-0 {
