@@ -707,12 +707,17 @@
     grid-template-columns: 1fr;
   }
 
-  .home-v2-comprehensive .services-list__grid {
+  /* Homepage Smilers: image above copy on small screens */
+  .home-v2-comprehensive__smilers .services-item__grid {
     grid-template-columns: 1fr;
   }
 
-  .home-v2-comprehensive .services-list__item {
-    grid-column: span 1;
+  .home-v2-comprehensive__smilers .services-item__image {
+    order: -1;
+  }
+
+  .home-v2-comprehensive__smilers .services-item__content {
+    order: 1;
   }
 
   .home-v2-doctor__inner {
