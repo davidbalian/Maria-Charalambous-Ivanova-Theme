@@ -153,9 +153,9 @@ get_header(); ?>
 						) ); ?>
 					</div>
 
-					<div class="home-contact__actions fade-in fade-in-delay-5">
-						<a href="<?php echo esc_url( mci_url( '/contact/' ) ); ?>" class="btn btn-primary"><?php mci_te( 'Contact Us' ); ?></a>
-						<?php get_template_part( 'template-parts/whatsapp-cta' ); ?>
+					<div class="home-contact__actions">
+						<a href="<?php echo esc_url( mci_url( '/contact/' ) ); ?>" class="btn btn-primary fade-in fade-in-delay-5"><?php mci_te( 'Contact Us' ); ?></a>
+						<?php get_template_part( 'template-parts/whatsapp-cta', null, array( 'extra_class' => 'fade-in fade-in-delay-6' ) ); ?>
 					</div>
 				</div>
 
