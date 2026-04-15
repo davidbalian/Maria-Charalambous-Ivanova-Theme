@@ -11,7 +11,7 @@ get_header(); ?>
 
 	<?php get_template_part( 'template-parts/home-v2/hero' ); ?>
 
-	<?php get_template_part( 'template-parts/home-v2/benefits' ); ?>
+	<?php get_template_part( 'template-parts/home-v2/comprehensive-services' ); ?>
 
 	<!-- Existing Reviews -->
 	<section id="reviews" class="home-reviews">
@@ -23,6 +23,8 @@ get_header(); ?>
 			</div>
 		</div>
 	</section>
+
+	<?php get_template_part( 'template-parts/home-v2/benefits' ); ?>
 
 	<?php get_template_part( 'template-parts/home-v2/welcome' ); ?>
 
@@ -48,8 +50,6 @@ get_header(); ?>
 	</section>
 
 	<?php get_template_part( 'template-parts/home-v2/gentle-touch' ); ?>
-
-	<?php get_template_part( 'template-parts/home-v2/comprehensive-services' ); ?>
 
 	<?php get_template_part( 'template-parts/home-v2/doctor' ); ?>
 
