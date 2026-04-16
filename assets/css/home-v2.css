@@ -58,7 +58,13 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35) 0%, transparent 45%);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.35) 0%,
+    transparent 35%,
+    transparent 55%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
   pointer-events: none;
   z-index: 1;
 }
@@ -832,10 +838,48 @@
    triggers frosted-glass via main.js).
    ========================================================================== */
 
-/* 1. Pull hero behind top bar + header */
+/* 1. Pull hero behind top bar + header; slider fills 90dvh */
 .home .home-hero {
-  --mci-home-hero-viewport: 100vh;
+  --mci-home-hero-viewport: 90dvh;
+  min-height: 90dvh;
+  height: 90dvh;
+  max-height: none;
   margin-top: -7rem;
+}
+
+/* Slider fills the full hero — absolutely positioned behind the text overlay */
+.home .home-hero__slider-bleed {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(50% - 50vw);
+  width: 100vw;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Text band overlaid at bottom-left of the slider */
+.home .home-hero__bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: var(--mci-spacing-xl) var(--mci-spacing-lg);
+  align-items: flex-start;
+  z-index: 2;
+}
+
+.home .home-hero__text-band {
+  margin-inline: 0;
+}
+
+/* Scroll-down arrow — white over the dark slider */
+.home .home-hero__scroll-down {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.home .home-hero__scroll-down:hover {
+  color: #fff;
 }
 
 /* 2. Top bar — transparent bg, white text */
@@ -898,9 +942,16 @@
   }
 }
 
-/* 5. Mobile — hero negative margin still applies */
+/* 6. Mobile — keep overlay layout, adjust spacing */
 @media (max-width: 768px) {
   .home .home-hero {
+    min-height: 90dvh;
+    height: 90dvh;
+    max-height: none;
     margin-top: -7rem;
+  }
+
+  .home .home-hero__bottom {
+    padding: var(--mci-spacing-lg) var(--mci-spacing-sm);
   }
 }
