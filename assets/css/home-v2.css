@@ -864,7 +864,12 @@
   color: #fff;
 }
 
-/* 3. Header nav + lang switcher — white when not scrolled */
+/* 3. Logo — white when not scrolled */
+.home .site-header:not(.is-scrolled) .site-logo {
+  filter: brightness(0) invert(1);
+}
+
+/* 4. Header nav + lang switcher — white when not scrolled */
 .home .site-header:not(.is-scrolled) .main-navigation a {
   color: rgba(255, 255, 255, 0.9);
 }
