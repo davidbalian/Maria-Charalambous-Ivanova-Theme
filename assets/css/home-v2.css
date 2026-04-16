@@ -815,3 +815,49 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================================================
+   Homepage — transparent header overlay
+   Top bar + header float over the hero. Scoped to .home body class so no
+   other pages are affected. Scroll behaviour is unchanged (is-scrolled still
+   triggers frosted-glass via main.js).
+   ========================================================================== */
+
+/* 1. Pull hero behind top bar + header */
+.home .home-hero {
+  --mci-home-hero-viewport: 100vh;
+  margin-top: -6.5rem;
+}
+
+/* 2. Top bar — transparent bg, dark text */
+.home .site-top-bar {
+  background: transparent;
+  border-bottom-color: transparent;
+}
+
+.home .site-top-bar__link {
+  color: var(--mci-color-text);
+}
+
+.home .site-top-bar__link:hover {
+  color: var(--mci-color-primary);
+}
+
+.home .site-top-bar__link svg {
+  opacity: 0.6;
+}
+
+.home .site-top-bar__cta {
+  color: var(--mci-color-text);
+}
+
+.home .site-top-bar__cta:hover {
+  color: var(--mci-color-primary);
+}
+
+/* 3. Mobile — top bar keeps transparent bg (it scrolls away, header stays opaque) */
+@media (max-width: 768px) {
+  .home .home-hero {
+    margin-top: -6.5rem;
+  }
+}
