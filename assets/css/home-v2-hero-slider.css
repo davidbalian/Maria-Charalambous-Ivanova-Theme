@@ -17,6 +17,7 @@
 .home-hero__carousel .slick-track {
   display: flex;
   align-items: stretch;
+  height: 100%;
 }
 
 .home-hero__carousel .slick-slide {
@@ -26,12 +27,17 @@
   overflow: hidden;
 }
 
+/* Slick wraps each slide in an extra div — ensure it stretches to full height */
+.home-hero__carousel .slick-slide > div {
+  height: 100%;
+}
+
 .home-hero__carousel .slick-arrow {
   display: none !important;
 }
 
 .home-hero__slide {
-  width: 50vw;
+  width: 100%;
   height: 100%;
 }
 
@@ -40,12 +46,6 @@
   height: 100%;
   display: block;
   object-fit: cover;
-}
-
-@media (max-width: 768px) {
-  .home-hero__slide {
-    width: 100vw;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

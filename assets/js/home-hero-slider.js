@@ -12,7 +12,7 @@ jQuery(window).on('load', function () {
 		window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 	$slider.slick({
-		variableWidth: true,
+		variableWidth: false,
 		infinite: true,
 		waitForAnimate: false,
 		slidesToShow: 1,
@@ -29,7 +29,7 @@ jQuery(window).on('load', function () {
 			{
 				breakpoint: 768,
 				settings: {
-					variableWidth: true,
+					variableWidth: false,
 					slidesToScroll: 1,
 					autoplay: !reduceMotion,
 				},
