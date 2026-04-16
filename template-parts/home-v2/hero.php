@@ -81,11 +81,15 @@ shuffle( $hero_slider_keys );
 					<p class="home-hero__text fade-in fade-in-delay-1"><?php mci_te( 'Professional dental care with modern technology, personalized treatment, and a focus on long-term oral health.' ); ?></p>
 					<div class="home-hero__ctas">
 						<?php get_template_part( 'template-parts/whatsapp-cta', null, array( 'extra_class' => 'fade-in fade-in-delay-2' ) ); ?>
+						<a
+							href="#comprehensive-dental-care"
+							class="btn btn-outline home-hero__services-cta js-home-hero-scroll-next fade-in fade-in-delay-3"
+						><?php echo esc_html( mci_t( 'Services' ) ); ?></a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<a href="#comprehensive-dental-care" class="home-hero__scroll-down" aria-label="<?php echo esc_attr( mci_t( 'Scroll to next section' ) ); ?>">
+		<a href="#comprehensive-dental-care" class="home-hero__scroll-down js-home-hero-scroll-next" aria-label="<?php echo esc_attr( mci_t( 'Scroll to next section' ) ); ?>">
 			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
 		</a>
 	</div>

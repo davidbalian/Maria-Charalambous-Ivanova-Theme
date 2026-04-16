@@ -3,17 +3,20 @@
  */
 
 document.addEventListener('DOMContentLoaded', function () {
-	// Smooth scroll for anchor links
-	var scrollDown = document.querySelector('.home-hero__scroll-down');
-	if (scrollDown) {
-		scrollDown.addEventListener('click', function (e) {
+	// Smooth scroll: hero chevron + in-page CTAs (same target as #comprehensive-dental-care)
+	document.querySelectorAll('.js-home-hero-scroll-next').forEach(function (link) {
+		link.addEventListener('click', function (e) {
 			e.preventDefault();
-			var target = document.querySelector(scrollDown.getAttribute('href'));
+			var href = link.getAttribute('href');
+			if (!href || href.indexOf('#') !== 0) {
+				return;
+			}
+			var target = document.querySelector(href);
 			if (target) {
 				target.scrollIntoView({ behavior: 'smooth' });
 			}
 		});
-	}
+	});
 
 	// Scroll-triggered fade-in animations
 	var observer = new IntersectionObserver(
