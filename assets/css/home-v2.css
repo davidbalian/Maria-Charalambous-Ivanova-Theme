@@ -835,7 +835,7 @@
 /* 1. Pull hero behind top bar + header */
 .home .home-hero {
   --mci-home-hero-viewport: 100vh;
-  margin-top: -6.5rem;
+  margin-top: -7rem;
 }
 
 /* 2. Top bar — transparent bg, white text */
@@ -896,6 +896,6 @@
 /* 5. Mobile — hero negative margin still applies */
 @media (max-width: 768px) {
   .home .home-hero {
-    margin-top: -6.5rem;
+    margin-top: -7rem;
   }
 }
