@@ -82,11 +82,15 @@ shuffle( $hero_slider_images );
 					<h1 class="home-hero__title fade-in fade-in-delay-0"><?php echo mci_t_accent( 'Beautiful Smiles {accent}Start Here{/accent}' ); ?></h1>
 					<p class="home-hero__text fade-in fade-in-delay-1"><?php mci_te( 'Professional dental care with modern technology, personalized treatment, and a focus on long-term oral health.' ); ?></p>
 					<div class="home-hero__ctas">
-						<?php get_template_part( 'template-parts/whatsapp-cta', null, array( 'extra_class' => 'fade-in fade-in-delay-2' ) ); ?>
-						<a
-							href="#comprehensive-dental-care"
-							class="btn btn-outline home-hero__services-cta js-home-hero-scroll-next fade-in fade-in-delay-3"
-						><?php echo esc_html( mci_t( 'Services' ) ); ?></a>
+						<div class="fade-in fade-in-delay-2">
+							<?php get_template_part( 'template-parts/whatsapp-cta', null, array( 'extra_class' => '' ) ); ?>
+						</div>
+						<div class="fade-in fade-in-delay-3">
+							<a
+								href="#comprehensive-dental-care"
+								class="btn btn-outline home-hero__services-cta js-home-hero-scroll-next"
+							><?php echo esc_html( mci_t( 'Services' ) ); ?></a>
+						</div>
 					</div>
 				</div>
 			</div>
