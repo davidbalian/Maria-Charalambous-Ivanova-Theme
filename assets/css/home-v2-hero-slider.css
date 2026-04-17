@@ -29,7 +29,7 @@
 
 /* Ken Burns runs only while .home-hero__kb--run is toggled on the active slide (JS). */
 .home-hero__carousel .swiper-slide-active .home-hero__slide img.home-hero__kb--run {
-  animation: home-hero-ken-burns 3.5s var(--mci-ease-standard) forwards;
+  animation: home-hero-ken-burns 3.5s ease forwards;
   will-change: transform;
 }
 
