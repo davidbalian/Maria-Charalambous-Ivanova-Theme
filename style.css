@@ -825,7 +825,7 @@ body:has(#wpadminbar) .site-header {
   border: none;
   border-radius: var(--mci-radius-md);
   cursor: pointer;
-  transition: transform 0.13s var(--mci-ease-standard), filter 0.13s var(--mci-ease-standard), background 0.13s var(--mci-ease-standard);
+  transition: transform 0.18s var(--mci-ease-standard), filter 0.18s var(--mci-ease-standard), background 0.18s var(--mci-ease-standard);
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.10));
 }
 
