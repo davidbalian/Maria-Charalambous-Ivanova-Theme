@@ -46,10 +46,24 @@
   height: 100%;
   display: block;
   object-fit: cover;
+  transform-origin: center center;
+}
+
+/* Ken Burns: animate on the active slide only */
+@keyframes ken-burns {
+  0%   { transform: scale(1)    translateX(0)      translateY(0); }
+  100% { transform: scale(1.06) translateX(-1.5%)  translateY(-1%); }
+}
+
+.home-hero__carousel .slick-active .home-hero__slide img {
+  animation: ken-burns 8s ease-in-out forwards;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .home-hero__carousel .slick-track {
     transition: none !important;
+  }
+  .home-hero__carousel .slick-active .home-hero__slide img {
+    animation: none;
   }
 }

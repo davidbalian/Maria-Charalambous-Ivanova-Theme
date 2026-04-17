@@ -41,15 +41,11 @@ endif;
 
 $hero_slider_images = array(
 	array(
-		'src' => '/wp-content/uploads/2026/02/dr-maria-charalambous-ivanova-portrait-05.webp',
+		'src' => '/wp-content/uploads/2026/04/dr-maria-charalambous-ivanova-portrait-hd.webp',
 		'alt' => 'Dr. Maria Charalambous-Ivanova',
 	),
 	array(
-		'src' => '/wp-content/uploads/2026/02/dr-maria-charalambous-ivanova-portrait-06.webp',
-		'alt' => 'Dr. Maria Charalambous-Ivanova',
-	),
-	array(
-		'src' => '/wp-content/uploads/2026/04/dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-wide-angle-equipment.avif',
+		'src' => '/wp-content/uploads/2026/04/dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-wide-angle-equipment-1.webp',
 		'alt' => 'Dental Art Clinic treatment room wide angle',
 	),
 );

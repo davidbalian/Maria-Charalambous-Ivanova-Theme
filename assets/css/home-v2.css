@@ -33,7 +33,7 @@
 
 /* Hero Section — full-bleed slider + text band */
 .home-hero {
-  --mci-home-hero-viewport: calc(100vh - 6.5rem);
+  --mci-home-hero-viewport: 98dvh;
   position: relative;
   box-sizing: border-box;
   padding: 0;
@@ -110,7 +110,7 @@
 
 @media (min-width: 1921px) {
   .home-hero {
-    --mci-home-hero-viewport: min(calc(100vh - 6.5rem), 1080px);
+    --mci-home-hero-viewport: min(98dvh, 1080px);
   }
 }
 
