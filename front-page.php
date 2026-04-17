@@ -106,20 +106,24 @@ get_header(); ?>
 				</div>
 			</div>
 
-			<div class="home-v2-clinic__carousel js-clinic-slick">
-				<?php foreach ( $clinic_images as $filename => $alt_text ) : ?>
-					<?php
-					$clinic_image_url = preg_match( '#^https?://#i', $filename )
-						? $filename
-						: $clinic_image_base_url . $filename;
-					?>
-					<img
-						src="<?php echo esc_url( $clinic_image_url ); ?>"
-						alt="<?php echo esc_attr( $alt_text ); ?>"
-						loading="lazy"
-						decoding="async"
-					>
-				<?php endforeach; ?>
+			<div class="swiper home-v2-clinic__carousel js-clinic-swiper">
+				<div class="swiper-wrapper">
+					<?php foreach ( $clinic_images as $filename => $alt_text ) : ?>
+						<?php
+						$clinic_image_url = preg_match( '#^https?://#i', $filename )
+							? $filename
+							: $clinic_image_base_url . $filename;
+						?>
+						<div class="swiper-slide">
+							<img
+								src="<?php echo esc_url( $clinic_image_url ); ?>"
+								alt="<?php echo esc_attr( $alt_text ); ?>"
+								loading="lazy"
+								decoding="async"
+							>
+						</div>
+					<?php endforeach; ?>
+				</div>
 			</div>
 		</div>
 	</section>

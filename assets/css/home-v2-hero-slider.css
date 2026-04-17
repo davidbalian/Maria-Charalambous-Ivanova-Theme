@@ -1,25 +1,16 @@
-/* Homepage hero — Slick fade + Ken Burns on active slide only */
+/* Homepage hero — Swiper fade + Ken Burns on active slide only */
 
-.home-hero__carousel {
+.home-hero__carousel.swiper {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-.home-hero__carousel .slick-list {
-  overflow: hidden;
+.home-hero__carousel .swiper-wrapper {
   height: 100%;
 }
 
-.home-hero__carousel .slick-track {
-  height: 100%;
-}
-
-.home-hero__carousel .slick-slide {
-  height: 100%;
-}
-
-.home-hero__carousel .slick-slide > div {
+.home-hero__carousel .swiper-slide {
   height: 100%;
 }
 
@@ -37,7 +28,7 @@
 }
 
 /* Ken Burns runs only while .home-hero__kb--run is toggled on the active slide (JS). */
-.home-hero__carousel .slick-active .home-hero__slide img.home-hero__kb--run {
+.home-hero__carousel .swiper-slide-active .home-hero__slide img.home-hero__kb--run {
   animation: home-hero-ken-burns 4.8s ease-in-out forwards;
   will-change: transform;
 }
@@ -52,8 +43,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .home-hero__carousel .home-hero__slide img,
-  .home-hero__carousel .slick-active .home-hero__slide img.home-hero__kb--run {
+  .home-hero__slide img,
+  .home-hero__carousel .swiper-slide-active .home-hero__slide img.home-hero__kb--run {
     animation: none;
     will-change: auto;
   }

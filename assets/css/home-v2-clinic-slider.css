@@ -77,37 +77,23 @@
 }
 
 /* ------------------------------------------------
-   Slick carousel overrides
+   Swiper carousel (variable slide width)
    ------------------------------------------------ */
 
-.home-v2-clinic__carousel {
+.home-v2-clinic__carousel.swiper {
   width: 100%;
 }
 
-.home-v2-clinic__carousel .slick-list {
-  overflow: hidden;
-  margin: 0 -8px;
-}
-
-.home-v2-clinic__carousel .slick-track {
-  display: flex;
-  align-items: stretch; /* Ensure all slides are equal height */
-}
-
-.home-v2-clinic__carousel .slick-slide {
-  margin: 0 8px;
+.home-v2-clinic__carousel .swiper-slide {
+  margin: 0;
+  width: auto;
   height: 280px;
-  overflow: hidden; /* For border-radius clipping */
+  overflow: hidden;
   border-radius: var(--mci-radius-lg);
-  /* Fix for Safari border-radius clipping */
-  transform: translateZ(0); 
+  transform: translateZ(0);
 }
 
-.home-v2-clinic__carousel .slick-arrow {
-  display: none !important;
-}
-
-.home-v2-clinic__carousel .slick-slide img {
+.home-v2-clinic__carousel .swiper-slide img {
   width: auto;
   height: 100%;
   max-width: none;
@@ -116,7 +102,7 @@
 }
 
 @media (max-width: 1024px) {
-  .home-v2-clinic__carousel .slick-slide {
+  .home-v2-clinic__carousel .swiper-slide {
     height: 240px;
   }
 }
@@ -143,7 +129,7 @@
     gap: var(--mci-spacing-xl);
   }
 
-  .home-v2-clinic__carousel .slick-slide {
+  .home-v2-clinic__carousel .swiper-slide {
     height: 200px;
   }
 }
@@ -153,7 +139,7 @@
     transition: none;
   }
 
-  .home-v2-clinic__carousel .slick-track {
-    transition: none !important;
+  .home-v2-clinic__carousel .swiper-wrapper {
+    transition-duration: 0ms !important;
   }
 }

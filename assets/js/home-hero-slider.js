@@ -1,9 +1,9 @@
 /**
- * Slick carousel for the homepage hero (fade, autoplay, Ken Burns on active slide only).
+ * Swiper carousel for the homepage hero (fade, autoplay, Ken Burns on active slide only).
  */
-jQuery(window).on('load', function () {
-	var $slider = jQuery('.js-home-hero-slick');
-	if (!$slider.length) {
+window.addEventListener('load', function () {
+	var root = document.querySelector('.js-home-hero-swiper');
+	if (!root || typeof Swiper === 'undefined') {
 		return;
 	}
 
@@ -17,45 +17,38 @@ jQuery(window).on('load', function () {
 		if (reduceMotion) {
 			return;
 		}
-		var $imgs = $slider.find('.home-hero__slide img');
-		$imgs.removeClass(kbClass);
-		var active = $slider.find('.slick-active .home-hero__slide img').get(0);
+		root.querySelectorAll('.home-hero__slide img').forEach(function (img) {
+			img.classList.remove(kbClass);
+		});
+		var active = root.querySelector('.swiper-slide-active .home-hero__slide img');
 		if (!active) {
 			return;
 		}
 		void active.offsetWidth;
-		jQuery(active).addClass(kbClass);
+		active.classList.add(kbClass);
 	}
 
-	if (!reduceMotion) {
-		$slider.on('init afterChange', refreshKenBurns);
-	}
-
-	$slider.slick({
-		variableWidth: false,
-		infinite: true,
-		waitForAnimate: false,
-		fade: true,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: false,
-		dots: false,
+	var swiper = new Swiper(root, {
+		effect: 'fade',
+		fadeEffect: { crossFade: true },
+		loop: true,
+		slidesPerView: 1,
 		speed: 800,
-		cssEase: 'cubic-bezier(0.22, 1, 0.36, 1)',
-		autoplay: !reduceMotion,
-		autoplaySpeed: 5600,
-		pauseOnHover: true,
-		accessibility: true,
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: {
-					fade: true,
-					slidesToScroll: 1,
-					autoplay: !reduceMotion,
+		autoplay: reduceMotion
+			? false
+			: {
+					delay: 5600,
+					pauseOnMouseEnter: true,
+					disableOnInteraction: false,
 				},
+		on: {
+			init: function () {
+				refreshKenBurns();
 			},
-		],
+			slideChangeTransitionEnd: function () {
+				refreshKenBurns();
+			},
+		},
 	});
 
 	if (!reduceMotion) {

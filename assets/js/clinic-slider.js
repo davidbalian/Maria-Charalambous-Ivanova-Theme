@@ -1,40 +1,24 @@
 /**
- * Slick carousel for the clinic gallery section.
- *
- * Uses window.load so every image is measured before Slick
- * calculates variable-width slide dimensions.
+ * Swiper carousel for the clinic gallery section (variable-width slides).
  */
-jQuery(window).on('load', function () {
-	var $slider = jQuery('.js-clinic-slick');
-	if (!$slider.length) {
+window.addEventListener('load', function () {
+	var el = document.querySelector('.js-clinic-swiper');
+	if (!el || typeof Swiper === 'undefined') {
 		return;
 	}
 
-	$slider.slick({
-		variableWidth: true,
-		infinite: true,
-		waitForAnimate: false,
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		prevArrow: jQuery('.js-clinic-prev'),
-		nextArrow: jQuery('.js-clinic-next'),
-		dots: false,
-		speed: 600,
-		cssEase: 'cubic-bezier(0.22, 1, 0.36, 1)',
-		accessibility: true,
-		responsive: [
-			{
-				breakpoint: 1024,
-				settings: {
-					slidesToShow: 2,
-				},
-			},
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 2,
-				},
-			},
-		],
+	var reduceMotion =
+		typeof window.matchMedia === 'function' &&
+		window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+	new Swiper(el, {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		loop: true,
+		speed: reduceMotion ? 0 : 600,
+		navigation: {
+			prevEl: '.js-clinic-prev',
+			nextEl: '.js-clinic-next',
+		},
 	});
 });
