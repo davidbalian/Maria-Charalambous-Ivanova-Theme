@@ -49,7 +49,6 @@ $hero_slider_images = array(
 		'alt' => 'Dental Art Clinic treatment room wide angle',
 	),
 );
-shuffle( $hero_slider_images );
 ?>
 <section class="home-hero">
 	<div class="home-hero__slider-bleed">
