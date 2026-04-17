@@ -2459,6 +2459,12 @@ hr {
   object-fit: cover;
 }
 
+.home-v2-comprehensive__smilers .services-item__image img,
+.services-item--smilers .services-item__image img {
+  height: auto;
+  object-fit: unset;
+}
+
 /* ==========================================================================
    19. Page Templates — Contact
    ========================================================================== */

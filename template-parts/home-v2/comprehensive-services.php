@@ -26,7 +26,7 @@ $stagger_delays = array( 2, 3, 4, 5 );
 					<a href="<?php echo esc_url( mci_whatsapp_chat_url() ); ?>" class="btn btn-primary fade-in fade-in-delay-4" target="_blank" rel="noopener noreferrer"><?php mci_te( 'Book Appointment' ); ?></a>
 				</div>
 				<div class="services-item__image fade-in fade-in-delay-2">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/smilers-aligners-at-dental-art-clinic-by-dr-maria-charalambous-ivanova.webp' ); ?>" alt="Smilers Aligners" width="560" height="420">
+					<img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/04/smilers-new-5.webp' ) ); ?>" alt="Smilers Aligners" width="560">
 				</div>
 			</div>
 		</div>

@@ -6,7 +6,7 @@
  */
 ?>
 <!-- Smilers Aligners -->
-<section class="services-item page-section page-section--surface">
+<section class="services-item services-item--smilers page-section page-section--surface">
 	<div class="container">
 		<div class="services-item__grid">
 			<div class="services-item__content">
@@ -17,7 +17,7 @@
 				<a href="<?php echo esc_url( mci_url( '/contact/' ) ); ?>" class="btn btn-primary fade-in fade-in-delay-4"><?php mci_te( 'Book Appointment' ); ?></a>
 			</div>
 			<div class="services-item__image fade-in fade-in-delay-2">
-				<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/smilers-aligners-at-dental-art-clinic-by-dr-maria-charalambous-ivanova.webp' ); ?>" alt="Smilers Aligners" width="560" height="420">
+				<img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/04/smilers-new-5.webp' ) ); ?>" alt="Smilers Aligners" width="560">
 			</div>
 		</div>
 	</div>
