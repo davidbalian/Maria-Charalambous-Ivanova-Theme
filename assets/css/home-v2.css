@@ -466,6 +466,7 @@
     opacity 0.3s var(--mci-ease-standard),
     background 0.25s var(--mci-ease-standard),
     border-color 0.25s var(--mci-ease-standard),
+    color 0.25s var(--mci-ease-standard),
     transform 0.13s var(--mci-ease-standard);
 }
 
