@@ -68,6 +68,9 @@ Text Domain: maria-charalambous-ivanova
   --mci-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
   --mci-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.06);
   --mci-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  /* Motion — shared easing for transitions (matches hero Ken Burns timing) */
+  --mci-ease-standard: cubic-bezier(0.32, 0.15, 0, 1.01);
 }
 
 /* ==========================================================================
@@ -79,7 +82,7 @@ Text Domain: maria-charalambous-ivanova
   transform: scale(0.97);
 }
 .press-feedback {
-  transition: transform 0.13s ease;
+  transition: transform 0.13s var(--mci-ease-standard);
 }
 
 /* ==========================================================================
@@ -160,7 +163,7 @@ body {
 a {
   color: var(--mci-color-primary);
   text-decoration: none;
-  transition: color 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: color 0.25s var(--mci-ease-standard);
 }
 
 a:hover {
@@ -293,7 +296,7 @@ blockquote p {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  transition: color 0.2s ease;
+  transition: color 0.2s var(--mci-ease-standard);
 }
 
 .site-top-bar__link:hover {
@@ -311,7 +314,7 @@ blockquote p {
   text-decoration: none;
   font-size: 0.75rem;
   letter-spacing: 0.08em;
-  transition: color 0.2s ease;
+  transition: color 0.2s var(--mci-ease-standard);
 }
 
 .site-top-bar__cta:hover {
@@ -338,9 +341,9 @@ blockquote p {
   background: transparent;
   border-bottom: 0.5px solid transparent;
   transition:
-    background 0.3s ease,
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
+    background 0.3s var(--mci-ease-standard),
+    border-color 0.3s var(--mci-ease-standard),
+    box-shadow 0.3s var(--mci-ease-standard);
 }
 
 .site-header__inner {
@@ -356,7 +359,7 @@ blockquote p {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: var(--mci-spacing-sm);
-  transition: height 150ms cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: height 150ms var(--mci-ease-standard);
 }
 
 /* WordPress Admin Bar Adjustment – sticky nav offset by #wpadminbar height when present */
@@ -400,8 +403,8 @@ body:has(#wpadminbar) .site-header {
 .site-logo {
   height: auto;
   display: block;
-  transition: opacity 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
-    height 150ms cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: opacity 0.25s var(--mci-ease-standard),
+    height 150ms var(--mci-ease-standard);
 }
 
 .site-logo:hover {
@@ -446,8 +449,8 @@ body:has(#wpadminbar) .site-header {
 .site-title a {
   color: var(--mci-color-text);
   transition:
-    color 0.3s ease,
-    opacity 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
+    color 0.3s var(--mci-ease-standard),
+    opacity 0.25s var(--mci-ease-standard);
 }
 
 .site-header.is-scrolled .site-title a {
@@ -462,7 +465,7 @@ body:has(#wpadminbar) .site-header {
   font-size: 0.8125rem;
   color: var(--mci-color-text-light);
   margin-bottom: 0;
-  transition: color 0.3s ease;
+  transition: color 0.3s var(--mci-ease-standard);
 }
 
 .site-header.is-scrolled .site-description {
@@ -480,7 +483,7 @@ body:has(#wpadminbar) .site-header {
   font-weight: var(--mci-font-weight-normal);
   color: var(--mci-color-text);
   padding: var(--mci-spacing-xs) 0;
-  transition: color 0.3s ease;
+  transition: color 0.3s var(--mci-ease-standard);
   letter-spacing: -0.008em;
 }
 
@@ -525,7 +528,7 @@ body:has(#wpadminbar) .site-header {
   color: var(--mci-color-text);
   letter-spacing: -0.008em;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: color 0.3s var(--mci-ease-standard);
 }
 
 .lang-switcher__toggle:hover {
@@ -533,7 +536,7 @@ body:has(#wpadminbar) .site-header {
 }
 
 .lang-switcher__chevron {
-  transition: transform 0.25s ease;
+  transition: transform 0.25s var(--mci-ease-standard);
 }
 
 .lang-switcher__toggle[aria-expanded="true"] .lang-switcher__chevron {
@@ -565,7 +568,7 @@ body:has(#wpadminbar) .site-header {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-4px);
-  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  transition: opacity 0.2s var(--mci-ease-standard), transform 0.2s var(--mci-ease-standard), visibility 0.2s var(--mci-ease-standard);
 }
 
 .lang-switcher__dropdown.is-open {
@@ -591,7 +594,7 @@ body:has(#wpadminbar) .site-header {
   text-align: center;
   white-space: nowrap;
   border-radius: 6px;
-  transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+  transition: background 0.15s var(--mci-ease-standard), color 0.15s var(--mci-ease-standard), box-shadow 0.15s var(--mci-ease-standard);
 }
 
 .lang-switcher__option:hover,
@@ -655,7 +658,7 @@ body:has(#wpadminbar) .site-header {
   color: var(--mci-color-text-light);
   letter-spacing: 0.02em;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: color 0.3s var(--mci-ease-standard);
 }
 
 .lang-switcher__toggle--mobile:hover {
@@ -673,7 +676,7 @@ body:has(#wpadminbar) .site-header {
   opacity: 0;
   visibility: hidden;
   transform: translateX(-8px);
-  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  transition: opacity 0.2s var(--mci-ease-standard), transform 0.2s var(--mci-ease-standard), visibility 0.2s var(--mci-ease-standard);
 }
 
 .lang-switcher__dropdown--mobile.is-open {
@@ -701,7 +704,7 @@ body:has(#wpadminbar) .site-header {
     border: none;
     cursor: pointer;
     color: var(--mci-color-text);
-    transition: color 0.2s ease, transform 0.13s ease;
+    transition: color 0.2s var(--mci-ease-standard), transform 0.13s var(--mci-ease-standard);
   }
 
   .mobile-nav-toggle:hover,
@@ -715,7 +718,7 @@ body:has(#wpadminbar) .site-header {
     height: 2px;
     background: currentColor;
     border-radius: 1px;
-    transition: transform 0.25s ease, opacity 0.25s ease;
+    transition: transform 0.25s var(--mci-ease-standard), opacity 0.25s var(--mci-ease-standard);
   }
 
   .site-header .mobile-nav-toggle.is-active .mobile-nav-toggle__line:nth-child(1) {
@@ -743,7 +746,7 @@ body:has(#wpadminbar) .site-header {
   padding: var(--mci-header-height) var(--mci-spacing-lg) 2rem;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.3s var(--mci-ease-standard), visibility 0.3s var(--mci-ease-standard);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -784,7 +787,7 @@ body:has(#wpadminbar) .site-header {
   color: var(--mci-color-text);
   text-decoration: none;
   letter-spacing: -0.008em;
-  transition: color 0.2s ease;
+  transition: color 0.2s var(--mci-ease-standard);
 }
 
 .mobile-nav__links a:hover,
@@ -822,7 +825,7 @@ body:has(#wpadminbar) .site-header {
   border: none;
   border-radius: var(--mci-radius-md);
   cursor: pointer;
-  transition: transform 0.13s ease, filter 0.13s ease, background 0.13s ease;
+  transition: transform 0.13s var(--mci-ease-standard), filter 0.13s var(--mci-ease-standard), background 0.13s var(--mci-ease-standard);
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.10));
 }
 
@@ -951,8 +954,8 @@ body:has(#wpadminbar) .site-header {
     0 1px 2px rgba(0, 0, 0, 0.04),
     var(--mci-shadow-md);
   transition:
-    transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1),
-    box-shadow 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transform 0.3s var(--mci-ease-standard),
+    box-shadow 0.3s var(--mci-ease-standard);
 }
 
 .card:active {
@@ -1027,8 +1030,8 @@ select {
   border: var(--mci-border-width) solid var(--mci-color-border);
   border-radius: var(--mci-radius-sm);
   transition:
-    border-color 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
-    box-shadow 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
+    border-color 0.25s var(--mci-ease-standard),
+    box-shadow 0.25s var(--mci-ease-standard);
 }
 
 input[type="text"]:focus,
@@ -1220,7 +1223,7 @@ hr {
 .footer-navigation a {
   font-size: 0.875rem;
   color: rgba(255, 255, 255, 0.6);
-  transition: color 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: color 0.25s var(--mci-ease-standard);
 }
 
 .footer-navigation a:hover {
@@ -1239,7 +1242,7 @@ hr {
 .site-footer__contact a {
   font-size: 0.875rem;
   color: rgba(255, 255, 255, 0.6);
-  transition: color 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: color 0.25s var(--mci-ease-standard);
 }
 
 .site-footer__contact a:hover {
@@ -1296,7 +1299,7 @@ hr {
 
 .site-footer__bottom a {
   color: rgba(255, 255, 255, 0.5);
-  transition: color 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: color 0.25s var(--mci-ease-standard);
 }
 
 .site-footer__bottom a:hover {
@@ -1438,7 +1441,7 @@ hr {
   box-shadow: var(--mci-shadow-lg);
   opacity: 0;
   transform: translateY(16px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition: opacity 0.4s var(--mci-ease-standard), transform 0.4s var(--mci-ease-standard);
 }
 
 .cookie-banner[hidden] {
@@ -1494,7 +1497,7 @@ hr {
   font-size: 1.25rem;
   line-height: 1;
   cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: background 0.2s var(--mci-ease-standard), color 0.2s var(--mci-ease-standard);
 }
 
 .cookie-banner__close:hover {
@@ -1652,8 +1655,8 @@ hr {
   text-decoration: none;
   color: var(--mci-color-text);
   transition:
-    transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1),
-    box-shadow 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transform 0.3s var(--mci-ease-standard),
+    box-shadow 0.3s var(--mci-ease-standard);
   box-shadow: var(--mci-shadow-sm);
 }
 
@@ -1785,7 +1788,7 @@ hr {
   /* Removed border-radius on img as parent handles clipping */
   will-change: transform;
   transform: scale(1) translateZ(0);
-  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 0.6s var(--mci-ease-standard);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }

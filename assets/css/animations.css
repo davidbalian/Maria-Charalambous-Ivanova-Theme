@@ -11,8 +11,8 @@
   opacity: 0;
   transform: translateY(24px);
   transition:
-    opacity var(--transition-slow),
-    transform var(--transition-slow);
+    opacity var(--transition-slow) var(--mci-ease-standard),
+    transform var(--transition-slow) var(--mci-ease-standard);
 }
 
 .fade-in.visible {
@@ -27,21 +27,21 @@
  */
 .btn.fade-in {
   transition:
-    opacity var(--transition-slow),
-    transform var(--transition-slow),
-    filter 0.13s ease,
-    background 0.13s ease,
-    box-shadow 0.13s ease;
+    opacity var(--transition-slow) var(--mci-ease-standard),
+    transform var(--transition-slow) var(--mci-ease-standard),
+    filter 0.13s var(--mci-ease-standard),
+    background 0.13s var(--mci-ease-standard),
+    box-shadow 0.13s var(--mci-ease-standard);
 }
 
 .btn.fade-in:active {
   transform: scale(0.97);
   transition:
-    opacity var(--transition-slow),
-    transform 0.13s ease,
-    filter 0.13s ease,
-    background 0.13s ease,
-    box-shadow 0.13s ease;
+    opacity var(--transition-slow) var(--mci-ease-standard),
+    transform 0.13s var(--mci-ease-standard),
+    filter 0.13s var(--mci-ease-standard),
+    background 0.13s var(--mci-ease-standard),
+    box-shadow 0.13s var(--mci-ease-standard);
 }
 
 .fade-in-delay-0 {

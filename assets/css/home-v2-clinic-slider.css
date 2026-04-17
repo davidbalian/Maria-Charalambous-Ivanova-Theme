@@ -50,10 +50,10 @@
   font-size: 1.125rem;
   cursor: pointer;
   transition:
-    transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
-    background-color 0.2s ease,
-    border-color 0.2s ease,
-    opacity 0.2s ease;
+    transform 0.25s var(--mci-ease-standard),
+    background-color 0.2s var(--mci-ease-standard),
+    border-color 0.2s var(--mci-ease-standard),
+    opacity 0.2s var(--mci-ease-standard);
 }
 
 .home-v2-clinic__button:hover:not(:disabled),

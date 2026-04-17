@@ -37,7 +37,7 @@ window.addEventListener('load', function () {
 		autoplay: reduceMotion
 			? false
 			: {
-					delay: 5600,
+					delay: 3500,
 					pauseOnMouseEnter: true,
 					disableOnInteraction: false,
 				},
