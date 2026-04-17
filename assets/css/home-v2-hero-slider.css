@@ -35,8 +35,12 @@
   transform-origin: center center;
 }
 
-/* Ken Burns runs only while .home-hero__kb--run is toggled on the active slide (JS). */
-.home-hero__carousel .swiper-slide-active .home-hero__slide img.home-hero__kb--run {
+/*
+ * Ken Burns: drive only with .home-hero__kb--run (JS), not .swiper-slide-active.
+ * Swiper moves swiper-slide-active at fade start; tying animation to active made the
+ * outgoing image lose the rule and snap to scale(1) mid-crossfade.
+ */
+.home-hero__carousel .home-hero__slide img.home-hero__kb--run {
   animation: home-hero-ken-burns 3.5s ease forwards;
   will-change: transform;
 }
@@ -52,7 +56,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .home-hero__slide img,
-  .home-hero__carousel .swiper-slide-active .home-hero__slide img.home-hero__kb--run {
+  .home-hero__carousel .home-hero__slide img.home-hero__kb--run {
     animation: none;
     will-change: auto;
   }
