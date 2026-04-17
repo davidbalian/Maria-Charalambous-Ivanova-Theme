@@ -41,7 +41,8 @@
  * outgoing image lose the rule and snap to scale(1) mid-crossfade.
  */
 .home-hero__carousel .home-hero__slide img.home-hero__kb--run {
-  animation: home-hero-ken-burns 3.5s ease forwards;
+  /* No delay; ease-in-out for symmetric acceleration. */
+  animation: home-hero-ken-burns 3.5s ease-in-out 0s forwards;
   will-change: transform;
 }
 
