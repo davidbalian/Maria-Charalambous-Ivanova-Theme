@@ -53,7 +53,7 @@ shuffle( $hero_slider_images );
 ?>
 <section class="home-hero">
 	<div class="home-hero__slider-bleed">
-		<div class="home-hero__carousel js-home-hero-slick" aria-label="<?php echo esc_attr( mci_t( 'Clinic photos' ) ); ?>">
+		<div class="home-hero__carousel" aria-label="<?php echo esc_attr( mci_t( 'Clinic photos' ) ); ?>">
 			<?php foreach ( $hero_slider_images as $hero_slide_index => $hero_slide ) : ?>
 				<?php $hero_img_loading = ( 0 === $hero_slide_index ) ? 'eager' : 'lazy'; ?>
 				<div class="home-hero__slide">

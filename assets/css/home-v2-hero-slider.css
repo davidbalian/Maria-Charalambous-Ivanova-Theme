@@ -1,69 +1,69 @@
-/* Homepage hero — Slick full-bleed, no gutters, no radius */
-.home-hero__slider-bleed {
-  touch-action: manipulation;
-}
+/* Homepage hero — pure CSS crossfade, no Slick */
 
 .home-hero__carousel {
+  position: relative;
   width: 100%;
   height: 100%;
-}
-
-.home-hero__carousel .slick-list {
-  overflow: hidden;
-  margin: 0;
-  height: 100%;
-}
-
-.home-hero__carousel .slick-track {
-  display: flex;
-  align-items: stretch;
-  height: 100%;
-}
-
-.home-hero__carousel .slick-slide {
-  margin: 0;
-  height: 100%;
-  border-radius: 0;
   overflow: hidden;
 }
 
-/* Slick wraps each slide in an extra div — ensure it stretches to full height */
-.home-hero__carousel .slick-slide > div {
-  height: 100%;
-}
-
-.home-hero__carousel .slick-arrow {
-  display: none !important;
-}
-
+/* Slides stacked absolutely inside the carousel */
 .home-hero__slide {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
 }
 
+/* -------------------------------------------------------------------------
+   Crossfade — 16s cycle, ~7s per slide, ~1s fade overlap
+   Slide 1: visible 0–7s, fades 7–8s, invisible 8–16s
+   Slide 2: invisible 0–8s, fades 8–9s, visible 9–15s, fades 15–16s
+   ------------------------------------------------------------------------- */
+.home-hero__slide:nth-child(1) {
+  animation: hero-fade-1 16s ease-in-out infinite;
+}
+
+.home-hero__slide:nth-child(2) {
+  animation: hero-fade-2 16s ease-in-out infinite;
+}
+
+@keyframes hero-fade-1 {
+  0%, 43.75% { opacity: 1; }
+  50%, 100%  { opacity: 0; }
+}
+
+@keyframes hero-fade-2 {
+  0%, 50%         { opacity: 0; }
+  56.25%, 93.75%  { opacity: 1; }
+  100%            { opacity: 0; }
+}
+
+/* Image fills slide */
 .home-hero__slide img {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
   transform-origin: center center;
+  animation: hero-ken-burns 16s ease-in-out infinite;
 }
 
-/* Ken Burns: animate on the active slide only */
-@keyframes ken-burns {
-  0%   { transform: scale(1)    translateX(0)      translateY(0); }
-  100% { transform: scale(1.06) translateX(-1.5%)  translateY(-1%); }
+/* Slide 2 Ken Burns starts fresh when the slide appears (at 8s) */
+.home-hero__slide:nth-child(2) img {
+  animation-delay: 8s;
 }
 
-.home-hero__carousel .slick-active .home-hero__slide img {
-  animation: ken-burns 8s ease-in-out forwards;
+@keyframes hero-ken-burns {
+  0%   { transform: scale(1)    translate(0,      0); }
+  50%  { transform: scale(1.06) translate(-1%,    -0.5%); }
+  100% { transform: scale(1)    translate(0,      0); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .home-hero__carousel .slick-track {
-    transition: none !important;
-  }
-  .home-hero__carousel .slick-active .home-hero__slide img {
+  .home-hero__slide,
+  .home-hero__slide img {
     animation: none;
   }
+  .home-hero__slide { opacity: 0; }
+  .home-hero__slide:nth-child(1) { opacity: 1; }
 }

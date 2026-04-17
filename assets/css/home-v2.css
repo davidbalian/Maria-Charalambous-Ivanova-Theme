@@ -70,6 +70,21 @@
   .home-hero__slider-bleed::after {
     background: rgba(0, 0, 0, 0.45);
   }
+
+  /* On mobile, give the slider an explicit height so it doesn't
+     compete with the text band for the 98dvh budget */
+  .home-hero {
+    height: auto;
+    min-height: auto;
+    max-height: none;
+  }
+
+  .home-hero__slider-bleed {
+    flex: none;
+    height: 62dvh;
+    min-height: 62dvh;
+    max-height: 62dvh;
+  }
 }
 
 .home-hero__carousel {
