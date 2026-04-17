@@ -77,6 +77,7 @@ function mci_enqueue_assets() {
 		wp_enqueue_style( 'mci-home-v2-hero-slider', get_template_directory_uri() . '/assets/css/home-v2-hero-slider.css', array( 'mci-home-v2-clinic-slider' ), MCI_THEME_VERSION );
 
 		wp_enqueue_script( 'slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array( 'jquery' ), '1.8.1', true );
+		wp_enqueue_script( 'mci-home-hero-slider', get_template_directory_uri() . '/assets/js/home-hero-slider.js', array( 'slick' ), MCI_THEME_VERSION, true );
 		wp_enqueue_script( 'mci-clinic-slider', get_template_directory_uri() . '/assets/js/clinic-slider.js', array( 'slick' ), MCI_THEME_VERSION, true );
 	}
 
@@ -118,7 +119,7 @@ add_action( 'wp_enqueue_scripts', 'mci_dequeue_jquery', 20 );
  * Add defer attribute to non-critical scripts.
  */
 function mci_defer_scripts( $tag, $handle, $src ) {
-	$defer_handles = array( 'slick', 'mci-clinic-slider', 'lightgallery', 'lg-thumbnail', 'lg-zoom' );
+	$defer_handles = array( 'slick', 'mci-home-hero-slider', 'mci-clinic-slider', 'lightgallery', 'lg-thumbnail', 'lg-zoom' );
 	if ( in_array( $handle, $defer_handles, true ) ) {
 		return str_replace( ' src=', ' defer src=', $tag );
 	}
