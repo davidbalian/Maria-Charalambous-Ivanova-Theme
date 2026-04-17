@@ -23,7 +23,9 @@
 					<p><em><?php mci_te( 'Because a smile is not just about appearance.' ); ?></em></p>
 					<p><em><?php mci_te( 'It is function. It is balance. It is confidence. It is quality of life.' ); ?></em></p>
 				</div>
-				<a href="<?php echo esc_url( mci_url( '/about/' ) ); ?>" class="btn btn-outline fade-in fade-in-delay-7"><?php mci_te( 'More About Dr. Charalambous-Ivanova' ); ?></a>
+				<div class="fade-in fade-in-delay-7">
+					<a href="<?php echo esc_url( mci_url( '/about/' ) ); ?>" class="btn btn-outline"><?php mci_te( 'More About Dr. Charalambous-Ivanova' ); ?></a>
+				</div>
 			</div>
 		</div>
 	</div>

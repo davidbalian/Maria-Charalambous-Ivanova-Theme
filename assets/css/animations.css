@@ -2,8 +2,8 @@
  * Shared fade-in animations for scroll-triggered reveal.
  * Used across homepage and inner pages.
  *
- * Stagger uses --mci-fade-in-delay on opacity/transform only so hover paint
- * (background, shadow, etc.) on buttons is never delayed by fade-in timing.
+ * Buttons always use a wrapper <div class="fade-in"> — never .fade-in directly
+ * on .btn — so the base .btn transition handles hover paint uninterrupted.
  */
 
 .fade-in {
@@ -19,34 +19,6 @@
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-/*
- * Buttons with .fade-in: long reveal only on opacity + translateY; interactive
- * paint stays on --mci-duration-btn with no stagger delay.
- */
-.btn.fade-in {
-  transition:
-    opacity var(--mci-duration-fade-in) var(--mci-ease-standard)
-      var(--mci-fade-in-delay, 0s),
-    transform var(--mci-duration-fade-in) var(--mci-ease-standard)
-      var(--mci-fade-in-delay, 0s),
-    filter var(--mci-duration-btn) var(--mci-ease-standard),
-    background var(--mci-duration-btn) var(--mci-ease-standard),
-    box-shadow var(--mci-duration-btn) var(--mci-ease-standard),
-    color var(--mci-duration-btn) var(--mci-ease-standard);
-}
-
-.btn.fade-in:active {
-  transform: scale(0.97);
-  transition:
-    opacity var(--mci-duration-fade-in) var(--mci-ease-standard)
-      var(--mci-fade-in-delay, 0s),
-    transform var(--mci-duration-btn) var(--mci-ease-standard),
-    filter var(--mci-duration-btn) var(--mci-ease-standard),
-    background var(--mci-duration-btn) var(--mci-ease-standard),
-    box-shadow var(--mci-duration-btn) var(--mci-ease-standard),
-    color var(--mci-duration-btn) var(--mci-ease-standard);
 }
 
 .fade-in-delay-0 {

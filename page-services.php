@@ -35,7 +35,9 @@ $clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
 					<h2 class="fade-in fade-in-delay-1"><?php mci_te( 'One-Visit Transformations' ); ?></h2>
 					<p class="fade-in fade-in-delay-2"><?php mci_te( 'Fast-track aesthetic dentistry at its finest. Using advanced materials and techniques, Dr. Maria can dramatically enhance your smile in a single appointment — creating a "Masterpiece" result you will love from day one.' ); ?></p>
 					<p class="fade-in fade-in-delay-3"><?php mci_te( 'Whether you need veneers, bonding, or a complete smile makeover, our one-visit approach saves you time without compromising on quality.' ); ?></p>
-					<a href="<?php echo esc_url( mci_url( '/contact/' ) ); ?>" class="btn btn-primary fade-in fade-in-delay-4"><?php mci_te( 'Book Appointment' ); ?></a>
+					<div class="fade-in fade-in-delay-4">
+						<a href="<?php echo esc_url( mci_url( '/contact/' ) ); ?>" class="btn btn-primary"><?php mci_te( 'Book Appointment' ); ?></a>
+					</div>
 				</div>
 				<div class="services-item__image fade-in fade-in-delay-2">
 					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/smilers-aligners-at-dental-art-clinic-by-dr-maria-charalambous-ivanova.webp' ); ?>" alt="One-Visit Transformations" width="560" height="420">
@@ -53,7 +55,9 @@ $clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
 					<h2 class="fade-in fade-in-delay-1"><?php mci_te( 'Cosmetic Masterpieces' ); ?></h2>
 					<p class="fade-in fade-in-delay-2"><?php mci_te( 'Solutions crafted for timeless elegance. Our cosmetic services go beyond simple fixes — they are designed to create smiles that look natural, feel comfortable, and stand the test of time.' ); ?></p>
 					<p class="fade-in fade-in-delay-3"><?php mci_te( 'From teeth whitening and porcelain veneers to full smile redesigns, every treatment is tailored to your unique features and personal goals.' ); ?></p>
-					<a href="<?php echo esc_url( mci_url( '/contact/' ) ); ?>" class="btn btn-primary fade-in fade-in-delay-4"><?php mci_te( 'Book Appointment' ); ?></a>
+					<div class="fade-in fade-in-delay-4">
+						<a href="<?php echo esc_url( mci_url( '/contact/' ) ); ?>" class="btn btn-primary"><?php mci_te( 'Book Appointment' ); ?></a>
+					</div>
 				</div>
 				<div class="services-item__image fade-in fade-in-delay-2">
 					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/smilers-aligners-at-dental-art-clinic-by-dr-maria-charalambous-ivanova.webp' ); ?>" alt="Cosmetic Masterpieces" width="560" height="420">
@@ -71,7 +75,9 @@ $clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
 					<h2 class="fade-in fade-in-delay-1"><?php echo mci_t( 'Preventative &amp; Restorative Care' ); ?></h2>
 					<p class="fade-in fade-in-delay-2"><?php mci_te( 'A beautiful smile starts with a healthy foundation. Our preventative and restorative services ensure your teeth and gums stay in excellent condition — so your smile looks great and lasts a lifetime.' ); ?></p>
 					<p class="fade-in fade-in-delay-3"><?php mci_te( 'From routine check-ups and professional cleanings to fillings and crowns, we provide comprehensive care with the same attention to detail that defines everything we do.' ); ?></p>
-					<a href="<?php echo esc_url( mci_url( '/contact/' ) ); ?>" class="btn btn-primary fade-in fade-in-delay-4"><?php mci_te( 'Book Appointment' ); ?></a>
+					<div class="fade-in fade-in-delay-4">
+						<a href="<?php echo esc_url( mci_url( '/contact/' ) ); ?>" class="btn btn-primary"><?php mci_te( 'Book Appointment' ); ?></a>
+					</div>
 				</div>
 				<div class="services-item__image fade-in fade-in-delay-2">
 					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/smilers-aligners-at-dental-art-clinic-by-dr-maria-charalambous-ivanova.webp' ); ?>" alt="Preventative and Restorative Care" width="560" height="420">
