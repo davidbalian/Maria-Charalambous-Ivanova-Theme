@@ -71,7 +71,7 @@ Text Domain: maria-charalambous-ivanova
 
   /* Motion — shared easing for transitions (matches hero Ken Burns timing) */
   --mci-ease-standard: cubic-bezier(0.32, 0.15, 0, 1.01);
-  --mci-duration-btn: 0.18s;
+  --mci-duration-btn: 1s;
   --mci-duration-fade-in: 0.75s;
 }
 
