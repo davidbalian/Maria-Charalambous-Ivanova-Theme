@@ -1,18 +1,19 @@
 /*
  * Shared fade-in animations for scroll-triggered reveal.
  * Used across homepage and inner pages.
+ *
+ * Stagger uses --mci-fade-in-delay on opacity/transform only so hover paint
+ * (background, shadow, etc.) on buttons is never delayed by fade-in timing.
  */
-
-:root {
-  --transition-slow: 0.5s;
-}
 
 .fade-in {
   opacity: 0;
   transform: translateY(24px);
   transition:
-    opacity var(--transition-slow) var(--mci-ease-standard),
-    transform var(--transition-slow) var(--mci-ease-standard);
+    opacity var(--mci-duration-fade-in) var(--mci-ease-standard)
+      var(--mci-fade-in-delay, 0s),
+    transform var(--mci-duration-fade-in) var(--mci-ease-standard)
+      var(--mci-fade-in-delay, 0s);
 }
 
 .fade-in.visible {
@@ -21,65 +22,69 @@
 }
 
 /*
- * Buttons with .fade-in must animate opacity + translateY like every other element.
- * Do NOT narrow transition on .visible — that snaps opacity and reads “early” / harsh.
- * Keep short timings only for hover paint (background, shadow, filter).
+ * Buttons with .fade-in: long reveal only on opacity + translateY; interactive
+ * paint stays on --mci-duration-btn with no stagger delay.
  */
 .btn.fade-in {
   transition:
-    opacity var(--transition-slow) var(--mci-ease-standard),
-    transform var(--transition-slow) var(--mci-ease-standard),
+    opacity var(--mci-duration-fade-in) var(--mci-ease-standard)
+      var(--mci-fade-in-delay, 0s),
+    transform var(--mci-duration-fade-in) var(--mci-ease-standard)
+      var(--mci-fade-in-delay, 0s),
     filter var(--mci-duration-btn) var(--mci-ease-standard),
     background var(--mci-duration-btn) var(--mci-ease-standard),
-    box-shadow var(--mci-duration-btn) var(--mci-ease-standard);
+    box-shadow var(--mci-duration-btn) var(--mci-ease-standard),
+    color var(--mci-duration-btn) var(--mci-ease-standard);
 }
 
 .btn.fade-in:active {
   transform: scale(0.97);
   transition:
-    opacity var(--transition-slow) var(--mci-ease-standard),
+    opacity var(--mci-duration-fade-in) var(--mci-ease-standard)
+      var(--mci-fade-in-delay, 0s),
     transform var(--mci-duration-btn) var(--mci-ease-standard),
     filter var(--mci-duration-btn) var(--mci-ease-standard),
     background var(--mci-duration-btn) var(--mci-ease-standard),
-    box-shadow var(--mci-duration-btn) var(--mci-ease-standard);
+    box-shadow var(--mci-duration-btn) var(--mci-ease-standard),
+    color var(--mci-duration-btn) var(--mci-ease-standard);
 }
 
 .fade-in-delay-0 {
-  transition-delay: 0s;
+  --mci-fade-in-delay: 0s;
 }
 .fade-in-delay-1 {
-  transition-delay: 0.1s;
+  --mci-fade-in-delay: 0.1s;
 }
 .fade-in-delay-2 {
-  transition-delay: 0.2s;
+  --mci-fade-in-delay: 0.2s;
 }
 .fade-in-delay-3 {
-  transition-delay: 0.3s;
+  --mci-fade-in-delay: 0.3s;
 }
 .fade-in-delay-4 {
-  transition-delay: 0.4s;
+  --mci-fade-in-delay: 0.4s;
 }
 .fade-in-delay-5 {
-  transition-delay: 0.5s;
+  --mci-fade-in-delay: 0.5s;
 }
 .fade-in-delay-6 {
-  transition-delay: 0.6s;
+  --mci-fade-in-delay: 0.6s;
 }
 .fade-in-delay-7 {
-  transition-delay: 0.7s;
+  --mci-fade-in-delay: 0.7s;
 }
 .fade-in-delay-8 {
-  transition-delay: 0.8s;
+  --mci-fade-in-delay: 0.8s;
 }
 .fade-in-delay-9 {
-  transition-delay: 0.9s;
+  --mci-fade-in-delay: 0.9s;
 }
 .fade-in-delay-10 {
-  transition-delay: 1s;
+  --mci-fade-in-delay: 1s;
 }
 
 @media (max-width: 768px) {
   [class*="fade-in-delay-"] {
-    transition-delay: 0s !important;
+    --mci-fade-in-delay: 0s !important;
   }
 }
