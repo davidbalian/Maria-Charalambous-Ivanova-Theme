@@ -58,7 +58,10 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 0%, transparent 65%);
+  background:
+    radial-gradient(ellipse at top left,    rgba(0, 0, 0, 0.70) 0%, transparent 55%),
+    radial-gradient(ellipse at top right,   rgba(0, 0, 0, 0.55) 0%, transparent 55%),
+    radial-gradient(ellipse at bottom left, rgba(0, 0, 0, 0.70) 0%, transparent 55%);
   pointer-events: none;
   z-index: 1;
 }
@@ -179,6 +182,11 @@
 /* Text band below hero slider (same colors as former text column) */
 .home-hero__text-band .home-hero__title {
   color: var(--mci-color-text);
+}
+
+.home-hero__text-band .home-hero__title .accent-font {
+  color: #b0b8bc;
+  font-weight: 400;
 }
 
 .home-hero__text-band .home-hero__text {

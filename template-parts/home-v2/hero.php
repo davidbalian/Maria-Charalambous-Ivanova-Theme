@@ -39,33 +39,31 @@ if ( false ) :
 	<?php
 endif;
 
-$hero_slider_base_url = home_url( '/wp-content/uploads/2026/02/' );
-$hero_slider_images   = array(
-	'dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-wide-angle-equipment.avif' => 'Dental Art Clinic treatment room wide angle',
-	'dental-art-clinic-by-dr-maria-charalambous-ivanova-reception-lobby-clinic-name.avif' => 'Dental Art Clinic reception lobby',
-	'dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-dental-chair-screens.avif' => 'Dental Art Clinic treatment room dental chair',
-	'dental-art-clinic-by-dr-maria-charalambous-ivanova-waiting-room-marble-interior.avif' => 'Dental Art Clinic waiting room',
-	'dental-art-clinic-by-dr-maria-charalambous-ivanova-reception-area-marble-counter.avif' => 'Dental Art Clinic reception marble counter',
-	'dental-art-clinic-by-dr-maria-charalambous-ivanova-pink-flowers-clinic-logo.avif' => 'Dental Art Clinic pink flowers and logo',
-	'dental-art-clinic-by-dr-maria-charalambous-ivanova-circular-mirror-orchid-artwork-smile.avif' => 'Dental Art Clinic mirror and orchid',
-	'dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-tv-screen-dental-work.avif' => 'Dental Art Clinic treatment room TV',
+$hero_slider_images = array(
+	array(
+		'src' => '/wp-content/uploads/2026/02/dr-maria-charalambous-ivanova-portrait-05.webp',
+		'alt' => 'Dr. Maria Charalambous-Ivanova',
+	),
+	array(
+		'src' => '/wp-content/uploads/2026/02/dr-maria-charalambous-ivanova-portrait-06.webp',
+		'alt' => 'Dr. Maria Charalambous-Ivanova',
+	),
+	array(
+		'src' => '/wp-content/uploads/2026/04/dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-wide-angle-equipment.avif',
+		'alt' => 'Dental Art Clinic treatment room wide angle',
+	),
 );
-$hero_slider_keys = array_keys( $hero_slider_images );
-shuffle( $hero_slider_keys );
+shuffle( $hero_slider_images );
 ?>
 <section class="home-hero">
 	<div class="home-hero__slider-bleed">
 		<div class="home-hero__carousel js-home-hero-slick" aria-label="<?php echo esc_attr( mci_t( 'Clinic photos' ) ); ?>">
-			<?php foreach ( $hero_slider_keys as $hero_slide_index => $filename ) : ?>
-				<?php
-				$alt_text         = $hero_slider_images[ $filename ];
-				$hero_slider_item = $hero_slider_base_url . $filename;
-				$hero_img_loading = ( 0 === $hero_slide_index ) ? 'eager' : 'lazy';
-				?>
+			<?php foreach ( $hero_slider_images as $hero_slide_index => $hero_slide ) : ?>
+				<?php $hero_img_loading = ( 0 === $hero_slide_index ) ? 'eager' : 'lazy'; ?>
 				<div class="home-hero__slide">
 					<img
-						src="<?php echo esc_url( $hero_slider_item ); ?>"
-						alt="<?php echo esc_attr( $alt_text ); ?>"
+						src="<?php echo esc_url( home_url( $hero_slide['src'] ) ); ?>"
+						alt="<?php echo esc_attr( $hero_slide['alt'] ); ?>"
 						loading="<?php echo esc_attr( $hero_img_loading ); ?>"
 						decoding="async"
 					/>
