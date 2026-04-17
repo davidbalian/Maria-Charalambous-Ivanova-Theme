@@ -14,6 +14,14 @@
   height: 100%;
 }
 
+/* Smoother crossfade than Swiper default (pairs with speed in home-hero-slider.js). */
+.home-hero__carousel.swiper-fade .swiper-slide {
+  /* Swiper sets transition duration inline; keep curve smooth over that duration. */
+  transition-timing-function: ease-in-out !important;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
 .home-hero__slide {
   height: 100%;
   overflow: hidden;

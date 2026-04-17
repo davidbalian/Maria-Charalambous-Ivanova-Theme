@@ -56,14 +56,18 @@ shuffle( $hero_slider_images );
 		<div class="swiper home-hero__carousel js-home-hero-swiper" aria-label="<?php echo esc_attr( mci_t( 'Clinic photos' ) ); ?>">
 			<div class="swiper-wrapper">
 				<?php foreach ( $hero_slider_images as $hero_slide_index => $hero_slide ) : ?>
-					<?php $hero_img_loading = ( 0 === $hero_slide_index ) ? 'eager' : 'lazy'; ?>
+					<?php
+					// Both eager: native lazy-load was decoding mid-fade and looked abrupt.
+					$hero_fetch_priority = ( 0 === $hero_slide_index ) ? 'high' : 'low';
+					?>
 					<div class="swiper-slide">
 						<div class="home-hero__slide">
 							<img
 								src="<?php echo esc_url( home_url( $hero_slide['src'] ) ); ?>"
 								alt="<?php echo esc_attr( $hero_slide['alt'] ); ?>"
-								loading="<?php echo esc_attr( $hero_img_loading ); ?>"
+								loading="eager"
 								decoding="async"
+								fetchpriority="<?php echo esc_attr( $hero_fetch_priority ); ?>"
 							/>
 						</div>
 					</div>

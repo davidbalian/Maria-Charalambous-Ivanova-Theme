@@ -13,6 +13,12 @@ window.addEventListener('load', function () {
 
 	var kbClass = 'home-hero__kb--run';
 
+	root.querySelectorAll('.home-hero__slide img').forEach(function (img) {
+		if (typeof img.decode === 'function') {
+			img.decode().catch(function () {});
+		}
+	});
+
 	function refreshKenBurns() {
 		if (reduceMotion) {
 			return;
@@ -33,7 +39,7 @@ window.addEventListener('load', function () {
 		fadeEffect: { crossFade: true },
 		loop: true,
 		slidesPerView: 1,
-		speed: 800,
+		speed: 1300,
 		autoplay: reduceMotion
 			? false
 			: {
