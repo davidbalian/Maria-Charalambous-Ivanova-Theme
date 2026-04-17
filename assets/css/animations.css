@@ -29,19 +29,19 @@
   transition:
     opacity var(--transition-slow) var(--mci-ease-standard),
     transform var(--transition-slow) var(--mci-ease-standard),
-    filter 0.13s var(--mci-ease-standard),
-    background 0.13s var(--mci-ease-standard),
-    box-shadow 0.13s var(--mci-ease-standard);
+    filter 0.18s var(--mci-ease-standard),
+    background 0.18s var(--mci-ease-standard),
+    box-shadow 0.18s var(--mci-ease-standard);
 }
 
 .btn.fade-in:active {
   transform: scale(0.97);
   transition:
     opacity var(--transition-slow) var(--mci-ease-standard),
-    transform 0.13s var(--mci-ease-standard),
-    filter 0.13s var(--mci-ease-standard),
-    background 0.13s var(--mci-ease-standard),
-    box-shadow 0.13s var(--mci-ease-standard);
+    transform 0.18s var(--mci-ease-standard),
+    filter 0.18s var(--mci-ease-standard),
+    background 0.18s var(--mci-ease-standard),
+    box-shadow 0.18s var(--mci-ease-standard);
 }
 
 .fade-in-delay-0 {
