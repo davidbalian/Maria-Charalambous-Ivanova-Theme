@@ -19,8 +19,6 @@ get_header(); ?>
 
 	<?php get_template_part( 'template-parts/home-v2/benefits' ); ?>
 
-	<?php get_template_part( 'template-parts/home-v2/gentle-touch' ); ?>
-
 	<!-- Before & After -->
 	<section id="before-after" class="home-cases">
 		<div class="container">
@@ -41,6 +39,8 @@ get_header(); ?>
 			</div>
 		</div>
 	</section>
+
+	<?php get_template_part( 'template-parts/home-v2/gentle-touch' ); ?>
 
 	<!-- Existing Reviews -->
 	<section id="reviews" class="home-reviews">

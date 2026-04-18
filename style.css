@@ -63,7 +63,7 @@ Text Domain: maria-charalambous-ivanova
   --mci-spacing-xl: 48px;
   --mci-spacing-2xl: 64px;
   --mci-spacing-3xl: 96px;
-  --mci-services-row-max-width: var(--mci-container-width);
+  --mci-services-row-max-width: 1400px;
 
   /* Shadows */
   --mci-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
