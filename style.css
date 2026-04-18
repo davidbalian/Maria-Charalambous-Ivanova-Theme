@@ -2393,6 +2393,12 @@ hr {
   gap: var(--mci-spacing-md);
 }
 
+.services-page .services-list__grid {
+  width: 100%;
+  max-width: var(--mci-services-row-max-width);
+  margin-inline: auto;
+}
+
 .services-list__item {
   width: calc(25% - var(--mci-spacing-md) * 3 / 4);
   padding: var(--mci-spacing-lg) var(--mci-spacing-md);

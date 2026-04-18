@@ -524,6 +524,12 @@
   gap: 1rem;
 }
 
+.home-v2-comprehensive__services-grid {
+  width: 100%;
+  max-width: var(--mci-services-row-max-width);
+  margin-inline: auto;
+}
+
 .home-v2-comprehensive__cta {
   text-align: center;
   margin-top: var(--mci-spacing-xl);
