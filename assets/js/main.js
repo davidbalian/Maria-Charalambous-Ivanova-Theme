@@ -43,6 +43,42 @@
 	}, { passive: true });
 
 	updateParallax();
+
+	// Hero slider parallax — translateY on <img> elements (not bg-image sections)
+	var heroSliderBleed = document.querySelector('.home-hero__slider-bleed');
+	if (heroSliderBleed) {
+		var heroImgs = heroSliderBleed.querySelectorAll('.home-hero__slide img');
+		if (heroImgs.length) {
+			var heroHeight = heroSliderBleed.offsetHeight;
+			var heroMaxOffset = heroHeight * 0.25;
+			var heroTicking = false;
+
+			function updateHeroParallax() {
+				var scrollY = window.scrollY;
+				if (scrollY > heroHeight) {
+					heroTicking = false;
+					return;
+				}
+				var offset = Math.min(scrollY * 0.25, heroMaxOffset);
+				for (var j = 0; j < heroImgs.length; j++) {
+					heroImgs[j].style.transform = 'translateY(' + offset + 'px)';
+				}
+				heroTicking = false;
+			}
+
+			window.addEventListener('scroll', function () {
+				if (!heroTicking) {
+					requestAnimationFrame(updateHeroParallax);
+					heroTicking = true;
+				}
+			}, { passive: true });
+
+			window.addEventListener('resize', function () {
+				heroHeight = heroSliderBleed.offsetHeight;
+				heroMaxOffset = heroHeight * 0.25;
+			}, { passive: true });
+		}
+	}
 })();
 
 document.addEventListener('DOMContentLoaded', function () {

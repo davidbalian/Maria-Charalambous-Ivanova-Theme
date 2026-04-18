@@ -92,6 +92,26 @@
   height: 100%;
 }
 
+/* Parallax: slide and img setup — img is 150% tall, centered (-25% top offset),
+   giving 25% headroom on each side for the JS translateY shift */
+.home-hero__slide {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.home-hero__slide img {
+  position: absolute;
+  left: 0;
+  top: -25%;
+  width: 100%;
+  height: 150%;
+  object-fit: cover;
+  object-position: center;
+  will-change: transform;
+}
+
 .home-hero__bottom {
   flex-shrink: 0;
   display: flex;
