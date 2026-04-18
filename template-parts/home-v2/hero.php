@@ -45,8 +45,8 @@ $hero_slider_images = array(
 		'alt' => 'Dr. Maria Charalambous-Ivanova',
 	),
 	array(
-		'src' => '/wp-content/uploads/2026/04/dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-wide-angle-equipment-1.webp',
-		'alt' => 'Dental Art Clinic treatment room wide angle',
+		'src' => '/wp-content/uploads/2026/04/porcelain-crowns-dental-lab-arch-view-dental-art-clinic-dr-maria-charalambous-ivanova-scaled.webp',
+		'alt' => 'Porcelain crowns dental lab arch view at Dental Art Clinic',
 	),
 );
 ?>
