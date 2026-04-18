@@ -5,6 +5,7 @@
 
 :root {
   --mci-header-height: 4rem;
+  --mci-home-v2-smilers-max-width: 1200px;
 }
 
 /* Preserve staggered fade-in for Why Choose Our Dental Clinic cards on mobile */
@@ -509,6 +510,9 @@
 .home-v2-comprehensive__smilers {
   background: transparent;
   margin-bottom: var(--mci-spacing-2xl);
+  width: 100%;
+  max-width: var(--mci-home-v2-smilers-max-width);
+  margin-inline: auto;
 }
 
 /* Homepage Smilers desktop ratio: text 70% / image 30% */

@@ -10,7 +10,7 @@ get_header();
 $clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
 ?>
 
-<main id="main" class="site-main">
+<main id="main" class="site-main services-page">
 
 	<!-- Hero with background image -->
 	<section class="services-hero" style="background-image: url('<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-dental-chair-screens.avif' ); ?>');">
