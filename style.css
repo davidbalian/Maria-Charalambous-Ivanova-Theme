@@ -63,7 +63,7 @@ Text Domain: maria-charalambous-ivanova
   --mci-spacing-xl: 48px;
   --mci-spacing-2xl: 64px;
   --mci-spacing-3xl: 96px;
-  --mci-services-row-max-width: 1000px;
+  --mci-services-row-max-width: var(--mci-container-width);
 
   /* Shadows */
   --mci-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
@@ -1379,7 +1379,7 @@ hr {
 .privacy-hero__subtitle {
   font-size: 1.125rem;
   color: rgba(255, 255, 255, 0.85);
-  max-width: 40ch;
+  max-width: 42ch;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.5;
@@ -1933,7 +1933,7 @@ hr {
 .page-hero__subtitle {
   font-size: 1.2rem;
   color: var(--mci-color-text-light);
-  max-width: 40ch;
+  max-width: 42ch;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.5;
@@ -2013,7 +2013,7 @@ hr {
 .about-hero__subtitle {
   font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.85);
-  max-width: 40ch;
+  max-width: 42ch;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.5;
@@ -2324,7 +2324,7 @@ hr {
 .services-hero__subtitle {
   font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.85);
-  max-width: 40ch;
+  max-width: 42ch;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.5;
@@ -2556,7 +2556,7 @@ hr {
 .contact-hero__subtitle {
   font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.85);
-  max-width: 40ch;
+  max-width: 42ch;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.5;
@@ -2729,7 +2729,7 @@ hr {
 .gallery-hero__subtitle {
   font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.85);
-  max-width: 40ch;
+  max-width: 42ch;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.5;
