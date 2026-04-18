@@ -539,9 +539,9 @@
   margin-inline: auto;
 }
 
-/* Homepage Smilers desktop ratio: text 70% / image 30% */
+/* Homepage Smilers desktop ratio: text 60% / image 40% */
 .home-v2-comprehensive__smilers .services-item__grid {
-  grid-template-columns: 7fr 3fr;
+  grid-template-columns: 6fr 4fr;
 }
 
 .home-v2-comprehensive .services-list__grid {
