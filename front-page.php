@@ -37,7 +37,7 @@ get_header(); ?>
 					<img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-1.jpg.webp' ) ); ?>" alt="Before and after at Dental Art Clinic" width="400" height="400" loading="lazy">
 				</div>
 				<div class="home-cases__item fade-in fade-in-delay-2">
-					<img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-2-e1771955301824.webp' ) ); ?>" alt="Before and after at Dental Art Clinic" width="400" height="400" loading="lazy">
+					<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/04/dental-implants-bridge-before-after-missing-teeth-dental-art-clinic-dr-maria-charalambous-ivanova-scaled.webp" alt="Before and after at Dental Art Clinic" width="400" height="400" loading="lazy">
 				</div>
 				<div class="home-cases__item fade-in fade-in-delay-3">
 					<img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/02/before-and-after-at-dental-art-clinic-limassol-e1771955250456.webp' ) ); ?>" alt="Before and after at Dental Art Clinic" width="400" height="400" loading="lazy">

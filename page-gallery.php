@@ -36,8 +36,8 @@ $theme_image_base  = get_template_directory_uri() . '/assets/images/';
 				<a href="<?php echo esc_url( $theme_image_base . 'before-and-after-at-dental-art-clinic-limassol-1.jpg.webp' ); ?>" class="gallery-grid__item fade-in">
 					<img src="<?php echo esc_url( $theme_image_base . 'before-and-after-at-dental-art-clinic-limassol-1.jpg.webp' ); ?>" alt="Before and after smile transformation" width="400" height="300" loading="lazy">
 				</a>
-				<a href="<?php echo esc_url( $theme_image_base . 'before-and-after-at-dental-art-clinic-limassol-2.webp' ); ?>" class="gallery-grid__item fade-in">
-					<img src="<?php echo esc_url( $theme_image_base . 'before-and-after-at-dental-art-clinic-limassol-2.webp' ); ?>" alt="Before and after smile transformation" width="400" height="300" loading="lazy">
+				<a href="http://davidb1646.sg-host.com/wp-content/uploads/2026/04/dental-implants-bridge-before-after-missing-teeth-dental-art-clinic-dr-maria-charalambous-ivanova-scaled.webp" class="gallery-grid__item fade-in">
+					<img src="http://davidb1646.sg-host.com/wp-content/uploads/2026/04/dental-implants-bridge-before-after-missing-teeth-dental-art-clinic-dr-maria-charalambous-ivanova-scaled.webp" alt="Before and after smile transformation" width="400" height="300" loading="lazy">
 				</a>
 			</div>
 		</div>
