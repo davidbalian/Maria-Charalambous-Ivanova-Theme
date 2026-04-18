@@ -2067,6 +2067,7 @@ hr {
 
 .about-doctor__image img {
   width: 100%;
+  aspect-ratio: 1 / 1;
   border-radius: var(--mci-radius-lg);
   object-fit: cover;
 }
