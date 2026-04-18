@@ -1036,6 +1036,11 @@
 
   .home .home-hero__bottom {
     padding: var(--mci-spacing-lg) 0 var(--mci-spacing-sm);
+    justify-content: flex-end;
+  }
+
+  .home .home-hero__scroll-down {
+    display: none;
   }
 
   .home .home-hero__title {
