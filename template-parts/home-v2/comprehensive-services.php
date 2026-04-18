@@ -13,7 +13,7 @@ $stagger_delays = array( 2, 3, 4, 5 );
 <section id="comprehensive-dental-care" class="home-v2-comprehensive">
 	<div class="container">
 		<h2 class="home-v2-comprehensive__title fade-in fade-in-delay-0"><?php echo mci_t_accent( 'Comprehensive Dental Care for {accent}Every Need{/accent}' ); ?></h2>
-		<p class="home-v2-comprehensive__subtitle fade-in fade-in-delay-1"><?php mci_te( 'We are committed to high-quality dental care in a comfortable, welcoming environment, helping patients maintain excellent oral health while enhancing the beauty and function of their smile.' ); ?></p>
+		<p class="home-v2-comprehensive__subtitle fade-in fade-in-delay-1"><?php mci_te( 'High-quality dental care in a welcoming environment — helping patients maintain oral health while enhancing their smile.' ); ?></p>
 
 		<!-- Smilers Aligners (same content as services page; transparent, constrained to .container) -->
 		<div class="home-v2-comprehensive__smilers">
@@ -21,8 +21,8 @@ $stagger_delays = array( 2, 3, 4, 5 );
 				<div class="services-item__content">
 					<span class="badge badge-gold fade-in fade-in-delay-0"><?php mci_te( 'Orthodontics' ); ?></span>
 					<h2 class="fade-in fade-in-delay-1"><?php mci_te( 'Smilers Aligners' ); ?></h2>
-					<p class="fade-in fade-in-delay-2"><?php mci_te( 'Discreet and durable aligners built for modern lifestyles — Smilers offer a virtually invisible way to straighten your teeth and correct your bite, without the look or feel of traditional braces.' ); ?></p>
-					<p class="fade-in fade-in-delay-3"><?php mci_te( 'Correct your smile invisibly — Smilers Aligners let you go about your day with complete confidence while your teeth gently move into place.' ); ?></p>
+					<p class="fade-in fade-in-delay-2"><?php mci_te( 'Discreet, durable aligners for modern lifestyles — a virtually invisible way to straighten teeth and correct your bite.' ); ?></p>
+					<p class="fade-in fade-in-delay-3"><?php mci_te( 'Correct your smile invisibly — Smilers let you go about your day with confidence while your teeth gently shift into place.' ); ?></p>
 					<div class="fade-in fade-in-delay-4">
 						<a href="<?php echo esc_url( mci_whatsapp_chat_url() ); ?>" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><?php mci_te( 'Book Appointment' ); ?></a>
 					</div>

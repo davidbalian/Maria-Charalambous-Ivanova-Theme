@@ -36,8 +36,8 @@ return array(
 	   Welcome Section
 	   ===================================================================== */
 	'Welcome to Our Dental Clinic'            => 'Καλώς Ήρθατε στο Οδοντιατρείο μας',
-	'At our dental clinic, your oral health and smile are our top priorities. We provide high-quality care in a modern, comfortable environment.' => 'Στο οδοντιατρείο μας, η στοματική σας υγεία και το χαμόγελό σας αποτελούν τις κορυφαίες προτεραιότητές μας. Παρέχουμε υψηλής ποιότητας φροντίδα σε σύγχρονο, άνετο περιβάλλον.',
-	'From preventive care and routine check-ups to advanced restorative and cosmetic procedures, we use modern technology to deliver safe, effective, and personalized treatment for every patient.' => 'Από προληπτική φροντίδα και τακτικούς ελέγχους έως προηγμένες επανορθωτικές και αισθητικές διαδικασίες, χρησιμοποιούμε σύγχρονη τεχνολογία για ασφαλή, αποτελεσματική και εξατομικευμένη θεραπεία κάθε ασθενή.',
+	'Your oral health and smile are our top priorities — high-quality care in a modern, comfortable environment.' => 'Η στοματική σας υγεία και το χαμόγελό σας είναι προτεραιότητά μας. Υψηλής ποιότητας φροντίδα σε σύγχρονο, άνετο περιβάλλον.',
+	'From routine check-ups to advanced restorative and cosmetic procedures, we use modern technology for safe, personalized care.' => 'Από ελέγχους έως επανορθωτικές και αισθητικές διαδικασίες, με σύγχρονη τεχνολογία για ασφαλή, εξατομικευμένη φροντίδα.',
 	'Our goal goes beyond treating dental problems — we help patients maintain long-term oral health and confidence in their smile.' => 'Ο στόχος μας ξεπερνά τη θεραπεία προβλημάτων — βοηθάμε τους ασθενείς να διατηρήσουν μακροπρόθεσμη στοματική υγεία και αυτοπεποίθηση στο χαμόγελό τους.',
 	'Whether you need a routine exam, aesthetic treatment, or emergency care, our team is here with professionalism and care.' => 'Είτε χρειάζεστε τακτικό έλεγχο, αισθητική θεραπεία ή επείγουσα φροντίδα, η ομάδα μας είναι εδώ με επαγγελματισμό και φροντίδα.',
 
@@ -70,15 +70,15 @@ return array(
 	   Comprehensive Services
 	   ===================================================================== */
 	'Comprehensive Dental Care for {accent}Every Need{/accent}' => 'Ολοκληρωμένη Οδοντιατρική Φροντίδα για {accent}Κάθε Ανάγκη{/accent}',
-	'We are committed to high-quality dental care in a comfortable, welcoming environment, helping patients maintain excellent oral health while enhancing the beauty and function of their smile.' => 'Δεσμευόμαστε για υψηλής ποιότητας οδοντιατρική φροντίδα σε άνετο, φιλόξενο περιβάλλον, βοηθώντας τους ασθενείς να διατηρήσουν άριστη στοματική υγεία ενισχύοντας την ομορφιά και τη λειτουργία του χαμόγελού τους.',
+	'High-quality dental care in a welcoming environment — helping patients maintain oral health while enhancing their smile.' => 'Υψηλής ποιότητας οδοντιατρική φροντίδα σε φιλόξενο περιβάλλον — διατήρηση στοματικής υγείας και ενίσχυση του χαμόγελου.',
 
 	/* =====================================================================
 	   Doctor
 	   ===================================================================== */
 	'Dr. Maria Charalambous-Ivanova'          => 'Δρ. Μαρία Χαραλάμπους-Ιβάνοβα',
 	'DMD, MSD | Founder &amp; Clinical Director' => 'DMD, MSD | Ιδρύτρια &amp; Κλινική Διευθύντρια',
-	'Dr. Maria Charalambous-Ivanova graduated from the University of Sofia in 2007 and has practiced since 2008. Through ongoing participation in international congresses and advanced training, she remains at the forefront of modern dental techniques.' => 'Η Δρ. Μαρία Χαραλάμπους-Ιβάνοβα αποφοίτησε από το Πανεπιστήμιο της Σόφιας το 2007 και ασκεί το επάγγελμα από το 2008. Μέσω συνεχούς συμμετοχής σε διεθνή συνέδρια και προηγμένα εκπαιδευτικά προγράμματα, παραμένει στην πρώτη γραμμή των σύγχρονων οδοντιατρικών τεχνικών.',
-	'Composite and Emax veneers form the foundation of her aesthetic philosophy. She also undertakes complex full mouth rehabilitation cases requiring functional analysis, precise diagnosis, and structured treatment planning.' => 'Σύνθετες και Emax όψεις αποτελούν τη βάση της αισθητικής της φιλοσοφίας. Αναλαμβάνει επίσης σύνθετη πλήρη αποκατάσταση στόματος που απαιτεί λειτουργική ανάλυση, ακριβή διάγνωση και δομημένο θεραπευτικό σχεδιασμό.',
+	'Graduated University of Sofia (2007), practicing since 2008. Continually advances through international congresses and training.' => 'Απόφοιτος Πανεπιστημίου Σόφιας (2007), ασκεί επάγγελμα από το 2008. Εξελίσσεται μέσω διεθνών συνεδρίων και εκπαίδευσης.',
+	'Composite and Emax veneers anchor her aesthetic philosophy. She also handles complex full mouth rehabilitation cases.' => 'Όψεις composite και Emax είναι η βάση της αισθητικής της φιλοσοφίας. Αναλαμβάνει επίσης σύνθετες πλήρεις αποκαταστάσεις στόματος.',
 	'Scientific precision'                    => 'Επιστημονική ακρίβεια',
 	'Strategic treatment planning'            => 'Στρατηγικός θεραπευτικός σχεδιασμός',
 	'Pain-free experience'                    => 'Ανώδυνη εμπειρία',
@@ -114,8 +114,8 @@ return array(
 	   Consultation
 	   ===================================================================== */
 	'Ready to Transform Your Smile?'          => 'Έτοιμοι να Μεταμορφώσετε το Χαμόγελό σας;',
-	'Consult Dr. Maria Charalambous-Ivanova and discover how scientific precision and aesthetic harmony can create the smile you\'ve always wanted.' => 'Συμβουλευτείτε τη Δρ. Μαρία Χαραλάμπους-Ιβάνοβα και ανακαλύψτε πώς η επιστημονική ακρίβεια και η αισθητική αρμονία μπορούν να δημιουργήσουν το χαμόγελο που πάντα θέλατε.',
-	'Every case is individual — no standardized solutions, only the right approach for each patient, always focused on long-term health, proper function, and aesthetic balance.' => 'Κάθε περιστατικό είναι μοναδικό — χωρίς τυποποιημένες λύσεις, μόνο η σωστή προσέγγιση για κάθε ασθενή, με εστίαση στη μακροπρόθεσμη υγεία, τη λειτουργία και την αισθητική ισορροπία.',
+	'Consult Dr. Maria and see how scientific precision and aesthetic harmony create the smile you\'ve always wanted.' => 'Συμβουλευτείτε τη Δρ. Μαρία και δείτε πώς η επιστημονική ακρίβεια και η αισθητική αρμονία δημιουργούν το χαμόγελο που θέλατε.',
+	'Every case is individual — the right approach for each patient, focused on long-term health, function, and aesthetic balance.' => 'Κάθε περιστατικό είναι μοναδικό — η σωστή προσέγγιση για κάθε ασθενή, με εστίαση σε υγεία, λειτουργία και αισθητική.',
 	'Full Name'                               => 'Ονοματεπώνυμο',
 	'Message'                                 => 'Μήνυμα',
 	'Tell us about your smile goals...'       => 'Πείτε μας για τους στόχους σας σχετικά με το χαμόγελό σας...',
@@ -140,7 +140,7 @@ return array(
 	   11 Services (mci_get_services_data)
 	   ===================================================================== */
 	'General Dental Examination & Prevention'  => 'Γενική Οδοντιατρική Εξέταση & Πρόληψη',
-	'Regular check-ups help detect problems early and maintain optimal oral health through preventive care and professional advice.' => 'Οι τακτικοί έλεγχοι βοηθούν στην έγκαιρη ανίχνευση προβλημάτων και στη διατήρηση βέλτιστης στοματικής υγείας μέσω προληπτικής φροντίδας και επαγγελματικών συμβουλών.',
+	'Regular check-ups help detect problems early and maintain optimal oral health through preventive care and professional advice.' => 'Τακτικοί έλεγχοι για έγκαιρη ανίχνευση προβλημάτων και διατήρηση στοματικής υγείας μέσω πρόληψης και συμβουλών.',
 	'Professional Teeth Cleaning'             => 'Επαγγελματικός Καθαρισμός Δοντιών',
 	'Removes plaque, tartar, and stains to promote healthy gums and a brighter smile.' => 'Αφαίρεση πλάκας, τρυγίας και λεκέδων για την προαγωγή υγιών ούλων και ενός πιο λαμπερού χαμόγελου.',
 	'Dental Fillings'                         => 'Οδοντικά Σφραγίσματα',
@@ -183,8 +183,8 @@ return array(
 	'Explore All Our Services'                => 'Εξερευνήστε Όλες τις Υπηρεσίες μας',
 	'Orthodontics'                            => 'Ορθοδοντική',
 	'Smilers Aligners'                        => 'Smilers Aligners',
-	'Discreet and durable aligners built for modern lifestyles — Smilers offer a virtually invisible way to straighten your teeth and correct your bite, without the look or feel of traditional braces.' => 'Διακριτικοί και ανθεκτικοί νάρθηκες για τον σύγχρονο τρόπο ζωής — οι Smilers προσφέρουν σχεδόν αόρατη ευθυγράμμιση δοντιών και διόρθωση σύγκλεισης, χωρίς την εμφάνιση ή αίσθηση παραδοσιακών σιδεράκιων.',
-	'Correct your smile invisibly — Smilers Aligners let you go about your day with complete confidence while your teeth gently move into place.' => 'Διορθώστε το χαμόγελό σας αθόρυβα — οι Smilers Aligners σάς επιτρέπουν να συνεχίσετε τη μέρα σας με απόλυτη αυτοπεποίθηση ενώ τα δόντια σας μετακινούνται ήπια στη σωστή θέση.',
+	'Discreet, durable aligners for modern lifestyles — a virtually invisible way to straighten teeth and correct your bite.' => 'Διακριτικοί, ανθεκτικοί νάρθηκες για σύγχρονο τρόπο ζωής — σχεδόν αόρατη ευθυγράμμιση δοντιών και διόρθωση σύγκλεισης.',
+	'Correct your smile invisibly — Smilers let you go about your day with confidence while your teeth gently shift into place.' => 'Διορθώστε το χαμόγελο αθόρυβα — οι Smilers σάς αφήνουν να συνεχίσετε με αυτοπεποίθηση ενώ τα δόντια μετακινούνται ήπια.',
 	'Aesthetic Dentistry'                     => 'Αισθητική Οδοντιατρική',
 	'One-Visit Transformations'               => 'Μεταμορφώσεις σε Μία Επίσκεψη',
 	'Using advanced materials and techniques, Dr. Maria can dramatically enhance your smile in a single appointment — creating a "Masterpiece" result you will love from day one.' => 'Χρησιμοποιώντας προηγμένα υλικά και τεχνικές, η Δρ. Μαρία μπορεί να αναβαθμίσει εντυπωσιακά το χαμόγελό σας σε ένα μόνο ραντεβού — δημιουργώντας ένα αποτέλεσμα «Αριστούργημα» που θα αγαπήσετε από την πρώτη μέρα.',

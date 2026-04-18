@@ -5,8 +5,8 @@
 		<div class="home-v2-consultation__grid">
 			<div class="home-v2-consultation__info fade-in fade-in-delay-0">
 				<h2><?php mci_te( 'Ready to Transform Your Smile?' ); ?></h2>
-				<p><?php mci_te( 'Consult Dr. Maria Charalambous-Ivanova and discover how scientific precision and aesthetic harmony can create the smile you\'ve always wanted.' ); ?></p>
-				<p><?php mci_te( 'Every case is individual — no standardized solutions, only the right approach for each patient, always focused on long-term health, proper function, and aesthetic balance.' ); ?></p>
+				<p><?php mci_te( 'Consult Dr. Maria and see how scientific precision and aesthetic harmony create the smile you\'ve always wanted.' ); ?></p>
+				<p><?php mci_te( 'Every case is individual — the right approach for each patient, focused on long-term health, function, and aesthetic balance.' ); ?></p>
 			</div>
 			<div class="home-v2-consultation__form fade-in fade-in-delay-1">
 				<h3><?php mci_te( 'Send Message' ); ?></h3>

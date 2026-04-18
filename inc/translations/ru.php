@@ -36,8 +36,8 @@ return array(
 	   Welcome Section
 	   ===================================================================== */
 	'Welcome to Our Dental Clinic'            => 'Добро пожаловать в нашу стоматологическую клинику',
-	'At our dental clinic, your oral health and smile are our top priorities. We provide high-quality care in a modern, comfortable environment.' => 'В нашей клинике здоровье полости рта и красота улыбки — наш главный приоритет. Мы оказываем высококачественную помощь в современной, комфортной обстановке.',
-	'From preventive care and routine check-ups to advanced restorative and cosmetic procedures, we use modern technology to deliver safe, effective, and personalized treatment for every patient.' => 'От профилактики и плановых осмотров до сложных реставрационных и косметических процедур — используя современные технологии, мы гарантируем безопасное, эффективное и индивидуальное лечение для каждого пациента.',
+	'Your oral health and smile are our top priorities — high-quality care in a modern, comfortable environment.' => 'Здоровье полости рта и красота улыбки — наш приоритет. Высококачественная помощь в современной, комфортной обстановке.',
+	'From routine check-ups to advanced restorative and cosmetic procedures, we use modern technology for safe, personalized care.' => 'От осмотров до сложных реставраций и косметических процедур — современные технологии для безопасного, индивидуального лечения.',
 	'Our goal goes beyond treating dental problems — we help patients maintain long-term oral health and confidence in their smile.' => 'Наша цель выходит за рамки лечения — мы помогаем пациентам поддерживать долгосрочное здоровье полости рта и уверенность в своей улыбке.',
 	'Whether you need a routine exam, aesthetic treatment, or emergency care, our team is here with professionalism and care.' => 'Плановый осмотр, эстетическое лечение или экстренная помощь — наша команда здесь с профессионализмом и заботой.',
 
@@ -70,15 +70,15 @@ return array(
 	   Comprehensive Services
 	   ===================================================================== */
 	'Comprehensive Dental Care for {accent}Every Need{/accent}' => 'Комплексная стоматологическая помощь для {accent}любых потребностей{/accent}',
-	'We are committed to high-quality dental care in a comfortable, welcoming environment, helping patients maintain excellent oral health while enhancing the beauty and function of their smile.' => 'Мы стремимся оказывать высококачественную помощь в комфортной, гостеприимной обстановке, помогая пациентам поддерживать отличное здоровье полости рта и улучшая красоту и функциональность их улыбки.',
+	'High-quality dental care in a welcoming environment — helping patients maintain oral health while enhancing their smile.' => 'Высококачественная помощь в гостеприимной обстановке — поддержка здоровья полости рта и улучшение красоты улыбки.',
 
 	/* =====================================================================
 	   Doctor
 	   ===================================================================== */
 	'Dr. Maria Charalambous-Ivanova'          => 'Др. Мария Харалампус-Иванова',
 	'DMD, MSD | Founder &amp; Clinical Director' => 'DMD, MSD | Основатель и клинический директор',
-	'Dr. Maria Charalambous-Ivanova graduated from the University of Sofia in 2007 and has practiced since 2008. Through ongoing participation in international congresses and advanced training, she remains at the forefront of modern dental techniques.' => 'Др. Мария Харалампус-Иванова окончила Софийский университет в 2007 году и ведёт практику с 2008 года. Благодаря постоянному участию в международных конгрессах и программах повышения квалификации она остаётся в авангарде современных стоматологических методик.',
-	'Composite and Emax veneers form the foundation of her aesthetic philosophy. She also undertakes complex full mouth rehabilitation cases requiring functional analysis, precise diagnosis, and structured treatment planning.' => 'Композитные виниры и виниры Emax — основа её эстетической философии. Она также берётся за сложную полную реабилитацию полости рта, требующую функционального анализа, точной диагностики и структурированного плана лечения.',
+	'Graduated University of Sofia (2007), practicing since 2008. Continually advances through international congresses and training.' => 'Выпускница Софийского университета (2007), практикует с 2008 года. Постоянно совершенствуется на международных конгрессах.',
+	'Composite and Emax veneers anchor her aesthetic philosophy. She also handles complex full mouth rehabilitation cases.' => 'Композитные и Emax виниры — основа её эстетической философии. Также берётся за сложные случаи полной реабилитации полости рта.',
 	'Scientific precision'                    => 'Научная точность',
 	'Strategic treatment planning'            => 'Стратегическое планирование лечения',
 	'Pain-free experience'                    => 'Безболезненное лечение',
@@ -114,8 +114,8 @@ return array(
 	   Consultation
 	   ===================================================================== */
 	'Ready to Transform Your Smile?'          => 'Готовы преобразить свою улыбку?',
-	'Consult Dr. Maria Charalambous-Ivanova and discover how scientific precision and aesthetic harmony can create the smile you\'ve always wanted.' => 'Проконсультируйтесь с Др. Марией Харалампус-Ивановой и узнайте, как научная точность и эстетическая гармония могут создать улыбку, о которой Вы всегда мечтали.',
-	'Every case is individual — no standardized solutions, only the right approach for each patient, always focused on long-term health, proper function, and aesthetic balance.' => 'Каждый случай индивидуален — никаких шаблонных решений, только правильный подход для каждого пациента, всегда с акцентом на долгосрочное здоровье, правильную функцию и эстетический баланс.',
+	'Consult Dr. Maria and see how scientific precision and aesthetic harmony create the smile you\'ve always wanted.' => 'Проконсультируйтесь с Др. Марией и узнайте, как научная точность и эстетическая гармония создают улыбку, о которой Вы мечтали.',
+	'Every case is individual — the right approach for each patient, focused on long-term health, function, and aesthetic balance.' => 'Каждый случай индивидуален — правильный подход для каждого пациента, с акцентом на здоровье, функцию и эстетический баланс.',
 	'Full Name'                               => 'Полное имя',
 	'Message'                                 => 'Сообщение',
 	'Tell us about your smile goals...'       => 'Расскажите нам о Ваших пожеланиях к улыбке...',
@@ -140,7 +140,7 @@ return array(
 	   11 Services (mci_get_services_data)
 	   ===================================================================== */
 	'General Dental Examination & Prevention' => 'Общий стоматологический осмотр и профилактика',
-	'Regular check-ups help detect problems early and maintain optimal oral health through preventive care and professional advice.' => 'Регулярные осмотры помогают своевременно выявлять проблемы и поддерживать оптимальное здоровье полости рта с помощью профилактики и профессиональных рекомендаций.',
+	'Regular check-ups help detect problems early and maintain optimal oral health through preventive care and professional advice.' => 'Регулярные осмотры — раннее выявление проблем и поддержание здоровья полости рта через профилактику и рекомендации.',
 	'Professional Teeth Cleaning'             => 'Профессиональная чистка зубов',
 	'Removes plaque, tartar, and stains to promote healthy gums and a brighter smile.' => 'Удаление зубного налёта, зубного камня и пигментации для здоровья дёсен и более яркой улыбки.',
 	'Dental Fillings'                         => 'Пломбирование зубов',
@@ -183,8 +183,8 @@ return array(
 	'Explore All Our Services'                => 'Ознакомьтесь со всеми нашими услугами',
 	'Orthodontics'                            => 'Ортодонтия',
 	'Smilers Aligners'                        => 'Элайнеры Smilers',
-	'Discreet and durable aligners built for modern lifestyles — Smilers offer a virtually invisible way to straighten your teeth and correct your bite, without the look or feel of traditional braces.' => 'Незаметные и прочные элайнеры для современного образа жизни — Smilers предлагают практически невидимый способ выровнять зубы и исправить прикус, без внешнего вида и ощущений традиционных брекетов.',
-	'Correct your smile invisibly — Smilers Aligners let you go about your day with complete confidence while your teeth gently move into place.' => 'Корректируйте улыбку незаметно — элайнеры Smilers позволяют Вам уверенно проводить день, пока зубы мягко перемещаются в правильное положение.',
+	'Discreet, durable aligners for modern lifestyles — a virtually invisible way to straighten teeth and correct your bite.' => 'Незаметные, прочные элайнеры для современной жизни — практически невидимый способ выровнять зубы и исправить прикус.',
+	'Correct your smile invisibly — Smilers let you go about your day with confidence while your teeth gently shift into place.' => 'Корректируйте улыбку незаметно — Smilers позволяют уверенно проводить день, пока зубы мягко перемещаются на место.',
 	'Aesthetic Dentistry'                     => 'Эстетическая стоматология',
 	'One-Visit Transformations'               => 'Преображение за один визит',
 	'Using advanced materials and techniques, Dr. Maria can dramatically enhance your smile in a single appointment — creating a "Masterpiece" result you will love from day one.' => 'Используя передовые материалы и методики, Др. Мария может кардинально преобразить Вашу улыбку за один приём, создавая результат-«шедевр», который порадует Вас с первого дня.',

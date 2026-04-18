@@ -7,8 +7,8 @@
 			</div>
 			<div class="home-v2-welcome__content fade-in fade-in-delay-2">
 				<h2 class="home-v2-welcome__title fade-in fade-in-delay-0"><?php mci_te( 'Welcome to Our Dental Clinic' ); ?></h2>
-				<p><?php mci_te( 'At our dental clinic, your oral health and smile are our top priorities. We provide high-quality care in a modern, comfortable environment.' ); ?></p>
-				<p><?php mci_te( 'From preventive care and routine check-ups to advanced restorative and cosmetic procedures, we use modern technology to deliver safe, effective, and personalized treatment for every patient.' ); ?></p>
+				<p><?php mci_te( 'Your oral health and smile are our top priorities — high-quality care in a modern, comfortable environment.' ); ?></p>
+				<p><?php mci_te( 'From routine check-ups to advanced restorative and cosmetic procedures, we use modern technology for safe, personalized care.' ); ?></p>
 				<p><?php mci_te( 'Our goal goes beyond treating dental problems — we help patients maintain long-term oral health and confidence in their smile.' ); ?></p>
 				<p><?php mci_te( 'Whether you need a routine exam, aesthetic treatment, or emergency care, our team is here with professionalism and care.' ); ?></p>
 			</div>
