@@ -5,7 +5,7 @@
 
 :root {
   --mci-header-height: 4rem;
-  --mci-home-v2-smilers-max-width: 1200px;
+  --mci-home-v2-smilers-max-width: 1000px;
 }
 
 /* Preserve staggered fade-in for Why Choose Our Dental Clinic cards on mobile */

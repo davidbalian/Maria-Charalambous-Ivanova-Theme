@@ -63,7 +63,7 @@ Text Domain: maria-charalambous-ivanova
   --mci-spacing-xl: 48px;
   --mci-spacing-2xl: 64px;
   --mci-spacing-3xl: 96px;
-  --mci-services-row-max-width: 1200px;
+  --mci-services-row-max-width: 1000px;
 
   /* Shadows */
   --mci-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
@@ -2440,6 +2440,23 @@ hr {
 @media (min-width: 769px) {
   .services-page .services-item__grid {
     grid-template-columns: 7fr 3fr;
+  }
+
+  /* Keep 7fr = text, 3fr = image even when --reverse uses order to swap visual flow */
+  .services-page .services-item__content {
+    grid-column: 1;
+  }
+
+  .services-page .services-item__image {
+    grid-column: 2;
+  }
+
+  .services-page .services-item--reverse .services-item__content {
+    grid-column: 2;
+  }
+
+  .services-page .services-item--reverse .services-item__image {
+    grid-column: 1;
   }
 }
 
