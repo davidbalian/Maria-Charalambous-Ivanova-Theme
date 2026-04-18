@@ -2475,7 +2475,7 @@ hr {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--mci-spacing-2xl);
-  align-items: center;
+  align-items: start;
 }
 
 .services-item--reverse .services-item__content {
