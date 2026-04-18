@@ -67,6 +67,7 @@ $hero_slider_images = array(
 								loading="eager"
 								decoding="async"
 								fetchpriority="<?php echo esc_attr( $hero_fetch_priority ); ?>"
+								<?php if ( 0 === $hero_slide_index ) : ?>style="object-position: 30% center;"<?php endif; ?>
 							/>
 						</div>
 					</div>
