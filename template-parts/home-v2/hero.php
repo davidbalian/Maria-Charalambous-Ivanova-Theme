@@ -19,7 +19,7 @@ if ( false ) :
 			<div class="home-hero__inner">
 				<div class="home-hero__content">
 					<h1 class="home-hero__title fade-in fade-in-delay-0"><?php echo mci_t_accent( 'Beautiful Smiles {accent}Start Here{/accent}' ); ?></h1>
-					<p class="home-hero__text fade-in fade-in-delay-1"><?php mci_te( 'Professional dental care with modern technology, personalized treatment, and a focus on long-term oral health.' ); ?></p>
+					<p class="home-hero__text fade-in fade-in-delay-1"><?php mci_te( 'Professional dental care with modern technology, personalized treatment, and lasting oral health.' ); ?></p>
 					<div class="home-hero__ctas">
 						<?php get_template_part( 'template-parts/whatsapp-cta', null, array( 'extra_class' => 'fade-in fade-in-delay-2' ) ); ?>
 					</div>
@@ -80,7 +80,7 @@ $hero_slider_images = array(
 			<div class="home-hero__inner">
 				<div class="home-hero__content">
 					<h1 class="home-hero__title fade-in fade-in-delay-0"><?php echo mci_t_accent( 'Beautiful Smiles {accent}Start Here{/accent}' ); ?></h1>
-					<p class="home-hero__text fade-in fade-in-delay-1"><?php mci_te( 'Professional dental care with modern technology, personalized treatment, and a focus on long-term oral health.' ); ?></p>
+					<p class="home-hero__text fade-in fade-in-delay-1"><?php mci_te( 'Professional dental care with modern technology, personalized treatment, and lasting oral health.' ); ?></p>
 					<div class="home-hero__ctas">
 						<div class="fade-in fade-in-delay-2">
 							<?php get_template_part( 'template-parts/whatsapp-cta', null, array( 'extra_class' => '' ) ); ?>

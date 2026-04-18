@@ -17,7 +17,7 @@ $clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
 		<div class="services-hero__overlay"></div>
 		<div class="container services-hero__content">
 			<h1 class="services-hero__title fade-in fade-in-delay-0"><?php mci_te( 'Our Services' ); ?></h1>
-			<p class="services-hero__subtitle fade-in fade-in-delay-1"><?php mci_te( 'Comprehensive dental care using modern technology and evidence-based treatments, tailored to every patient.' ); ?></p>
+			<p class="services-hero__subtitle fade-in fade-in-delay-1"><?php mci_te( 'Comprehensive dental care with modern technology and evidence-based treatments for every patient.' ); ?></p>
 			<?php get_template_part( 'template-parts/whatsapp-cta', null, array( 'extra_class' => 'fade-in fade-in-delay-2' ) ); ?>
 		</div>
 	</section>
@@ -33,8 +33,8 @@ $clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
 				<div class="services-item__content">
 					<span class="badge badge-gold fade-in fade-in-delay-0"><?php mci_te( 'Aesthetic Dentistry' ); ?></span>
 					<h2 class="fade-in fade-in-delay-1"><?php mci_te( 'One-Visit Transformations' ); ?></h2>
-					<p class="fade-in fade-in-delay-2"><?php mci_te( 'Fast-track aesthetic dentistry at its finest. Using advanced materials and techniques, Dr. Maria can dramatically enhance your smile in a single appointment — creating a "Masterpiece" result you will love from day one.' ); ?></p>
-					<p class="fade-in fade-in-delay-3"><?php mci_te( 'Whether you need veneers, bonding, or a complete smile makeover, our one-visit approach saves you time without compromising on quality.' ); ?></p>
+					<p class="fade-in fade-in-delay-2"><?php mci_te( 'Using advanced materials and techniques, Dr. Maria can dramatically enhance your smile in a single appointment — creating a "Masterpiece" result you will love from day one.' ); ?></p>
+					<p class="fade-in fade-in-delay-3"><?php mci_te( 'Whether you need veneers, bonding, or a complete smile makeover, our one-visit approach saves time without compromising quality.' ); ?></p>
 					<div class="fade-in fade-in-delay-4">
 						<a href="<?php echo esc_url( mci_url( '/contact/' ) ); ?>" class="btn btn-primary"><?php mci_te( 'Book Appointment' ); ?></a>
 					</div>
@@ -53,8 +53,8 @@ $clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
 				<div class="services-item__content">
 					<span class="badge badge-gold fade-in fade-in-delay-0"><?php mci_te( 'Cosmetic' ); ?></span>
 					<h2 class="fade-in fade-in-delay-1"><?php mci_te( 'Cosmetic Masterpieces' ); ?></h2>
-					<p class="fade-in fade-in-delay-2"><?php mci_te( 'Solutions crafted for timeless elegance. Our cosmetic services go beyond simple fixes — they are designed to create smiles that look natural, feel comfortable, and stand the test of time.' ); ?></p>
-					<p class="fade-in fade-in-delay-3"><?php mci_te( 'From teeth whitening and porcelain veneers to full smile redesigns, every treatment is tailored to your unique features and personal goals.' ); ?></p>
+					<p class="fade-in fade-in-delay-2"><?php mci_te( 'Our cosmetic services go beyond simple fixes — crafted to create smiles that look natural, feel comfortable, and stand the test of time.' ); ?></p>
+					<p class="fade-in fade-in-delay-3"><?php mci_te( 'From teeth whitening and veneers to full smile redesigns, every treatment is tailored to your unique features and personal goals.' ); ?></p>
 					<div class="fade-in fade-in-delay-4">
 						<a href="<?php echo esc_url( mci_url( '/contact/' ) ); ?>" class="btn btn-primary"><?php mci_te( 'Book Appointment' ); ?></a>
 					</div>
@@ -73,8 +73,8 @@ $clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
 				<div class="services-item__content">
 					<span class="badge badge-gold fade-in fade-in-delay-0"><?php mci_te( 'General Dentistry' ); ?></span>
 					<h2 class="fade-in fade-in-delay-1"><?php echo mci_t( 'Preventative &amp; Restorative Care' ); ?></h2>
-					<p class="fade-in fade-in-delay-2"><?php mci_te( 'A beautiful smile starts with a healthy foundation. Our preventative and restorative services ensure your teeth and gums stay in excellent condition — so your smile looks great and lasts a lifetime.' ); ?></p>
-					<p class="fade-in fade-in-delay-3"><?php mci_te( 'From routine check-ups and professional cleanings to fillings and crowns, we provide comprehensive care with the same attention to detail that defines everything we do.' ); ?></p>
+					<p class="fade-in fade-in-delay-2"><?php mci_te( 'A beautiful smile needs a healthy foundation. Our preventative and restorative services keep your teeth and gums in excellent condition — so your smile looks great and lasts a lifetime.' ); ?></p>
+					<p class="fade-in fade-in-delay-3"><?php mci_te( 'From check-ups and cleanings to fillings and crowns, we provide comprehensive care with the attention to detail that defines everything we do.' ); ?></p>
 					<div class="fade-in fade-in-delay-4">
 						<a href="<?php echo esc_url( mci_url( '/contact/' ) ); ?>" class="btn btn-primary"><?php mci_te( 'Book Appointment' ); ?></a>
 					</div>
@@ -91,7 +91,7 @@ $clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
 		<div class="services-cta__overlay"></div>
 		<div class="container services-cta__content">
 			<h2 class="fade-in fade-in-delay-0"><?php echo mci_t_accent( 'Ready to Transform {accent}Your Smile?{/accent}' ); ?></h2>
-			<p class="fade-in fade-in-delay-1"><?php mci_te( 'Book a consultation and discover the difference personalized dental care can make.' ); ?></p>
+			<p class="fade-in fade-in-delay-1"><?php mci_te( 'Book a consultation and discover the difference personalized care makes.' ); ?></p>
 			<div class="services-cta__buttons fade-in fade-in-delay-2">
 				<a href="<?php echo esc_url( mci_url( '/contact/' ) ); ?>" class="btn btn-primary"><?php mci_te( 'Book Appointment' ); ?></a>
 				<a href="tel:+35725377757" class="btn btn-outline-light"><?php mci_te( 'Call +357 25 377757' ); ?></a>

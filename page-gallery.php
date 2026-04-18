@@ -20,7 +20,7 @@ $theme_image_base  = get_template_directory_uri() . '/assets/images/';
 		<div class="gallery-hero__overlay"></div>
 		<div class="container gallery-hero__content">
 			<h1 class="gallery-hero__title fade-in fade-in-delay-0"><?php mci_te( 'Gallery' ); ?></h1>
-			<p class="gallery-hero__subtitle fade-in fade-in-delay-1"><?php echo mci_t( 'Browse our collection of before &amp; after transformations and clinic photos.' ); ?></p>
+			<p class="gallery-hero__subtitle fade-in fade-in-delay-1"><?php echo mci_t( 'Browse our before &amp; after transformations and clinic photos.' ); ?></p>
 			<?php get_template_part( 'template-parts/whatsapp-cta', null, array( 'extra_class' => 'fade-in fade-in-delay-2' ) ); ?>
 		</div>
 	</section>
@@ -93,7 +93,7 @@ $theme_image_base  = get_template_directory_uri() . '/assets/images/';
 		<div class="gallery-cta__overlay"></div>
 		<div class="container gallery-cta__content">
 			<h2 class="fade-in fade-in-delay-0"><?php echo mci_t_accent( 'Ready to Transform {accent}Your Smile?{/accent}' ); ?></h2>
-			<p class="fade-in fade-in-delay-1"><?php mci_te( 'Book a consultation and discover the difference personalized dental care can make.' ); ?></p>
+			<p class="fade-in fade-in-delay-1"><?php mci_te( 'Book a consultation and discover the difference personalized care makes.' ); ?></p>
 			<div class="gallery-cta__buttons fade-in fade-in-delay-2">
 				<a href="<?php echo esc_url( mci_url( '/contact/' ) ); ?>" class="btn btn-primary"><?php mci_te( 'Book Appointment' ); ?></a>
 				<a href="tel:+35725377757" class="btn btn-outline-light"><?php mci_te( 'Call +357 25 377757' ); ?></a>

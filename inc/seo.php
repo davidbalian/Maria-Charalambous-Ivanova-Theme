@@ -85,47 +85,47 @@ function mci_get_services_data() {
 	return array(
 		array(
 			'title' => mci_t( 'General Dental Examination & Prevention' ),
-			'desc'  => mci_t( 'Regular dental check-ups help detect potential problems early and maintain optimal oral health through preventive care and professional advice.' ),
+			'desc'  => mci_t( 'Regular check-ups help detect problems early and maintain optimal oral health through preventive care and professional advice.' ),
 		),
 		array(
 			'title' => mci_t( 'Professional Teeth Cleaning' ),
-			'desc'  => mci_t( 'Removal of plaque, tartar, and stains to promote healthy gums and a brighter, healthier smile.' ),
+			'desc'  => mci_t( 'Removes plaque, tartar, and stains to promote healthy gums and a brighter smile.' ),
 		),
 		array(
 			'title' => mci_t( 'Dental Fillings' ),
-			'desc'  => mci_t( 'Treatment of tooth decay using modern, aesthetic materials that restore both function and natural appearance.' ),
+			'desc'  => mci_t( 'Treatment of tooth decay with modern aesthetic materials, restoring both function and natural appearance.' ),
 		),
 		array(
 			'title' => mci_t( 'Root Canal Treatment (Endodontics)' ),
-			'desc'  => mci_t( 'Advanced treatment for infected or inflamed tooth nerves, allowing the natural tooth to be preserved and pain to be relieved.' ),
+			'desc'  => mci_t( 'Advanced treatment for infected or inflamed tooth nerves, preserving the natural tooth and relieving pain.' ),
 		),
 		array(
 			'title' => mci_t( 'Tooth Extractions' ),
-			'desc'  => mci_t( 'Safe and gentle removal of teeth when they cannot be restored, always prioritizing patient comfort.' ),
+			'desc'  => mci_t( 'Safe and gentle removal when teeth cannot be restored, always prioritizing patient comfort.' ),
 		),
 		array(
 			'title' => mci_t( 'Cosmetic Dentistry' ),
-			'desc'  => mci_t( 'A range of treatments designed to enhance the appearance of your smile, including teeth whitening and aesthetic restorations.' ),
+			'desc'  => mci_t( 'A range of treatments to enhance your smile, including teeth whitening and aesthetic restorations.' ),
 		),
 		array(
 			'title' => mci_t( 'Crowns & Bridges' ),
-			'desc'  => mci_t( 'Durable restorations used to repair damaged teeth or replace missing ones, improving both function and aesthetics.' ),
+			'desc'  => mci_t( 'Durable restorations that repair damaged teeth or replace missing ones, improving both function and aesthetics.' ),
 		),
 		array(
 			'title' => mci_t( 'Dental Implants' ),
-			'desc'  => mci_t( 'A modern and long-lasting solution for replacing missing teeth, restoring both confidence and oral function.' ),
+			'desc'  => mci_t( 'Modern, long-lasting solution for replacing missing teeth and restoring both confidence and oral function.' ),
 		),
 		array(
 			'title' => mci_t( 'Dentures' ),
-			'desc'  => mci_t( 'Full or partial removable dentures designed to restore chewing ability, speech, and smile aesthetics.' ),
+			'desc'  => mci_t( 'Full or partial removable dentures that restore chewing ability, speech, and smile aesthetics.' ),
 		),
 		array(
 			'title' => mci_t( 'Periodontal Treatment' ),
-			'desc'  => mci_t( 'Diagnosis and treatment of gum diseases such as gingivitis and periodontitis to protect the health of your gums and supporting bone.' ),
+			'desc'  => mci_t( 'Diagnosis and treatment of gum diseases such as gingivitis and periodontitis, protecting your gums and supporting bone.' ),
 		),
 		array(
 			'title' => mci_t( 'Emergency Dental Care' ),
-			'desc'  => mci_t( 'Prompt care for dental emergencies including severe toothache, broken teeth, infections, or other urgent dental conditions.' ),
+			'desc'  => mci_t( 'Prompt care for dental emergencies including severe toothache, broken teeth, and infections.' ),
 		),
 	);
 }

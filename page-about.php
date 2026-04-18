@@ -27,7 +27,7 @@ $clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
 		<div class="container">
 			<div class="about-mission__header">
 				<h2 class="fade-in fade-in-delay-0"><?php mci_te( 'The Masterpiece Philosophy' ); ?></h2>
-				<p class="fade-in fade-in-delay-1"><?php mci_te( 'At DENTAL ART CLINIC LIMASSOL, dentistry is approached as a combination of scientific precision, strategic planning, and aesthetic harmony. The establishment and expansion of the second clinic represent the natural evolution of a career built on trust, consistency, and a commitment to excellence.' ); ?></p>
+				<p class="fade-in fade-in-delay-1"><?php mci_te( 'At DENTAL ART CLINIC LIMASSOL, dentistry combines scientific precision, strategic planning, and aesthetic harmony — the natural evolution of a career built on trust, consistency, and excellence.' ); ?></p>
 			</div>
 			<div class="about-mission__images fade-in fade-in-delay-2">
 				<img src="<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-reception-area-marble-counter.avif' ); ?>" alt="Dental Art Clinic reception area" width="560" height="380" loading="lazy">
@@ -46,10 +46,10 @@ $clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
 				<div class="about-doctor__bio">
 					<h2 class="fade-in fade-in-delay-1"><?php mci_te( 'Dr. Maria Charalambous-Ivanova' ); ?></h2>
 					<p class="about-doctor__subtitle fade-in fade-in-delay-2"><?php echo mci_t( 'DMD, MSD | Founder &amp; Clinical Director' ); ?></p>
-					<p class="fade-in fade-in-delay-3"><?php mci_te( 'Dr. Maria Charalambous-Ivanova graduated from the University of Sofia in 2007 and has been practicing since 2008, building a dynamic and continuously evolving professional career. Through constant participation in international congresses and advanced training programs, she remains at the forefront of modern dental techniques.' ); ?></p>
-					<p class="fade-in fade-in-delay-4"><?php mci_te( 'Her specialization in composite veneers and Emax veneers forms the foundation of her aesthetic philosophy. In addition, she undertakes complex and full mouth rehabilitation cases requiring comprehensive functional analysis, precise diagnosis, and carefully structured treatment planning.' ); ?></p>
-					<p class="fade-in fade-in-delay-5"><?php mci_te( 'Each case is treated individually. There are no standardized solutions — only the right solution for the specific patient, always focusing on long-term health, proper function, and aesthetic balance.' ); ?></p>
-					<p class="fade-in fade-in-delay-6"><?php mci_te( 'Collaboration with highly skilled and specialized partners ensures optimal, natural, and harmoniously balanced results.' ); ?></p>
+					<p class="fade-in fade-in-delay-3"><?php mci_te( 'Dr. Maria Charalambous-Ivanova graduated from the University of Sofia in 2007 and has practiced since 2008. Through ongoing participation in international congresses and advanced training, she remains at the forefront of modern dental techniques.' ); ?></p>
+					<p class="fade-in fade-in-delay-4"><?php mci_te( 'Composite and Emax veneers form the foundation of her aesthetic philosophy. She also undertakes complex full mouth rehabilitation cases requiring functional analysis, precise diagnosis, and structured treatment planning.' ); ?></p>
+					<p class="fade-in fade-in-delay-5"><?php mci_te( 'Every case is treated individually — no standardized solutions, only the right approach for each patient, focusing on long-term health, proper function, and aesthetic balance.' ); ?></p>
+					<p class="fade-in fade-in-delay-6"><?php mci_te( 'Collaboration with skilled partners ensures optimal, natural, and harmoniously balanced results.' ); ?></p>
 					<div class="about-doctor__philosophy fade-in fade-in-delay-7">
 						<div class="about-doctor__philosophy-item"><?php mci_te( 'Scientific precision' ); ?></div>
 						<div class="about-doctor__philosophy-divider"></div>
@@ -70,9 +70,9 @@ $clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
 			<div class="about-experience__grid">
 				<div class="about-experience__content">
 					<h2 class="fade-in fade-in-delay-0"><?php mci_te( 'The Clinic Experience' ); ?></h2>
-					<p class="fade-in fade-in-delay-1"><?php mci_te( 'Our dental clinic is dedicated to providing comprehensive dental care for patients of all ages. We focus on prevention, accurate diagnosis, and high-quality treatment to ensure the best possible results for every patient.' ); ?></p>
-					<p class="fade-in fade-in-delay-2"><?php mci_te( 'We believe that visiting the dentist should be a comfortable and positive experience. For this reason, we create a friendly and relaxed environment while offering personalized care tailored to each patient\'s needs.' ); ?></p>
-					<p class="fade-in fade-in-delay-3"><?php mci_te( 'Our priority is to build long-term relationships with our patients based on trust, professionalism, and excellent dental care.' ); ?></p>
+					<p class="fade-in fade-in-delay-1"><?php mci_te( 'Our clinic provides comprehensive dental care for patients of all ages, focusing on prevention, accurate diagnosis, and high-quality treatment for the best possible results.' ); ?></p>
+					<p class="fade-in fade-in-delay-2"><?php mci_te( 'We believe dental visits should be comfortable and positive. We create a friendly, relaxed environment with personalized care tailored to each patient\'s needs.' ); ?></p>
+					<p class="fade-in fade-in-delay-3"><?php mci_te( 'Our priority is long-term patient relationships built on trust, professionalism, and excellent dental care.' ); ?></p>
 				</div>
 				<div class="about-experience__image fade-in fade-in-delay-2">
 					<img src="<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-waiting-room-marble-interior.avif' ); ?>" alt="Dental Art Clinic waiting room" width="560" height="420" loading="lazy">
@@ -86,7 +86,7 @@ $clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
 		<div class="about-cta__overlay"></div>
 		<div class="container about-cta__content">
 			<h2 class="fade-in fade-in-delay-0"><?php echo mci_t_accent( 'Ready to Transform {accent}Your Smile?{/accent}' ); ?></h2>
-			<p class="fade-in fade-in-delay-1"><?php mci_te( 'Book a consultation and discover the difference personalized dental care can make.' ); ?></p>
+			<p class="fade-in fade-in-delay-1"><?php mci_te( 'Book a consultation and discover the difference personalized care makes.' ); ?></p>
 			<div class="about-cta__buttons fade-in fade-in-delay-2">
 				<a href="<?php echo esc_url( mci_url( '/contact/' ) ); ?>" class="btn btn-primary"><?php mci_te( 'Book Appointment' ); ?></a>
 				<a href="tel:+35725377757" class="btn btn-outline-light"><?php mci_te( 'Call +357 25 377757' ); ?></a>

@@ -30,16 +30,16 @@ return array(
 	   Homepage Hero
 	   ===================================================================== */
 	'Beautiful Smiles {accent}Start Here{/accent}' => 'Τα Όμορφα Χαμόγελα {accent}Ξεκινούν Εδώ{/accent}',
-	'Professional dental care with modern technology, personalized treatment, and a focus on long-term oral health.' => 'Επαγγελματική οδοντιατρική φροντίδα με σύγχρονη τεχνολογία, εξατομικευμένη θεραπεία και εστίαση στη μακροπρόθεσμη στοματική υγεία.',
+	'Professional dental care with modern technology, personalized treatment, and lasting oral health.' => 'Επαγγελματική οδοντιατρική φροντίδα με σύγχρονη τεχνολογία, εξατομικευμένη θεραπεία και μακροπρόθεσμη στοματική υγεία.',
 
 	/* =====================================================================
 	   Welcome Section
 	   ===================================================================== */
 	'Welcome to Our Dental Clinic'            => 'Καλώς Ήρθατε στο Οδοντιατρείο μας',
-	'Welcome to our dental clinic, where your oral health and smile are our top priorities. We provide high-quality dental care in a modern, comfortable, and friendly environment.' => 'Καλώς ήρθατε στο οδοντιατρείο μας, όπου η στοματική σας υγεία και το χαμόγελό σας αποτελούν τις κορυφαίες προτεραιότητές μας. Παρέχουμε υψηλής ποιότητας οδοντιατρική φροντίδα σε ένα σύγχρονο, άνετο και φιλικό περιβάλλον.',
-	'Our clinic offers a wide range of dental treatments, from preventive care and routine check-ups to advanced restorative and cosmetic procedures. Using modern technology and up-to-date techniques, we ensure safe, effective, and personalized treatment for every patient.' => 'Το οδοντιατρείο μας προσφέρει ένα ευρύ φάσμα οδοντιατρικών θεραπειών, από προληπτική φροντίδα και τακτικούς ελέγχους έως προηγμένες επανορθωτικές και αισθητικές διαδικασίες. Χρησιμοποιώντας σύγχρονη τεχνολογία και ενημερωμένες τεχνικές, εξασφαλίζουμε ασφαλή, αποτελεσματική και εξατομικευμένη θεραπεία για κάθε ασθενή.',
-	'Our goal is not only to treat dental problems but also to help our patients maintain long-term oral health and confidence in their smile.' => 'Στόχος μας δεν είναι μόνο η αντιμετώπιση οδοντιατρικών προβλημάτων, αλλά και η βοήθεια στους ασθενείς μας να διατηρήσουν μακροπρόθεσμη στοματική υγεία και αυτοπεποίθηση στο χαμόγελό τους.',
-	'Whether you need a routine dental examination, aesthetic treatment, or emergency dental care, our team is here to help you with professionalism and care.' => 'Είτε χρειάζεστε τακτικό οδοντιατρικό έλεγχο, αισθητική θεραπεία ή επείγουσα οδοντιατρική φροντίδα, η ομάδα μας είναι εδώ για να σας βοηθήσει με επαγγελματισμό και φροντίδα.',
+	'At our dental clinic, your oral health and smile are our top priorities. We provide high-quality care in a modern, comfortable environment.' => 'Στο οδοντιατρείο μας, η στοματική σας υγεία και το χαμόγελό σας αποτελούν τις κορυφαίες προτεραιότητές μας. Παρέχουμε υψηλής ποιότητας φροντίδα σε σύγχρονο, άνετο περιβάλλον.',
+	'From preventive care and routine check-ups to advanced restorative and cosmetic procedures, we use modern technology to deliver safe, effective, and personalized treatment for every patient.' => 'Από προληπτική φροντίδα και τακτικούς ελέγχους έως προηγμένες επανορθωτικές και αισθητικές διαδικασίες, χρησιμοποιούμε σύγχρονη τεχνολογία για ασφαλή, αποτελεσματική και εξατομικευμένη θεραπεία κάθε ασθενή.',
+	'Our goal goes beyond treating dental problems — we help patients maintain long-term oral health and confidence in their smile.' => 'Ο στόχος μας ξεπερνά τη θεραπεία προβλημάτων — βοηθάμε τους ασθενείς να διατηρήσουν μακροπρόθεσμη στοματική υγεία και αυτοπεποίθηση στο χαμόγελό τους.',
+	'Whether you need a routine exam, aesthetic treatment, or emergency care, our team is here with professionalism and care.' => 'Είτε χρειάζεστε τακτικό έλεγχο, αισθητική θεραπεία ή επείγουσα φροντίδα, η ομάδα μας είναι εδώ με επαγγελματισμό και φροντίδα.',
 
 	/* =====================================================================
 	   Before & After
@@ -60,25 +60,25 @@ return array(
 	   Gentle Touch
 	   ===================================================================== */
 	'Modern Dentistry with a {accent}Gentle Touch{/accent}' => 'Σύγχρονη Οδοντιατρική με {accent}Απαλό Άγγιγμα{/accent}',
-	'We believe dental visits should be stress-free, personalized, and focused entirely on your comfort and long-term health.' => 'Πιστεύουμε ότι η επίσκεψη στον οδοντίατρο πρέπει να είναι χωρίς άγχος, εξατομικευμένη και εστιασμένη αποκλειστικά στην άνεσή σας και τη μακροπρόθεσμη υγεία σας.',
+	'Every visit should be stress-free, personalized, and entirely focused on your comfort and long-term health.' => 'Κάθε επίσκεψη πρέπει να είναι χωρίς άγχος, εξατομικευμένη και αποκλειστικά εστιασμένη στην άνεσή σας και τη μακροπρόθεσμη υγεία σας.',
 	'Scientific Precision'                    => 'Επιστημονική Ακρίβεια',
-	'Every treatment is based on comprehensive functional analysis, precise diagnosis, and carefully structured planning for long-term health.' => 'Κάθε θεραπεία βασίζεται σε ολοκληρωμένη λειτουργική ανάλυση, ακριβή διάγνωση και προσεκτικά δομημένο σχεδιασμό για μακροπρόθεσμη υγεία.',
+	'Every treatment starts with functional analysis, precise diagnosis, and structured planning for long-term health.' => 'Κάθε θεραπεία ξεκινά με λειτουργική ανάλυση, ακριβή διάγνωση και δομημένο σχεδιασμό για μακροπρόθεσμη υγεία.',
 	'Aesthetic Harmony'                       => 'Αισθητική Αρμονία',
-	'Specializing in composite veneers and Emax veneers, we create naturally balanced results that harmonize function with aesthetics.' => 'Εξειδικευόμενοι σε σύνθετες όψεις και όψεις Emax, δημιουργούμε φυσικά ισορροπημένα αποτελέσματα που εναρμονίζουν τη λειτουργία με την αισθητική.',
+	'Specializing in composite and Emax veneers, we create naturally balanced results that harmonize function with aesthetics.' => 'Εξειδικευόμενοι σε σύνθετες και Emax όψεις, δημιουργούμε φυσικά ισορροπημένα αποτελέσματα που εναρμονίζουν τη λειτουργία με την αισθητική.',
 
 	/* =====================================================================
 	   Comprehensive Services
 	   ===================================================================== */
 	'Comprehensive Dental Care for {accent}Every Need{/accent}' => 'Ολοκληρωμένη Οδοντιατρική Φροντίδα για {accent}Κάθε Ανάγκη{/accent}',
-	'At our dental clinic, we are committed to providing high-quality dental care in a comfortable and welcoming environment. Our goal is to help patients maintain excellent oral health while enhancing the beauty and function of their smile.' => 'Στο οδοντιατρείο μας, δεσμευόμαστε να παρέχουμε υψηλής ποιότητας οδοντιατρική φροντίδα σε ένα άνετο και φιλόξενο περιβάλλον. Στόχος μας είναι να βοηθήσουμε τους ασθενείς να διατηρήσουν άριστη στοματική υγεία, ενισχύοντας παράλληλα την ομορφιά και τη λειτουργία του χαμόγελού τους.',
+	'We are committed to high-quality dental care in a comfortable, welcoming environment, helping patients maintain excellent oral health while enhancing the beauty and function of their smile.' => 'Δεσμευόμαστε για υψηλής ποιότητας οδοντιατρική φροντίδα σε άνετο, φιλόξενο περιβάλλον, βοηθώντας τους ασθενείς να διατηρήσουν άριστη στοματική υγεία ενισχύοντας την ομορφιά και τη λειτουργία του χαμόγελού τους.',
 
 	/* =====================================================================
 	   Doctor
 	   ===================================================================== */
 	'Dr. Maria Charalambous-Ivanova'          => 'Δρ. Μαρία Χαραλάμπους-Ιβάνοβα',
 	'DMD, MSD | Founder &amp; Clinical Director' => 'DMD, MSD | Ιδρύτρια &amp; Κλινική Διευθύντρια',
-	'Dr. Maria Charalambous-Ivanova graduated from the University of Sofia in 2007 and has been practicing since 2008, building a dynamic and continuously evolving professional career. Through constant participation in international congresses and advanced training programs, she remains at the forefront of modern dental techniques.' => 'Η Δρ. Μαρία Χαραλάμπους-Ιβάνοβα αποφοίτησε από το Πανεπιστήμιο της Σόφιας το 2007 και ασκεί το επάγγελμα από το 2008, χτίζοντας μια δυναμική και συνεχώς εξελισσόμενη επαγγελματική σταδιοδρομία. Μέσω της συνεχούς συμμετοχής σε διεθνή συνέδρια και προηγμένα εκπαιδευτικά προγράμματα, παραμένει στην πρώτη γραμμή των σύγχρονων οδοντιατρικών τεχνικών.',
-	'Her specialization in composite veneers and Emax veneers forms the foundation of her aesthetic philosophy. In addition, she undertakes complex and full mouth rehabilitation cases requiring comprehensive functional analysis, precise diagnosis, and carefully structured treatment planning.' => 'Η εξειδίκευσή της στις σύνθετες όψεις και τις όψεις Emax αποτελεί τη βάση της αισθητικής της φιλοσοφίας. Επιπλέον, αναλαμβάνει σύνθετες περιπτώσεις και πλήρη αποκατάσταση στόματος που απαιτούν ολοκληρωμένη λειτουργική ανάλυση, ακριβή διάγνωση και προσεκτικά δομημένο θεραπευτικό σχεδιασμό.',
+	'Dr. Maria Charalambous-Ivanova graduated from the University of Sofia in 2007 and has practiced since 2008. Through ongoing participation in international congresses and advanced training, she remains at the forefront of modern dental techniques.' => 'Η Δρ. Μαρία Χαραλάμπους-Ιβάνοβα αποφοίτησε από το Πανεπιστήμιο της Σόφιας το 2007 και ασκεί το επάγγελμα από το 2008. Μέσω συνεχούς συμμετοχής σε διεθνή συνέδρια και προηγμένα εκπαιδευτικά προγράμματα, παραμένει στην πρώτη γραμμή των σύγχρονων οδοντιατρικών τεχνικών.',
+	'Composite and Emax veneers form the foundation of her aesthetic philosophy. She also undertakes complex full mouth rehabilitation cases requiring functional analysis, precise diagnosis, and structured treatment planning.' => 'Σύνθετες και Emax όψεις αποτελούν τη βάση της αισθητικής της φιλοσοφίας. Αναλαμβάνει επίσης σύνθετη πλήρη αποκατάσταση στόματος που απαιτεί λειτουργική ανάλυση, ακριβή διάγνωση και δομημένο θεραπευτικό σχεδιασμό.',
 	'Scientific precision'                    => 'Επιστημονική ακρίβεια',
 	'Strategic treatment planning'            => 'Στρατηγικός θεραπευτικός σχεδιασμός',
 	'Pain-free experience'                    => 'Ανώδυνη εμπειρία',
@@ -114,8 +114,8 @@ return array(
 	   Consultation
 	   ===================================================================== */
 	'Ready to Transform Your Smile?'          => 'Έτοιμοι να Μεταμορφώσετε το Χαμόγελό σας;',
-	'Book a consultation with Dr. Maria Charalambous-Ivanova and discover how scientific precision and aesthetic harmony can create the smile you\'ve always wanted.' => 'Κλείστε ραντεβού με τη Δρ. Μαρία Χαραλάμπους-Ιβάνοβα και ανακαλύψτε πώς η επιστημονική ακρίβεια και η αισθητική αρμονία μπορούν να δημιουργήσουν το χαμόγελο που πάντα θέλατε.',
-	'Each case is treated individually with no standardized solutions — only the right solution for the specific patient, always focusing on long-term health, proper function, and aesthetic balance.' => 'Κάθε περιστατικό αντιμετωπίζεται ξεχωριστά χωρίς τυποποιημένες λύσεις — μόνο η σωστή λύση για τον συγκεκριμένο ασθενή, με εστίαση πάντα στη μακροπρόθεσμη υγεία, τη σωστή λειτουργία και την αισθητική ισορροπία.',
+	'Consult Dr. Maria Charalambous-Ivanova and discover how scientific precision and aesthetic harmony can create the smile you\'ve always wanted.' => 'Συμβουλευτείτε τη Δρ. Μαρία Χαραλάμπους-Ιβάνοβα και ανακαλύψτε πώς η επιστημονική ακρίβεια και η αισθητική αρμονία μπορούν να δημιουργήσουν το χαμόγελο που πάντα θέλατε.',
+	'Every case is individual — no standardized solutions, only the right approach for each patient, always focused on long-term health, proper function, and aesthetic balance.' => 'Κάθε περιστατικό είναι μοναδικό — χωρίς τυποποιημένες λύσεις, μόνο η σωστή προσέγγιση για κάθε ασθενή, με εστίαση στη μακροπρόθεσμη υγεία, τη λειτουργία και την αισθητική ισορροπία.',
 	'Full Name'                               => 'Ονοματεπώνυμο',
 	'Message'                                 => 'Μήνυμα',
 	'Tell us about your smile goals...'       => 'Πείτε μας για τους στόχους σας σχετικά με το χαμόγελό σας...',
@@ -140,26 +140,26 @@ return array(
 	   11 Services (mci_get_services_data)
 	   ===================================================================== */
 	'General Dental Examination & Prevention'  => 'Γενική Οδοντιατρική Εξέταση & Πρόληψη',
-	'Regular dental check-ups help detect potential problems early and maintain optimal oral health through preventive care and professional advice.' => 'Οι τακτικοί οδοντιατρικοί έλεγχοι βοηθούν στην έγκαιρη ανίχνευση πιθανών προβλημάτων και στη διατήρηση της βέλτιστης στοματικής υγείας μέσω προληπτικής φροντίδας και επαγγελματικών συμβουλών.',
+	'Regular check-ups help detect problems early and maintain optimal oral health through preventive care and professional advice.' => 'Οι τακτικοί έλεγχοι βοηθούν στην έγκαιρη ανίχνευση προβλημάτων και στη διατήρηση βέλτιστης στοματικής υγείας μέσω προληπτικής φροντίδας και επαγγελματικών συμβουλών.',
 	'Professional Teeth Cleaning'             => 'Επαγγελματικός Καθαρισμός Δοντιών',
-	'Removal of plaque, tartar, and stains to promote healthy gums and a brighter, healthier smile.' => 'Αφαίρεση πλάκας, τρυγίας και λεκέδων για την προαγωγή υγιών ούλων και ενός πιο λαμπερού, υγιούς χαμόγελου.',
+	'Removes plaque, tartar, and stains to promote healthy gums and a brighter smile.' => 'Αφαίρεση πλάκας, τρυγίας και λεκέδων για την προαγωγή υγιών ούλων και ενός πιο λαμπερού χαμόγελου.',
 	'Dental Fillings'                         => 'Οδοντικά Σφραγίσματα',
-	'Treatment of tooth decay using modern, aesthetic materials that restore both function and natural appearance.' => 'Θεραπεία τερηδόνας με σύγχρονα, αισθητικά υλικά που αποκαθιστούν τόσο τη λειτουργία όσο και τη φυσική εμφάνιση.',
+	'Treatment of tooth decay with modern aesthetic materials, restoring both function and natural appearance.' => 'Θεραπεία τερηδόνας με σύγχρονα αισθητικά υλικά που αποκαθιστούν τόσο τη λειτουργία όσο και τη φυσική εμφάνιση.',
 	'Root Canal Treatment (Endodontics)'      => 'Θεραπεία Ριζικού Σωλήνα (Ενδοδοντία)',
-	'Advanced treatment for infected or inflamed tooth nerves, allowing the natural tooth to be preserved and pain to be relieved.' => 'Προηγμένη θεραπεία για μολυσμένα ή φλεγμαίνοντα νεύρα δοντιών, που επιτρέπει τη διατήρηση του φυσικού δοντιού και την ανακούφιση από τον πόνο.',
+	'Advanced treatment for infected or inflamed tooth nerves, preserving the natural tooth and relieving pain.' => 'Προηγμένη θεραπεία για μολυσμένα ή φλεγμαίνοντα νεύρα δοντιών, διατηρώντας το φυσικό δόντι και ανακουφίζοντας τον πόνο.',
 	'Tooth Extractions'                       => 'Εξαγωγές Δοντιών',
-	'Safe and gentle removal of teeth when they cannot be restored, always prioritizing patient comfort.' => 'Ασφαλής και ήπια αφαίρεση δοντιών όταν δεν μπορούν να αποκατασταθούν, δίνοντας πάντα προτεραιότητα στην άνεση του ασθενούς.',
-	'A range of treatments designed to enhance the appearance of your smile, including teeth whitening and aesthetic restorations.' => 'Μια σειρά θεραπειών σχεδιασμένων για να βελτιώσουν την εμφάνιση του χαμόγελού σας, συμπεριλαμβανομένης της λεύκανσης δοντιών και αισθητικών αποκαταστάσεων.',
+	'Safe and gentle removal when teeth cannot be restored, always prioritizing patient comfort.' => 'Ασφαλής και ήπια αφαίρεση δοντιών που δεν μπορούν να αποκατασταθούν, με πάντα πρώτη προτεραιότητα την άνεση του ασθενούς.',
+	'A range of treatments to enhance your smile, including teeth whitening and aesthetic restorations.' => 'Μια σειρά θεραπειών για να βελτιώσουν το χαμόγελό σας, συμπεριλαμβανομένης λεύκανσης δοντιών και αισθητικών αποκαταστάσεων.',
 	'Crowns & Bridges'                        => 'Στεφάνες & Γέφυρες',
-	'Durable restorations used to repair damaged teeth or replace missing ones, improving both function and aesthetics.' => 'Ανθεκτικές αποκαταστάσεις για την επισκευή κατεστραμμένων δοντιών ή την αντικατάσταση ελλειπόντων, βελτιώνοντας τόσο τη λειτουργία όσο και την αισθητική.',
+	'Durable restorations that repair damaged teeth or replace missing ones, improving both function and aesthetics.' => 'Ανθεκτικές αποκαταστάσεις που επισκευάζουν κατεστραμμένα δόντια ή αντικαθιστούν ελλείποντα, βελτιώνοντας τη λειτουργία και την αισθητική.',
 	'Dental Implants'                         => 'Οδοντικά Εμφυτεύματα',
-	'A modern and long-lasting solution for replacing missing teeth, restoring both confidence and oral function.' => 'Μια σύγχρονη και μακροχρόνια λύση για την αντικατάσταση ελλειπόντων δοντιών, αποκαθιστώντας τόσο την αυτοπεποίθηση όσο και τη στοματική λειτουργία.',
+	'Modern, long-lasting solution for replacing missing teeth and restoring both confidence and oral function.' => 'Σύγχρονη και μακροχρόνια λύση για την αντικατάσταση ελλειπόντων δοντιών, αποκαθιστώντας αυτοπεποίθηση και στοματική λειτουργία.',
 	'Dentures'                                => 'Οδοντοστοιχίες',
-	'Full or partial removable dentures designed to restore chewing ability, speech, and smile aesthetics.' => 'Ολικές ή μερικές κινητές οδοντοστοιχίες σχεδιασμένες για την αποκατάσταση της μασητικής ικανότητας, της ομιλίας και της αισθητικής του χαμόγελου.',
+	'Full or partial removable dentures that restore chewing ability, speech, and smile aesthetics.' => 'Ολικές ή μερικές κινητές οδοντοστοιχίες που αποκαθιστούν τη μασητική ικανότητα, την ομιλία και την αισθητική του χαμόγελου.',
 	'Periodontal Treatment'                   => 'Περιοδοντική Θεραπεία',
-	'Diagnosis and treatment of gum diseases such as gingivitis and periodontitis to protect the health of your gums and supporting bone.' => 'Διάγνωση και θεραπεία παθήσεων των ούλων, όπως ουλίτιδα και περιοδοντίτιδα, για την προστασία της υγείας των ούλων και του υποστηρικτικού οστού.',
+	'Diagnosis and treatment of gum diseases such as gingivitis and periodontitis, protecting your gums and supporting bone.' => 'Διάγνωση και θεραπεία παθήσεων ούλων όπως ουλίτιδα και περιοδοντίτιδα, προστατεύοντας την υγεία των ούλων και του υποστηρικτικού οστού.',
 	'Emergency Dental Care'                   => 'Επείγουσα Οδοντιατρική Φροντίδα',
-	'Prompt care for dental emergencies including severe toothache, broken teeth, infections, or other urgent dental conditions.' => 'Άμεση φροντίδα για οδοντιατρικά επείγοντα, συμπεριλαμβανομένου έντονου πονόδοντου, σπασμένων δοντιών, λοιμώξεων ή άλλων επειγουσών οδοντιατρικών καταστάσεων.',
+	'Prompt care for dental emergencies including severe toothache, broken teeth, and infections.' => 'Άμεση φροντίδα για οδοντιατρικά επείγοντα, συμπεριλαμβανομένου έντονου πονόδοντου, σπασμένων δοντιών και λοιμώξεων.',
 
 	/* =====================================================================
 	   About Page
@@ -167,48 +167,48 @@ return array(
 	'About the Clinic'                        => 'Σχετικά με το Οδοντιατρείο',
 	'Where your oral health and smile are our top priorities.' => 'Όπου η στοματική σας υγεία και το χαμόγελό σας αποτελούν τις κορυφαίες προτεραιότητές μας.',
 	'The Masterpiece Philosophy'              => 'Η Φιλοσοφία του Αριστουργήματος',
-	'At DENTAL ART CLINIC LIMASSOL, dentistry is approached as a combination of scientific precision, strategic planning, and aesthetic harmony. The establishment and expansion of the second clinic represent the natural evolution of a career built on trust, consistency, and a commitment to excellence.' => 'Στο DENTAL ART CLINIC ΛΕΜΕΣΟΣ, η οδοντιατρική προσεγγίζεται ως συνδυασμός επιστημονικής ακρίβειας, στρατηγικού σχεδιασμού και αισθητικής αρμονίας. Η ίδρυση και η επέκταση του δεύτερου οδοντιατρείου αντιπροσωπεύουν τη φυσική εξέλιξη μιας σταδιοδρομίας χτισμένης πάνω στην εμπιστοσύνη, τη συνέπεια και τη δέσμευση στην αριστεία.',
-	'Each case is treated individually. There are no standardized solutions — only the right solution for the specific patient, always focusing on long-term health, proper function, and aesthetic balance.' => 'Κάθε περιστατικό αντιμετωπίζεται ξεχωριστά. Δεν υπάρχουν τυποποιημένες λύσεις — μόνο η σωστή λύση για τον συγκεκριμένο ασθενή, με εστίαση πάντα στη μακροπρόθεσμη υγεία, τη σωστή λειτουργία και την αισθητική ισορροπία.',
-	'Collaboration with highly skilled and specialized partners ensures optimal, natural, and harmoniously balanced results.' => 'Η συνεργασία με εξειδικευμένους και ικανούς συνεργάτες εξασφαλίζει βέλτιστα, φυσικά και αρμονικά ισορροπημένα αποτελέσματα.',
+	'At DENTAL ART CLINIC LIMASSOL, dentistry combines scientific precision, strategic planning, and aesthetic harmony — the natural evolution of a career built on trust, consistency, and excellence.' => 'Στο DENTAL ART CLINIC ΛΕΜΕΣΟΣ, η οδοντιατρική συνδυάζει επιστημονική ακρίβεια, στρατηγικό σχεδιασμό και αισθητική αρμονία — φυσική εξέλιξη μιας σταδιοδρομίας χτισμένης στην εμπιστοσύνη, τη συνέπεια και την αριστεία.',
+	'Every case is treated individually — no standardized solutions, only the right approach for each patient, focusing on long-term health, proper function, and aesthetic balance.' => 'Κάθε περιστατικό αντιμετωπίζεται ξεχωριστά — χωρίς τυποποιημένες λύσεις, μόνο η σωστή προσέγγιση για κάθε ασθενή, με εστίαση στη μακροπρόθεσμη υγεία, τη λειτουργία και την αισθητική ισορροπία.',
+	'Collaboration with skilled partners ensures optimal, natural, and harmoniously balanced results.' => 'Η συνεργασία με εξειδικευμένους συνεργάτες εξασφαλίζει βέλτιστα, φυσικά και αρμονικά ισορροπημένα αποτελέσματα.',
 	'The Clinic Experience'                   => 'Η Εμπειρία του Οδοντιατρείου',
-	'Our dental clinic is dedicated to providing comprehensive dental care for patients of all ages. We focus on prevention, accurate diagnosis, and high-quality treatment to ensure the best possible results for every patient.' => 'Το οδοντιατρείο μας είναι αφιερωμένο στην παροχή ολοκληρωμένης οδοντιατρικής φροντίδας για ασθενείς όλων των ηλικιών. Εστιάζουμε στην πρόληψη, την ακριβή διάγνωση και την υψηλής ποιότητας θεραπεία για να εξασφαλίσουμε τα καλύτερα δυνατά αποτελέσματα για κάθε ασθενή.',
-	'We believe that visiting the dentist should be a comfortable and positive experience. For this reason, we create a friendly and relaxed environment while offering personalized care tailored to each patient\'s needs.' => 'Πιστεύουμε ότι η επίσκεψη στον οδοντίατρο πρέπει να είναι μια άνετη και θετική εμπειρία. Για αυτόν τον λόγο, δημιουργούμε ένα φιλικό και χαλαρό περιβάλλον, προσφέροντας εξατομικευμένη φροντίδα προσαρμοσμένη στις ανάγκες κάθε ασθενούς.',
-	'Our priority is to build long-term relationships with our patients based on trust, professionalism, and excellent dental care.' => 'Προτεραιότητά μας είναι η οικοδόμηση μακροχρόνιων σχέσεων με τους ασθενείς μας, βασισμένων στην εμπιστοσύνη, τον επαγγελματισμό και την άριστη οδοντιατρική φροντίδα.',
-	'Book a consultation and discover the difference personalized dental care can make.' => 'Κλείστε ραντεβού και ανακαλύψτε τη διαφορά που μπορεί να κάνει η εξατομικευμένη οδοντιατρική φροντίδα.',
+	'Our clinic provides comprehensive dental care for patients of all ages, focusing on prevention, accurate diagnosis, and high-quality treatment for the best possible results.' => 'Το οδοντιατρείο μας παρέχει ολοκληρωμένη φροντίδα για ασθενείς όλων των ηλικιών, με εστίαση στην πρόληψη, την ακριβή διάγνωση και την υψηλής ποιότητας θεραπεία για τα καλύτερα δυνατά αποτελέσματα.',
+	'We believe dental visits should be comfortable and positive. We create a friendly, relaxed environment with personalized care tailored to each patient\'s needs.' => 'Πιστεύουμε ότι η επίσκεψη στον οδοντίατρο πρέπει να είναι άνετη και θετική. Δημιουργούμε φιλικό, χαλαρό περιβάλλον με εξατομικευμένη φροντίδα προσαρμοσμένη στις ανάγκες κάθε ασθενούς.',
+	'Our priority is long-term patient relationships built on trust, professionalism, and excellent dental care.' => 'Προτεραιότητά μας είναι μακροχρόνιες σχέσεις με τους ασθενείς μας, βασισμένες στην εμπιστοσύνη, τον επαγγελματισμό και την άριστη φροντίδα.',
+	'Book a consultation and discover the difference personalized care makes.' => 'Κλείστε ραντεβού και ανακαλύψτε τη διαφορά που κάνει η εξατομικευμένη φροντίδα.',
 
 	/* =====================================================================
 	   Services Page
 	   ===================================================================== */
-	'Comprehensive dental care using modern technology and evidence-based treatments, tailored to every patient.' => 'Ολοκληρωμένη οδοντιατρική φροντίδα με σύγχρονη τεχνολογία και τεκμηριωμένες θεραπείες, προσαρμοσμένη σε κάθε ασθενή.',
+	'Comprehensive dental care with modern technology and evidence-based treatments for every patient.' => 'Ολοκληρωμένη οδοντιατρική φροντίδα με σύγχρονη τεχνολογία και τεκμηριωμένες θεραπείες για κάθε ασθενή.',
 	'Explore All Our Services'                => 'Εξερευνήστε Όλες τις Υπηρεσίες μας',
 	'Orthodontics'                            => 'Ορθοδοντική',
 	'Smilers Aligners'                        => 'Smilers Aligners',
-	'Discreet and tough dental aligners designed for modern lifestyles. Smilers offer a virtually invisible way to straighten your teeth and correct your bite — without the look and feel of traditional braces.' => 'Διακριτικοί και ανθεκτικοί οδοντιατρικοί νάρθηκες σχεδιασμένοι για τον σύγχρονο τρόπο ζωής. Οι Smilers προσφέρουν έναν σχεδόν αόρατο τρόπο ευθυγράμμισης των δοντιών σας και διόρθωσης της σύγκλεισης — χωρίς την εμφάνιση και την αίσθηση των παραδοσιακών σιδεράκιων.',
-	'Ideal for protecting gutters and correcting smiles invisibly, Smilers Aligners let you go about your day with complete confidence while your teeth gently move into place.' => 'Ιδανικοί για την προστασία των τόξων και τη διόρθωση του χαμόγελου με αόρατο τρόπο, οι Smilers Aligners σας επιτρέπουν να συνεχίσετε τη μέρα σας με απόλυτη αυτοπεποίθηση ενώ τα δόντια σας μετακινούνται ήπια στη σωστή θέση.',
+	'Discreet and durable aligners built for modern lifestyles — Smilers offer a virtually invisible way to straighten your teeth and correct your bite, without the look or feel of traditional braces.' => 'Διακριτικοί και ανθεκτικοί νάρθηκες για τον σύγχρονο τρόπο ζωής — οι Smilers προσφέρουν σχεδόν αόρατη ευθυγράμμιση δοντιών και διόρθωση σύγκλεισης, χωρίς την εμφάνιση ή αίσθηση παραδοσιακών σιδεράκιων.',
+	'Correct your smile invisibly — Smilers Aligners let you go about your day with complete confidence while your teeth gently move into place.' => 'Διορθώστε το χαμόγελό σας αθόρυβα — οι Smilers Aligners σάς επιτρέπουν να συνεχίσετε τη μέρα σας με απόλυτη αυτοπεποίθηση ενώ τα δόντια σας μετακινούνται ήπια στη σωστή θέση.',
 	'Aesthetic Dentistry'                     => 'Αισθητική Οδοντιατρική',
 	'One-Visit Transformations'               => 'Μεταμορφώσεις σε Μία Επίσκεψη',
-	'Fast-track aesthetic dentistry at its finest. Using advanced materials and techniques, Dr. Maria can dramatically enhance your smile in a single appointment — creating a "Masterpiece" result you will love from day one.' => 'Αισθητική οδοντιατρική ταχείας διαδρομής στο καλύτερό της. Χρησιμοποιώντας προηγμένα υλικά και τεχνικές, η Δρ. Μαρία μπορεί να αναβαθμίσει εντυπωσιακά το χαμόγελό σας σε ένα μόνο ραντεβού — δημιουργώντας ένα αποτέλεσμα «Αριστούργημα» που θα αγαπήσετε από την πρώτη μέρα.',
-	'Whether you need veneers, bonding, or a complete smile makeover, our one-visit approach saves you time without compromising on quality.' => 'Είτε χρειάζεστε όψεις, bonding ή πλήρη αναμόρφωση χαμόγελου, η προσέγγισή μας σε μία επίσκεψη σας εξοικονομεί χρόνο χωρίς συμβιβασμούς στην ποιότητα.',
+	'Using advanced materials and techniques, Dr. Maria can dramatically enhance your smile in a single appointment — creating a "Masterpiece" result you will love from day one.' => 'Χρησιμοποιώντας προηγμένα υλικά και τεχνικές, η Δρ. Μαρία μπορεί να αναβαθμίσει εντυπωσιακά το χαμόγελό σας σε ένα μόνο ραντεβού — δημιουργώντας ένα αποτέλεσμα «Αριστούργημα» που θα αγαπήσετε από την πρώτη μέρα.',
+	'Whether you need veneers, bonding, or a complete smile makeover, our one-visit approach saves time without compromising quality.' => 'Είτε χρειάζεστε όψεις, bonding ή πλήρη αναμόρφωση χαμόγελου, η προσέγγισή μας σε μία επίσκεψη εξοικονομεί χρόνο χωρίς συμβιβασμούς στην ποιότητα.',
 	'Cosmetic'                                => 'Αισθητική',
 	'Cosmetic Masterpieces'                   => 'Αισθητικά Αριστουργήματα',
-	'Solutions crafted for timeless elegance. Our cosmetic services go beyond simple fixes — they are designed to create smiles that look natural, feel comfortable, and stand the test of time.' => 'Λύσεις σχεδιασμένες για διαχρονική κομψότητα. Οι αισθητικές μας υπηρεσίες ξεπερνούν τις απλές διορθώσεις — είναι σχεδιασμένες για να δημιουργούν χαμόγελα που φαίνονται φυσικά, αισθάνονται άνετα και αντέχουν στη δοκιμασία του χρόνου.',
-	'From teeth whitening and porcelain veneers to full smile redesigns, every treatment is tailored to your unique features and personal goals.' => 'Από τη λεύκανση δοντιών και τις πορσελάνινες όψεις έως την πλήρη επανασχεδίαση χαμόγελου, κάθε θεραπεία είναι προσαρμοσμένη στα μοναδικά χαρακτηριστικά σας και τους προσωπικούς σας στόχους.',
+	'Our cosmetic services go beyond simple fixes — crafted to create smiles that look natural, feel comfortable, and stand the test of time.' => 'Οι αισθητικές μας υπηρεσίες ξεπερνούν τις απλές διορθώσεις — σχεδιασμένες για χαμόγελα που φαίνονται φυσικά, αισθάνονται άνετα και αντέχουν στη δοκιμασία του χρόνου.',
+	'From teeth whitening and veneers to full smile redesigns, every treatment is tailored to your unique features and personal goals.' => 'Από τη λεύκανση δοντιών και τις όψεις έως την πλήρη επανασχεδίαση χαμόγελου, κάθε θεραπεία είναι προσαρμοσμένη στα μοναδικά χαρακτηριστικά σας και τους προσωπικούς σας στόχους.',
 	'General Dentistry'                       => 'Γενική Οδοντιατρική',
 	'Preventative &amp; Restorative Care'     => 'Προληπτική &amp; Επανορθωτική Φροντίδα',
-	'A beautiful smile starts with a healthy foundation. Our preventative and restorative services ensure your teeth and gums stay in excellent condition — so your smile looks great and lasts a lifetime.' => 'Ένα όμορφο χαμόγελο ξεκινά με υγιή βάση. Οι προληπτικές και επανορθωτικές υπηρεσίες μας εξασφαλίζουν ότι τα δόντια και τα ούλα σας παραμένουν σε άριστη κατάσταση — ώστε το χαμόγελό σας να δείχνει υπέροχο και να διαρκεί μια ζωή.',
-	'From routine check-ups and professional cleanings to fillings and crowns, we provide comprehensive care with the same attention to detail that defines everything we do.' => 'Από τους τακτικούς ελέγχους και τους επαγγελματικούς καθαρισμούς έως τα σφραγίσματα και τις στεφάνες, παρέχουμε ολοκληρωμένη φροντίδα με την ίδια προσοχή στη λεπτομέρεια που χαρακτηρίζει ό,τι κάνουμε.',
+	'A beautiful smile needs a healthy foundation. Our preventative and restorative services keep your teeth and gums in excellent condition — so your smile looks great and lasts a lifetime.' => 'Ένα όμορφο χαμόγελο χρειάζεται υγιή βάση. Οι προληπτικές και επανορθωτικές υπηρεσίες μας διατηρούν τα δόντια και τα ούλα σας σε άριστη κατάσταση — ώστε το χαμόγελό σας να δείχνει υπέροχο μια ζωή.',
+	'From check-ups and cleanings to fillings and crowns, we provide comprehensive care with the attention to detail that defines everything we do.' => 'Από τους ελέγχους και τους καθαρισμούς έως τα σφραγίσματα και τις στεφάνες, παρέχουμε ολοκληρωμένη φροντίδα με την προσοχή στη λεπτομέρεια που χαρακτηρίζει ό,τι κάνουμε.',
 	'Ready to Transform {accent}Your Smile?{/accent}' => 'Έτοιμοι να Μεταμορφώσετε {accent}το Χαμόγελό σας;{/accent}',
 
 	/* =====================================================================
 	   Gallery Page
 	   ===================================================================== */
 	'Gallery'                                 => 'Γκαλερί',
-	'Browse our collection of before &amp; after transformations and clinic photos.' => 'Περιηγηθείτε στη συλλογή μας με μεταμορφώσεις πριν &amp; μετά και φωτογραφίες του οδοντιατρείου.',
+	'Browse our before &amp; after transformations and clinic photos.' => 'Περιηγηθείτε στις μεταμορφώσεις πριν &amp; μετά και φωτογραφίες του οδοντιατρείου μας.',
 
 	/* =====================================================================
 	   Contact Page
 	   ===================================================================== */
-	'We would love to hear from you. Reach out to schedule an appointment or learn more about our services.' => 'Θα χαρούμε να ακούσουμε από εσάς. Επικοινωνήστε μαζί μας για να κλείσετε ραντεβού ή να μάθετε περισσότερα για τις υπηρεσίες μας.',
+	'We\'d love to hear from you. Schedule an appointment or learn more about our services.' => 'Θα χαρούμε να ακούσουμε από εσάς. Κλείστε ραντεβού ή μάθετε περισσότερα για τις υπηρεσίες μας.',
 	'Contact Information'                     => 'Στοιχεία Επικοινωνίας',
 	'Book an Appointment'                     => 'Κλείστε Ραντεβού',
 	'Name'                                    => 'Όνομα',
