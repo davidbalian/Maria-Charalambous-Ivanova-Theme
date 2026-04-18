@@ -30,7 +30,7 @@ return array(
 	   Homepage Hero
 	   ===================================================================== */
 	'Beautiful Smiles {accent}Start Here{/accent}' => 'Красивые улыбки {accent}начинаются здесь{/accent}',
-	'Professional dental care with modern technology, personalized treatment, and lasting oral health.' => 'Профессиональная стоматологическая помощь с современными технологиями, индивидуальным подходом и заботой о долгосрочном здоровье полости рта.',
+	'Professional dental care with modern technology, personalized treatment, and lasting oral health.' => 'Современные технологии, индивидуальный подход, долгосрочное здоровье.',
 
 	/* =====================================================================
 	   Welcome Section

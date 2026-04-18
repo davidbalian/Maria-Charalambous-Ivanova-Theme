@@ -30,7 +30,7 @@ return array(
 	   Homepage Hero
 	   ===================================================================== */
 	'Beautiful Smiles {accent}Start Here{/accent}' => 'Τα Όμορφα Χαμόγελα {accent}Ξεκινούν Εδώ{/accent}',
-	'Professional dental care with modern technology, personalized treatment, and lasting oral health.' => 'Επαγγελματική οδοντιατρική φροντίδα με σύγχρονη τεχνολογία, εξατομικευμένη θεραπεία και μακροπρόθεσμη στοματική υγεία.',
+	'Professional dental care with modern technology, personalized treatment, and lasting oral health.' => 'Σύγχρονη τεχνολογία, εξατομικευμένη φροντίδα, μακροπρόθεσμη στοματική υγεία.',
 
 	/* =====================================================================
 	   Welcome Section
