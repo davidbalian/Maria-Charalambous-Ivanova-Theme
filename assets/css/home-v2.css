@@ -89,6 +89,12 @@
     min-height: 62dvh;
     max-height: 62dvh;
   }
+
+  .home .home-hero__slider-bleed {
+    height: 100%;
+    min-height: 100%;
+    max-height: none;
+  }
 }
 
 .home-hero__carousel,
@@ -915,6 +921,7 @@
   left: calc(50% - 50vw);
   width: 100vw;
   height: 100%;
+  min-height: 100%;
   margin-left: 0;
   margin-right: 0;
 }
