@@ -426,7 +426,7 @@ body:has(#wpadminbar) .site-header {
 }
 
 @media (max-width: 768px) {
-  .site-header {
+  .site-header.is-scrolled {
     background: rgba(255, 255, 255, 0.95);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);

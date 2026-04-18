@@ -91,7 +91,9 @@
   }
 }
 
-.home-hero__carousel {
+.home-hero__carousel,
+.home-hero__carousel .swiper-wrapper,
+.home-hero__carousel .swiper-slide {
   height: 100%;
 }
 
