@@ -44,40 +44,32 @@
 
 	updateParallax();
 
-	// Hero slider parallax — translateY on <img> elements (not bg-image sections)
+	// Hero slider parallax — translate the slider-bleed container
 	var heroSliderBleed = document.querySelector('.home-hero__slider-bleed');
 	if (heroSliderBleed) {
-		var heroImgs = heroSliderBleed.querySelectorAll('.home-hero__slide img');
-		if (heroImgs.length) {
-			var heroHeight = heroSliderBleed.offsetHeight;
-			var heroMaxOffset = heroHeight * 0.25;
-			var heroTicking = false;
+		var heroHeight = heroSliderBleed.closest('.home-hero').offsetHeight;
+		var heroTicking = false;
 
-			function updateHeroParallax() {
-				var scrollY = window.scrollY;
-				if (scrollY > heroHeight) {
-					heroTicking = false;
-					return;
-				}
-				var offset = Math.min(scrollY * 0.25, heroMaxOffset);
-				for (var j = 0; j < heroImgs.length; j++) {
-					heroImgs[j].style.transform = 'translateY(' + offset + 'px)';
-				}
+		function updateHeroParallax() {
+			var scrollY = window.scrollY;
+			if (scrollY > heroHeight) {
 				heroTicking = false;
+				return;
 			}
-
-			window.addEventListener('scroll', function () {
-				if (!heroTicking) {
-					requestAnimationFrame(updateHeroParallax);
-					heroTicking = true;
-				}
-			}, { passive: true });
-
-			window.addEventListener('resize', function () {
-				heroHeight = heroSliderBleed.offsetHeight;
-				heroMaxOffset = heroHeight * 0.25;
-			}, { passive: true });
+			heroSliderBleed.style.transform = 'translateY(' + (scrollY * 0.25) + 'px)';
+			heroTicking = false;
 		}
+
+		window.addEventListener('scroll', function () {
+			if (!heroTicking) {
+				requestAnimationFrame(updateHeroParallax);
+				heroTicking = true;
+			}
+		}, { passive: true });
+
+		window.addEventListener('resize', function () {
+			heroHeight = heroSliderBleed.closest('.home-hero').offsetHeight;
+		}, { passive: true });
 	}
 })();
 
