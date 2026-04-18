@@ -17,6 +17,16 @@ window.addEventListener('load', function () {
 		}
 	});
 
+	var firstImg = root.querySelector('.home-hero__slide img');
+	if (firstImg && !reduceMotion) {
+		firstImg.classList.add('is-initial-load');
+		firstImg.addEventListener('animationend', function (e) {
+			if (e.animationName === 'home-hero-fade-in') {
+				firstImg.classList.remove('is-initial-load');
+			}
+		}, { once: true });
+	}
+
 	new Swiper(root, {
 		effect: 'fade',
 		fadeEffect: { crossFade: true },

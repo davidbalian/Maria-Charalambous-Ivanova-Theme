@@ -52,10 +52,10 @@
   to   { opacity: 1; }
 }
 
-.home-hero__carousel .swiper-slide:first-child .home-hero__slide img {
+.home-hero__carousel .home-hero__slide img.is-initial-load {
   animation:
     home-hero-ken-pulse 8s ease-in-out infinite,
-    home-hero-fade-in 1.4s cubic-bezier(0.32, 0.15, 0, 1.01) forwards;
+    home-hero-fade-in 1.4s ease-in-out forwards;
 }
 
 @media (prefers-reduced-motion: reduce) {
