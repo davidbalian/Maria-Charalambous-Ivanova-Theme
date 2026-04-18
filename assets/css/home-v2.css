@@ -511,6 +511,11 @@
   margin-bottom: var(--mci-spacing-2xl);
 }
 
+/* Homepage Smilers desktop ratio: text 70% / image 30% */
+.home-v2-comprehensive__smilers .services-item__grid {
+  grid-template-columns: 7fr 3fr;
+}
+
 .home-v2-comprehensive .services-list__grid {
   gap: 1rem;
 }
