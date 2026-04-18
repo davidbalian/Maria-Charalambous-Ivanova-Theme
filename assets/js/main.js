@@ -2,6 +2,49 @@
  * Main theme JS.
  */
 
+// Parallax background — desktop only, respects reduced-motion
+(function () {
+	if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+	if (window.matchMedia('(pointer: coarse)').matches) return;
+
+	var parallaxEls = document.querySelectorAll(
+		'.privacy-hero, .about-hero, .about-cta, ' +
+		'.services-hero, .services-cta, ' +
+		'.contact-hero, .contact-cta, ' +
+		'.gallery-hero, .gallery-cta, ' +
+		'.home-v2-consultation'
+	);
+	if (!parallaxEls.length) return;
+
+	var ticking = false;
+	var vh = window.innerHeight;
+
+	function updateParallax() {
+		for (var i = 0; i < parallaxEls.length; i++) {
+			var el = parallaxEls[i];
+			var rect = el.getBoundingClientRect();
+			if (rect.bottom < 0 || rect.top > vh) continue;
+			// Negative offset: as section scrolls up, bg shifts down (slower than scroll)
+			var offset = -(rect.top * 0.25);
+			el.style.backgroundPositionY = 'calc(50% + ' + offset + 'px)';
+		}
+		ticking = false;
+	}
+
+	window.addEventListener('scroll', function () {
+		if (!ticking) {
+			requestAnimationFrame(updateParallax);
+			ticking = true;
+		}
+	}, { passive: true });
+
+	window.addEventListener('resize', function () {
+		vh = window.innerHeight;
+	}, { passive: true });
+
+	updateParallax();
+})();
+
 document.addEventListener('DOMContentLoaded', function () {
 	// Smooth scroll: hero chevron + in-page CTAs (same target as #comprehensive-dental-care)
 	document.querySelectorAll('.js-home-hero-scroll-next').forEach(function (link) {
