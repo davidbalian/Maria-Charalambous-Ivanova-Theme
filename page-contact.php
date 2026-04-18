@@ -17,7 +17,7 @@ $clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
 		<div class="contact-hero__overlay"></div>
 		<div class="container contact-hero__content">
 			<h1 class="contact-hero__title fade-in fade-in-delay-0"><?php mci_te( 'Contact Us' ); ?></h1>
-			<p class="contact-hero__subtitle fade-in fade-in-delay-1"><?php mci_te( 'We would love to hear from you. Reach out to schedule an appointment or learn more about our services.' ); ?></p>
+			<p class="contact-hero__subtitle fade-in fade-in-delay-1"><?php mci_te( 'We\'d love to hear from you. Schedule an appointment or learn more about our services.' ); ?></p>
 			<?php get_template_part( 'template-parts/whatsapp-cta', null, array( 'extra_class' => 'fade-in fade-in-delay-2' ) ); ?>
 		</div>
 	</section>
@@ -112,7 +112,7 @@ $clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
 		<div class="contact-cta__overlay"></div>
 		<div class="container contact-cta__content">
 			<h2 class="fade-in fade-in-delay-0"><?php echo mci_t_accent( 'Ready to Transform {accent}Your Smile?{/accent}' ); ?></h2>
-			<p class="fade-in fade-in-delay-1"><?php mci_te( 'Book a consultation and discover the difference personalized dental care can make.' ); ?></p>
+			<p class="fade-in fade-in-delay-1"><?php mci_te( 'Book a consultation and discover the difference personalized care makes.' ); ?></p>
 			<div class="contact-cta__buttons fade-in fade-in-delay-2">
 				<a href="tel:+35725377757" class="btn btn-primary"><?php mci_te( 'Call +357 25 377757' ); ?></a>
 				<a href="mailto:info@dentalartcliniclimassol.com" class="btn btn-outline-light"><?php mci_te( 'Email Us' ); ?></a>

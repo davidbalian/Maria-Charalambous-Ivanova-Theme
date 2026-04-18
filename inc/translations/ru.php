@@ -30,16 +30,16 @@ return array(
 	   Homepage Hero
 	   ===================================================================== */
 	'Beautiful Smiles {accent}Start Here{/accent}' => 'Красивые улыбки {accent}начинаются здесь{/accent}',
-	'Professional dental care with modern technology, personalized treatment, and a focus on long-term oral health.' => 'Профессиональная стоматологическая помощь с использованием современных технологий, индивидуальный подход к лечению и забота о долгосрочном здоровье полости рта.',
+	'Professional dental care with modern technology, personalized treatment, and lasting oral health.' => 'Профессиональная стоматологическая помощь с современными технологиями, индивидуальным подходом и заботой о долгосрочном здоровье полости рта.',
 
 	/* =====================================================================
 	   Welcome Section
 	   ===================================================================== */
 	'Welcome to Our Dental Clinic'            => 'Добро пожаловать в нашу стоматологическую клинику',
-	'Welcome to our dental clinic, where your oral health and smile are our top priorities. We provide high-quality dental care in a modern, comfortable, and friendly environment.' => 'Добро пожаловать в нашу стоматологическую клинику, где здоровье Вашей полости рта и красота улыбки являются нашим главным приоритетом. Мы оказываем высококачественную стоматологическую помощь в современной, комфортной и дружелюбной обстановке.',
-	'Our clinic offers a wide range of dental treatments, from preventive care and routine check-ups to advanced restorative and cosmetic procedures. Using modern technology and up-to-date techniques, we ensure safe, effective, and personalized treatment for every patient.' => 'Наша клиника предлагает широкий спектр стоматологических услуг — от профилактики и плановых осмотров до сложных реставрационных и косметических процедур. Используя современные технологии и актуальные методики, мы гарантируем безопасное, эффективное и индивидуальное лечение для каждого пациента.',
-	'Our goal is not only to treat dental problems but also to help our patients maintain long-term oral health and confidence in their smile.' => 'Наша цель — не только лечение стоматологических проблем, но и помощь пациентам в поддержании долгосрочного здоровья полости рта и уверенности в своей улыбке.',
-	'Whether you need a routine dental examination, aesthetic treatment, or emergency dental care, our team is here to help you with professionalism and care.' => 'Будь то плановый стоматологический осмотр, эстетическое лечение или экстренная стоматологическая помощь — наша команда готова помочь Вам с профессионализмом и заботой.',
+	'At our dental clinic, your oral health and smile are our top priorities. We provide high-quality care in a modern, comfortable environment.' => 'В нашей клинике здоровье полости рта и красота улыбки — наш главный приоритет. Мы оказываем высококачественную помощь в современной, комфортной обстановке.',
+	'From preventive care and routine check-ups to advanced restorative and cosmetic procedures, we use modern technology to deliver safe, effective, and personalized treatment for every patient.' => 'От профилактики и плановых осмотров до сложных реставрационных и косметических процедур — используя современные технологии, мы гарантируем безопасное, эффективное и индивидуальное лечение для каждого пациента.',
+	'Our goal goes beyond treating dental problems — we help patients maintain long-term oral health and confidence in their smile.' => 'Наша цель выходит за рамки лечения — мы помогаем пациентам поддерживать долгосрочное здоровье полости рта и уверенность в своей улыбке.',
+	'Whether you need a routine exam, aesthetic treatment, or emergency care, our team is here with professionalism and care.' => 'Плановый осмотр, эстетическое лечение или экстренная помощь — наша команда здесь с профессионализмом и заботой.',
 
 	/* =====================================================================
 	   Before & After
@@ -60,25 +60,25 @@ return array(
 	   Gentle Touch
 	   ===================================================================== */
 	'Modern Dentistry with a {accent}Gentle Touch{/accent}' => 'Современная стоматология с {accent}бережным подходом{/accent}',
-	'We believe dental visits should be stress-free, personalized, and focused entirely on your comfort and long-term health.' => 'Мы убеждены, что посещение стоматолога должно быть свободным от стресса, индивидуальным и полностью сосредоточенным на Вашем комфорте и долгосрочном здоровье.',
+	'Every visit should be stress-free, personalized, and entirely focused on your comfort and long-term health.' => 'Каждый визит должен быть свободным от стресса, индивидуальным и полностью сосредоточенным на Вашем комфорте и долгосрочном здоровье.',
 	'Scientific Precision'                    => 'Научная точность',
-	'Every treatment is based on comprehensive functional analysis, precise diagnosis, and carefully structured planning for long-term health.' => 'Каждое лечение основано на комплексном функциональном анализе, точной диагностике и тщательно структурированном планировании для долгосрочного здоровья.',
+	'Every treatment starts with functional analysis, precise diagnosis, and structured planning for long-term health.' => 'Каждое лечение начинается с функционального анализа, точной диагностики и структурированного планирования для долгосрочного здоровья.',
 	'Aesthetic Harmony'                       => 'Эстетическая гармония',
-	'Specializing in composite veneers and Emax veneers, we create naturally balanced results that harmonize function with aesthetics.' => 'Специализируясь на композитных винирах и винирах Emax, мы создаём естественно сбалансированные результаты, гармонично сочетающие функцию и эстетику.',
+	'Specializing in composite and Emax veneers, we create naturally balanced results that harmonize function with aesthetics.' => 'Специализируясь на композитных и Emax винирах, мы создаём естественно сбалансированные результаты, гармонично сочетающие функцию и эстетику.',
 
 	/* =====================================================================
 	   Comprehensive Services
 	   ===================================================================== */
 	'Comprehensive Dental Care for {accent}Every Need{/accent}' => 'Комплексная стоматологическая помощь для {accent}любых потребностей{/accent}',
-	'At our dental clinic, we are committed to providing high-quality dental care in a comfortable and welcoming environment. Our goal is to help patients maintain excellent oral health while enhancing the beauty and function of their smile.' => 'В нашей стоматологической клинике мы стремимся оказывать высококачественную стоматологическую помощь в комфортной и гостеприимной обстановке. Наша цель — помочь пациентам поддерживать отличное здоровье полости рта, одновременно улучшая красоту и функциональность их улыбки.',
+	'We are committed to high-quality dental care in a comfortable, welcoming environment, helping patients maintain excellent oral health while enhancing the beauty and function of their smile.' => 'Мы стремимся оказывать высококачественную помощь в комфортной, гостеприимной обстановке, помогая пациентам поддерживать отличное здоровье полости рта и улучшая красоту и функциональность их улыбки.',
 
 	/* =====================================================================
 	   Doctor
 	   ===================================================================== */
 	'Dr. Maria Charalambous-Ivanova'          => 'Др. Мария Харалампус-Иванова',
 	'DMD, MSD | Founder &amp; Clinical Director' => 'DMD, MSD | Основатель и клинический директор',
-	'Dr. Maria Charalambous-Ivanova graduated from the University of Sofia in 2007 and has been practicing since 2008, building a dynamic and continuously evolving professional career. Through constant participation in international congresses and advanced training programs, she remains at the forefront of modern dental techniques.' => 'Др. Мария Харалампус-Иванова окончила Софийский университет в 2007 году и ведёт практику с 2008 года, развивая динамичную и постоянно совершенствующуюся профессиональную карьеру. Благодаря регулярному участию в международных конгрессах и программах повышения квалификации она остаётся в авангарде современных стоматологических методик.',
-	'Her specialization in composite veneers and Emax veneers forms the foundation of her aesthetic philosophy. In addition, she undertakes complex and full mouth rehabilitation cases requiring comprehensive functional analysis, precise diagnosis, and carefully structured treatment planning.' => 'Её специализация на композитных винирах и винирах Emax составляет основу её эстетической философии. Кроме того, она берётся за сложные случаи и полную реабилитацию полости рта, требующие комплексного функционального анализа, точной диагностики и тщательно структурированного плана лечения.',
+	'Dr. Maria Charalambous-Ivanova graduated from the University of Sofia in 2007 and has practiced since 2008. Through ongoing participation in international congresses and advanced training, she remains at the forefront of modern dental techniques.' => 'Др. Мария Харалампус-Иванова окончила Софийский университет в 2007 году и ведёт практику с 2008 года. Благодаря постоянному участию в международных конгрессах и программах повышения квалификации она остаётся в авангарде современных стоматологических методик.',
+	'Composite and Emax veneers form the foundation of her aesthetic philosophy. She also undertakes complex full mouth rehabilitation cases requiring functional analysis, precise diagnosis, and structured treatment planning.' => 'Композитные виниры и виниры Emax — основа её эстетической философии. Она также берётся за сложную полную реабилитацию полости рта, требующую функционального анализа, точной диагностики и структурированного плана лечения.',
 	'Scientific precision'                    => 'Научная точность',
 	'Strategic treatment planning'            => 'Стратегическое планирование лечения',
 	'Pain-free experience'                    => 'Безболезненное лечение',
@@ -114,8 +114,8 @@ return array(
 	   Consultation
 	   ===================================================================== */
 	'Ready to Transform Your Smile?'          => 'Готовы преобразить свою улыбку?',
-	'Book a consultation with Dr. Maria Charalambous-Ivanova and discover how scientific precision and aesthetic harmony can create the smile you\'ve always wanted.' => 'Запишитесь на консультацию к Др. Марии Харалампус-Ивановой и узнайте, как научная точность и эстетическая гармония могут создать улыбку, о которой Вы всегда мечтали.',
-	'Each case is treated individually with no standardized solutions — only the right solution for the specific patient, always focusing on long-term health, proper function, and aesthetic balance.' => 'Каждый случай рассматривается индивидуально — никаких шаблонных решений, только правильное решение для конкретного пациента, всегда с акцентом на долгосрочное здоровье, правильную функцию и эстетический баланс.',
+	'Consult Dr. Maria Charalambous-Ivanova and discover how scientific precision and aesthetic harmony can create the smile you\'ve always wanted.' => 'Проконсультируйтесь с Др. Марией Харалампус-Ивановой и узнайте, как научная точность и эстетическая гармония могут создать улыбку, о которой Вы всегда мечтали.',
+	'Every case is individual — no standardized solutions, only the right approach for each patient, always focused on long-term health, proper function, and aesthetic balance.' => 'Каждый случай индивидуален — никаких шаблонных решений, только правильный подход для каждого пациента, всегда с акцентом на долгосрочное здоровье, правильную функцию и эстетический баланс.',
 	'Full Name'                               => 'Полное имя',
 	'Message'                                 => 'Сообщение',
 	'Tell us about your smile goals...'       => 'Расскажите нам о Ваших пожеланиях к улыбке...',
@@ -140,26 +140,26 @@ return array(
 	   11 Services (mci_get_services_data)
 	   ===================================================================== */
 	'General Dental Examination & Prevention' => 'Общий стоматологический осмотр и профилактика',
-	'Regular dental check-ups help detect potential problems early and maintain optimal oral health through preventive care and professional advice.' => 'Регулярные стоматологические осмотры помогают своевременно выявлять потенциальные проблемы и поддерживать оптимальное здоровье полости рта с помощью профилактики и профессиональных рекомендаций.',
+	'Regular check-ups help detect problems early and maintain optimal oral health through preventive care and professional advice.' => 'Регулярные осмотры помогают своевременно выявлять проблемы и поддерживать оптимальное здоровье полости рта с помощью профилактики и профессиональных рекомендаций.',
 	'Professional Teeth Cleaning'             => 'Профессиональная чистка зубов',
-	'Removal of plaque, tartar, and stains to promote healthy gums and a brighter, healthier smile.' => 'Удаление зубного налёта, зубного камня и пигментации для здоровья дёсен и более яркой, здоровой улыбки.',
+	'Removes plaque, tartar, and stains to promote healthy gums and a brighter smile.' => 'Удаление зубного налёта, зубного камня и пигментации для здоровья дёсен и более яркой улыбки.',
 	'Dental Fillings'                         => 'Пломбирование зубов',
-	'Treatment of tooth decay using modern, aesthetic materials that restore both function and natural appearance.' => 'Лечение кариеса с использованием современных эстетических материалов, восстанавливающих как функцию, так и естественный внешний вид зуба.',
+	'Treatment of tooth decay with modern aesthetic materials, restoring both function and natural appearance.' => 'Лечение кариеса с применением современных эстетических материалов, восстанавливающих функцию и естественный вид зуба.',
 	'Root Canal Treatment (Endodontics)'      => 'Лечение корневых каналов (эндодонтия)',
-	'Advanced treatment for infected or inflamed tooth nerves, allowing the natural tooth to be preserved and pain to be relieved.' => 'Современное лечение инфицированных или воспалённых нервов зуба, позволяющее сохранить естественный зуб и устранить боль.',
+	'Advanced treatment for infected or inflamed tooth nerves, preserving the natural tooth and relieving pain.' => 'Современное лечение инфицированных или воспалённых нервов зуба, позволяющее сохранить зуб и устранить боль.',
 	'Tooth Extractions'                       => 'Удаление зубов',
-	'Safe and gentle removal of teeth when they cannot be restored, always prioritizing patient comfort.' => 'Безопасное и бережное удаление зубов, когда их восстановление невозможно, с приоритетом комфорта пациента.',
-	'A range of treatments designed to enhance the appearance of your smile, including teeth whitening and aesthetic restorations.' => 'Комплекс процедур для улучшения внешнего вида Вашей улыбки, включая отбеливание зубов и эстетические реставрации.',
+	'Safe and gentle removal when teeth cannot be restored, always prioritizing patient comfort.' => 'Безопасное и бережное удаление, когда восстановление зуба невозможно, с приоритетом комфорта пациента.',
+	'A range of treatments to enhance your smile, including teeth whitening and aesthetic restorations.' => 'Комплекс процедур для улучшения Вашей улыбки, включая отбеливание зубов и эстетические реставрации.',
 	'Crowns & Bridges'                        => 'Коронки и мосты',
-	'Durable restorations used to repair damaged teeth or replace missing ones, improving both function and aesthetics.' => 'Долговечные реставрации для восстановления повреждённых зубов или замещения отсутствующих, улучшающие как функцию, так и эстетику.',
+	'Durable restorations that repair damaged teeth or replace missing ones, improving both function and aesthetics.' => 'Долговечные реставрации для восстановления повреждённых зубов или замещения отсутствующих, улучшающие функцию и эстетику.',
 	'Dental Implants'                         => 'Зубные имплантаты',
-	'A modern and long-lasting solution for replacing missing teeth, restoring both confidence and oral function.' => 'Современное и долговечное решение для замещения отсутствующих зубов, восстанавливающее уверенность в себе и функцию полости рта.',
+	'Modern, long-lasting solution for replacing missing teeth and restoring both confidence and oral function.' => 'Современное долговечное решение для замещения отсутствующих зубов, восстанавливающее уверенность и функцию полости рта.',
 	'Dentures'                                => 'Зубные протезы',
-	'Full or partial removable dentures designed to restore chewing ability, speech, and smile aesthetics.' => 'Полные или частичные съёмные протезы, предназначенные для восстановления жевательной функции, речи и эстетики улыбки.',
+	'Full or partial removable dentures that restore chewing ability, speech, and smile aesthetics.' => 'Полные или частичные съёмные протезы для восстановления жевательной функции, речи и эстетики улыбки.',
 	'Periodontal Treatment'                   => 'Пародонтологическое лечение',
-	'Diagnosis and treatment of gum diseases such as gingivitis and periodontitis to protect the health of your gums and supporting bone.' => 'Диагностика и лечение заболеваний дёсен, таких как гингивит и пародонтит, для защиты здоровья дёсен и поддерживающей костной ткани.',
+	'Diagnosis and treatment of gum diseases such as gingivitis and periodontitis, protecting your gums and supporting bone.' => 'Диагностика и лечение заболеваний дёсен, таких как гингивит и пародонтит, с защитой здоровья дёсен и поддерживающей кости.',
 	'Emergency Dental Care'                   => 'Экстренная стоматологическая помощь',
-	'Prompt care for dental emergencies including severe toothache, broken teeth, infections, or other urgent dental conditions.' => 'Оперативная помощь при стоматологических неотложных состояниях, включая сильную зубную боль, сломанные зубы, инфекции и другие срочные случаи.',
+	'Prompt care for dental emergencies including severe toothache, broken teeth, and infections.' => 'Оперативная помощь при стоматологических неотложных ситуациях, включая сильную зубную боль, сломанные зубы и инфекции.',
 
 	/* =====================================================================
 	   About Page
@@ -167,48 +167,48 @@ return array(
 	'About the Clinic'                        => 'О клинике',
 	'Where your oral health and smile are our top priorities.' => 'Здоровье Вашей полости рта и улыбка — наш главный приоритет.',
 	'The Masterpiece Philosophy'               => 'Философия мастерства',
-	'At DENTAL ART CLINIC LIMASSOL, dentistry is approached as a combination of scientific precision, strategic planning, and aesthetic harmony. The establishment and expansion of the second clinic represent the natural evolution of a career built on trust, consistency, and a commitment to excellence.' => 'В DENTAL ART CLINIC LIMASSOL стоматология рассматривается как сочетание научной точности, стратегического планирования и эстетической гармонии. Основание и расширение второй клиники — это естественная эволюция карьеры, построенной на доверии, последовательности и стремлении к совершенству.',
-	'Each case is treated individually. There are no standardized solutions — only the right solution for the specific patient, always focusing on long-term health, proper function, and aesthetic balance.' => 'Каждый случай рассматривается индивидуально. Никаких шаблонных решений — только правильное решение для конкретного пациента, всегда с акцентом на долгосрочное здоровье, правильную функцию и эстетический баланс.',
-	'Collaboration with highly skilled and specialized partners ensures optimal, natural, and harmoniously balanced results.' => 'Сотрудничество с высококвалифицированными и специализированными партнёрами обеспечивает оптимальные, естественные и гармонично сбалансированные результаты.',
+	'At DENTAL ART CLINIC LIMASSOL, dentistry combines scientific precision, strategic planning, and aesthetic harmony — the natural evolution of a career built on trust, consistency, and excellence.' => 'В DENTAL ART CLINIC LIMASSOL стоматология сочетает научную точность, стратегическое планирование и эстетическую гармонию — это естественная эволюция карьеры, построенной на доверии, последовательности и стремлении к совершенству.',
+	'Every case is treated individually — no standardized solutions, only the right approach for each patient, focusing on long-term health, proper function, and aesthetic balance.' => 'Каждый случай рассматривается индивидуально — никаких шаблонных решений, только правильный подход для каждого пациента, с акцентом на долгосрочное здоровье, правильную функцию и эстетический баланс.',
+	'Collaboration with skilled partners ensures optimal, natural, and harmoniously balanced results.' => 'Сотрудничество с квалифицированными партнёрами обеспечивает оптимальные, естественные и гармонично сбалансированные результаты.',
 	'The Clinic Experience'                   => 'Атмосфера клиники',
-	'Our dental clinic is dedicated to providing comprehensive dental care for patients of all ages. We focus on prevention, accurate diagnosis, and high-quality treatment to ensure the best possible results for every patient.' => 'Наша стоматологическая клиника специализируется на оказании комплексной стоматологической помощи пациентам всех возрастов. Мы делаем акцент на профилактике, точной диагностике и высококачественном лечении для достижения наилучших результатов для каждого пациента.',
-	'We believe that visiting the dentist should be a comfortable and positive experience. For this reason, we create a friendly and relaxed environment while offering personalized care tailored to each patient\'s needs.' => 'Мы считаем, что посещение стоматолога должно быть комфортным и приятным. Поэтому мы создаём дружелюбную и расслабленную атмосферу, предлагая индивидуальный уход, адаптированный к потребностям каждого пациента.',
-	'Our priority is to build long-term relationships with our patients based on trust, professionalism, and excellent dental care.' => 'Наш приоритет — выстраивание долгосрочных отношений с пациентами, основанных на доверии, профессионализме и превосходной стоматологической помощи.',
-	'Book a consultation and discover the difference personalized dental care can make.' => 'Запишитесь на консультацию и почувствуйте разницу, которую может обеспечить индивидуальный подход к стоматологическому лечению.',
+	'Our clinic provides comprehensive dental care for patients of all ages, focusing on prevention, accurate diagnosis, and high-quality treatment for the best possible results.' => 'Наша клиника оказывает комплексную стоматологическую помощь пациентам всех возрастов, делая акцент на профилактике, точной диагностике и высококачественном лечении для наилучших результатов.',
+	'We believe dental visits should be comfortable and positive. We create a friendly, relaxed environment with personalized care tailored to each patient\'s needs.' => 'Мы убеждены, что визит к стоматологу должен быть комфортным и приятным. Мы создаём дружелюбную, расслабленную атмосферу с индивидуальным уходом, адаптированным к потребностям каждого пациента.',
+	'Our priority is long-term patient relationships built on trust, professionalism, and excellent dental care.' => 'Наш приоритет — долгосрочные отношения с пациентами, основанные на доверии, профессионализме и превосходной стоматологической помощи.',
+	'Book a consultation and discover the difference personalized care makes.' => 'Запишитесь на консультацию и почувствуйте разницу, которую обеспечивает индивидуальный подход.',
 
 	/* =====================================================================
 	   Services Page
 	   ===================================================================== */
-	'Comprehensive dental care using modern technology and evidence-based treatments, tailored to every patient.' => 'Комплексная стоматологическая помощь с использованием современных технологий и доказательных методов лечения, адаптированная к каждому пациенту.',
+	'Comprehensive dental care with modern technology and evidence-based treatments for every patient.' => 'Комплексная стоматологическая помощь с современными технологиями и доказательными методами лечения для каждого пациента.',
 	'Explore All Our Services'                => 'Ознакомьтесь со всеми нашими услугами',
 	'Orthodontics'                            => 'Ортодонтия',
 	'Smilers Aligners'                        => 'Элайнеры Smilers',
-	'Discreet and tough dental aligners designed for modern lifestyles. Smilers offer a virtually invisible way to straighten your teeth and correct your bite — without the look and feel of traditional braces.' => 'Незаметные и прочные зубные элайнеры, созданные для современного образа жизни. Smilers предлагают практически невидимый способ выровнять зубы и исправить прикус — без внешнего вида и ощущений традиционных брекетов.',
-	'Ideal for protecting gutters and correcting smiles invisibly, Smilers Aligners let you go about your day with complete confidence while your teeth gently move into place.' => 'Идеально подходящие для защиты зубного ряда и незаметной коррекции улыбки, элайнеры Smilers позволяют Вам уверенно проводить день, пока зубы мягко перемещаются в правильное положение.',
+	'Discreet and durable aligners built for modern lifestyles — Smilers offer a virtually invisible way to straighten your teeth and correct your bite, without the look or feel of traditional braces.' => 'Незаметные и прочные элайнеры для современного образа жизни — Smilers предлагают практически невидимый способ выровнять зубы и исправить прикус, без внешнего вида и ощущений традиционных брекетов.',
+	'Correct your smile invisibly — Smilers Aligners let you go about your day with complete confidence while your teeth gently move into place.' => 'Корректируйте улыбку незаметно — элайнеры Smilers позволяют Вам уверенно проводить день, пока зубы мягко перемещаются в правильное положение.',
 	'Aesthetic Dentistry'                     => 'Эстетическая стоматология',
 	'One-Visit Transformations'               => 'Преображение за один визит',
-	'Fast-track aesthetic dentistry at its finest. Using advanced materials and techniques, Dr. Maria can dramatically enhance your smile in a single appointment — creating a "Masterpiece" result you will love from day one.' => 'Экспресс-эстетическая стоматология в лучшем её проявлении. Используя передовые материалы и методики, Др. Мария может кардинально преобразить Вашу улыбку за один приём, создавая результат-«шедевр», который порадует Вас с первого дня.',
-	'Whether you need veneers, bonding, or a complete smile makeover, our one-visit approach saves you time without compromising on quality.' => 'Будь то виниры, бондинг или полное преображение улыбки — наш подход «за один визит» экономит Ваше время без ущерба качеству.',
+	'Using advanced materials and techniques, Dr. Maria can dramatically enhance your smile in a single appointment — creating a "Masterpiece" result you will love from day one.' => 'Используя передовые материалы и методики, Др. Мария может кардинально преобразить Вашу улыбку за один приём, создавая результат-«шедевр», который порадует Вас с первого дня.',
+	'Whether you need veneers, bonding, or a complete smile makeover, our one-visit approach saves time without compromising quality.' => 'Будь то виниры, бондинг или полное преображение улыбки — наш подход «за один визит» экономит время без ущерба качеству.',
 	'Cosmetic'                                => 'Косметические услуги',
 	'Cosmetic Masterpieces'                   => 'Косметические шедевры',
-	'Solutions crafted for timeless elegance. Our cosmetic services go beyond simple fixes — they are designed to create smiles that look natural, feel comfortable, and stand the test of time.' => 'Решения, созданные для вневременной элегантности. Наши косметические услуги выходят за рамки простых исправлений — они предназначены для создания улыбок, которые выглядят естественно, ощущаются комфортно и выдерживают проверку временем.',
-	'From teeth whitening and porcelain veneers to full smile redesigns, every treatment is tailored to your unique features and personal goals.' => 'От отбеливания зубов и керамических виниров до полного редизайна улыбки — каждая процедура адаптирована к Вашим уникальным чертам и личным пожеланиям.',
+	'Our cosmetic services go beyond simple fixes — crafted to create smiles that look natural, feel comfortable, and stand the test of time.' => 'Наши косметические услуги выходят за рамки простых исправлений — созданные для улыбок, которые выглядят естественно, ощущаются комфортно и выдерживают проверку временем.',
+	'From teeth whitening and veneers to full smile redesigns, every treatment is tailored to your unique features and personal goals.' => 'От отбеливания зубов и виниров до полного редизайна улыбки — каждая процедура адаптирована к Вашим уникальным чертам и личным пожеланиям.',
 	'General Dentistry'                       => 'Общая стоматология',
 	'Preventative &amp; Restorative Care'     => 'Профилактика и реставрация',
-	'A beautiful smile starts with a healthy foundation. Our preventative and restorative services ensure your teeth and gums stay in excellent condition — so your smile looks great and lasts a lifetime.' => 'Красивая улыбка начинается со здоровой основы. Наши профилактические и реставрационные услуги обеспечивают отличное состояние Ваших зубов и дёсен — чтобы Ваша улыбка выглядела великолепно и сохранялась на всю жизнь.',
-	'From routine check-ups and professional cleanings to fillings and crowns, we provide comprehensive care with the same attention to detail that defines everything we do.' => 'От плановых осмотров и профессиональных чисток до пломбирования и коронок — мы оказываем комплексную помощь с тем же вниманием к деталям, которое определяет всё, что мы делаем.',
+	'A beautiful smile needs a healthy foundation. Our preventative and restorative services keep your teeth and gums in excellent condition — so your smile looks great and lasts a lifetime.' => 'Красивая улыбка требует здоровой основы. Наши профилактические и реставрационные услуги поддерживают отличное состояние Ваших зубов и дёсен — чтобы Ваша улыбка выглядела великолепно и сохранялась на всю жизнь.',
+	'From check-ups and cleanings to fillings and crowns, we provide comprehensive care with the attention to detail that defines everything we do.' => 'От осмотров и чисток до пломбирования и коронок — мы оказываем комплексную помощь с вниманием к деталям, которое определяет всё, что мы делаем.',
 	'Ready to Transform {accent}Your Smile?{/accent}' => 'Готовы преобразить {accent}свою улыбку?{/accent}',
 
 	/* =====================================================================
 	   Gallery Page
 	   ===================================================================== */
 	'Gallery'                                 => 'Галерея',
-	'Browse our collection of before &amp; after transformations and clinic photos.' => 'Ознакомьтесь с нашей коллекцией фотографий преображений до и после, а также снимками клиники.',
+	'Browse our before &amp; after transformations and clinic photos.' => 'Просмотрите наши фотографии преображений до и после и снимки клиники.',
 
 	/* =====================================================================
 	   Contact Page
 	   ===================================================================== */
-	'We would love to hear from you. Reach out to schedule an appointment or learn more about our services.' => 'Мы будем рады Вашему обращению. Свяжитесь с нами, чтобы записаться на приём или узнать больше о наших услугах.',
+	'We\'d love to hear from you. Schedule an appointment or learn more about our services.' => 'Мы будем рады Вашему обращению. Запишитесь на приём или узнайте больше о наших услугах.',
 	'Contact Information'                     => 'Контактная информация',
 	'Book an Appointment'                     => 'Записаться на приём',
 	'Name'                                    => 'Имя',
