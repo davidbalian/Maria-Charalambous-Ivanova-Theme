@@ -2444,17 +2444,22 @@ hr {
 }
 
 @media (min-width: 769px) {
+  /* Normal rows: text(col1=6fr) | image(col2=4fr) */
   .services-page .services-item__grid {
     grid-template-columns: 6fr 4fr;
   }
 
-  /* Keep 6fr = text, 4fr = image even when --reverse uses order to swap visual flow */
   .services-page .services-item__content {
     grid-column: 1;
   }
 
   .services-page .services-item__image {
     grid-column: 2;
+  }
+
+  /* Reversed rows: image(col1=4fr) | text(col2=6fr) */
+  .services-page .services-item--reverse .services-item__grid {
+    grid-template-columns: 4fr 6fr;
   }
 
   .services-page .services-item--reverse .services-item__content {
