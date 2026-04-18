@@ -1027,7 +1027,7 @@
 /* 6. Mobile — keep overlay layout, adjust spacing */
 @media (max-width: 768px) {
   .home .home-hero {
-    --mci-home-hero-viewport: min(98dvh, 1920px);
+    --mci-home-hero-viewport: min(87dvh, 1920px);
     min-height: var(--mci-home-hero-viewport);
     height: var(--mci-home-hero-viewport);
     max-height: var(--mci-home-hero-viewport);
