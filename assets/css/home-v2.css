@@ -1037,4 +1037,8 @@
   .home .home-hero__bottom {
     padding: var(--mci-spacing-lg) 0 var(--mci-spacing-sm);
   }
+
+  .home .home-hero__title {
+    margin-bottom: 0.5rem;
+  }
 }

@@ -5,7 +5,6 @@
 // Parallax background — desktop only, respects reduced-motion
 (function () {
 	if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-	if (window.matchMedia('(pointer: coarse)').matches) return;
 
 	var parallaxEls = document.querySelectorAll(
 		'.privacy-hero, .about-hero, .about-cta, ' +
