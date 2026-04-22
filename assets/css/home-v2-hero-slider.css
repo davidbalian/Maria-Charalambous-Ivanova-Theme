@@ -1,17 +1,4 @@
-/* Homepage hero — Swiper fade + continuous Ken Burns–style zoom on all slide images */
-
-/*
- * Registered custom property so the scale value is animatable via @keyframes
- * AND transitionable when the animation is removed. This is what prevents the
- * outgoing slide from snapping back to scale(1) the instant it loses
- * .swiper-slide-active: the transition on --ken-scale catches the last
- * animated value and eases it back to 1 during the crossfade.
- */
-@property --ken-scale {
-  syntax: '<number>';
-  inherits: false;
-  initial-value: 1;
-}
+/* Homepage hero — Swiper fade + Ken Burns zoom driven by Web Animations API in home-hero-slider.js. */
 
 .home-hero__carousel.swiper {
   position: relative;
@@ -51,34 +38,16 @@
   display: block;
   object-fit: cover;
   transform-origin: center center;
-  transform: scale(var(--ken-scale));
-  /*
-   * Duration matches SLIDER_SPEED_MS in home-hero-slider.js so when the
-   * active class moves to the next slide, the outgoing image eases its
-   * --ken-scale back to 1 over the same window as Swiper's crossfade.
-   */
-  transition: --ken-scale 1.5s ease-in-out;
 }
 
 /*
- * Perf: scope Ken Burns to the active slide only so Safari isn't maintaining
- * three promoted GPU layers with transform: scale animations running forever
- * (even for off-screen slides). will-change is also only set on the active
- * slide to avoid permanent layer promotion.
+ * Perf: only the active slide gets will-change so Safari isn't maintaining
+ * multiple promoted GPU layers. The actual Ken Burns animation is run via
+ * Web Animations API (see home-hero-slider.js), which lets us freeze the
+ * outgoing slide's transform mid-cycle and clear it after the fade.
  */
 .home-hero__carousel.is-ready .swiper-slide-active .home-hero__slide img {
-  animation: home-hero-ken-pulse 8s ease-in-out infinite;
   will-change: transform;
-}
-
-@keyframes home-hero-ken-pulse {
-  0%,
-  100% {
-    --ken-scale: 1;
-  }
-  50% {
-    --ken-scale: 1.02;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -86,9 +55,7 @@
     transition: none;
   }
 
-  .home-hero__carousel .home-hero__slide img,
   .home-hero__carousel.is-ready .swiper-slide-active .home-hero__slide img {
-    animation: none;
     will-change: auto;
   }
 }
