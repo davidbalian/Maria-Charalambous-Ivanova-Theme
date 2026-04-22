@@ -2,7 +2,7 @@
 /**
  * Home: The Clinic carousel.
  *
- * Driven by Galleries → Placements → home_clinic. Wiring targets match
+ * Driven by the Galleries CPT (location = home_clinic). Wiring targets match
  * assets/js/clinic-slider.js (.js-clinic-swiper, .js-clinic-prev, .js-clinic-next).
  *
  * @package Maria_Charalambous_Ivanova
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$items = MCI_Gallery_Repository::get_items_for_slot( 'home_clinic' );
+$items = MCI_Galleries_Repository::get_items_for_location( MCI_Galleries_Locations::HOME_CLINIC );
 if ( empty( $items ) ) {
 	return;
 }
@@ -37,7 +37,7 @@ if ( empty( $items ) ) {
 		<div class="swiper home-v2-clinic__carousel js-clinic-swiper">
 			<div class="swiper-wrapper">
 				<?php foreach ( $items as $row ) : ?>
-					<?php $src = $row['thumb_url'] ? $row['thumb_url'] : $row['url']; ?>
+					<?php $src = '' !== $row['thumb_url'] ? $row['thumb_url'] : $row['url']; ?>
 					<div class="swiper-slide">
 						<img
 							src="<?php echo esc_url( $src ); ?>"

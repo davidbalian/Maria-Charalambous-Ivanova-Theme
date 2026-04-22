@@ -2,7 +2,7 @@
 /**
  * Gallery page: Before & After grid.
  *
- * Driven by Galleries → Placements → page_before_after.
+ * Driven by the Galleries CPT (location = page_before_after).
  *
  * @package Maria_Charalambous_Ivanova
  */
@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$items = MCI_Gallery_Repository::get_items_for_slot( 'page_before_after' );
+$items = MCI_Galleries_Repository::get_items_for_location( MCI_Galleries_Locations::PAGE_BEFORE_AFTER );
 if ( empty( $items ) ) {
 	return;
 }
@@ -24,7 +24,7 @@ if ( empty( $items ) ) {
 				<?php
 				$width  = $row['width'] > 0 ? (int) $row['width'] : 400;
 				$height = $row['height'] > 0 ? (int) $row['height'] : 300;
-				$src    = $row['thumb_url'] ? $row['thumb_url'] : $row['url'];
+				$src    = '' !== $row['thumb_url'] ? $row['thumb_url'] : $row['url'];
 				?>
 				<a href="<?php echo esc_url( $row['url'] ); ?>" class="gallery-grid__item fade-in">
 					<img

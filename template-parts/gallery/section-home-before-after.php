@@ -2,7 +2,7 @@
 /**
  * Home: Before & After grid.
  *
- * Driven by Galleries → Placements → home_before_after.
+ * Driven by the Galleries CPT (location = home_before_after).
  *
  * @package Maria_Charalambous_Ivanova
  */
@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$items = MCI_Gallery_Repository::get_items_for_slot( 'home_before_after' );
+$items = MCI_Galleries_Repository::get_items_for_location( MCI_Galleries_Locations::HOME_BEFORE_AFTER );
 if ( empty( $items ) ) {
 	return;
 }
@@ -25,7 +25,7 @@ if ( empty( $items ) ) {
 				$width  = $row['width'] > 0 ? (int) $row['width'] : 400;
 				$height = $row['height'] > 0 ? (int) $row['height'] : 400;
 				$delay  = min( ( $index % 3 ) + 1, 3 );
-				$src    = $row['thumb_url'] ? $row['thumb_url'] : $row['url'];
+				$src    = '' !== $row['thumb_url'] ? $row['thumb_url'] : $row['url'];
 				?>
 				<div class="home-cases__item fade-in fade-in-delay-<?php echo esc_attr( (string) $delay ); ?>">
 					<img
