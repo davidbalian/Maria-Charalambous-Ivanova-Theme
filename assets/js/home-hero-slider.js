@@ -13,12 +13,20 @@
 	var DECODE_TIMEOUT_MS = 1500;
 	var SLIDER_SPEED_MS = 1500;
 	var AUTOPLAY_DELAY_MS = 5000;
-	var KEN_BURNS_DURATION_MS = 8000;
+	/*
+	 * Ken Burns is a single-shot zoom per slide: scale 1 → 1.02 over the
+	 * autoplay window so the zoom finishes right as the crossfade begins.
+	 * fill: 'forwards' holds the image at the final scale during the fade
+	 * out. The outgoing slide is intentionally NOT touched during the fade;
+	 * it's only reset once the slide is fully invisible, so the next time
+	 * it appears it starts from scale(1) again.
+	 */
+	var KEN_BURNS_DURATION_MS = AUTOPLAY_DELAY_MS;
 	var KEN_BURNS_KEYFRAMES = [
 		{ transform: 'scale(1)' },
 		{ transform: 'scale(1.02)' },
-		{ transform: 'scale(1)' },
 	];
+	var KEN_BURNS_EASING = 'ease-out';
 	var KEN_BURNS_ANIM_KEY = '_mciKenBurnsAnim';
 
 	function prefersReducedMotion() {
@@ -33,59 +41,42 @@
 	}
 
 	/**
-	 * Start the Ken Burns loop on the incoming slide's image. Clears any
-	 * leftover inline transform first so the animation always begins from
-	 * scale(1). Safe to call on a slide that's already animating (no-op).
+	 * Cancel any running Ken Burns animation on this image and clear any
+	 * inline transform it committed. Leaves the element at its base
+	 * (unzoomed) state. Idempotent.
 	 */
-	function startKenBurns(img) {
-		if (!supportsWaapi(img) || img[KEN_BURNS_ANIM_KEY]) {
-			return;
-		}
-
-		img.style.transform = '';
-
-		var anim = img.animate(KEN_BURNS_KEYFRAMES, {
-			duration: KEN_BURNS_DURATION_MS,
-			iterations: Infinity,
-			easing: 'ease-in-out',
-		});
-
-		img[KEN_BURNS_ANIM_KEY] = anim;
-	}
-
-	/**
-	 * Freeze the outgoing slide's image at its current animated scale by
-	 * committing the current computed style to inline, then cancelling the
-	 * animation. The slide keeps this transform for the duration of the
-	 * crossfade so it does not "pop" back to scale(1) mid-fade.
-	 */
-	function freezeKenBurns(img) {
+	function clearKenBurns(img) {
 		if (!img) {
 			return;
 		}
 		var anim = img[KEN_BURNS_ANIM_KEY];
-		if (!anim) {
-			return;
+		if (anim) {
+			anim.cancel();
+			img[KEN_BURNS_ANIM_KEY] = null;
 		}
-		try {
-			anim.commitStyles();
-		} catch (e) {
-			/* commitStyles can throw if the element isn't rendered; ignore */
-		}
-		anim.cancel();
-		img[KEN_BURNS_ANIM_KEY] = null;
+		img.style.transform = '';
 	}
 
 	/**
-	 * Reset a slide's image transform back to the base (scale(1)). Called
-	 * after the crossfade ends, when the slide is fully invisible, so the
-	 * next time it becomes active it starts fresh.
+	 * Start a fresh single-shot Ken Burns zoom on the incoming slide's
+	 * image. Always clears any pre-existing animation/inline transform
+	 * first so the slide always starts at scale(1), even if it still had a
+	 * stale animation held at the final scale.
 	 */
-	function resetKenBurns(img) {
-		if (!img) {
+	function startKenBurns(img) {
+		if (!supportsWaapi(img)) {
 			return;
 		}
-		img.style.transform = '';
+
+		clearKenBurns(img);
+
+		var anim = img.animate(KEN_BURNS_KEYFRAMES, {
+			duration: KEN_BURNS_DURATION_MS,
+			easing: KEN_BURNS_EASING,
+			fill: 'forwards',
+		});
+
+		img[KEN_BURNS_ANIM_KEY] = anim;
 	}
 
 	function getSlideImg(slideEl) {
@@ -137,21 +128,31 @@
 			return {};
 		}
 
+		/*
+		 * Crossfade begins: start a fresh zoom on the incoming slide. The
+		 * outgoing slide is intentionally untouched — its animation is
+		 * already at (or holding at) scale(1.02) via fill: 'forwards', and
+		 * the user wants that zoom to remain during the fade.
+		 */
 		function onTransitionStart() {
 			var swiper = this;
 			if (swiper.previousIndex === swiper.activeIndex) {
 				return;
 			}
-			freezeKenBurns(getSlideImg(swiper.slides[swiper.previousIndex]));
 			startKenBurns(getSlideImg(swiper.slides[swiper.activeIndex]));
 		}
 
+		/*
+		 * Crossfade ends and the outgoing slide is now fully invisible.
+		 * Reset it so the next time it becomes active it starts from
+		 * scale(1) again.
+		 */
 		function onTransitionEnd() {
 			var swiper = this;
 			if (swiper.previousIndex === swiper.activeIndex) {
 				return;
 			}
-			resetKenBurns(getSlideImg(swiper.slides[swiper.previousIndex]));
+			clearKenBurns(getSlideImg(swiper.slides[swiper.previousIndex]));
 		}
 
 		function onAfterInit() {
