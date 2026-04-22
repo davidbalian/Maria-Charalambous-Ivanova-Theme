@@ -26,7 +26,7 @@ if ( empty( $items ) ) {
 				$height = $row['height'] > 0 ? (int) $row['height'] : 300;
 				$src    = '' !== $row['thumb_url'] ? $row['thumb_url'] : $row['url'];
 				?>
-				<a href="<?php echo esc_url( $row['url'] ); ?>" class="gallery-grid__item fade-in">
+				<div class="gallery-grid__item fade-in">
 					<img
 						src="<?php echo esc_url( $src ); ?>"
 						alt="<?php echo esc_attr( $row['alt'] ); ?>"
@@ -35,7 +35,7 @@ if ( empty( $items ) ) {
 						loading="lazy"
 						decoding="async"
 					>
-				</a>
+				</div>
 			<?php endforeach; ?>
 		</div>
 	</div>
