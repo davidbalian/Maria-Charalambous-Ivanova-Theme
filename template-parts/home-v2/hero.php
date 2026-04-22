@@ -52,7 +52,7 @@ $hero_slider_images = array(
 ?>
 <section class="home-hero">
 	<div class="home-hero__slider-bleed">
-		<div class="swiper home-hero__carousel js-home-hero-swiper" aria-label="<?php echo esc_attr( mci_t( 'Clinic photos' ) ); ?>">
+		<div class="swiper home-hero__carousel js-hero-swiper" aria-label="<?php echo esc_attr( mci_t( 'Clinic photos' ) ); ?>">
 			<div class="swiper-wrapper">
 				<?php foreach ( $hero_slider_images as $hero_slide_index => $hero_slide ) : ?>
 					<?php

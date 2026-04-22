@@ -8,7 +8,7 @@
 
 	var parallaxEls = document.querySelectorAll(
 		'.privacy-hero, .about-hero, .about-cta, ' +
-		'.services-hero, .services-cta, ' +
+		'.services-cta, ' +
 		'.contact-hero, .contact-cta, ' +
 		'.gallery-hero, .gallery-cta, ' +
 		'.home-v2-consultation'
