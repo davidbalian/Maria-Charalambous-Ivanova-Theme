@@ -60,8 +60,15 @@ $hero_slider_images = array(
 			<div class="swiper-wrapper">
 				<?php foreach ( $hero_slider_images as $hero_slide_index => $hero_slide ) : ?>
 					<?php
-					// Both eager: native lazy-load was decoding mid-fade and looked abrupt.
-					$hero_fetch_priority = ( 0 === $hero_slide_index ) ? 'high' : 'low';
+					// All eager: native lazy-load was decoding mid-fade and looked abrupt.
+					// First slide = high; second slide = auto so the first crossfade has a ready bitmap; rest = low.
+					if ( 0 === $hero_slide_index ) {
+						$hero_fetch_priority = 'high';
+					} elseif ( 1 === $hero_slide_index ) {
+						$hero_fetch_priority = 'auto';
+					} else {
+						$hero_fetch_priority = 'low';
+					}
 					?>
 					<div class="swiper-slide">
 						<div class="home-hero__slide">

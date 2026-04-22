@@ -4,6 +4,12 @@
   position: relative;
   width: 100%;
   height: 100%;
+  opacity: 0;
+  transition: opacity 1.4s ease-in-out;
+}
+
+.home-hero__carousel.swiper.is-ready {
+  opacity: 1;
 }
 
 .home-hero__carousel .swiper-wrapper {
@@ -16,7 +22,6 @@
 
 /* Smoother crossfade than Swiper default (pairs with speed in home-hero-slider.js). */
 .home-hero__carousel.swiper-fade .swiper-slide {
-  /* Swiper sets transition duration inline; keep curve smooth over that duration. */
   transition-timing-function: ease-in-out !important;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -33,8 +38,11 @@
   display: block;
   object-fit: cover;
   transform-origin: center center;
-  animation: home-hero-ken-pulse 8s ease-in-out infinite;
   will-change: transform;
+}
+
+.home-hero__carousel.is-ready .home-hero__slide img {
+  animation: home-hero-ken-pulse 8s ease-in-out infinite;
 }
 
 @keyframes home-hero-ken-pulse {
@@ -47,19 +55,13 @@
   }
 }
 
-@keyframes home-hero-fade-in {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-.home-hero__carousel .home-hero__slide img.is-initial-load {
-  animation:
-    home-hero-ken-pulse 8s ease-in-out infinite,
-    home-hero-fade-in 1.4s ease-in-out forwards;
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .home-hero__carousel .home-hero__slide img {
+  .home-hero__carousel.swiper {
+    transition: none;
+  }
+
+  .home-hero__carousel .home-hero__slide img,
+  .home-hero__carousel.is-ready .home-hero__slide img {
     animation: none;
     will-change: auto;
   }
