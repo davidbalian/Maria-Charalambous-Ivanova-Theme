@@ -11,8 +11,8 @@
 	var FIRST_IMAGE_SELECTOR = '.swiper-slide img';
 	var READY_CLASS = 'is-ready';
 	var DECODE_TIMEOUT_MS = 1500;
-	var SLIDER_SPEED_MS = 1500;
-	var AUTOPLAY_DELAY_MS = 5000;
+	var SLIDER_SPEED_MS = 1000;
+	var AUTOPLAY_DELAY_MS = 4000;
 	/*
 	 * Ken Burns is a single-shot zoom per slide: scale 1 → 1.02 over the
 	 * autoplay window so the zoom finishes right as the crossfade begins.
