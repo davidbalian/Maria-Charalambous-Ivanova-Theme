@@ -177,7 +177,6 @@
 				? false
 				: {
 						delay: AUTOPLAY_DELAY_MS,
-						pauseOnMouseEnter: true,
 						disableOnInteraction: false,
 					},
 			on: createKenBurnsHandlers(reduceMotion),
