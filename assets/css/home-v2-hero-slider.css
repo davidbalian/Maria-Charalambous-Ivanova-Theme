@@ -1,5 +1,18 @@
 /* Homepage hero — Swiper fade + continuous Ken Burns–style zoom on all slide images */
 
+/*
+ * Registered custom property so the scale value is animatable via @keyframes
+ * AND transitionable when the animation is removed. This is what prevents the
+ * outgoing slide from snapping back to scale(1) the instant it loses
+ * .swiper-slide-active: the transition on --ken-scale catches the last
+ * animated value and eases it back to 1 during the crossfade.
+ */
+@property --ken-scale {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 1;
+}
+
 .home-hero__carousel.swiper {
   position: relative;
   width: 100%;
@@ -38,6 +51,13 @@
   display: block;
   object-fit: cover;
   transform-origin: center center;
+  transform: scale(var(--ken-scale));
+  /*
+   * Duration matches SLIDER_SPEED_MS in home-hero-slider.js so when the
+   * active class moves to the next slide, the outgoing image eases its
+   * --ken-scale back to 1 over the same window as Swiper's crossfade.
+   */
+  transition: --ken-scale 1.5s ease-in-out;
 }
 
 /*
@@ -54,10 +74,10 @@
 @keyframes home-hero-ken-pulse {
   0%,
   100% {
-    transform: scale(1);
+    --ken-scale: 1;
   }
   50% {
-    transform: scale(1.02);
+    --ken-scale: 1.02;
   }
 }
 
