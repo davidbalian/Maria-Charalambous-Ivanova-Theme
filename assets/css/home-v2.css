@@ -34,7 +34,7 @@
 
 /* Hero Section — full-bleed slider + text band */
 .home-hero {
-  --mci-home-hero-viewport: min(98dvh, 1920px);
+  --mci-home-hero-viewport: min(98svh, 1920px);
   position: relative;
   box-sizing: border-box;
   padding: 0;
@@ -76,7 +76,7 @@
   }
 
   /* On mobile, give the slider an explicit height so it doesn't
-     compete with the text band for the 98dvh budget */
+     compete with the text band for the 98svh budget */
   .home-hero {
     height: auto;
     min-height: auto;
@@ -85,9 +85,9 @@
 
   .home-hero__slider-bleed {
     flex: none;
-    height: 62dvh;
-    min-height: 62dvh;
-    max-height: 62dvh;
+    height: 62svh;
+    min-height: 62svh;
+    max-height: 62svh;
   }
 
   .home .home-hero__slider-bleed {
@@ -151,7 +151,7 @@
 
 @media (min-width: 1921px) {
   .home-hero {
-    --mci-home-hero-viewport: min(98dvh, 1920px);
+    --mci-home-hero-viewport: min(98svh, 1920px);
   }
 }
 
@@ -902,9 +902,9 @@
    triggers frosted-glass via main.js).
    ========================================================================== */
 
-/* 1. Pull hero behind top bar + header; slider fills min(98dvh, 1920px) */
+/* 1. Pull hero behind top bar + header; slider fills min(98svh, 1920px) */
 .home .home-hero {
-  --mci-home-hero-viewport: min(98dvh, 1920px);
+  --mci-home-hero-viewport: min(98svh, 1920px);
   min-height: var(--mci-home-hero-viewport);
   height: var(--mci-home-hero-viewport);
   max-height: var(--mci-home-hero-viewport);
@@ -1025,7 +1025,7 @@
 /* 6. Mobile — keep overlay layout, adjust spacing */
 @media (max-width: 768px) {
   .home .home-hero {
-    --mci-home-hero-viewport: min(87dvh, 1920px);
+    --mci-home-hero-viewport: min(87svh, 1920px);
     min-height: var(--mci-home-hero-viewport);
     height: var(--mci-home-hero-viewport);
     max-height: var(--mci-home-hero-viewport);

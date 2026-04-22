@@ -2,79 +2,98 @@
  * Main theme JS.
  */
 
-// Parallax background — GPU-composited via transform on .mci-parallax::before
-// (writes a CSS custom property; no paints during scroll). Respects reduced-motion.
-// Disabled on mobile (<=768px) to avoid compositor churn on large background textures.
+/*
+ * Parallax — GPU-composited via CSS variables driving translate3d().
+ *
+ * Section parallax writes --mci-parallax-y; .mci-parallax::before consumes it
+ * as a translate3d on a promoted layer (see style.css), so there are no paints
+ * during scroll.
+ *
+ * A single scroll handler drives both section parallax and the hero slider
+ * bleed to avoid scheduling two rAF callbacks per scroll tick. Disabled when
+ * prefers-reduced-motion is on, and the section branch short-circuits on
+ * mobile where the CSS disables the parallax transform anyway.
+ */
 (function () {
 	if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-	var parallaxEls = document.querySelectorAll('.mci-parallax');
-	if (!parallaxEls.length) return;
+	var SECTION_FACTOR = 0.25;
+	var HERO_FACTOR = 0.25;
+	var MOBILE_MAX_WIDTH = 768;
 
-	var mobileQuery = window.matchMedia('(max-width: 768px)');
-	if (mobileQuery.matches) {
-		for (var m = 0; m < parallaxEls.length; m++) {
-			parallaxEls[m].style.removeProperty('--mci-parallax-y');
+	var sectionEls = document.querySelectorAll('.mci-parallax');
+	var heroBleedEl = document.querySelector('.home-hero__slider-bleed');
+	var heroSectionEl = heroBleedEl ? heroBleedEl.closest('.home-hero') : null;
+
+	if (!sectionEls.length && !heroBleedEl) return;
+
+	var viewportHeight = window.innerHeight;
+	var heroHeight = heroSectionEl ? heroSectionEl.offsetHeight : 0;
+	var isMobile = window.innerWidth <= MOBILE_MAX_WIDTH;
+	var ticking = false;
+
+	// On mobile the CSS disables the ::before transform; clear any stale values
+	// so the compositor doesn't hold on to a value that's no longer honored.
+	function clearSectionVars() {
+		for (var i = 0; i < sectionEls.length; i++) {
+			sectionEls[i].style.removeProperty('--mci-parallax-y');
 		}
-		return;
 	}
 
-	var ticking = false;
-	var vh = window.innerHeight;
-	var factor = 0.25;
-
-	function updateParallax() {
-		for (var i = 0; i < parallaxEls.length; i++) {
-			var el = parallaxEls[i];
+	function updateSections() {
+		for (var i = 0; i < sectionEls.length; i++) {
+			var el = sectionEls[i];
 			var rect = el.getBoundingClientRect();
-			if (rect.bottom < 0 || rect.top > vh) continue;
-			// Negative offset: as section scrolls up, bg shifts down (slower than scroll)
-			var offset = -(rect.top * factor);
+			if (rect.bottom < 0 || rect.top > viewportHeight) continue;
+			// Negative offset: as the section scrolls up the bg drifts down
+			// (slower than scroll) for a parallax feel.
+			var offset = -(rect.top * SECTION_FACTOR);
 			el.style.setProperty('--mci-parallax-y', offset + 'px');
 		}
+	}
+
+	function updateHero() {
+		if (!heroBleedEl) return;
+		var scrollY = window.scrollY;
+		if (scrollY > heroHeight) return;
+		// translate3d forces GPU layer promotion on Safari so the bleed
+		// composites without repainting the Swiper + gradient overlay.
+		heroBleedEl.style.transform =
+			'translate3d(0, ' + (scrollY * HERO_FACTOR) + 'px, 0)';
+	}
+
+	function onFrame() {
+		if (!isMobile) {
+			updateSections();
+		}
+		updateHero();
 		ticking = false;
 	}
 
-	window.addEventListener('scroll', function () {
-		if (!ticking) {
-			requestAnimationFrame(updateParallax);
-			ticking = true;
-		}
-	}, { passive: true });
-
-	window.addEventListener('resize', function () {
-		vh = window.innerHeight;
-	}, { passive: true });
-
-	updateParallax();
-
-	// Hero slider parallax — translate the slider-bleed container
-	var heroSliderBleed = document.querySelector('.home-hero__slider-bleed');
-	if (heroSliderBleed) {
-		var heroHeight = heroSliderBleed.closest('.home-hero').offsetHeight;
-		var heroTicking = false;
-
-		function updateHeroParallax() {
-			var scrollY = window.scrollY;
-			if (scrollY > heroHeight) {
-				heroTicking = false;
-				return;
-			}
-			heroSliderBleed.style.transform = 'translateY(' + (scrollY * 0.25) + 'px)';
-			heroTicking = false;
-		}
-
-		window.addEventListener('scroll', function () {
-			if (!heroTicking) {
-				requestAnimationFrame(updateHeroParallax);
-				heroTicking = true;
-			}
-		}, { passive: true });
-
-		window.addEventListener('resize', function () {
-			heroHeight = heroSliderBleed.closest('.home-hero').offsetHeight;
-		}, { passive: true });
+	function onScroll() {
+		if (ticking) return;
+		requestAnimationFrame(onFrame);
+		ticking = true;
 	}
+
+	function onResize() {
+		viewportHeight = window.innerHeight;
+		var wasMobile = isMobile;
+		isMobile = window.innerWidth <= MOBILE_MAX_WIDTH;
+		if (heroSectionEl) heroHeight = heroSectionEl.offsetHeight;
+		if (!wasMobile && isMobile) {
+			clearSectionVars();
+		}
+	}
+
+	if (isMobile) {
+		clearSectionVars();
+	}
+
+	window.addEventListener('scroll', onScroll, { passive: true });
+	window.addEventListener('resize', onResize, { passive: true });
+
+	onFrame();
 })();
 
 document.addEventListener('DOMContentLoaded', function () {
