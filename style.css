@@ -4,7 +4,7 @@ Theme URI:
 Author: Balian Web Dev Co.
 Author URI: https://balian.cy/
 Description: A custom WordPress theme for Dr. Maria Charalambous-Ivanova.
-Version: 1.5.0
+Version: 1.6.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: maria-charalambous-ivanova
@@ -433,6 +433,16 @@ body:has(#wpadminbar) .site-header {
 @media (max-width: 768px) {
   .site-header.is-scrolled {
     background: rgba(255, 255, 255, 0.97);
+  }
+
+  /*
+   * Lock mobile header height so the scroll transition does not reduce the
+   * header padding (which otherwise shifts the hero and makes it appear to
+   * shrink). The initial state matches the scrolled state on mobile.
+   */
+  .site-header__inner,
+  .site-header.is-scrolled .site-header__inner {
+    height: 4rem;
   }
 
   .site-logo--desktop {
