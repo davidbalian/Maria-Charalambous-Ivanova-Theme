@@ -19,7 +19,7 @@ if ( empty( $items ) ) {
 <section class="gallery-section page-section page-section--background">
 	<div class="container">
 		<h2 class="gallery-section__heading fade-in fade-in-delay-0"><?php echo mci_t( 'Before &amp; After' ); ?></h2>
-		<div class="gallery-grid" id="page-gallery" data-fade-stagger>
+		<div class="gallery-grid" id="page-gallery">
 			<?php foreach ( $items as $row ) : ?>
 				<?php
 				$width  = $row['width'] > 0 ? (int) $row['width'] : 400;

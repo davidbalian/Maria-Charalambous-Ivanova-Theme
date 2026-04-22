@@ -19,7 +19,7 @@ if ( empty( $items ) ) {
 <section class="gallery-section page-section page-section--surface">
 	<div class="container">
 		<h2 class="gallery-section__heading fade-in fade-in-delay-0"><?php mci_te( 'The Clinic' ); ?></h2>
-		<div class="gallery-grid" data-fade-stagger>
+		<div class="gallery-grid">
 			<?php foreach ( $items as $row ) : ?>
 				<?php
 				$width  = $row['width'] > 0 ? (int) $row['width'] : 400;
