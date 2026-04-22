@@ -30,9 +30,10 @@ if ( empty( $items ) ) {
 		<div class="swiper home-v2-clinic__carousel js-clinic-swiper">
 			<div class="swiper-wrapper">
 				<?php foreach ( $items as $row ) : ?>
+					<?php $src = ! empty( $row['thumb_url'] ) ? $row['thumb_url'] : $row['url']; ?>
 					<div class="swiper-slide">
 						<img
-							src="<?php echo esc_url( $row['url'] ); ?>"
+							src="<?php echo esc_url( $src ); ?>"
 							alt="<?php echo esc_attr( $row['alt'] ); ?>"
 							loading="lazy"
 							decoding="async"

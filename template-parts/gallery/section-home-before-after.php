@@ -19,10 +19,11 @@ if ( empty( $items ) ) {
 				$w = ! empty( $row['width'] ) ? (int) $row['width'] : 400;
 				$h = ! empty( $row['height'] ) ? (int) $row['height'] : 400;
 				$d = (int) min( ( $i % 3 ) + 1, 3 );
+				$src = ! empty( $row['thumb_url'] ) ? $row['thumb_url'] : $row['url'];
 				?>
 				<div class="home-cases__item fade-in fade-in-delay-<?php echo esc_attr( (string) $d ); ?>">
 					<img
-						src="<?php echo esc_url( $row['url'] ); ?>"
+						src="<?php echo esc_url( $src ); ?>"
 						alt="<?php echo esc_attr( $row['alt'] ); ?>"
 						width="<?php echo esc_attr( (string) $w ); ?>"
 						height="<?php echo esc_attr( (string) $h ); ?>"

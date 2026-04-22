@@ -18,5 +18,5 @@ class MCI_Gallery_Constants {
 	public const ITEMS_META    = 'mci_gallery_items';
 	public const PLACEMENTS    = 'mci_gallery_placements';
 	public const SEED_VERSION  = 'mci_gallery_seed_version';
-	public const SEED_VERSION_NUMBER = 1;
+	public const SEED_VERSION_NUMBER = 2;
 }

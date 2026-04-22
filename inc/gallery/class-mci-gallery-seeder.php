@@ -31,14 +31,18 @@ class MCI_Gallery_Seeder {
 		if ( $v >= MCI_Gallery_Constants::SEED_VERSION_NUMBER ) {
 			return;
 		}
-		$this->run();
+		// Force-overwrite items when upgrading (fixes any corrupt/wrong URLs from earlier seed runs).
+		$force = $v > 0;
+		$this->run( $force );
 		update_option( MCI_Gallery_Constants::SEED_VERSION, MCI_Gallery_Constants::SEED_VERSION_NUMBER );
 	}
 
 	/**
 	 * Create default posts, items, and placements.
+	 *
+	 * @param bool $force_items Overwrite existing items regardless of current content.
 	 */
-	public function run() {
+	public function run( $force_items = false ) {
 		$map = $this->get_default_definitions();
 		$ids = array();
 		foreach ( $map as $slot => $def ) {
@@ -47,10 +51,12 @@ class MCI_Gallery_Seeder {
 				continue;
 			}
 			$ids[ $slot ] = $post_id;
-			$existing     = get_post_meta( $post_id, MCI_Gallery_Constants::ITEMS_META, true );
-			$decoded      = is_string( $existing ) ? json_decode( $existing, true ) : array();
-			if ( is_array( $decoded ) && ! empty( $decoded ) ) {
-				continue;
+			if ( ! $force_items ) {
+				$existing = get_post_meta( $post_id, MCI_Gallery_Constants::ITEMS_META, true );
+				$decoded  = is_string( $existing ) ? json_decode( $existing, true ) : array();
+				if ( is_array( $decoded ) && ! empty( $decoded ) ) {
+					continue;
+				}
 			}
 			$items = $this->build_items( $def['source_items'] );
 			update_post_meta( $post_id, MCI_Gallery_Constants::ITEMS_META, wp_json_encode( $items ) );
@@ -72,10 +78,10 @@ class MCI_Gallery_Seeder {
 	private function get_default_definitions() {
 		$u = 'wp-content/uploads/2026/02/';
 		$t = 'assets/images/';
-		$base_upload = function ( $f ) {
-			return home_url( $u . $f );
+		$base_upload = function ( $f ) use ( $u ) {
+			return home_url( '/' . $u . $f );
 		};
-		$base_theme  = function ( $f ) {
+		$base_theme  = function ( $f ) use ( $t ) {
 			return get_template_directory_uri() . '/' . $t . $f;
 		};
 

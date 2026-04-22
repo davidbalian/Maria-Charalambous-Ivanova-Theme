@@ -16,13 +16,13 @@ if ( empty( $items ) ) {
 		<div class="gallery-grid" id="page-gallery" data-fade-stagger>
 			<?php
 			foreach ( $items as $row ) {
-				$w = ! empty( $row['width'] ) ? (int) $row['width'] : 400;
-				$h = ! empty( $row['height'] ) ? (int) $row['height'] : 300;
-				$u = $row['url'];
+				$w   = ! empty( $row['width'] ) ? (int) $row['width'] : 400;
+				$h   = ! empty( $row['height'] ) ? (int) $row['height'] : 300;
+				$src = ! empty( $row['thumb_url'] ) ? $row['thumb_url'] : $row['url'];
 				?>
-				<a href="<?php echo esc_url( $u ); ?>" class="gallery-grid__item fade-in">
+				<a href="<?php echo esc_url( $row['url'] ); ?>" class="gallery-grid__item fade-in">
 					<img
-						src="<?php echo esc_url( $u ); ?>"
+						src="<?php echo esc_url( $src ); ?>"
 						alt="<?php echo esc_attr( $row['alt'] ); ?>"
 						width="<?php echo esc_attr( (string) $w ); ?>"
 						height="<?php echo esc_attr( (string) $h ); ?>"

@@ -61,8 +61,13 @@ class MCI_Gallery_Repository {
 	/**
 	 * Items for a placement slot, ready for templates.
 	 *
+	 * Each item has:
+	 *   url       — full-size URL (use for lightbox href)
+	 *   thumb_url — medium/large size (use for <img src>); same as url for URL-only items
+	 *   alt, width, height, id
+	 *
 	 * @param string $slot One of MCI_Gallery_Repository::get_slot_keys().
-	 * @return array<int, array{url:string, alt:string, width:int, height:int, id:int}>>
+	 * @return array<int, array{url:string, thumb_url:string, alt:string, width:int, height:int, id:int}>
 	 */
 	public static function get_items_for_slot( $slot ) {
 		if ( ! in_array( $slot, self::get_slot_keys(), true ) ) {
@@ -98,45 +103,61 @@ class MCI_Gallery_Repository {
 	 * Build one output row from stored meta.
 	 *
 	 * @param array $row Item row.
-	 * @return array{url:string, alt:string, width:int, height:int, id:int}
+	 * @return array{url:string, thumb_url:string, alt:string, width:int, height:int, id:int}
 	 */
 	private static function resolve_item_row( $row ) {
 		$id     = isset( $row['id'] ) ? absint( $row['id'] ) : 0;
 		$alt    = isset( $row['alt'] ) ? sanitize_text_field( $row['alt'] ) : '';
 		$fb_url = isset( $row['url'] ) ? esc_url_raw( $row['url'] ) : '';
-		$url    = '';
-		$w      = 0;
-		$h      = 0;
+		$url       = '';
+		$thumb_url = '';
+		$w         = 0;
+		$h         = 0;
 
-		if ( $id && wp_attachment_is_image( $id ) ) {
-			$full = wp_get_attachment_image_url( $id, 'full' );
-			$url  = $full ? $full : '';
-			$meta = wp_get_attachment_metadata( $id );
-			if ( is_array( $meta ) ) {
-				$w = isset( $meta['width'] ) ? (int) $meta['width'] : 0;
-				$h = isset( $meta['height'] ) ? (int) $meta['height'] : 0;
+		if ( $id ) {
+			// Use wp_get_attachment_url as the most reliable full-size URL for any attachment type.
+			$raw = wp_get_attachment_url( $id );
+			if ( $raw ) {
+				$url = $raw;
+				// Try to get a medium/large thumbnail for grid display.
+				$medium = wp_get_attachment_image_url( $id, 'large' );
+				if ( ! $medium ) {
+					$medium = wp_get_attachment_image_url( $id, 'medium_large' );
+				}
+				if ( ! $medium ) {
+					$medium = wp_get_attachment_image_url( $id, 'medium' );
+				}
+				$thumb_url = $medium ? $medium : $url;
+				// Dimensions from metadata.
+				$meta = wp_get_attachment_metadata( $id );
+				if ( is_array( $meta ) ) {
+					$w = isset( $meta['width'] ) ? (int) $meta['width'] : 0;
+					$h = isset( $meta['height'] ) ? (int) $meta['height'] : 0;
+				}
+				if ( '' === $alt ) {
+					$alt = (string) get_post_meta( $id, '_wp_attachment_image_alt', true );
+				}
 			}
-			if ( '' === $alt ) {
-				$alt = (string) get_post_meta( $id, '_wp_attachment_image_alt', true );
-			}
-		} elseif ( $fb_url ) {
+		}
+
+		// Fall back to stored URL when no attachment ID or attachment URL empty.
+		if ( ! $url && $fb_url ) {
 			$url = self::normalize_url( $fb_url );
 		}
-		// If ID points to missing file, try fallback URL in meta.
-		if ( ( ! $url ) && $fb_url ) {
-			$url = self::normalize_url( $fb_url );
+		if ( ! $thumb_url ) {
+			$thumb_url = $url;
 		}
-		if ( ( ! $url ) && $id ) {
-			$url = wp_get_attachment_url( $id );
-		}
-		$url = $url ? esc_url( $url ) : '';
+
+		$url       = $url ? esc_url( $url ) : '';
+		$thumb_url = $thumb_url ? esc_url( $thumb_url ) : '';
 
 		return array(
-			'url'    => $url,
-			'alt'    => $alt,
-			'width'  => $w,
-			'height' => $h,
-			'id'     => $id,
+			'url'       => $url,
+			'thumb_url' => $thumb_url,
+			'alt'       => $alt,
+			'width'     => $w,
+			'height'    => $h,
+			'id'        => $id,
 		);
 	}
 }
