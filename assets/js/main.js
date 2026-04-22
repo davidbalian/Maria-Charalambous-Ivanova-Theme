@@ -263,6 +263,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		cookieBanner.querySelector('.cookie-banner__accept').addEventListener('click', dismissBanner);
 		cookieBanner.querySelector('.cookie-banner__close').addEventListener('click', dismissBanner);
+		var rejectBtn = cookieBanner.querySelector('.cookie-banner__reject');
+		if (rejectBtn) rejectBtn.addEventListener('click', dismissBanner);
 	}
 
 	// AJAX Contact Form Submission

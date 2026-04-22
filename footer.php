@@ -75,10 +75,11 @@ if ( $mci_lang !== 'en' ) {
 
 <!-- Cookie Banner -->
 <div id="mci-cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie consent" hidden>
+	<button type="button" class="cookie-banner__close" aria-label="Dismiss cookie banner">&times;</button>
 	<p class="cookie-banner__text"><?php echo esc_html( mci_t( 'We use cookies to analyse site traffic and improve your experience. By continuing, you agree to our' ) ); ?> <a href="<?php echo esc_url( mci_url( '/privacy-policy/' ) ); ?>"><?php mci_te( 'Privacy Policy' ); ?></a>.</p>
 	<div class="cookie-banner__actions">
 		<button type="button" class="cookie-banner__accept btn btn-primary"><?php mci_te( 'Accept' ); ?></button>
-		<button type="button" class="cookie-banner__close" aria-label="Dismiss cookie banner">&times;</button>
+		<button type="button" class="cookie-banner__reject btn btn-outline"><?php mci_te( 'Reject' ); ?></button>
 	</div>
 </div>
 
