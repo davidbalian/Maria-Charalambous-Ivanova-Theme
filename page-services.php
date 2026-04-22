@@ -7,7 +7,8 @@
 
 get_header();
 
-$clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
+$clinic_image_base  = home_url( '/wp-content/uploads/2026/02/' );
+$services_blocks_base = home_url( '/wp-content/uploads/2026/04/' );
 ?>
 
 <main id="main" class="site-main services-page">
@@ -40,7 +41,7 @@ $clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
 					</div>
 				</div>
 				<div class="services-item__image fade-in fade-in-delay-2">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/smilers-aligners-at-dental-art-clinic-by-dr-maria-charalambous-ivanova.webp' ); ?>" alt="One-Visit Transformations" width="560" height="420">
+					<img src="<?php echo esc_url( $services_blocks_base . 'porcelain-veneers-upper-teeth-macro-close-up-dental-art-clinic-dr-maria-charalambous-ivanova-scaled.webp' ); ?>" alt="One-Visit Transformations" width="560" height="420">
 				</div>
 			</div>
 		</div>
@@ -60,7 +61,7 @@ $clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
 					</div>
 				</div>
 				<div class="services-item__image fade-in fade-in-delay-2">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/smilers-aligners-at-dental-art-clinic-by-dr-maria-charalambous-ivanova.webp' ); ?>" alt="Cosmetic Masterpieces" width="560" height="420">
+					<img src="<?php echo esc_url( $services_blocks_base . 'porcelain-veneers-natural-smile-side-angle-dental-art-clinic-dr-maria-charalambous-ivanova-scaled.webp' ); ?>" alt="Cosmetic Masterpieces" width="560" height="420">
 				</div>
 			</div>
 		</div>
@@ -80,7 +81,7 @@ $clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
 					</div>
 				</div>
 				<div class="services-item__image fade-in fade-in-delay-2">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/smilers-aligners-at-dental-art-clinic-by-dr-maria-charalambous-ivanova.webp' ); ?>" alt="Preventative and Restorative Care" width="560" height="420">
+					<img src="<?php echo esc_url( $services_blocks_base . 'single-porcelain-veneer-macro-detail-dental-art-clinic-dr-maria-charalambous-ivanova.webp' ); ?>" alt="Preventative and Restorative Care" width="560" height="420">
 				</div>
 			</div>
 		</div>
