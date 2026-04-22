@@ -1483,7 +1483,7 @@ hr {
 .cookie-banner__actions {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: var(--mci-spacing-xs);
   flex-shrink: 0;
 }
@@ -1530,7 +1530,7 @@ hr {
   }
 
   .cookie-banner__actions {
-    justify-content: flex-end;
+    justify-content: flex-start;
   }
 }
 
