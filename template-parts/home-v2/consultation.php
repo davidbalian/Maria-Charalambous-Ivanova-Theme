@@ -1,5 +1,5 @@
 <!-- Consultation Section -->
-<section class="home-v2-consultation" style="background-image: url('<?php echo esc_url( home_url( '/wp-content/uploads/2026/02/dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-wide-angle-equipment.avif' ) ); ?>');">
+<section class="home-v2-consultation mci-parallax" style="--mci-parallax-bg: url('<?php echo esc_url( home_url( '/wp-content/uploads/2026/02/dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-wide-angle-equipment.avif' ) ); ?>');">
 	<div class="home-v2-consultation__overlay"></div>
 	<div class="container">
 		<div class="home-v2-consultation__grid">

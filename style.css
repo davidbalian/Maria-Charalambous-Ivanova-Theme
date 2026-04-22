@@ -1342,14 +1342,38 @@ hr {
    14. Privacy Policy
    ========================================================================== */
 
+/* Shared GPU-composited parallax utility.
+   Background is rendered on a ::before layer and translated via transform
+   so scroll parallax is composited (no per-frame paints). */
+.mci-parallax {
+  position: relative;
+  overflow: hidden;
+}
+
+.mci-parallax::before {
+  content: '';
+  position: absolute;
+  inset: -15% 0;
+  background-image: var(--mci-parallax-bg);
+  background-size: cover;
+  background-position: center;
+  transform: translate3d(0, var(--mci-parallax-y, 0px), 0);
+  will-change: transform;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.mci-parallax > * {
+  position: relative;
+  z-index: 1;
+}
+
 .privacy-hero {
   position: relative;
   min-height: 75vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: cover;
-  background-position: center;
   text-align: center;
   margin-top: -6.5rem;
   padding: calc(6.5rem + var(--mci-spacing-3xl)) 0 var(--mci-spacing-3xl);
@@ -1988,9 +2012,6 @@ hr {
   /* Pull hero up behind the in-flow header (nav 5rem + top bar ~1.5rem) */
   margin-top: -6.5rem;
   padding: calc(6.5rem + var(--mci-spacing-3xl)) 0 var(--mci-spacing-3xl);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   background-color: var(--mci-color-secondary);
 }
 
@@ -2159,9 +2180,6 @@ hr {
   position: relative;
   padding: calc(var(--mci-spacing-3xl) * 2) 0;
   text-align: center;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   background-color: var(--mci-color-secondary);
 }
 
@@ -2357,9 +2375,6 @@ hr {
   position: relative;
   padding: calc(var(--mci-spacing-3xl) * 2) 0;
   text-align: center;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   background-color: var(--mci-color-secondary);
 }
 
@@ -2550,9 +2565,6 @@ hr {
   text-align: center;
   margin-top: -6.5rem;
   padding: calc(6.5rem + var(--mci-spacing-3xl)) 0 var(--mci-spacing-3xl);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   background-color: var(--mci-color-secondary);
 }
 
@@ -2661,9 +2673,6 @@ hr {
   position: relative;
   padding: calc(var(--mci-spacing-3xl) * 2) 0;
   text-align: center;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   background-color: var(--mci-color-secondary);
 }
 
@@ -2723,9 +2732,6 @@ hr {
   text-align: center;
   margin-top: -6.5rem;
   padding: calc(6.5rem + var(--mci-spacing-3xl)) 0 var(--mci-spacing-3xl);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   background-color: var(--mci-color-secondary);
 }
 
@@ -2772,9 +2778,6 @@ hr {
   position: relative;
   padding: calc(var(--mci-spacing-3xl) * 2) 0;
   text-align: center;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   background-color: var(--mci-color-secondary);
 }
 

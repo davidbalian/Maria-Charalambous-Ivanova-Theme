@@ -15,7 +15,7 @@ $clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
 <main id="main" class="site-main">
 
 	<!-- Hero with background image -->
-	<section class="gallery-hero" style="background-image: url('<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-reception-area-marble-counter.avif' ); ?>');">
+	<section class="gallery-hero mci-parallax" style="--mci-parallax-bg: url('<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-reception-area-marble-counter.avif' ); ?>');">
 		<div class="gallery-hero__overlay"></div>
 		<div class="container gallery-hero__content">
 			<h1 class="gallery-hero__title fade-in fade-in-delay-0"><?php mci_te( 'Gallery' ); ?></h1>
@@ -29,7 +29,7 @@ $clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
 	<?php get_template_part( 'template-parts/gallery/section-page-clinic' ); ?>
 
 	<!-- CTA Banner -->
-	<section class="gallery-cta" style="background-image: url('<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-wide-angle-equipment.avif' ); ?>');">
+	<section class="gallery-cta mci-parallax" style="--mci-parallax-bg: url('<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-wide-angle-equipment.avif' ); ?>');">
 		<div class="gallery-cta__overlay"></div>
 		<div class="container gallery-cta__content">
 			<h2 class="fade-in fade-in-delay-0"><?php echo mci_t_accent( 'Ready to Transform {accent}Your Smile?{/accent}' ); ?></h2>

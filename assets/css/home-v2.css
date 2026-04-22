@@ -654,9 +654,6 @@
 .home-v2-consultation {
   position: relative;
   padding: var(--mci-spacing-3xl) 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   background-color: var(--mci-color-secondary);
 }
 

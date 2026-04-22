@@ -2,21 +2,18 @@
  * Main theme JS.
  */
 
-// Parallax background — desktop only, respects reduced-motion
+// Parallax background — GPU-composited via transform on .mci-parallax::before
+// (writes a CSS custom property; no paints during scroll). Respects reduced-motion.
 (function () {
 	if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-	var parallaxEls = document.querySelectorAll(
-		'.privacy-hero, .about-hero, .about-cta, ' +
-		'.services-cta, ' +
-		'.contact-hero, .contact-cta, ' +
-		'.gallery-hero, .gallery-cta, ' +
-		'.home-v2-consultation'
-	);
+	var parallaxEls = document.querySelectorAll('.mci-parallax');
 	if (!parallaxEls.length) return;
 
 	var ticking = false;
 	var vh = window.innerHeight;
+	var mobileQuery = window.matchMedia('(max-width: 768px)');
+	var factor = mobileQuery.matches ? 0.15 : 0.25;
 
 	function updateParallax() {
 		for (var i = 0; i < parallaxEls.length; i++) {
@@ -24,8 +21,8 @@
 			var rect = el.getBoundingClientRect();
 			if (rect.bottom < 0 || rect.top > vh) continue;
 			// Negative offset: as section scrolls up, bg shifts down (slower than scroll)
-			var offset = -(rect.top * 0.25);
-			el.style.backgroundPositionY = 'calc(50% + ' + offset + 'px)';
+			var offset = -(rect.top * factor);
+			el.style.setProperty('--mci-parallax-y', offset + 'px');
 		}
 		ticking = false;
 	}
@@ -39,6 +36,7 @@
 
 	window.addEventListener('resize', function () {
 		vh = window.innerHeight;
+		factor = mobileQuery.matches ? 0.15 : 0.25;
 	}, { passive: true });
 
 	updateParallax();

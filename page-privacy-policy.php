@@ -13,7 +13,7 @@ $clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
 <main id="main" class="site-main">
 
 	<!-- Hero -->
-	<section class="privacy-hero" style="background-image: url('<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-reception-lobby-clinic-name.avif' ); ?>');">
+	<section class="privacy-hero mci-parallax" style="--mci-parallax-bg: url('<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-reception-lobby-clinic-name.avif' ); ?>');">
 		<div class="privacy-hero__overlay"></div>
 		<div class="container privacy-hero__content">
 			<h1 class="privacy-hero__title fade-in fade-in-delay-0"><?php mci_te( 'Privacy Policy' ); ?></h1>
@@ -141,7 +141,7 @@ $clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
 	</section>
 
 	<!-- CTA Banner -->
-	<section class="about-cta" style="background-image: url('<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-wide-angle-equipment.avif' ); ?>');">
+	<section class="about-cta mci-parallax" style="--mci-parallax-bg: url('<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-wide-angle-equipment.avif' ); ?>');">
 		<div class="about-cta__overlay"></div>
 		<div class="container about-cta__content">
 			<h2 class="fade-in fade-in-delay-0"><?php echo mci_t_accent( 'Have Questions About {accent}Your Data?{/accent}' ); ?></h2>

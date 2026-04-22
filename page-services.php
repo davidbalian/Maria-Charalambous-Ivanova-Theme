@@ -88,7 +88,7 @@ $services_blocks_base = home_url( '/wp-content/uploads/2026/04/' );
 	</section>
 
 	<!-- CTA Banner -->
-	<section class="services-cta" style="background-image: url('<?php echo esc_url( $clinic_image_base . 'dr-maria-charalambous-ivanova-portrait-09.webp' ); ?>');">
+	<section class="services-cta mci-parallax" style="--mci-parallax-bg: url('<?php echo esc_url( $clinic_image_base . 'dr-maria-charalambous-ivanova-portrait-09.webp' ); ?>');">
 		<div class="services-cta__overlay"></div>
 		<div class="container services-cta__content">
 			<h2 class="fade-in fade-in-delay-0"><?php echo mci_t_accent( 'Ready to Transform {accent}Your Smile?{/accent}' ); ?></h2>
