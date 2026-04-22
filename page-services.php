@@ -13,7 +13,15 @@ $services_blocks_base = home_url( '/wp-content/uploads/2026/04/' );
 
 <main id="main" class="site-main services-page">
 
-	<?php get_template_part( 'template-parts/services-hero' ); ?>
+	<!-- Hero with background image -->
+	<section class="services-hero" style="background-image: url('<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-dental-chair-screens.avif' ); ?>');">
+		<div class="services-hero__overlay"></div>
+		<div class="container services-hero__content">
+			<h1 class="services-hero__title fade-in fade-in-delay-0"><?php mci_te( 'Our Services' ); ?></h1>
+			<p class="services-hero__subtitle fade-in fade-in-delay-1"><?php mci_te( 'Comprehensive dental care with modern technology and evidence-based treatments for every patient.' ); ?></p>
+			<?php get_template_part( 'template-parts/whatsapp-cta', null, array( 'extra_class' => 'fade-in fade-in-delay-2' ) ); ?>
+		</div>
+	</section>
 
 	<?php get_template_part( 'template-parts/services-list' ); ?>
 
