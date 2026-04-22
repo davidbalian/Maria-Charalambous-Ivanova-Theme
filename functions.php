@@ -49,6 +49,11 @@ require get_template_directory() . '/inc/i18n.php';
 require get_template_directory() . '/inc/whatsapp.php';
 
 /**
+ * Editable image galleries (CPT + placements).
+ */
+require get_template_directory() . '/inc/gallery/bootstrap.php';
+
+/**
  * SEO — meta tags, Open Graph, Twitter Cards, JSON-LD structured data.
  */
 require get_template_directory() . '/inc/seo.php';
