@@ -1368,6 +1368,16 @@ hr {
   z-index: 1;
 }
 
+/* Mobile: disable parallax compositor layer. Background renders as a static
+   cover image with no GPU promotion, avoiding texture-upload jank on scroll. */
+@media (max-width: 768px) {
+  .mci-parallax::before {
+    inset: 0;
+    transform: none;
+    will-change: auto;
+  }
+}
+
 .privacy-hero {
   position: relative;
   min-height: 75vh;

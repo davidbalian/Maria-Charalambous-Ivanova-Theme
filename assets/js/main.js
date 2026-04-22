@@ -4,16 +4,24 @@
 
 // Parallax background — GPU-composited via transform on .mci-parallax::before
 // (writes a CSS custom property; no paints during scroll). Respects reduced-motion.
+// Disabled on mobile (<=768px) to avoid compositor churn on large background textures.
 (function () {
 	if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
 	var parallaxEls = document.querySelectorAll('.mci-parallax');
 	if (!parallaxEls.length) return;
 
+	var mobileQuery = window.matchMedia('(max-width: 768px)');
+	if (mobileQuery.matches) {
+		for (var m = 0; m < parallaxEls.length; m++) {
+			parallaxEls[m].style.removeProperty('--mci-parallax-y');
+		}
+		return;
+	}
+
 	var ticking = false;
 	var vh = window.innerHeight;
-	var mobileQuery = window.matchMedia('(max-width: 768px)');
-	var factor = mobileQuery.matches ? 0.15 : 0.25;
+	var factor = 0.25;
 
 	function updateParallax() {
 		for (var i = 0; i < parallaxEls.length; i++) {
@@ -36,7 +44,6 @@
 
 	window.addEventListener('resize', function () {
 		vh = window.innerHeight;
-		factor = mobileQuery.matches ? 0.15 : 0.25;
 	}, { passive: true });
 
 	updateParallax();
