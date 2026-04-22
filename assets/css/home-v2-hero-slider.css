@@ -38,11 +38,17 @@
   display: block;
   object-fit: cover;
   transform-origin: center center;
-  will-change: transform;
 }
 
-.home-hero__carousel.is-ready .home-hero__slide img {
+/*
+ * Perf: scope Ken Burns to the active slide only so Safari isn't maintaining
+ * three promoted GPU layers with transform: scale animations running forever
+ * (even for off-screen slides). will-change is also only set on the active
+ * slide to avoid permanent layer promotion.
+ */
+.home-hero__carousel.is-ready .swiper-slide-active .home-hero__slide img {
   animation: home-hero-ken-pulse 8s ease-in-out infinite;
+  will-change: transform;
 }
 
 @keyframes home-hero-ken-pulse {
@@ -61,7 +67,7 @@
   }
 
   .home-hero__carousel .home-hero__slide img,
-  .home-hero__carousel.is-ready .home-hero__slide img {
+  .home-hero__carousel.is-ready .swiper-slide-active .home-hero__slide img {
     animation: none;
     will-change: auto;
   }
