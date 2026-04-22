@@ -11,8 +11,9 @@
  *
  * A single scroll handler drives both section parallax and the hero slider
  * bleed to avoid scheduling two rAF callbacks per scroll tick. Disabled when
- * prefers-reduced-motion is on, and the section branch short-circuits on
- * mobile where the CSS disables the parallax transform anyway.
+ * prefers-reduced-motion is on, and the whole handler short-circuits on
+ * mobile — neither section nor hero parallax run there, matching the CSS
+ * that treats the mobile hero as a static image with fade-ins only.
  */
 (function () {
 	if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -40,6 +41,14 @@
 		}
 	}
 
+	// Mobile disables hero parallax entirely; drop any inline transform so the
+	// slider bleed sits flush with the viewport instead of holding a stale offset.
+	function clearHeroTransform() {
+		if (heroBleedEl) {
+			heroBleedEl.style.transform = '';
+		}
+	}
+
 	function updateSections() {
 		for (var i = 0; i < sectionEls.length; i++) {
 			var el = sectionEls[i];
@@ -63,9 +72,11 @@
 	}
 
 	function onFrame() {
-		if (!isMobile) {
-			updateSections();
+		if (isMobile) {
+			ticking = false;
+			return;
 		}
+		updateSections();
 		updateHero();
 		ticking = false;
 	}
@@ -83,11 +94,13 @@
 		if (heroSectionEl) heroHeight = heroSectionEl.offsetHeight;
 		if (!wasMobile && isMobile) {
 			clearSectionVars();
+			clearHeroTransform();
 		}
 	}
 
 	if (isMobile) {
 		clearSectionVars();
+		clearHeroTransform();
 	}
 
 	window.addEventListener('scroll', onScroll, { passive: true });

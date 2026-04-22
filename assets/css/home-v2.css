@@ -88,6 +88,10 @@
     height: 62svh;
     min-height: 62svh;
     max-height: 62svh;
+    /* Hero parallax is disabled on mobile (see main.js); drop the promoted
+       layer hint so Safari doesn't keep a GPU layer for a static element. */
+    will-change: auto;
+    transform: none;
   }
 
   .home .home-hero__slider-bleed {
