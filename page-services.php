@@ -27,21 +27,21 @@ $services_blocks_base = home_url( '/wp-content/uploads/2026/04/' );
 
 	<?php get_template_part( 'template-parts/services-smilers-row' ); ?>
 
-	<!-- One-Visit Transformations -->
+	<!-- Emax Veneers & Crowns -->
 	<section class="services-item services-item--reverse page-section page-section--background">
 		<div class="container">
 			<div class="services-item__grid">
 				<div class="services-item__content">
 					<span class="badge badge-gold fade-in fade-in-delay-0"><?php mci_te( 'Aesthetic Dentistry' ); ?></span>
-					<h2 class="fade-in fade-in-delay-1"><?php mci_te( 'One-Visit Transformations' ); ?></h2>
-					<p class="fade-in fade-in-delay-2"><?php mci_te( 'Using advanced materials and techniques, Dr. Maria can dramatically enhance your smile in a single appointment — creating a "Masterpiece" result you will love from day one.' ); ?></p>
-					<p class="fade-in fade-in-delay-3"><?php mci_te( 'Whether you need veneers, bonding, or a complete smile makeover, our one-visit approach saves time without compromising quality.' ); ?></p>
+					<h2 class="fade-in fade-in-delay-1"><?php mci_te( 'Emax Veneers & Crowns' ); ?></h2>
+					<p class="fade-in fade-in-delay-2"><?php mci_te( 'Emax is the gold standard in aesthetic restorations — ultra-thin, layered ceramic that captures the natural translucency, light play, and character of real enamel.' ); ?></p>
+					<p class="fade-in fade-in-delay-3"><?php mci_te( 'Whether refining shape, shade, or symmetry, Emax delivers strength and beauty that last for years — a restoration indistinguishable from your own teeth.' ); ?></p>
 					<div class="fade-in fade-in-delay-4">
 						<a href="<?php echo esc_url( mci_url( '/contact/' ) ); ?>" class="btn btn-primary"><?php mci_te( 'Book Appointment' ); ?></a>
 					</div>
 				</div>
 				<div class="services-item__image fade-in fade-in-delay-2">
-					<img src="<?php echo esc_url( $services_blocks_base . 'porcelain-veneers-upper-teeth-macro-close-up-dental-art-clinic-dr-maria-charalambous-ivanova-scaled.webp' ); ?>" alt="One-Visit Transformations" width="560" height="420">
+					<img src="<?php echo esc_url( $services_blocks_base . 'additional-hero-images-2.webp' ); ?>" alt="Emax veneers and crowns" width="560" height="420">
 				</div>
 			</div>
 		</div>
