@@ -3,7 +3,7 @@
 	<div class="container">
 		<div class="home-v2-doctor__inner">
 			<div class="home-v2-doctor__image fade-in fade-in-delay-0">
-				<img src="<?php echo esc_url( 'http://davidb1646.sg-host.com/wp-content/uploads/2026/02/dr-maria-charalambous-ivanova-portrait-05.webp' ); ?>" alt="Dr. Maria Charalambous-Ivanova" width="400" height="500" loading="lazy">
+				<img src="<?php echo esc_url( 'http://davidb1646.sg-host.com/wp-content/uploads/2026/02/dr-maria-charalambous-ivanova-portrait-12.webp' ); ?>" alt="Dr. Maria Charalambous-Ivanova" width="400" height="500" loading="lazy">
 			</div>
 			<div class="home-v2-doctor__content">
 				<h2 class="fade-in fade-in-delay-1"><?php mci_te( 'Dr. Maria Charalambous-Ivanova' ); ?></h2>

@@ -45,14 +45,25 @@ $hero_slider_images = array(
 		'alt' => 'Dr. Maria Charalambous-Ivanova',
 	),
 	array(
-		'src' => '/wp-content/uploads/2026/04/porcelain-crowns-dental-lab-arch-view-dental-art-clinic-dr-maria-charalambous-ivanova-scaled.webp',
-		'alt' => 'Porcelain crowns dental lab arch view at Dental Art Clinic',
+		'src' => '/wp-content/uploads/2026/04/additional-hero-images-1.webp',
+		'alt' => 'Dental Art Clinic additional hero image 1',
 	),
 	array(
 		'src' => '/wp-content/uploads/2026/04/porcelain-veneers-smile-profile-view-dental-art-clinic-dr-maria-charalambous-ivanova-scaled.webp',
 		'alt' => 'Porcelain veneers smile profile view at Dental Art Clinic',
 	),
+	array(
+		'src' => '/wp-content/uploads/2026/04/additional-hero-images-3.webp',
+		'alt' => 'Dental Art Clinic additional hero image 3',
+	),
 );
+
+if ( wp_is_mobile() ) {
+	$hero_slider_images[] = array(
+		'src' => '/wp-content/uploads/2026/04/additional-hero-images-5.webp',
+		'alt' => 'Dental Art Clinic additional hero image 5',
+	);
+}
 ?>
 <section class="home-hero">
 	<div class="home-hero__slider-bleed">

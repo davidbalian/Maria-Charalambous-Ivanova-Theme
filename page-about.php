@@ -41,7 +41,7 @@ $clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
 		<div class="container">
 			<div class="about-doctor__grid">
 				<div class="about-doctor__image fade-in fade-in-delay-0">
-					<img src="<?php echo esc_url( 'http://davidb1646.sg-host.com/wp-content/uploads/2026/02/dr-maria-charalambous-ivanova-portrait-05.webp' ); ?>" alt="Dr. Maria Charalambous-Ivanova" width="560" height="700">
+					<img src="<?php echo esc_url( 'http://davidb1646.sg-host.com/wp-content/uploads/2026/02/dr-maria-charalambous-ivanova-portrait-12.webp' ); ?>" alt="Dr. Maria Charalambous-Ivanova" width="560" height="700">
 				</div>
 				<div class="about-doctor__bio">
 					<h2 class="fade-in fade-in-delay-1"><?php mci_te( 'Dr. Maria Charalambous-Ivanova' ); ?></h2>
