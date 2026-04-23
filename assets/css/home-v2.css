@@ -853,6 +853,11 @@
     grid-template-columns: 1fr;
   }
 
+  /* Smilers reversed row: keep a single column on mobile too */
+  .home-v2-comprehensive__smilers.services-item--reverse .services-item__grid {
+    grid-template-columns: 1fr;
+  }
+
   .home-v2-comprehensive__smilers .services-item__image {
     order: -1;
   }
