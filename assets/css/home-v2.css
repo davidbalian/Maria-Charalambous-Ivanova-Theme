@@ -548,6 +548,11 @@
   grid-template-columns: 6fr 4fr;
 }
 
+/* Reversed row (image on left): swap tracks so image stays 40% / text stays 60% */
+.home-v2-comprehensive__smilers.services-item--reverse .services-item__grid {
+  grid-template-columns: 4fr 6fr;
+}
+
 .home-v2-comprehensive .services-list__grid {
   gap: 1rem;
 }

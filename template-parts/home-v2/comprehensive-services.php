@@ -30,7 +30,7 @@
 		</div>
 
 		<!-- Smilers Aligners (same content as services page; transparent, constrained to .container) -->
-		<div class="home-v2-comprehensive__smilers">
+		<div class="home-v2-comprehensive__smilers services-item--reverse">
 			<div class="services-item__grid">
 				<div class="services-item__content">
 					<span class="badge badge-gold fade-in fade-in-delay-0"><?php mci_te( 'Orthodontics' ); ?></span>

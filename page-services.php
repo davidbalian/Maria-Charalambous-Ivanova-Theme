@@ -14,7 +14,7 @@ $services_blocks_base = home_url( '/wp-content/uploads/2026/04/' );
 <main id="main" class="site-main services-page">
 
 	<!-- Hero with background image -->
-	<section class="services-hero" style="background-image: url('<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-dental-chair-screens.avif' ); ?>');">
+	<section class="services-hero mci-parallax" style="--mci-parallax-bg: url('<?php echo esc_url( $clinic_image_base . 'dental-art-clinic-by-dr-maria-charalambous-ivanova-treatment-room-dental-chair-screens.avif' ); ?>');">
 		<div class="services-hero__overlay"></div>
 		<div class="container services-hero__content">
 			<h1 class="services-hero__title fade-in fade-in-delay-0"><?php mci_te( 'Our Services' ); ?></h1>
