@@ -60,6 +60,10 @@ $hero_slider_images = array(
 
 // Inject "-mobile" before the extension to derive the mobile-cropped variant filename.
 $mci_hero_to_mobile = static function ( $src ) {
+	if ( preg_match( '#/additional-hero-images-3\.webp$#i', $src ) ) {
+		return $src;
+	}
+
 	return (string) preg_replace( '/(\.[a-z0-9]+)$/i', '-mobile$1', $src, 1 );
 };
 ?>
