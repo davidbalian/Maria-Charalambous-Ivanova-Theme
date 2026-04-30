@@ -32,7 +32,7 @@ return array(
 	   Homepage Hero
 	   ===================================================================== */
 	'Beautiful Smiles {accent}Start Here{/accent}' => 'Τα Όμορφα Χαμόγελα {accent}Ξεκινούν Εδώ{/accent}',
-	'5-star rated dental clinic in Limassol. Natural-looking E.max veneers & smile transformations.' => 'Οδοντιατρική κλινική 5 αστέρων στη Λεμεσό. Φυσικής όψης όψεις E.max και μεταμορφώσεις χαμόγελου.',
+	'5-star rated dental clinic in Limassol. Natural-looking E.max veneers & smile transformations.' => 'Οδοντιατρική κλινική 5 αστέρων στη Λεμεσό. Φυσικές όψεις E.max και μεταμορφώσεις χαμόγελου.',
 
 	/* =====================================================================
 	   Welcome Section
@@ -98,7 +98,7 @@ return array(
 	   Reviews
 	   ===================================================================== */
 	'What Our Patients Say'                   => 'Τι Λένε οι Ασθενείς μας',
-	'Real reviews from our community of patients in Limassol and beyond.' => 'Πραγματικές κριτικές από την κοινότητα ασθενών μας στη Λεμεσό και όχι μόνο.',
+	'Real reviews from our community of patients in Limassol and beyond.' => 'Πραγματικές κριτικές ασθενών μας',
 
 	/* =====================================================================
 	   Contact Section (Homepage)
@@ -197,7 +197,7 @@ return array(
 	'Premium E.max Veneers'                   => 'Όψεις E.max υψηλής ποιότητας',
 	'Achieve a natural, confident smile with ultra-thin, high-quality veneers designed just for you.' => 'Αποκτήστε ένα φυσικό, γεμάτο αυτοπεποίθηση χαμόγελο με εξαιρετικά λεπτές, υψηλής ποιότητας όψεις σχεδιασμένες αποκλειστικά για εσάς.',
 	'E.max veneers are one of the most advanced solutions in cosmetic dentistry. Crafted from high-strength ceramic, they offer exceptional durability while maintaining a completely natural look.' => 'Οι όψεις E.max είναι μία από τις πιο προηγμένες λύσεις στην αισθητική οδοντιατρική. Κατασκευασμένες από κεραμικό υψηλής αντοχής, προσφέρουν εξαιρετική ανθεκτικότητα διατηρώντας παράλληλα απόλυτα φυσική εμφάνιση.',
-	'Each smile is digitally designed to match your facial features, ensuring a result that looks beautiful, not artificial.' => 'Κάθε χαμόγελο σχεδιάζεται ψηφιακά ώστε να ταιριάζει στα χαρακτηριστικά του προσώπου σας, εξασφαλίζοντας ένα αποτέλεσμα που δείχνει όμορφο και όχι τεχνητό.',
+	'Each smile is digitally designed to match your facial features, ensuring a result that looks beautiful, not artificial.' => 'Κάθε χαμόγελο σχεδιάζεται ψηφιακά ώστε να ταιριάζει στα χαρακτηριστικά του προσώπου σας, εξασφαλίζοντας ένα αποτέλεσμα που δείχνει φυσικό και όχι τεχνιτό.',
 	'Cosmetic'                                => 'Αισθητική',
 	'Cosmetic Masterpieces'                   => 'Αισθητικά Αριστουργήματα',
 	'Our cosmetic services go beyond simple fixes — crafted to create smiles that look natural, feel comfortable, and stand the test of time.' => 'Οι αισθητικές μας υπηρεσίες ξεπερνούν τις απλές διορθώσεις — σχεδιασμένες για χαμόγελα που φαίνονται φυσικά, αισθάνονται άνετα και αντέχουν στη δοκιμασία του χρόνου.',
