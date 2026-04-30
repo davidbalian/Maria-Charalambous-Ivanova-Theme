@@ -170,6 +170,28 @@ function mci_defer_scripts( $tag, $handle, $src ) {
 add_filter( 'script_loader_tag', 'mci_defer_scripts', 10, 3 );
 
 /**
+ * Load non-critical CSS asynchronously to remove render-blocking requests.
+ * Uses the rel="preload" + onload pattern with a <noscript> fallback.
+ * style.css and home-v2.css stay blocking — they contain above-the-fold styles.
+ */
+function mci_async_styles( $html, $handle ) {
+	$async_handles = array(
+		'mci-animations',
+		'swiper',
+		'mci-home-v2-clinic-slider',
+		'mci-home-v2-hero-slider',
+		'mci-services-hero-slider',
+		'lightgallery',
+	);
+	if ( in_array( $handle, $async_handles, true ) ) {
+		$async = str_replace( "rel='stylesheet'", "rel='preload' as='style' onload=\"this.onload=null;this.rel='stylesheet'\"", $html );
+		return $async . '<noscript>' . $html . '</noscript>';
+	}
+	return $html;
+}
+add_filter( 'style_loader_tag', 'mci_async_styles', 10, 2 );
+
+/**
  * Handle contact form submission.
  */
 function mci_handle_contact_form() {
