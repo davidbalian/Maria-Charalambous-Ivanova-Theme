@@ -98,7 +98,7 @@ return array(
 	   Reviews
 	   ===================================================================== */
 	'What Our Patients Say'                   => 'Τι Λένε οι Ασθενείς μας',
-	'Real reviews from our community of patients in Limassol and beyond.' => 'Πραγματικές κριτικές ασθενών μας',
+	'Real reviews from our community of patients in Limassol and beyond.' => 'Πραγματικές κριτικές ασθενών μας.',
 
 	/* =====================================================================
 	   Contact Section (Homepage)
