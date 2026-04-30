@@ -321,6 +321,9 @@ function mci_setup_menus_once() {
 		'primary'    => 'Primary Menu',
 		'primary-el' => 'Primary Menu (Greek)',
 		'primary-ru' => 'Primary Menu (Russian)',
+		'footer'     => 'Footer Menu',
+		'footer-el'  => 'Footer Menu (Greek)',
+		'footer-ru'  => 'Footer Menu (Russian)',
 	);
 
 	$existing_locations = get_nav_menu_locations();
