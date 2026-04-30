@@ -311,7 +311,7 @@ add_action( 'wp_ajax_nopriv_mci_contact_form', 'mci_handle_contact_form' );
  * Delete the 'mci_menus_built' option to re-run.
  */
 function mci_setup_menus_once() {
-	if ( get_option( 'mci_menus_built' ) ) {
+	if ( get_option( 'mci_menus_built' ) === '2' ) {
 		return;
 	}
 
@@ -368,6 +368,6 @@ function mci_setup_menus_once() {
 	}
 
 	set_theme_mod( 'nav_menu_locations', $location_map );
-	update_option( 'mci_menus_built', '1' );
+	update_option( 'mci_menus_built', '2' );
 }
 add_action( 'admin_init', 'mci_setup_menus_once' );
