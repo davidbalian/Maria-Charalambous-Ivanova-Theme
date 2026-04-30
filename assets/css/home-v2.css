@@ -232,6 +232,11 @@
 .home-hero__text-band .home-hero__title .accent-font {
   color: #ffffff;
   font-weight: 400;
+  font-style: normal;
+}
+
+.home-hero__title .accent-font {
+  font-style: normal;
 }
 
 .home-hero__text-band .home-hero__text {
