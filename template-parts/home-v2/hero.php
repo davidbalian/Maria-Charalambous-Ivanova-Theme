@@ -109,9 +109,9 @@ if ( wp_is_mobile() ) {
 						</div>
 						<div class="fade-in fade-in-delay-3">
 							<a
-								href="#comprehensive-dental-care"
-								class="btn btn-outline home-hero__services-cta js-home-hero-scroll-next"
-							><?php echo esc_html( mci_t( 'Services' ) ); ?></a>
+								href="<?php echo esc_url( 'tel:+' . mci_whatsapp_phone_digits() ); ?>"
+								class="btn btn-outline home-hero__services-cta"
+							><?php echo esc_html( mci_t( 'Call Now' ) ); ?></a>
 						</div>
 					</div>
 				</div>
