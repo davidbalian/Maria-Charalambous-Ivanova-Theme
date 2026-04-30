@@ -23,11 +23,7 @@ $services_blocks_base = home_url( '/wp-content/uploads/2026/04/' );
 		</div>
 	</section>
 
-	<?php get_template_part( 'template-parts/services-list' ); ?>
-
-	<?php get_template_part( 'template-parts/services-smilers-row' ); ?>
-
-	<!-- Premium E.max Veneers -->
+	<!-- Premium E.max Veneers — row 1: image LEFT -->
 	<section class="services-item services-item--reverse page-section page-section--background">
 		<div class="container">
 			<div class="services-item__grid">
@@ -48,8 +44,10 @@ $services_blocks_base = home_url( '/wp-content/uploads/2026/04/' );
 		</div>
 	</section>
 
-	<!-- Cosmetic Masterpieces -->
-	<section class="services-item page-section page-section--surface">
+	<?php get_template_part( 'template-parts/services-smilers-row' ); ?>
+
+	<!-- Cosmetic Masterpieces — row 3: image LEFT -->
+	<section class="services-item services-item--reverse page-section page-section--surface">
 		<div class="container">
 			<div class="services-item__grid">
 				<div class="services-item__content">
@@ -68,8 +66,8 @@ $services_blocks_base = home_url( '/wp-content/uploads/2026/04/' );
 		</div>
 	</section>
 
-	<!-- Preventative & Restorative Care -->
-	<section class="services-item services-item--reverse page-section page-section--background">
+	<!-- Preventative & Restorative Care — row 4: image RIGHT -->
+	<section class="services-item page-section page-section--background">
 		<div class="container">
 			<div class="services-item__grid">
 				<div class="services-item__content">
@@ -87,6 +85,8 @@ $services_blocks_base = home_url( '/wp-content/uploads/2026/04/' );
 			</div>
 		</div>
 	</section>
+
+	<?php get_template_part( 'template-parts/services-list' ); ?>
 
 	<!-- CTA Banner -->
 	<section class="services-cta mci-parallax" style="--mci-parallax-bg: url('<?php echo esc_url( $clinic_image_base . 'dr-maria-charalambous-ivanova-portrait-09.webp' ); ?>');">
