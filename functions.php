@@ -305,3 +305,66 @@ add_action( 'admin_post_mci_contact_form', 'mci_handle_contact_form' );
 add_action( 'admin_post_nopriv_mci_contact_form', 'mci_handle_contact_form' );
 add_action( 'wp_ajax_mci_contact_form', 'mci_handle_contact_form' );
 add_action( 'wp_ajax_nopriv_mci_contact_form', 'mci_handle_contact_form' );
+
+/**
+ * One-time menu setup. Runs once on next admin load, then disables itself.
+ * Delete the 'mci_menus_built' option to re-run.
+ */
+function mci_setup_menus_once() {
+	if ( get_option( 'mci_menus_built' ) ) {
+		return;
+	}
+
+	$nav_slugs = array( 'about', 'services', 'gallery', 'contact' );
+
+	$menus_to_build = array(
+		'primary'    => 'Primary Menu',
+		'primary-el' => 'Primary Menu (Greek)',
+		'primary-ru' => 'Primary Menu (Russian)',
+	);
+
+	$existing_locations = get_nav_menu_locations();
+
+	// Delete any menus currently assigned to these locations.
+	foreach ( $menus_to_build as $location => $label ) {
+		if ( ! empty( $existing_locations[ $location ] ) ) {
+			$old = wp_get_nav_menu_object( $existing_locations[ $location ] );
+			if ( $old ) {
+				wp_delete_nav_menu( $old->term_id );
+			}
+		}
+	}
+
+	// Resolve page IDs once.
+	$page_ids = array();
+	foreach ( $nav_slugs as $slug ) {
+		$page = get_page_by_path( $slug, OBJECT, 'page' );
+		if ( $page ) {
+			$page_ids[ $slug ] = $page->ID;
+		}
+	}
+
+	$location_map = $existing_locations;
+
+	foreach ( $menus_to_build as $location => $label ) {
+		$menu_id = wp_create_nav_menu( $label );
+		if ( is_wp_error( $menu_id ) ) {
+			continue;
+		}
+
+		foreach ( $page_ids as $page_id ) {
+			wp_update_nav_menu_item( $menu_id, 0, array(
+				'menu-item-object-id' => $page_id,
+				'menu-item-object'    => 'page',
+				'menu-item-type'      => 'post_type',
+				'menu-item-status'    => 'publish',
+			) );
+		}
+
+		$location_map[ $location ] = $menu_id;
+	}
+
+	set_theme_mod( 'nav_menu_locations', $location_map );
+	update_option( 'mci_menus_built', '1' );
+}
+add_action( 'admin_init', 'mci_setup_menus_once' );
