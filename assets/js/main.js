@@ -29,8 +29,8 @@
 	if (!sectionEls.length && !heroBleedEl) return;
 
 	var viewportHeight = window.innerHeight;
-	var heroHeight = heroSectionEl ? heroSectionEl.offsetHeight : 0;
 	var isMobile = window.innerWidth <= MOBILE_MAX_WIDTH;
+	var heroHeight = (!isMobile && heroSectionEl) ? heroSectionEl.offsetHeight : 0;
 	var ticking = false;
 
 	// On mobile the CSS disables the ::before transform; clear any stale values
@@ -106,7 +106,7 @@
 	window.addEventListener('scroll', onScroll, { passive: true });
 	window.addEventListener('resize', onResize, { passive: true });
 
-	onFrame();
+	if (!isMobile) requestAnimationFrame(onFrame);
 })();
 
 document.addEventListener('DOMContentLoaded', function () {
