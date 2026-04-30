@@ -311,25 +311,46 @@ add_action( 'wp_ajax_nopriv_mci_contact_form', 'mci_handle_contact_form' );
  * Delete the 'mci_menus_built' option to re-run.
  */
 function mci_setup_menus_once() {
-	if ( get_option( 'mci_menus_built' ) === '2' ) {
+	if ( get_option( 'mci_menus_built' ) === '3' ) {
 		return;
 	}
 
-	$nav_slugs = array( 'about', 'services', 'gallery', 'contact' );
+	// Translated nav labels per language.
+	$labels = array(
+		'en' => array(
+			'about'   => 'About',
+			'services' => 'Services',
+			'gallery' => 'Gallery',
+			'contact' => 'Contact',
+		),
+		'el' => array(
+			'about'   => 'Σχετικά',
+			'services' => 'Υπηρεσίες',
+			'gallery' => 'Γκαλερί',
+			'contact' => 'Επικοινωνία',
+		),
+		'ru' => array(
+			'about'   => 'О клинике',
+			'services' => 'Услуги',
+			'gallery' => 'Галерея',
+			'contact' => 'Контакты',
+		),
+	);
 
+	// Menu locations to build: location slug => [ display name, language ].
 	$menus_to_build = array(
-		'primary'    => 'Primary Menu',
-		'primary-el' => 'Primary Menu (Greek)',
-		'primary-ru' => 'Primary Menu (Russian)',
-		'footer'     => 'Footer Menu',
-		'footer-el'  => 'Footer Menu (Greek)',
-		'footer-ru'  => 'Footer Menu (Russian)',
+		'primary'    => array( 'name' => 'Primary Menu',          'lang' => 'en' ),
+		'primary-el' => array( 'name' => 'Primary Menu (Greek)',   'lang' => 'el' ),
+		'primary-ru' => array( 'name' => 'Primary Menu (Russian)', 'lang' => 'ru' ),
+		'footer'     => array( 'name' => 'Footer Menu',            'lang' => 'en' ),
+		'footer-el'  => array( 'name' => 'Footer Menu (Greek)',    'lang' => 'el' ),
+		'footer-ru'  => array( 'name' => 'Footer Menu (Russian)',  'lang' => 'ru' ),
 	);
 
 	$existing_locations = get_nav_menu_locations();
 
 	// Delete any menus currently assigned to these locations.
-	foreach ( $menus_to_build as $location => $label ) {
+	foreach ( $menus_to_build as $location => $config ) {
 		if ( ! empty( $existing_locations[ $location ] ) ) {
 			$old = wp_get_nav_menu_object( $existing_locations[ $location ] );
 			if ( $old ) {
@@ -338,9 +359,9 @@ function mci_setup_menus_once() {
 		}
 	}
 
-	// Resolve page IDs once.
+	// Resolve page IDs once (slugs are the same across all languages).
 	$page_ids = array();
-	foreach ( $nav_slugs as $slug ) {
+	foreach ( array_keys( $labels['en'] ) as $slug ) {
 		$page = get_page_by_path( $slug, OBJECT, 'page' );
 		if ( $page ) {
 			$page_ids[ $slug ] = $page->ID;
@@ -349,17 +370,21 @@ function mci_setup_menus_once() {
 
 	$location_map = $existing_locations;
 
-	foreach ( $menus_to_build as $location => $label ) {
-		$menu_id = wp_create_nav_menu( $label );
+	foreach ( $menus_to_build as $location => $config ) {
+		$menu_id = wp_create_nav_menu( $config['name'] );
 		if ( is_wp_error( $menu_id ) ) {
 			continue;
 		}
 
-		foreach ( $page_ids as $page_id ) {
+		$lang         = $config['lang'];
+		$lang_labels  = $labels[ $lang ];
+
+		foreach ( $page_ids as $slug => $page_id ) {
 			wp_update_nav_menu_item( $menu_id, 0, array(
 				'menu-item-object-id' => $page_id,
 				'menu-item-object'    => 'page',
 				'menu-item-type'      => 'post_type',
+				'menu-item-title'     => $lang_labels[ $slug ],
 				'menu-item-status'    => 'publish',
 			) );
 		}
@@ -368,6 +393,6 @@ function mci_setup_menus_once() {
 	}
 
 	set_theme_mod( 'nav_menu_locations', $location_map );
-	update_option( 'mci_menus_built', '2' );
+	update_option( 'mci_menus_built', '3' );
 }
 add_action( 'admin_init', 'mci_setup_menus_once' );
