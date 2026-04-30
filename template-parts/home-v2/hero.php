@@ -58,19 +58,10 @@ $hero_slider_images = array(
 	),
 );
 
-if ( wp_is_mobile() ) {
-	$hero_slider_images = array_map(
-		static function ( $slide ) {
-			if ( empty( $slide['src'] ) || ! is_string( $slide['src'] ) ) {
-				return $slide;
-			}
-
-			$slide['src'] = (string) preg_replace( '/(\.[a-z0-9]+)$/i', '-mobile$1', $slide['src'], 1 );
-			return $slide;
-		},
-		$hero_slider_images
-	);
-}
+// Inject "-mobile" before the extension to derive the mobile-cropped variant filename.
+$mci_hero_to_mobile = static function ( $src ) {
+	return (string) preg_replace( '/(\.[a-z0-9]+)$/i', '-mobile$1', $src, 1 );
+};
 ?>
 <section class="home-hero">
 	<div class="home-hero__slider-bleed">
@@ -88,16 +79,23 @@ if ( wp_is_mobile() ) {
 						$hero_fetch_priority = 'low';
 					}
 					?>
+					<?php
+					$hero_desktop_src = home_url( $hero_slide['src'] );
+					$hero_mobile_src  = home_url( $mci_hero_to_mobile( $hero_slide['src'] ) );
+					?>
 					<div class="swiper-slide">
 						<div class="home-hero__slide">
-							<img
-								src="<?php echo esc_url( home_url( $hero_slide['src'] ) ); ?>"
-								alt="<?php echo esc_attr( $hero_slide['alt'] ); ?>"
-								loading="eager"
-								decoding="async"
-								fetchpriority="<?php echo esc_attr( $hero_fetch_priority ); ?>"
-								<?php if ( 0 === $hero_slide_index ) : ?>style="object-position: 30% center;"<?php endif; ?>
-							/>
+							<picture>
+								<source media="(max-width: 768px)" srcset="<?php echo esc_url( $hero_mobile_src ); ?>" />
+								<img
+									src="<?php echo esc_url( $hero_desktop_src ); ?>"
+									alt="<?php echo esc_attr( $hero_slide['alt'] ); ?>"
+									loading="eager"
+									decoding="async"
+									fetchpriority="<?php echo esc_attr( $hero_fetch_priority ); ?>"
+									<?php if ( 0 === $hero_slide_index ) : ?>style="object-position: 30% center;"<?php endif; ?>
+								/>
+							</picture>
 						</div>
 					</div>
 				<?php endforeach; ?>
