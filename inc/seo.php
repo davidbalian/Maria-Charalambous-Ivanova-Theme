@@ -262,21 +262,7 @@ function mci_seo_canonical() {
    ========================================================================= */
 
 function mci_seo_robots() {
-	$noindex = false;
-
-	if ( is_search() || is_404() ) {
-		$noindex = true;
-	}
-
-	if ( is_paged() ) {
-		$noindex = true;
-	}
-
-	if ( $noindex ) {
-		echo '<meta name="robots" content="noindex, follow">' . "\n";
-	} else {
-		echo '<meta name="robots" content="index, follow">' . "\n";
-	}
+	echo '<meta name="robots" content="index, follow">' . "\n";
 }
 
 /* =========================================================================
