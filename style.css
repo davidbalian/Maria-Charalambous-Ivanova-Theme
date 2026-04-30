@@ -2556,6 +2556,7 @@ hr {
 .services-item__content p {
   color: var(--mci-color-text-light);
   line-height: 1.65;
+  text-align: justify;
 }
 
 .services-item__content .btn {
