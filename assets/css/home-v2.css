@@ -747,6 +747,11 @@
   min-width: 0;
 }
 
+.home-v2-welcome__image picture {
+  display: block;
+  height: 100%;
+}
+
 .home-v2-welcome__image img {
   width: 100%;
   max-width: 100%;
