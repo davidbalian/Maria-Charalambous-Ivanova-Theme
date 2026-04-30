@@ -449,20 +449,32 @@ function mci_seo_json_ld() {
 	$in_language = isset( $in_language_map[ $lang ] ) ? $in_language_map[ $lang ] : 'en-US';
 
 	// --- Dentist / MedicalBusiness schema (every page) ---
+	$biz_desc = mci_t( 'seo_business_desc' );
+	if ( $biz_desc === 'seo_business_desc' ) {
+		$biz_desc = 'Modern dental clinic in Limassol by Dr. Maria Charalambous-Ivanova, DMD, MSD. Specialising in cosmetic dentistry, E.max veneers, Smilers aligners, dental implants, and full mouth rehabilitation since 2008.';
+	}
+
 	$dentist = array(
 		'@type'           => array( 'Dentist', 'MedicalBusiness' ),
 		'@id'             => $biz['url'] . '#dentist',
 		'name'            => $biz['name'],
+		'description'     => $biz_desc,
 		'url'             => $biz['url'],
 		'telephone'       => $biz['phone_raw'],
 		'email'           => $biz['email'],
 		'priceRange'      => $biz['price_range'],
 		'foundingDate'    => (string) $biz['founding_year'],
 		'logo'            => array(
-			'@type'      => 'ImageObject',
-			'url'        => $biz['logo'],
+			'@type'  => 'ImageObject',
+			'url'    => $biz['logo'],
+			'width'  => 200,
+			'height' => 40,
 		),
-		'image'           => $biz['image_clinic'],
+		'image'           => array(
+			$biz['image_clinic'],
+			$biz['image_doctor'],
+			$biz['image_gallery'],
+		),
 		'address'         => array(
 			'@type'           => 'PostalAddress',
 			'streetAddress'   => $biz['street'],
@@ -477,6 +489,16 @@ function mci_seo_json_ld() {
 			'longitude' => $biz['lng'],
 		),
 		'hasMap'          => $biz['maps_url'],
+		'contactPoint'    => array(
+			array(
+				'@type'             => 'ContactPoint',
+				'contactType'       => 'customer service',
+				'telephone'         => $biz['phone_raw'],
+				'email'             => $biz['email'],
+				'areaServed'        => 'CY',
+				'availableLanguage' => array( 'English', 'Russian', 'Greek' ),
+			),
+		),
 		'openingHoursSpecification' => array(),
 		'sameAs'          => array_values( $biz['social'] ),
 		'areaServed'      => array(
@@ -495,7 +517,15 @@ function mci_seo_json_ld() {
 				'name'  => $lang_name,
 			);
 		}, $biz['languages'] ),
-		'medicalSpecialty' => $biz['medical_specialties'],
+		'medicalSpecialty' => 'Dentistry',
+		'knowsAbout'      => array(
+			'Cosmetic Dentistry',
+			'Endodontics',
+			'Prosthodontics',
+			'Periodontics',
+			'Orthodontics',
+			'General Dentistry',
+		),
 	);
 
 	foreach ( $biz['opening_spec'] as $spec ) {
@@ -526,10 +556,17 @@ function mci_seo_json_ld() {
 	$graph[] = $dentist;
 
 	// --- Person schema (Dr. Maria) ---
+	$doctor_desc = mci_t( 'seo_doctor_desc' );
+	if ( $doctor_desc === 'seo_doctor_desc' ) {
+		$doctor_desc = 'Dr. Maria Charalambous-Ivanova, DMD, MSD is the founder and lead dentist at Dental Art Clinic Limassol. A graduate of Medical University of Sofia, practicing since 2008 with a focus on cosmetic and restorative dentistry.';
+	}
+
 	$graph[] = array(
 		'@type'             => 'Person',
 		'@id'               => $biz['url'] . '#doctor',
 		'name'              => $biz['doctor_name'],
+		'description'       => $doctor_desc,
+		'url'               => mci_url( '/about/' ),
 		'jobTitle'          => 'Dentist',
 		'honorificSuffix'   => $biz['doctor_title'],
 		'image'             => $biz['image_doctor'],
@@ -571,15 +608,18 @@ function mci_seo_json_ld() {
 	$graph[] = $website;
 
 	// --- WebPage schema ---
-	$webpage_type = 'WebPage';
-	if ( mci_seo_is_page( 'about' ) ) {
+	if ( is_front_page() ) {
+		$webpage_type = 'MedicalWebPage';
+	} elseif ( mci_seo_is_page( 'about' ) ) {
 		$webpage_type = 'AboutPage';
 	} elseif ( mci_seo_is_page( 'contact' ) ) {
 		$webpage_type = 'ContactPage';
 	} elseif ( mci_seo_is_page( 'services' ) ) {
 		$webpage_type = 'MedicalWebPage';
 	} elseif ( mci_seo_is_page( 'gallery' ) ) {
-		$webpage_type = 'CollectionPage';
+		$webpage_type = array( 'CollectionPage', 'ImageGallery' );
+	} else {
+		$webpage_type = 'WebPage';
 	}
 
 	$current_url = mci_seo_current_url();
@@ -604,6 +644,30 @@ function mci_seo_json_ld() {
 
 	if ( $wp_desc ) {
 		$webpage['description'] = $wp_desc;
+	}
+
+	// primaryImageOfPage — aligned with OG image.
+	$og_image_url = mci_seo_get_og_image( $biz );
+	if ( $og_image_url ) {
+		$webpage['primaryImageOfPage'] = array(
+			'@type' => 'ImageObject',
+			'url'   => $og_image_url,
+		);
+	}
+
+	// dateModified — available on singular pages.
+	if ( is_singular() ) {
+		$queried = get_queried_object();
+		if ( $queried ) {
+			$webpage['dateModified'] = get_the_modified_date( 'c', $queried );
+		}
+	}
+
+	// mainEntity cross-references.
+	if ( mci_seo_is_page( 'about' ) ) {
+		$webpage['mainEntity'] = array( '@id' => $biz['url'] . '#doctor' );
+	} elseif ( mci_seo_is_page( 'contact' ) || mci_seo_is_page( 'services' ) || is_front_page() ) {
+		$webpage['mainEntity'] = array( '@id' => $biz['url'] . '#dentist' );
 	}
 
 	$graph[] = $webpage;
