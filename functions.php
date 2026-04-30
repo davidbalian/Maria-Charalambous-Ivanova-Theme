@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'MCI_THEME_VERSION', '1.6.11' );
+define( 'MCI_THEME_VERSION', '1.6.12' );
 
 /**
  * Theme setup.
@@ -57,6 +57,11 @@ require get_template_directory() . '/inc/galleries/bootstrap.php';
  * SEO — meta tags, Open Graph, Twitter Cards, JSON-LD structured data.
  */
 require get_template_directory() . '/inc/seo.php';
+
+/**
+ * Multilingual XML sitemap served at /sitemap.xml with hreflang annotations.
+ */
+require get_template_directory() . '/inc/sitemap.php';
 
 /**
  * Enqueue styles and scripts.
