@@ -343,12 +343,14 @@ function mci_nav_menu_lang_urls( $items ) {
 		return $items;
 	}
 
-	$home = untrailingslashit( home_url() );
+	$home      = untrailingslashit( home_url() );
+	$home_norm = preg_replace( '#^https?://#', '', $home );
 
 	foreach ( $items as &$item ) {
-		// Only rewrite internal URLs.
-		if ( strpos( $item->url, $home ) === 0 ) {
-			$path = substr( $item->url, strlen( $home ) );
+		// Normalise protocol so http/https mismatches don't break the check.
+		$url_norm = preg_replace( '#^https?://#', '', $item->url );
+		if ( strpos( $url_norm, $home_norm ) === 0 ) {
+			$path = substr( $url_norm, strlen( $home_norm ) );
 			// Don't double-prefix.
 			if ( ! preg_match( '#^/(ru|el)(/|$)#', $path ) ) {
 				$item->url = $home . '/' . $lang . $path;
