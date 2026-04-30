@@ -79,7 +79,7 @@ return array(
 	   ===================================================================== */
 	'Dr. Maria Charalambous-Ivanova'          => 'Δρ. Μαρία Χαραλάμπους-Ιβάνοβα',
 	'DMD, MSD | Founder &amp; Clinical Director' => 'DMD, MSD | Ιδρύτρια &amp; Κλινική Διευθύντρια',
-	'Graduated University of Sofia (2007), practicing since 2008. Continually advances through international congresses and training.' => 'Απόφοιτος Πανεπιστημίου Σόφιας (2007), ασκεί επάγγελμα από το 2008. Εξελίσσεται μέσω διεθνών συνεδρίων και εκπαίδευσης.',
+	'Graduated University of Sofia (2007), practicing since 2008. Continually advances through international congresses and training.' => 'Απόφοιτος Πανεπιστημίου Σόφιας (2007), ασκεί επάγγελμα από το 2008. Εξελίσσεται μέσω Διεθνών συνεδρίων και εκπαίδευσης.',
 	'Composite and Emax veneers anchor her aesthetic philosophy. She also handles complex full mouth rehabilitation cases.' => 'Όψεις composite και Emax είναι η βάση της αισθητικής της φιλοσοφίας. Αναλαμβάνει επίσης σύνθετες πλήρεις αποκαταστάσεις στόματος.',
 	'Scientific precision'                    => 'Επιστημονική ακρίβεια',
 	'Strategic treatment planning'            => 'Στρατηγικός θεραπευτικός σχεδιασμός',
@@ -167,7 +167,7 @@ return array(
 	   About Page
 	   ===================================================================== */
 	'About the Clinic'                        => 'Σχετικά με το Οδοντιατρείο',
-	'Where your oral health and smile are our top priorities.' => 'Όπου η στοματική σας υγεία και το χαμόγελό σας αποτελούν τις κορυφαίες προτεραιότητές μας.',
+	'Where your oral health and smile are our top priorities.' => 'Όπου η στοματική σας υγεία και το χαμόγελό αποτελούν τις κορυφαίες προτεραιότητές μας.',
 	'The Masterpiece Philosophy'              => 'Η Φιλοσοφία του Αριστουργήματος',
 	'At DENTAL ART CLINIC LIMASSOL, dentistry combines scientific precision, strategic planning, and aesthetic harmony — the natural evolution of a career built on trust, consistency, and excellence.' => 'Στο DENTAL ART CLINIC ΛΕΜΕΣΟΣ, η οδοντιατρική συνδυάζει επιστημονική ακρίβεια, στρατηγικό σχεδιασμό και αισθητική αρμονία — φυσική εξέλιξη μιας σταδιοδρομίας χτισμένης στην εμπιστοσύνη, τη συνέπεια και την αριστεία.',
 	'Every case is treated individually — no standardized solutions, only the right approach for each patient, focusing on long-term health, proper function, and aesthetic balance.' => 'Κάθε περιστατικό αντιμετωπίζεται ξεχωριστά — χωρίς τυποποιημένες λύσεις, μόνο η σωστή προσέγγιση για κάθε ασθενή, με εστίαση στη μακροπρόθεσμη υγεία, τη λειτουργία και την αισθητική ισορροπία.',
@@ -186,7 +186,7 @@ return array(
 	'Orthodontics'                            => 'Ορθοδοντική',
 	'Smilers Aligners'                        => 'Smilers Aligners',
 	'Discreet, durable aligners for modern lifestyles — a virtually invisible way to straighten teeth and correct your bite.' => 'Διακριτικοί, ανθεκτικοί νάρθηκες για σύγχρονο τρόπο ζωής — σχεδόν αόρατη ευθυγράμμιση δοντιών και διόρθωση σύγκλεισης.',
-	'Correct your smile invisibly — Smilers let you go about your day with confidence while your teeth gently shift into place.' => 'Διορθώστε το χαμόγελο αθόρυβα — οι Smilers σάς αφήνουν να συνεχίσετε με αυτοπεποίθηση ενώ τα δόντια μετακινούνται ήπια.',
+	'Correct your smile invisibly — Smilers let you go about your day with confidence while your teeth gently shift into place.' => 'Διορθώστε το χαμόγελο αθόρυβα — οι Smilers σας αφήνουν να συνεχίσετε με αυτοπεποίθηση ενώ τα δόντια μετακινούνται ήπια.',
 	'Aesthetic Dentistry'                     => 'Αισθητική Οδοντιατρική',
 	'One-Visit Transformations'               => 'Μεταμορφώσεις σε Μία Επίσκεψη',
 	'Using advanced materials and techniques, Dr. Maria can dramatically enhance your smile in a single appointment — creating a "Masterpiece" result you will love from day one.' => 'Χρησιμοποιώντας προηγμένα υλικά και τεχνικές, η Δρ. Μαρία μπορεί να αναβαθμίσει εντυπωσιακά το χαμόγελό σας σε ένα μόνο ραντεβού — δημιουργώντας ένα αποτέλεσμα «Αριστούργημα» που θα αγαπήσετε από την πρώτη μέρα.',
