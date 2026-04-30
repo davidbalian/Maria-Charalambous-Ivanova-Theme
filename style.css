@@ -1228,7 +1228,7 @@ hr {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--mci-color-white);
   margin-bottom: var(--mci-spacing-sm);
 }
 
