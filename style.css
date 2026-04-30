@@ -2477,6 +2477,7 @@ hr {
   color: var(--mci-color-text-light);
   line-height: 1.6;
   margin: 0;
+  text-align: justify;
 }
 
 @media (max-width: 768px) {
