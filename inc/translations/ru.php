@@ -32,7 +32,7 @@ return array(
 	   Homepage Hero
 	   ===================================================================== */
 	'Beautiful Smiles {accent}Start Here{/accent}' => 'Красивые улыбки {accent}начинаются здесь{/accent}',
-	'5-Star rated dental clinic in Limassol. Pain-free dental care & smile transformations.' => 'Стоматологическая клиника Лимассола с рейтингом 5 звёзд. Безболезненная стоматология и преображение улыбки.',
+	'5-star rated dental clinic in Limassol. Natural-looking E.max veneers & smile transformations.' => 'Стоматологическая клиника Лимассола с рейтингом 5 звёзд. Естественно выглядящие виниры E.max и преображение улыбки.',
 
 	/* =====================================================================
 	   Welcome Section
