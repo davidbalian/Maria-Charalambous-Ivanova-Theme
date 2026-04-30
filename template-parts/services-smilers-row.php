@@ -19,7 +19,10 @@
 				</div>
 			</div>
 			<div class="services-item__image fade-in fade-in-delay-2">
-				<img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/04/smilers-new-5.webp' ) ); ?>" alt="Smilers Aligners" width="560">
+				<picture>
+					<source media="(max-width: 768px)" srcset="<?php echo esc_url( home_url( '/wp-content/uploads/2026/04/smilers-new-5-body-mobile.webp' ) ); ?>">
+					<img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/04/smilers-new-5.webp' ) ); ?>" alt="Smilers Aligners" width="560">
+				</picture>
 			</div>
 		</div>
 	</div>

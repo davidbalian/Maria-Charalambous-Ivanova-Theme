@@ -38,7 +38,10 @@ $services_blocks_base = home_url( '/wp-content/uploads/2026/04/' );
 					</div>
 				</div>
 				<div class="services-item__image fade-in fade-in-delay-2">
-					<img src="<?php echo esc_url( $services_blocks_base . 'additional-hero-images-2.webp' ); ?>" alt="Emax veneers and crowns" width="560" height="420">
+					<picture>
+						<source media="(max-width: 768px)" srcset="<?php echo esc_url( $services_blocks_base . 'additional-hero-images-2-body-mobile.webp' ); ?>">
+						<img src="<?php echo esc_url( $services_blocks_base . 'additional-hero-images-2.webp' ); ?>" alt="Emax veneers and crowns" width="560" height="420">
+					</picture>
 				</div>
 			</div>
 		</div>
