@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'MCI_THEME_VERSION', '1.6.12' );
+define( 'MCI_THEME_VERSION', '1.6.13' );
 
 /**
  * Theme setup.
@@ -62,6 +62,11 @@ require get_template_directory() . '/inc/seo.php';
  * Multilingual XML sitemap served at /sitemap.xml with hreflang annotations.
  */
 require get_template_directory() . '/inc/sitemap.php';
+
+/**
+ * llms.txt — guidance file for AI crawlers, served at /llms.txt.
+ */
+require get_template_directory() . '/inc/llms.php';
 
 /**
  * Enqueue styles and scripts.
