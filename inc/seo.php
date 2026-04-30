@@ -386,20 +386,16 @@ function mci_seo_get_og_image_alt() {
 
 /**
  * Pick the best OG image for the current page.
+ * Only the homepage gets an OG image.
  */
 function mci_seo_get_og_image( $biz ) {
-	if ( is_singular() && has_post_thumbnail() ) {
-		return get_the_post_thumbnail_url( null, 'large' );
+	if ( is_front_page() ) {
+		// First slide of the homepage hero carousel.
+		// Note: WebP has limited support on LinkedIn, Slack, Discord — if this becomes an issue, swap for a PNG equivalent.
+		return home_url( '/wp-content/uploads/2026/04/dr-maria-charalambous-ivanova-portrait-hd.webp' );
 	}
 
-	if ( mci_seo_is_page( 'about' ) ) {
-		return $biz['image_doctor'];
-	}
-	if ( mci_seo_is_page( 'gallery' ) ) {
-		return $biz['image_gallery'];
-	}
-
-	return $biz['image_clinic'];
+	return '';
 }
 
 /* =========================================================================
