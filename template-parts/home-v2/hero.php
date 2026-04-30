@@ -59,9 +59,16 @@ $hero_slider_images = array(
 );
 
 if ( wp_is_mobile() ) {
-	$hero_slider_images[] = array(
-		'src' => '/wp-content/uploads/2026/04/additional-hero-images-5.webp',
-		'alt' => 'Dental Art Clinic additional hero image 5',
+	$hero_slider_images = array_map(
+		static function ( $slide ) {
+			if ( empty( $slide['src'] ) || ! is_string( $slide['src'] ) ) {
+				return $slide;
+			}
+
+			$slide['src'] = (string) preg_replace( '/(\.[a-z0-9]+)$/i', '-mobile$1', $slide['src'], 1 );
+			return $slide;
+		},
+		$hero_slider_images
 	);
 }
 ?>
