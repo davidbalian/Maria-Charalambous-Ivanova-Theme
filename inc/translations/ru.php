@@ -32,7 +32,7 @@ return array(
 	   Homepage Hero
 	   ===================================================================== */
 	'Beautiful Smiles {accent}Start Here{/accent}' => 'Красивые улыбки {accent}начинаются здесь{/accent}',
-	'Professional dental care with modern technology, personalized treatment, and lasting oral health.' => 'Современные технологии, индивидуальный подход, долгосрочное здоровье.',
+	'5-Star rated dental clinic in Limassol. Pain-free dental care & smile transformations.' => 'Стоматологическая клиника Лимассола с рейтингом 5 звёзд. Безболезненная стоматология и преображение улыбки.',
 
 	/* =====================================================================
 	   Welcome Section

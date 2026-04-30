@@ -32,7 +32,7 @@ return array(
 	   Homepage Hero
 	   ===================================================================== */
 	'Beautiful Smiles {accent}Start Here{/accent}' => 'Τα Όμορφα Χαμόγελα {accent}Ξεκινούν Εδώ{/accent}',
-	'Professional dental care with modern technology, personalized treatment, and lasting oral health.' => 'Σύγχρονη τεχνολογία, εξατομικευμένη φροντίδα, μακροπρόθεσμη στοματική υγεία.',
+	'5-Star rated dental clinic in Limassol. Pain-free dental care & smile transformations.' => '5 αστέρων οδοντιατρική κλινική στη Λεμεσό. Ανώδυνη οδοντιατρική φροντίδα και μεταμορφώσεις χαμόγελου.',
 
 	/* =====================================================================
 	   Welcome Section
