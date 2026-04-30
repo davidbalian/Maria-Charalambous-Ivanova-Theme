@@ -4,12 +4,11 @@
   position: relative;
   width: 100%;
   height: 100%;
-  opacity: 0;
-  transition: opacity 1.4s ease-in-out;
 }
 
-.home-hero__carousel.swiper.is-ready {
-  opacity: 1;
+/* Before Swiper initialises, only show the first slide to prevent a flash of stacked images. */
+.home-hero__carousel:not(.swiper-initialized) .swiper-slide:not(:first-child) {
+  display: none;
 }
 
 .home-hero__carousel .swiper-wrapper {
@@ -51,10 +50,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .home-hero__carousel.swiper {
-    transition: none;
-  }
-
   .home-hero__carousel.is-ready .swiper-slide-active .home-hero__slide img {
     will-change: auto;
   }

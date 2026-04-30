@@ -86,25 +86,25 @@ function mci_enqueue_assets() {
 	// Home V2 CSS + Swiper (hero + clinic carousels).
 	if ( is_front_page() ) {
 		wp_enqueue_style( 'mci-home-v2', get_template_directory_uri() . '/assets/css/home-v2.css', array( 'mci-style', 'mci-animations' ), MCI_THEME_VERSION );
-		wp_enqueue_style( 'swiper', 'https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css', array(), '12' );
+		wp_enqueue_style( 'swiper', get_template_directory_uri() . '/assets/css/swiper-bundle.min.css', array(), '12.1.4' );
 		wp_enqueue_style( 'mci-home-v2-clinic-slider', get_template_directory_uri() . '/assets/css/home-v2-clinic-slider.css', array( 'mci-home-v2', 'swiper' ), MCI_THEME_VERSION );
 		wp_enqueue_style( 'mci-home-v2-hero-slider', get_template_directory_uri() . '/assets/css/home-v2-hero-slider.css', array( 'mci-home-v2-clinic-slider' ), MCI_THEME_VERSION );
 
-		wp_enqueue_script( 'swiper', 'https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js', array(), '12', true );
+		wp_enqueue_script( 'swiper', get_template_directory_uri() . '/assets/js/swiper-bundle.min.js', array(), '12.1.4', true );
 		wp_enqueue_script( 'mci-home-hero-slider', get_template_directory_uri() . '/assets/js/home-hero-slider.js', array( 'swiper' ), MCI_THEME_VERSION, true );
 		wp_enqueue_script( 'mci-clinic-slider', get_template_directory_uri() . '/assets/js/clinic-slider.js', array( 'swiper' ), MCI_THEME_VERSION, true );
 	}
 
 	// Services page — hero Swiper (same script as home hero; see template-parts/services-hero.php).
 	if ( is_page_template( 'page-services.php' ) ) {
-		wp_enqueue_style( 'swiper', 'https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css', array(), '12' );
+		wp_enqueue_style( 'swiper', get_template_directory_uri() . '/assets/css/swiper-bundle.min.css', array(), '12.1.4' );
 		wp_enqueue_style(
 			'mci-services-hero-slider',
 			get_template_directory_uri() . '/assets/css/services-hero-slider.css',
 			array( 'mci-style', 'swiper' ),
 			MCI_THEME_VERSION
 		);
-		wp_enqueue_script( 'swiper', 'https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js', array(), '12', true );
+		wp_enqueue_script( 'swiper', get_template_directory_uri() . '/assets/js/swiper-bundle.min.js', array(), '12.1.4', true );
 		wp_enqueue_script( 'mci-home-hero-slider', get_template_directory_uri() . '/assets/js/home-hero-slider.js', array( 'swiper' ), MCI_THEME_VERSION, true );
 	}
 
@@ -140,6 +140,22 @@ function mci_dequeue_jquery() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'mci_dequeue_jquery', 20 );
+
+/**
+ * Preload first hero image on homepage to improve LCP.
+ */
+function mci_preload_hero_image() {
+	if ( ! is_front_page() ) {
+		return;
+	}
+	$desktop = home_url( '/wp-content/uploads/2026/04/dr-maria-charalambous-ivanova-portrait-hd.webp' );
+	$mobile  = home_url( '/wp-content/uploads/2026/04/dr-maria-charalambous-ivanova-portrait-hd-mobile.webp' );
+	?>
+	<link rel="preload" as="image" href="<?php echo esc_url( $mobile ); ?>" media="(max-width: 768px)" fetchpriority="high">
+	<link rel="preload" as="image" href="<?php echo esc_url( $desktop ); ?>" media="(min-width: 769px)" fetchpriority="high">
+	<?php
+}
+add_action( 'wp_head', 'mci_preload_hero_image', 1 );
 
 /**
  * Add defer attribute to non-critical scripts.
