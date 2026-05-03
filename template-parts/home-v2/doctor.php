@@ -20,8 +20,8 @@
 					<div class="home-v2-doctor__philosophy-item"><?php mci_te( 'Absolute transparency and trust' ); ?></div>
 				</div>
 				<div class="home-v2-doctor__quote fade-in fade-in-delay-6">
-					<p><em><?php mci_te( 'Because a smile is not just about appearance.' ); ?></em></p>
-					<p><em><?php mci_te( 'It is function. It is balance. It is confidence. It is quality of life.' ); ?></em></p>
+					<p><?php mci_te( 'Because a smile is not just about appearance.' ); ?></p>
+					<p><?php mci_te( 'It is function. It is balance. It is confidence. It is quality of life.' ); ?></p>
 				</div>
 				<div class="fade-in fade-in-delay-7">
 					<a href="<?php echo esc_url( mci_url( '/about/' ) ); ?>" class="btn btn-outline"><?php mci_te( 'More About Dr. Charalambous-Ivanova' ); ?></a>

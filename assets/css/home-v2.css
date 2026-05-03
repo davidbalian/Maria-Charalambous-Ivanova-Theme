@@ -650,10 +650,13 @@
 }
 
 .home-v2-doctor__quote p {
-  font-size: 1rem;
+  font-size: 0.9rem;
+  font-weight: var(--mci-font-weight-bold);
+  letter-spacing: -0.02em;
   color: var(--mci-color-text);
-  line-height: 1.7;
+  line-height: 1.65;
   margin: 0;
+  text-align: left;
 }
 
 .home-v2-doctor__quote p + p {
