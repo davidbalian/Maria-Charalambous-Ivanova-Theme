@@ -184,6 +184,7 @@ return array(
 	'Comprehensive dental care with modern technology and evidence-based treatments for every patient.' => 'Ολοκληρωμένη οδοντιατρική φροντίδα με σύγχρονη τεχνολογία και τεκμηριωμένες θεραπείες για κάθε ασθενή.',
 	'Explore All Our Services'                => 'Εξερευνήστε Όλες τις Υπηρεσίες μας',
 	'Orthodontics'                            => 'Ορθοδοντική',
+	'Orthodontic Clear Aligners'              => 'Ορθοδοντικοί Διαφανείς Νάρθηκες',
 	'Smilers Aligners'                        => 'Smilers Aligners',
 	'Discreet, durable aligners for modern lifestyles — a virtually invisible way to straighten teeth and correct your bite.' => 'Διακριτικοί, ανθεκτικοί νάρθηκες για σύγχρονο τρόπο ζωής — σχεδόν αόρατη ευθυγράμμιση δοντιών και διόρθωση σύγκλεισης.',
 	'Discreet and durable aligners built for modern lifestyles — Smilers offer a virtually invisible way to straighten your teeth and correct your bite, without the look or feel of traditional braces.' => 'Διακριτικοί, ανθεκτικοί νάρθηκες για σύγχρονο τρόπο ζωής — σχεδόν αόρατη ευθυγράμμιση δοντιών και διόρθωση σύγκλεισης, χωρίς την εμφάνιση ή την αίσθηση των παραδοσιακών σιδεράκιων.',

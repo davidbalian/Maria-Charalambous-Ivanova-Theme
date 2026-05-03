@@ -184,6 +184,7 @@ return array(
 	'Comprehensive dental care with modern technology and evidence-based treatments for every patient.' => 'Комплексная стоматологическая помощь с современными технологиями и доказательными методами лечения для каждого пациента.',
 	'Explore All Our Services'                => 'Ознакомьтесь со всеми нашими услугами',
 	'Orthodontics'                            => 'Ортодонтия',
+	'Orthodontic Clear Aligners'              => 'Ортодонтические прозрачные элайнеры',
 	'Smilers Aligners'                        => 'Элайнеры Smilers',
 	'Discreet, durable aligners for modern lifestyles — a virtually invisible way to straighten teeth and correct your bite.' => 'Незаметные, прочные элайнеры для современной жизни — практически невидимый способ выровнять зубы и исправить прикус.',
 	'Discreet and durable aligners built for modern lifestyles — Smilers offer a virtually invisible way to straighten your teeth and correct your bite, without the look or feel of traditional braces.' => 'Незаметные, прочные элайнеры для современного образа жизни — практически невидимый способ выровнять зубы и исправить прикус, без вида и ощущений традиционных брекетов.',

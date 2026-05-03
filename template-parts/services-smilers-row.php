@@ -10,7 +10,7 @@
 	<div class="container">
 		<div class="services-item__grid">
 			<div class="services-item__content">
-				<span class="badge badge-gold fade-in fade-in-delay-0"><?php mci_te( 'Orthodontics' ); ?></span>
+				<span class="badge badge-gold fade-in fade-in-delay-0"><?php mci_te( 'Orthodontic Clear Aligners' ); ?></span>
 				<h2 class="fade-in fade-in-delay-1"><?php mci_te( 'Smilers Aligners' ); ?></h2>
 				<p class="fade-in fade-in-delay-2"><?php mci_te( 'Discreet and durable aligners built for modern lifestyles — Smilers offer a virtually invisible way to straighten your teeth and correct your bite, without the look or feel of traditional braces.' ); ?></p>
 				<p class="fade-in fade-in-delay-3"><?php mci_te( 'Correct your smile invisibly — Smilers Aligners let you go about your day with complete confidence while your teeth gently move into place.' ); ?></p>
