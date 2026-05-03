@@ -4,7 +4,7 @@ Theme URI:
 Author: Balian Web Dev Co.
 Author URI: https://balian.cy/
 Description: A custom WordPress theme for Dr. Maria Charalambous-Ivanova.
-Version: 1.6.18
+Version: 1.6.19
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: maria-charalambous-ivanova
@@ -3061,7 +3061,7 @@ hr {
   .services-item__content .badge {
     display: block;
     width: fit-content;
-    margin: 0 auto;
+    margin: 0 auto calc(var(--mci-spacing-sm) + 0.25rem);
   }
 
   .services-item__content p {
