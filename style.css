@@ -3051,7 +3051,12 @@ hr {
 
   /* Services page — image rows: center title + badge; keep body + CTAs left (all languages via CSS). */
   .services-page .services-item__content {
+    width: 100%;
     text-align: center;
+  }
+
+  .services-page .services-item__content h2 {
+    width: 100%;
   }
 
   .services-page .services-item__content p {
