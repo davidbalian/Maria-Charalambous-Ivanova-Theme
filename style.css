@@ -2477,7 +2477,7 @@ hr {
   color: var(--mci-color-text-light);
   line-height: 1.6;
   margin: 0;
-  text-align: justify;
+  text-align: left;
 }
 
 @media (max-width: 768px) {
@@ -2557,7 +2557,7 @@ hr {
 .services-item__content p {
   color: var(--mci-color-text-light);
   line-height: 1.65;
-  text-align: justify;
+  text-align: left;
 }
 
 .services-item__content .btn {
