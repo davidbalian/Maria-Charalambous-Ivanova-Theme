@@ -1,0 +1,35 @@
+/* Media library "in use" indicator — grid tiles, modal, list view */
+
+/* Grid view: inset border on the thumbnail */
+.attachments-browser .attachment.mci-attachment-in-use .thumbnail,
+.media-frame .attachment.mci-attachment-in-use .thumbnail {
+	box-shadow: inset 0 0 0 2px #7fbf7f;
+	border-radius: 2px;
+}
+
+/* Preserve WP's blue selection ring when the tile is selected */
+.attachment.mci-attachment-in-use.selected .thumbnail,
+.attachment.mci-attachment-in-use.details .thumbnail {
+	box-shadow: inset 0 0 0 2px #7fbf7f, 0 0 0 3px #2271b1;
+}
+
+/* List view: subtle green left bar on the row */
+tr[data-mci-in-use="1"] {
+	box-shadow: inset 3px 0 0 #7fbf7f;
+}
+
+/* "Used" column dot */
+.mci-in-use-dot {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #7fbf7f;
+	vertical-align: middle;
+}
+
+/* Keep the "Used" column narrow */
+.column-mci_in_use {
+	width: 60px;
+	text-align: center !important;
+}
