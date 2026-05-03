@@ -87,5 +87,15 @@ class MCI_Media_In_Use_Admin {
 			MCI_THEME_VERSION,
 			true
 		);
+
+		// Pass in-use IDs to JS so the MutationObserver can stamp grid tiles
+		// without relying on Backbone view timing.
+		wp_localize_script(
+			MCI_Media_In_Use_Constants::ADMIN_HANDLE_JS,
+			'mciMediaInUse',
+			array(
+				'ids' => $this->detector->get_in_use_ids(),
+			)
+		);
 	}
 }
