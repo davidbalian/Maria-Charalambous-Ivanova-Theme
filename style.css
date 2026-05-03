@@ -3055,6 +3055,10 @@ hr {
     text-align: center;
   }
 
+  .services-page .services-item__content h2 {
+    text-align: center;
+  }
+
   .services-page .services-item__content p {
     text-align: left;
   }
