@@ -56,7 +56,7 @@ require get_template_directory() . '/inc/galleries/bootstrap.php';
 /**
  * Media library "in use" indicator — green border on attached/referenced items.
  */
-require get_template_directory() . '/inc/media-in-use/bootstrap.php';
+// require get_template_directory() . '/inc/media-in-use/bootstrap.php';
 
 /**
  * SEO — meta tags, Open Graph, Twitter Cards, JSON-LD structured data.
