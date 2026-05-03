@@ -86,7 +86,8 @@ return array(
 	'Pain-free experience'                    => 'Безболезненное лечение',
 	'Absolute transparency and trust'         => 'Абсолютная прозрачность и доверие',
 	'Because a smile is not just about appearance.' => 'Потому что улыбка — это не только внешность.',
-	'It is function. It is balance. It is confidence. It is quality of life.' => 'Это функция. Это баланс. Это уверенность. Это качество жизни.',
+	'It is function. It is balance.'             => 'Это функция. Это баланс.',
+	'It is confidence. It is quality of life.'  => 'Это уверенность. Это качество жизни.',
 
 	/* =====================================================================
 	   Clinic Section

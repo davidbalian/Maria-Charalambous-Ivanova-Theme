@@ -86,7 +86,8 @@ return array(
 	'Pain-free experience'                    => 'Ανώδυνη εμπειρία',
 	'Absolute transparency and trust'         => 'Απόλυτη διαφάνεια και εμπιστοσύνη',
 	'Because a smile is not just about appearance.' => 'Γιατί ένα χαμόγελο δεν αφορά μόνο την εμφάνιση.',
-	'It is function. It is balance. It is confidence. It is quality of life.' => 'Είναι λειτουργία. Είναι ισορροπία. Είναι αυτοπεποίθηση. Είναι ποιότητα ζωής.',
+	'It is function. It is balance.'             => 'Είναι λειτουργία. Είναι ισορροπία.',
+	'It is confidence. It is quality of life.'    => 'Είναι αυτοπεποίθηση. Είναι ποιότητα ζωής.',
 
 	/* =====================================================================
 	   Clinic Section
