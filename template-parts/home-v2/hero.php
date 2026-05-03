@@ -49,8 +49,9 @@ $hero_slider_images = array(
 		'alt' => 'Dental Art Clinic additional hero image 1',
 	),
 	array(
-		'src' => '/wp-content/uploads/2026/04/porcelain-veneers-smile-profile-view-dental-art-clinic-dr-maria-charalambous-ivanova-scaled.webp',
-		'alt' => 'Porcelain veneers smile profile view at Dental Art Clinic',
+		'src'         => '/wp-content/uploads/2026/05/new-hero-image.webp',
+		'mobile_src'  => '/wp-content/uploads/2026/05/new-hero-image-mobile-cropped.jpg',
+		'alt'         => 'Porcelain veneers smile at Dental Art Clinic',
 	),
 	array(
 		'src' => '/wp-content/uploads/2026/04/additional-hero-images-3.webp',
@@ -85,7 +86,9 @@ $mci_hero_to_mobile = static function ( $src ) {
 					?>
 					<?php
 					$hero_desktop_src = home_url( $hero_slide['src'] );
-					$hero_mobile_src  = home_url( $mci_hero_to_mobile( $hero_slide['src'] ) );
+					$hero_mobile_src  = home_url(
+						isset( $hero_slide['mobile_src'] ) ? $hero_slide['mobile_src'] : $mci_hero_to_mobile( $hero_slide['src'] )
+					);
 					?>
 					<div class="swiper-slide">
 						<div class="home-hero__slide">
