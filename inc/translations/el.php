@@ -148,7 +148,7 @@ return array(
 	'Dental Fillings'                         => 'Οδοντικά Σφραγίσματα',
 	'Treatment of tooth decay with modern aesthetic materials, restoring both function and natural appearance.' => 'Θεραπεία τερηδόνας με σύγχρονα αισθητικά υλικά που αποκαθιστούν τόσο τη λειτουργία όσο και τη φυσική εμφάνιση.',
 	'Root Canal Treatment (Endodontics)'      => 'Θεραπεία Ριζικού Σωλήνα (Ενδοδοντία)',
-	'Advanced treatment for infected or inflamed tooth nerves, preserving the natural tooth and relieving pain.' => 'Προηγμένη θεραπεία για μολυσμένα ή φλεγμαίνοντα νεύρα δοντιών, διατηρώντας το φυσικό δόντι και ανακουφίζοντας τον πόνο.',
+	'Advanced treatment for infected or inflamed tooth nerves, preserving the natural tooth and relieving pain.' => 'Προηγμένη θεραπεία για μολυσμένα ή φλεγμαίνοντα νεύρα δοντιών, διατηρώντας το φυσικό δόντι και ανακουφίζοντας από τον πόνο.',
 	'Tooth Extractions'                       => 'Εξαγωγές Δοντιών',
 	'Safe and gentle removal when teeth cannot be restored, always prioritizing patient comfort.' => 'Ασφαλής και ήπια αφαίρεση δοντιών που δεν μπορούν να αποκατασταθούν, με πάντα πρώτη προτεραιότητα την άνεση του ασθενούς.',
 	'A range of treatments to enhance your smile, including teeth whitening and aesthetic restorations.' => 'Μια σειρά θεραπειών για να βελτιώσουν το χαμόγελό σας, συμπεριλαμβανομένης λεύκανσης δοντιών και αισθητικών αποκαταστάσεων.',
@@ -207,7 +207,7 @@ return array(
 	'General Dentistry'                       => 'Γενική Οδοντιατρική',
 	'Preventative &amp; Restorative Care'     => 'Προληπτική &amp; Επανορθωτική Φροντίδα',
 	'A beautiful smile needs a healthy foundation. Our preventative and restorative services keep your teeth and gums in excellent condition — so your smile looks great and lasts a lifetime.' => 'Ένα όμορφο χαμόγελο χρειάζεται υγιή βάση. Οι προληπτικές και επανορθωτικές υπηρεσίες μας διατηρούν τα δόντια και τα ούλα σας σε άριστη κατάσταση — ώστε το χαμόγελό σας να δείχνει υπέροχο μια ζωή.',
-	'From check-ups and cleanings to fillings and crowns, we provide comprehensive care with the attention to detail that defines everything we do.' => 'Από τους ελέγχους και τους καθαρισμούς έως τα σφραγίσματα και τις στεφάνες, παρέχουμε ολοκληρωμένη φροντίδα με την προσοχή στη λεπτομέρεια που χαρακτηρίζει ό,τι κάνουμε.',
+	'From check-ups and cleanings to fillings and crowns, we provide comprehensive care with the attention to detail that defines everything we do.' => 'Από τους ελέγχους και τους καθαρισμούς έως τα σφραγίσματα και τις στεφάνες, παρέχουμε ολοκληρωμένη φροντίδα με προσοχή στη λεπτομέρεια που χαρακτηρίζει ό,τι κάνουμε.',
 	'Ready to Transform {accent}Your Smile?{/accent}' => 'Έτοιμοι να Μεταμορφώσετε {accent}το Χαμόγελό σας;{/accent}',
 
 	/* =====================================================================
