@@ -3049,6 +3049,19 @@ hr {
     order: 2;
   }
 
+  /* Services page — image rows: center title + badge; keep body + CTAs left (all languages via CSS). */
+  .services-page .services-item__content {
+    text-align: center;
+  }
+
+  .services-page .services-item__content p {
+    text-align: left;
+  }
+
+  .services-page .services-item__content > div {
+    text-align: left;
+  }
+
   /* Contact */
   .contact-hero {
     min-height: 320px;
