@@ -129,7 +129,7 @@ $mci_hero_to_mobile = static function ( $src ) {
 				</div>
 			</div>
 		</div>
-		<a href="#comprehensive-dental-care" class="home-hero__scroll-down js-home-hero-scroll-next" aria-label="<?php echo esc_attr( mci_t( 'Scroll to next section' ) ); ?>">
+		<a href="#reviews" class="home-hero__scroll-down js-home-hero-scroll-next" aria-label="<?php echo esc_attr( mci_t( 'Scroll to next section' ) ); ?>">
 			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
 		</a>
 	</div>
