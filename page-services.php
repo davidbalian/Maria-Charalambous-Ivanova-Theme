@@ -63,7 +63,7 @@ $services_blocks_base = home_url( '/wp-content/uploads/2026/04/' );
 					</div>
 				</div>
 				<div class="services-item__image fade-in fade-in-delay-2">
-					<img src="<?php echo esc_url( $services_blocks_base . 'porcelain-veneers-natural-smile-side-angle-dental-art-clinic-dr-maria-charalambous-ivanova-scaled.webp' ); ?>" alt="Cosmetic Masterpieces" width="560" height="420">
+					<img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/05/new-hero-image.webp' ) ); ?>" alt="Cosmetic Masterpieces" width="560" height="420">
 				</div>
 			</div>
 		</div>
