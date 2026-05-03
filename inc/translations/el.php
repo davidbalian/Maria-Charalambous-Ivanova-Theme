@@ -32,7 +32,7 @@ return array(
 	   Homepage Hero
 	   ===================================================================== */
 	'Beautiful Smiles {accent}Start Here{/accent}' => 'Τα Όμορφα Χαμόγελα {accent}Ξεκινούν Εδώ{/accent}',
-	'5-star rated dental clinic in Limassol. Natural-looking E.max veneers & smile transformations.' => 'Οδοντιατρική κλινική 5 αστέρων στη Λεμεσό. Φυσικές όψεις E.max και μεταμορφώσεις χαμόγελου.',
+	'5-star rated dental clinic in Limassol. Natural-looking E.max veneers & smile transformations.' => 'Οδοντιατρική κλινική 5 αστέρων! Φυσικές όψεις Emax και μεταμορφώσεις χαμόγελου.',
 
 	/* =====================================================================
 	   Welcome Section
