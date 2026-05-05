@@ -25,7 +25,6 @@ require_once __DIR__ . '/class-mci-galleries-admin-assets.php';
 require_once __DIR__ . '/class-mci-galleries-admin-columns.php';
 require_once __DIR__ . '/class-mci-galleries-default-data.php';
 require_once __DIR__ . '/class-mci-galleries-seeder.php';
-require_once __DIR__ . '/class-mci-galleries-smilers-dual-slot-bootstrap.php';
 
 /**
  * Register Galleries components on theme load.
@@ -47,8 +46,5 @@ function mci_galleries_bootstrap() {
 
 	$seeder = new MCI_Galleries_Seeder();
 	$seeder->register();
-
-	$smilers_dual_slot = new MCI_Galleries_Smilers_Dual_Slot_Bootstrap();
-	$smilers_dual_slot->register();
 }
 mci_galleries_bootstrap();

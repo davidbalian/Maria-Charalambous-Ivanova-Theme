@@ -44,6 +44,10 @@ final class MCI_Galleries_Default_Data {
 				'title' => __( 'Gallery page — The Clinic', 'maria-charalambous-ivanova' ),
 				'items' => self::page_clinic(),
 			),
+			MCI_Galleries_Locations::SMILERS_DUAL => array(
+				'title' => __( 'Smilers row — companion images', 'maria-charalambous-ivanova' ),
+				'items' => array(),
+			),
 		);
 	}
 
