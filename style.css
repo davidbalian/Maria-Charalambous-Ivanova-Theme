@@ -2584,6 +2584,19 @@ hr {
   object-fit: unset;
 }
 
+/* Space below Book CTA before companion gallery (homepage + services Smilers rows). */
+.home-v2-comprehensive__smilers .services-item__smilers-dual,
+.services-item--smilers .services-item__smilers-dual {
+  margin-top: calc(var(--mci-spacing-md) + 2rem);
+}
+
+@media (max-width: 768px) {
+  .home-v2-comprehensive__smilers .services-item__smilers-dual,
+  .services-item--smilers .services-item__smilers-dual {
+    margin-top: calc(var(--mci-spacing-md) + 1rem);
+  }
+}
+
 /* Smilers: two companion CPT images stretch with the text column to match the hero column (desktop only). */
 @media (min-width: 769px) {
   .services-item__grid--smilers-dual-balanced {
@@ -2599,7 +2612,6 @@ hr {
   .services-item__grid--smilers-dual-balanced .services-item__smilers-dual {
     flex: 1 1 auto;
     min-height: 0;
-    margin-top: var(--mci-spacing-md);
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -2666,7 +2678,6 @@ hr {
     justify-content: flex-start;
     align-items: stretch;
     gap: var(--mci-spacing-sm);
-    margin-top: var(--mci-spacing-md);
   }
 
   .services-item__grid--smilers-dual-balanced .services-item__smilers-dual-item {
