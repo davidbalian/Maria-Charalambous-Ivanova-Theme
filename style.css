@@ -2590,7 +2590,7 @@ hr {
   margin-top: calc(var(--mci-spacing-md) + 2rem);
 }
 
-/* Smilers dual grid (≥769px): hero keeps natural height; copy column capped to hero height (see main.js + --mci-smilers-copy-max-h). Tablet: full dual width; ≥1025px: 60%. */
+/* Smilers dual grid (≥769px): hero keeps natural height; copy column capped to hero height (see main.js + --mci-smilers-copy-max-h). Tablet: full dual width; ≥1025px: 60% wrapper, 300px-tall dual row. */
 @media (min-width: 769px) {
   .services-item__grid--smilers-dual-balanced {
     align-items: start;
@@ -2651,11 +2651,40 @@ hr {
   }
 }
 
-/* Smilers dual gallery: narrower on large desktop only (tablet keeps full text-column width). */
+/* Smilers dual gallery: desktop (≥1025px) — wrapper 60% of text column, 300px-tall band, equal-height imgs (width: auto, contain). */
 @media (min-width: 1025px) {
   .services-item__grid--smilers-dual-balanced .services-item__smilers-dual {
     width: 60%;
     max-width: 60%;
+    height: 300px;
+    max-height: 300px;
+    min-height: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: var(--mci-spacing-md);
+    overflow: hidden;
+  }
+
+  .services-item__grid--smilers-dual-balanced .services-item__smilers-dual-item {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--mci-radius-lg);
+    overflow: hidden;
+  }
+
+  .services-item__grid--smilers-dual-balanced .services-item__smilers-dual-item img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: var(--mci-radius-lg);
   }
 }
 
