@@ -1,306 +1,208 @@
-# How To: Location-Keyed Galleries (Custom Post Type + Post Meta)
+# Gallery Location-Keyed CPT — Handoff Guide
 
-Editors manage reusable image galleries in **wp-admin**. Each gallery post is tagged with a **location** (slot). On the frontend, templates ask for images by location; the backend returns **one canonical gallery per slot**—the **most recently published** post assigned to that slot. This pattern does **not** require Advanced Custom Fields (ACF): it uses a **private custom post type**, **classic metaboxes**, and **`post_meta`** for storage.
-
----
-
-## What It Looks Like
-
-- **Admin:** A **Galleries** (or similarly named) menu lists gallery posts. Each post has only a **title** (for internal labeling) plus metabox UI.
-- **Location metabox** (typically sidebar): a dropdown of fixed slots—for example “Home: Before & After,” “Gallery page: The Clinic”—with **None** to leave a draft unassigned.
-- **Images metabox** (main column): primary button opens the **WordPress Media Library** modal; editors pick one or many images. Thumbnails appear in a sortable list; **drag** to reorder; **×** to remove.
-- **Frontend:** Sections that need a gallery call a resolver like `get_gallery_items_for_location( 'home_before_after' )` and receive an ordered array of **`url`, `thumb_url`, `alt`, `width`, `height`**. The **same data** can power a CSS grid, a carousel (e.g. Swiper), or thumbnails that open a lightbox.
+Editors manage reusable image galleries in **wp-admin**. Each gallery post is tagged with a **location** (slot). On the frontend, templates ask for images by location; the backend returns **one canonical gallery per slot** — the **most recently published** post assigned to that slot. This pattern does **not** require ACF: it uses a private custom post type, classic metaboxes, and `post_meta` for storage.
 
 ---
 
-## Dependencies
+## Registered slots (as of this writing)
 
-| Layer | Requirement |
-|--------|----------------|
-| **WordPress** | Custom post type API, metabox APIs, `save_post_{post_type}`, Capabilities (`edit_posts` / `edit_post`) |
-| **Admin scripts** | `wp_enqueue_media()` so `wp.media` is available; **jQuery** for the modal + Sortable UX (enqueue only on the gallery edit screen) |
-| **Frontend** | None required for plain `<img>` grids; optionally **Swiper**, **lightGallery**, etc., depending on presentation |
-
-Carousel and lightbox libraries are **presentation only**—they consume the normalized row data, not raw meta.
-
----
-
-## Architecture (conceptual)
-
-```mermaid
-flowchart LR
-  editor[Editor]
-  galleryPost[GalleryCPT_Post]
-  postMeta[PostMeta_LocationPlusItems]
-  resolver[Resolver_QueryNewestPublished]
-  template[FrontTemplate]
-  ui[GridOrCarouselOrLightbox]
-
-  editor --> galleryPost
-  galleryPost --> postMeta
-  template --> resolver
-  resolver --> postMeta
-  resolver --> galleryPost
-  resolver --> ui
-  template --> ui
-```
+| Location slug | Admin label | Where it renders |
+|---|---|---|
+| `home_before_after` | Home: Before & After | `template-parts/gallery/section-home-before-after.php` |
+| `home_clinic` | Home: The Clinic | `template-parts/gallery/section-home-clinic.php` |
+| `page_before_after` | Gallery page: Before & After | `template-parts/gallery/section-page-before-after.php` |
+| `page_clinic` | Gallery page: The Clinic | `template-parts/gallery/section-page-clinic.php` |
+| `smilers_dual` | Home & Services: Smilers — companion images | `template-parts/services-smilers-dual-gallery.php` (included from `services-smilers-row.php` and `home-v2/comprehensive-services.php`) |
 
 ---
 
-## Admin workflow
+## File map
 
-1. In **Posts → Galleries** (menu label varies), choose **Add New** or edit an existing gallery.
-2. Set an **internal title** (helps identify the gallery in lists; not shown on the public site unless you choose to).
-3. In the **Location** metabox, pick **exactly one** slot—or **None** if the post should not appear on the site yet.
-4. In the **Images** metabox, click **Add Images** → Media Library opens → select images (**multiple** allowed) → confirm. Repeat to append more images.
-5. Drag thumbnails into the desired **order**.
-6. **Publish** or **Update**.
-
-**Important behavior**
-
-- Only **published** galleries participate in frontend resolution (typical setup).
-- **One gallery wins per location:** if two published posts share the same location slug, the one with the **newer post date** wins (`orderby` date, descending, `posts_per_page` 1).
-- The CPT should be **`public` => false** with **`show_ui` => true** so editors get a UI but **no public single URLs** unless you deliberately enable them.
-
----
-
-## Data model (conceptual meta keys)
-
-Use **leading underscores** if you want keys hidden from the default Custom Fields UI.
-
-| Purpose | Example meta key | Stored value |
-|--------|-------------------|---------------|
-| Which slot | `_gallery_location` | String slug, e.g. `home_before_after` |
-| Image list | `_gallery_images` | PHP **array** of items (WordPress stores serialized arrays when you pass an array to `update_post_meta`) |
-
-The edit screen submits images as **JSON** in a hidden input (easiest for JS); on `save_post`, **`json_decode`** the POST value, sanitize each entry, then save with `update_post_meta( $post_id, '_gallery_images', $clean_array )`.
-
-### Stored item shapes (after save)
-
-Both shapes include a discriminator **`kind`**:
-
-**Attachment (Media Library)**
-
-```json
-{
-  "kind": "attachment",
-  "id": 12345
-}
-```
-
-**Raw URL** (bundled assets, CDN, imports that are not attachments, legacy content)
-
-```json
-{
-  "kind": "url",
-  "url": "https://example.com/path/to/image.jpg",
-  "alt": "Accessible description"
-}
-```
-
-Invalid or unrecognized entries should be dropped on save.
-
-### Normalized row (what templates consume)
-
-A small mapper expands each saved item into a **uniform associative array**:
-
-| Field | Attachment source | URL source |
-|--------|-------------------|------------|
-| `url` | Attachment image **`large`** source URL | `url` from meta |
-| `thumb_url` | Attachment **`medium_large`** (or same as `url` if size missing) | Same as `url` |
-| `alt` | `_wp_attachment_image_alt` | `alt` from meta |
-| `width`, `height` | From resolved `large` dimensions | Often `0, 0` if unknown |
-
-Suggested WordPress helpers for attachments: `wp_get_attachment_image_src( $id, 'large' )` and `wp_get_attachment_image_src( $id, 'medium_large' )`. Choose image size names your theme registers or uses consistently.
-
-Templates typically display **`thumb_url`**, falling back to **`url`** when the thumb is empty:
-
-```pseudo
-display_src = thumb_url !== '' ? thumb_url : url
-```
+| Responsibility | File |
+|---|---|
+| Location slug constants + `all()` registry | `inc/galleries/class-mci-galleries-locations.php` |
+| Post type registration | `inc/galleries/class-mci-galleries-post-type.php` |
+| Meta key + nonce constants | `inc/galleries/class-mci-galleries-constants.php` |
+| Metabox registration (wires renderer + saver) | `inc/galleries/class-mci-galleries-metabox.php` |
+| Metabox HTML rendering | `inc/galleries/class-mci-galleries-metabox-renderer.php` |
+| Metabox save logic | `inc/galleries/class-mci-galleries-metabox-saver.php` |
+| Admin JS (media modal, sortable, hidden input sync) | `assets/js/admin-mci-galleries.js` |
+| Admin CSS | `assets/css/admin-mci-galleries.css` |
+| Admin asset enqueueing | `inc/galleries/class-mci-galleries-admin-assets.php` |
+| Admin list-table columns | `inc/galleries/class-mci-galleries-admin-columns.php` |
+| Frontend image resolver | `inc/galleries/class-mci-galleries-repository.php` |
+| Image value object (attachment → row mapping) | `inc/galleries/class-mci-galleries-image.php` |
+| Default seed data (placeholder URLs) | `inc/galleries/class-mci-galleries-default-data.php` |
+| One-time seeder (creates gallery posts on first run) | `inc/galleries/class-mci-galleries-seeder.php` |
+| Bootstrap (loads all files, wires hooks) | `inc/galleries/bootstrap.php` |
 
 ---
 
-## Resolver (backend pseudocode)
+## How to add a new gallery slot — exact steps
+
+Follow all five steps; skipping any one will cause images to not appear on the frontend.
+
+### Step 1 — Register the slug in `MCI_Galleries_Locations`
+
+In `inc/galleries/class-mci-galleries-locations.php`, add a constant and an entry in `all()`:
 
 ```php
-function get_gallery_items_for_location( string $location_slug ): array {
-    if ( ! is_valid_location( $location_slug ) ) {
-        return array();
-    }
+const MY_NEW_SLOT = 'my_new_slot';
 
-    $posts = new WP_Query( array(
-        'post_type'      => 'your_gallery_cpt', // e.g. gallery_cpt slug
-        'post_status'    => 'publish',
-        'posts_per_page' => 1,
-        'orderby'        => 'date',
-        'order'          => 'DESC',
-        'fields'         => 'ids',
-        'no_found_rows'  => true,
-        'meta_query'     => array(
-            array(
-                'key'   => '_gallery_location',
-                'value' => $location_slug,
-            ),
-        ),
-    ) );
-
-    if ( empty( $posts->posts ) ) {
-        return array();
-    }
-
-    $post_id = (int) $posts->posts[0];
-    $items   = get_post_meta( $post_id, '_gallery_images', true );
-
-    if ( ! is_array( $items ) ) {
-        return array();
-    }
-
-    $rows = array();
-    foreach ( $items as $item ) {
-        $row = map_item_to_row( $item ); // attachment vs url logic
-        if ( null !== $row ) {
-            $rows[] = $row;
-        }
-    }
-
-    return $rows;
-}
-```
-
-Memoize **per HTTP request** by location slug if the same gallery is queried from header, content, and footer.
-
----
-
-## Security and save guards
-
-When handling `save_post_your_cpt`:
-
-- **Return early** on `DOING_AUTOSAVE`.
-- Require a **`wp_nonce_field`** verified with `wp_verify_nonce`.
-- Check **`current_user_can( 'edit_post', $post_id )`**.
-- **Location:** sanitize as a slug/string; persist only if the value exists in your **central allowlist** of locations; otherwise **ignore** or delete meta. Clearing the dropdown may **`delete_post_meta`** for `_gallery_location`.
-- **Images:** decode JSON safely; iterate and **whitelist** fields per `kind`; for attachments, cast `id` to int and reject ≤ 0; for URLs use `esc_url_raw` and `sanitize_text_field` for alt text.
-
----
-
-## Frontend patterns
-
-### Responsive grid
-
-```php
-<?php
-$items = get_gallery_items_for_location( 'page_before_after' );
-if ( empty( $items ) ) {
-    return;
-}
-?>
-<section class="gallery-section">
-  <div class="gallery-grid">
-    <?php foreach ( $items as $row ) : ?>
-      <?php
-      $src    = '' !== $row['thumb_url'] ? $row['thumb_url'] : $row['url'];
-      $w      = $row['width']  > 0 ? $row['width']  : 400;
-      $h      = $row['height'] > 0 ? $row['height'] : 300;
-      ?>
-      <div class="gallery-grid__item">
-        <img
-          src="<?php echo esc_url( $src ); ?>"
-          alt="<?php echo esc_attr( $row['alt'] ); ?>"
-          width="<?php echo esc_attr( (string) $w ); ?>"
-          height="<?php echo esc_attr( (string) $h ); ?>"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
-    <?php endforeach; ?>
-  </div>
-</section>
-```
-
-Default **width/height** attributes avoid layout shift when attachments provide dimensions; URL-only items often need sane fallbacks.
-
-### Carousel (same data)
-
-Wrap each slide in your carousel markup; use `thumb_url` or `url` per design (full-bleed slides often use `url`).
-
-```pseudo
-foreach items as row
-  swiper-slide [
-    img src= row.thumb_url or row.url 
-        alt= row.alt
-        loading lazy
-  ]
-```
-
-### Lightbox
-
-Use **`url`** (larger/source) as the **`href`** on an anchor wrapping a thumbnail (`thumb_url` in the `<img>`), or initialize the library from data attributes populated from **`url`**.
-
----
-
-## Admin UI implementation notes (high level)
-
-- Register **two metaboxes** on `add_meta_boxes_{post_type}`.
-- **`wp_enqueue_media()`** plus a small script that instantiates **`wp.media({ library: { type: 'image' }, multiple: 'add' })`** and appends selected attachment IDs as `kind: attachment` items.
-- Use **jQuery UI Sortable** (or equivalent) on the thumbnail list so order changes **`before`** form submit.
-- On each change, **`JSON.stringify`** the item array into a **hidden `input`** so PHP receives one string field.
-- Localize strings (modal title, button label, remove **aria-label**) with `wp_localize_script`.
-
-Optional: show a badge on **URL** items in the grid so editors distinguish uploads from pasted URLs—if your seed data or tooling uses both kinds.
-
----
-
-## Location registry / extending slots
-
-Centralize allowed slugs in one place—for example:
-
-```php
-// Pseudocode registry
-function gallery_location_labels(): array {
+public static function all() {
     return array(
-        'home_before_after'   => 'Home: Before & After',
-        'home_clinic'         => 'Home: The Clinic',
-        'page_before_after'   => 'Gallery page: Before & After',
-        'page_clinic'         => 'Gallery page: The Clinic',
+        // ... existing entries ...
+        self::MY_NEW_SLOT => __( 'Descriptive admin label', 'maria-charalambous-ivanova' ),
     );
 }
 ```
 
-To add a slot:
+This makes the slug valid (`is_valid()` passes) **and** adds it to the Location dropdown in the metabox.
 
-1. Add the slug ⇒ label pair to that registry (and **`is_valid_location()`** helper).
-2. Render the slug as an `<option>` in the Location metabox.
-3. Call `get_gallery_items_for_location( 'your_new_slug' )` from the new template partial or block.
+### Step 2 — Add a definition in `MCI_Galleries_Default_Data`
 
-No database migration is needed for **new** slots unless you remap old slugs.
+In `inc/galleries/class-mci-galleries-default-data.php`, add an entry to `definitions()`:
+
+```php
+MCI_Galleries_Locations::MY_NEW_SLOT => array(
+    'title' => __( 'Internal gallery title', 'maria-charalambous-ivanova' ),
+    'items' => array(), // or pre-populate with URL items for a starter state
+),
+```
+
+This is what the seeder uses to create the gallery post on the site. **Without this entry the gallery post will never be created automatically.** `items` can be empty if the admin will fill in images manually, or pre-filled with `['url' => '...', 'alt' => '...']` entries.
+
+### Step 3 — The seeder runs automatically; nothing else needed in PHP
+
+`MCI_Galleries_Seeder::maybe_seed()` runs on `admin_init`. It loops over every location in `Default_Data::definitions()` and creates a gallery post for any location that does not already have one. The next admin page load will create the new post.
+
+No separate bootstrap class, no extra hook — the seeder owns all slot creation.
+
+### Step 4 — Write the frontend template
+
+Call the repository and render images:
+
+```php
+$items = MCI_Galleries_Repository::get_items_for_location( MCI_Galleries_Locations::MY_NEW_SLOT );
+if ( empty( $items ) ) {
+    return; // render nothing until the admin fills in images
+}
+foreach ( $items as $row ) {
+    $src = '' !== $row['thumb_url'] ? $row['thumb_url'] : $row['url'];
+    // render <img src="..."> using esc_url( $src ), esc_attr( $row['alt'] ), etc.
+}
+```
+
+Each `$row` has: `url`, `thumb_url`, `alt`, `width`, `height`.
+
+### Step 5 — Include the template from the relevant page template
+
+Wire the template part into the appropriate page template or section partial.
 
 ---
 
-## Optional: one-time default content (“seeder”)
+## Seeder — how it works and why it matters
 
-On **first activation** or first admin load, you can create a few gallery posts programmatically (`wp_insert_post`), set `_gallery_location`, and preload `_gallery_images` (often **`url` kind** pointing at theme starter assets).
+`MCI_Galleries_Seeder::maybe_seed()` uses **per-location idempotency**:
 
-Track completion with a **boolean option** (`get_option` / `update_option`) so you never overwrite intentional deletions after go-live.
+1. Reads a WordPress option (`mci_galleries_seeded_locations_v1`) that stores an array of location slugs that have already been seeded.
+2. For each location in `Default_Data::definitions()`:
+   - If the slug is already in the seeded array → skip.
+   - If any gallery post (any non-trash status) already has that location → mark as seeded, skip.
+   - Otherwise → create the gallery post, mark as seeded.
+3. Saves the updated seeded array back to the option.
+
+**Effect:** every slot in `Default_Data::definitions()` gets exactly one gallery post created — no matter how many times `admin_init` fires or whether the site is new or existing. Adding a new slug to definitions + running any admin page is enough to provision the post.
+
+**Migration note:** sites that ran the original seeder (which used a global boolean flag `mci_galleries_seeded_v1`) are migrated automatically — the seeder marks the original four locations as already-seeded on first run with the new code.
 
 ---
 
-## What this guide intentionally omits
+## Common pitfalls
 
-- **ACF field groups or JSON exports** — the pattern replaces them with CPT + metabox + meta.
-- **Theme-specific filenames, text-domain helpers, or translation wrappers** — use your own conventions.
-- **Exact CSS class names** — match your design system.
+### Do NOT create a separate "slot bootstrap" class
+
+The previous implementation had `MCI_Galleries_Smilers_Dual_Slot_Bootstrap` — a one-off class that ran on every `admin_init` and created an empty `smilers_dual` post if none existed. It was removed because it caused these bugs:
+
+- **Silent recreation after trash.** WP's `post_status => 'any'` excludes trash. Trashing the gallery post (or accidentally clearing its Location dropdown, which deletes `_mci_gallery_location` meta) made the bootstrap think no post existed and create a new empty one. The repository's "newest published wins" then returned the empty post instead of the user's edited one, so images never appeared on the frontend.
+- **No default content.** The bootstrap created an empty post. The other four galleries had placeholder URL items as starting content. The inconsistency made smilers behave differently in the admin.
+
+**The correct pattern:** add the slot to `Default_Data::definitions()` (Step 2). The seeder handles creation, with safe idempotency.
+
+### Do NOT add a new slot only to `MCI_Galleries_Locations`
+
+Just adding the slug constant and `all()` entry makes the dropdown show the option, but the gallery post is never created. The seeder won't create it unless the location is also in `Default_Data::definitions()`. The frontend will always receive an empty array.
+
+### Clearing the Location dropdown deletes meta
+
+`MCI_Galleries_Metabox_Saver::save_location()` calls `delete_post_meta` when the Location dropdown submits an empty value. If an admin accidentally selects "— None —" and clicks Update, the gallery post's location meta is removed. The repository can no longer find the post. To recover, reopen the post and re-select the correct location.
+
+### Multiple posts for the same location
+
+The repository uses `orderby => date, order => DESC, posts_per_page => 1` — the **newest published** gallery post wins. If two posts share the same location slug, the older one is silently ignored. If the wrong post (e.g. an empty auto-created one) has a newer date, it will render empty. Fix: check **Galleries → All Galleries** admin list, look at the Location column, trash any duplicate empty posts for the same slot.
 
 ---
 
-## Quick reference checklist (porting)
+## Data model
 
-- [ ] Register private CPT with `supports` ⇒ at least **`title`**; `public` off, `show_ui` on  
-- [ ] Location metabox + nonce in **first** rendered metabox (or standalone hidden nonce)  
-- [ ] Images metabox + hidden JSON field + **`wp.media`** + sortable list  
-- [ ] Robust `save_post` sanitization (`kind` attachment vs `url`)  
-- [ ] `get_gallery_items_for_location()` using **WP_Query**, newest-first, **`posts_per_page` 1**  
-- [ ] Template loops using **`thumb_url`** with **`url` fallback**, escaped output  
-- [ ] Optional: request-level cache keyed by location slug  
+**Meta keys** (defined in `MCI_Galleries_Constants`):
 
-This document matches the tone and depth of sibling “How To” handoff guides in your documentation set and can be adapted to any WordPress theme or plugin codebase.
+| Constant | Meta key | Value |
+|---|---|---|
+| `META_LOCATION` | `_mci_gallery_location` | String slug, e.g. `smilers_dual` |
+| `META_IMAGES` | `_mci_gallery_images` | Serialized PHP array of item objects |
+
+**Stored item shapes:**
+
+```json
+// Media Library attachment
+{ "kind": "attachment", "id": 12345 }
+
+// Raw URL (seed data, CDN, etc.)
+{ "kind": "url", "url": "https://…/image.webp", "alt": "Description" }
+```
+
+**Normalized row** (what templates receive from `MCI_Galleries_Repository`):
+
+| Field | Attachment | URL item |
+|---|---|---|
+| `url` | `wp_get_attachment_image_src( $id, 'large' )[0]` | `url` from meta |
+| `thumb_url` | `wp_get_attachment_image_src( $id, 'medium_large' )[0]` | Same as `url` |
+| `alt` | `_wp_attachment_image_alt` | `alt` from meta |
+| `width` | From `large` dimensions | `0` |
+| `height` | From `large` dimensions | `0` |
+
+---
+
+## Frontend resolver
+
+`MCI_Galleries_Repository::get_items_for_location( $slug )` — static, per-request memoized. Takes a location slug, returns an array of normalized rows (empty array if none). Safe to call multiple times on the same request; the WP_Query only runs once per slug.
+
+---
+
+## Security checklist (save_post)
+
+- Return early on `DOING_AUTOSAVE`.
+- Verify nonce (`mci_galleries_save` action, `mci_galleries_nonce` field).
+- Check `current_user_can( 'edit_post', $post_id )`.
+- Location: validate against `MCI_Galleries_Locations::is_valid()`; otherwise `delete_post_meta`.
+- Images: `json_decode`, then per-item: cast `id` to int (attachment) or `esc_url_raw` the URL; drop malformed entries.
+
+---
+
+## Admin UI notes
+
+- The **nonce field** is rendered by the Location metabox renderer. The save guard checks for this nonce before writing any meta. If the user hides the Location metabox via Screen Options, the nonce is absent and **neither** location nor images will save. Keep both metaboxes visible.
+- The Images metabox hidden input (`[data-mci-galleries-input]`) is kept in sync by `assets/js/admin-mci-galleries.js` via `syncInput()` — it fires on media modal select, thumbnail remove, and sortable drag. If JavaScript is disabled or broken, the input retains its last serialized value (or the initial value from PHP on page load, which is the already-saved state).
+
+---
+
+## Extending slots — quick checklist
+
+- [ ] Add constant + `all()` entry to `MCI_Galleries_Locations`
+- [ ] Add definition (title + items) to `MCI_Galleries_Default_Data::definitions()`
+- [ ] Load any WP admin page to trigger the seeder (creates the gallery post)
+- [ ] Write a frontend template calling `MCI_Galleries_Repository::get_items_for_location()`
+- [ ] Wire the template part into the page template or section partial
+- [ ] In WP admin, open the new gallery post, add images, click Update
+- [ ] Verify the frontend renders them
