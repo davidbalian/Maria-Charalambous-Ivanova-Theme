@@ -2590,13 +2590,6 @@ hr {
   margin-top: calc(var(--mci-spacing-md) + 2rem);
 }
 
-@media (max-width: 768px) {
-  .home-v2-comprehensive__smilers .services-item__smilers-dual,
-  .services-item--smilers .services-item__smilers-dual {
-    margin-top: calc(var(--mci-spacing-md) + 1rem);
-  }
-}
-
 /* Smilers: two companion CPT images stretch with the text column to match the hero column (desktop only). */
 @media (min-width: 769px) {
   .services-item__grid--smilers-dual-balanced {
