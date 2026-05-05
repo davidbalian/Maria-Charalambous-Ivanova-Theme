@@ -2,7 +2,7 @@
 /**
  * Location registry.
  *
- * Defines the four slots where galleries can be rendered in the theme.
+ * Defines the registered slots where galleries can be rendered in the theme.
  *
  * @package Maria_Charalambous_Ivanova
  */
@@ -20,6 +20,7 @@ final class MCI_Galleries_Locations {
 	const HOME_CLINIC       = 'home_clinic';
 	const PAGE_BEFORE_AFTER = 'page_before_after';
 	const PAGE_CLINIC       = 'page_clinic';
+	const SMILERS_DUAL      = 'smilers_dual';
 
 	/**
 	 * Location slug => human label map.
@@ -32,6 +33,7 @@ final class MCI_Galleries_Locations {
 			self::HOME_CLINIC       => __( 'Home: The Clinic', 'maria-charalambous-ivanova' ),
 			self::PAGE_BEFORE_AFTER => __( 'Gallery page: Before & After', 'maria-charalambous-ivanova' ),
 			self::PAGE_CLINIC       => __( 'Gallery page: The Clinic', 'maria-charalambous-ivanova' ),
+			self::SMILERS_DUAL      => __( 'Home & Services: Smilers — companion images', 'maria-charalambous-ivanova' ),
 		);
 	}
 

@@ -4,11 +4,14 @@
  *
  * @package Maria_Charalambous_Ivanova
  */
+
+$smilers_dual_items       = array_slice( MCI_Galleries_Repository::get_items_for_location( MCI_Galleries_Locations::SMILERS_DUAL ), 0, 2 );
+$grid_smilers_dual_suffix = count( $smilers_dual_items ) >= 2 ? ' services-item__grid--smilers-dual-balanced' : '';
 ?>
 <!-- Smilers Aligners -->
 <section class="services-item services-item--smilers page-section page-section--surface">
 	<div class="container">
-		<div class="services-item__grid">
+		<div class="services-item__grid<?php echo esc_attr( $grid_smilers_dual_suffix ); ?>">
 			<div class="services-item__content">
 				<span class="badge badge-gold fade-in fade-in-delay-0"><?php mci_te( 'Orthodontic Clear Aligners' ); ?></span>
 				<h2 class="fade-in fade-in-delay-1"><?php mci_te( 'Smilers Aligners' ); ?></h2>
@@ -17,6 +20,7 @@
 				<div class="fade-in fade-in-delay-4">
 					<a href="<?php echo esc_url( mci_url( '/contact/' ) ); ?>" class="btn btn-primary"><?php mci_te( 'Book Appointment' ); ?></a>
 				</div>
+				<?php get_template_part( 'template-parts/services-smilers-dual-gallery', '', array( 'items' => $smilers_dual_items ) ); ?>
 			</div>
 			<div class="services-item__image fade-in fade-in-delay-2">
 				<picture>

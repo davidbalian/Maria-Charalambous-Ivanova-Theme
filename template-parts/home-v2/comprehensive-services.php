@@ -34,8 +34,12 @@
 		</div>
 
 		<!-- Smilers Aligners (same content as services page; transparent, constrained to .container) -->
+		<?php
+		$home_smilers_dual_items          = array_slice( MCI_Galleries_Repository::get_items_for_location( MCI_Galleries_Locations::SMILERS_DUAL ), 0, 2 );
+		$home_smilers_dual_balanced_class = count( $home_smilers_dual_items ) >= 2 ? ' services-item__grid--smilers-dual-balanced' : '';
+		?>
 		<div class="home-v2-comprehensive__smilers services-item--reverse">
-			<div class="services-item__grid">
+			<div class="services-item__grid<?php echo esc_attr( $home_smilers_dual_balanced_class ); ?>">
 				<div class="services-item__content">
 					<span class="badge badge-gold fade-in fade-in-delay-0"><?php mci_te( 'Orthodontic Clear Aligners' ); ?></span>
 					<h2 class="fade-in fade-in-delay-1"><?php mci_te( 'Smilers Aligners' ); ?></h2>
@@ -44,6 +48,7 @@
 					<div class="fade-in fade-in-delay-4">
 						<a href="<?php echo esc_url( mci_whatsapp_chat_url() ); ?>" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><?php mci_te( 'Book Appointment' ); ?></a>
 					</div>
+					<?php get_template_part( 'template-parts/services-smilers-dual-gallery', '', array( 'items' => $home_smilers_dual_items ) ); ?>
 				</div>
 				<div class="services-item__image fade-in fade-in-delay-2">
 					<picture>
