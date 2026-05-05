@@ -282,6 +282,54 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	}
 
+	/* Smilers row (dual gallery): cap copy column to hero image height on desktop */
+	var SMILERS_BALANCED_DESKTOP_MIN = 769;
+	var smilersGrids = document.querySelectorAll('.services-item__grid--smilers-dual-balanced');
+	if (smilersGrids.length && typeof ResizeObserver !== 'undefined') {
+		var smilersObservers = [];
+
+		function isSmilersDesktop() {
+			return window.innerWidth >= SMILERS_BALANCED_DESKTOP_MIN;
+		}
+
+		function applySmilersCopyCap(grid) {
+			var imageCol = grid.querySelector('.services-item__image');
+			if (!imageCol) return;
+			if (!isSmilersDesktop()) {
+				grid.style.removeProperty('--mci-smilers-copy-max-h');
+				return;
+			}
+			var h = imageCol.getBoundingClientRect().height;
+			if (h <= 0) return;
+			grid.style.setProperty('--mci-smilers-copy-max-h', Math.round(h) + 'px');
+		}
+
+		smilersGrids.forEach(function (grid) {
+			var imageCol = grid.querySelector('.services-item__image');
+			if (!imageCol) return;
+			var ro = new ResizeObserver(function () {
+				applySmilersCopyCap(grid);
+			});
+			ro.observe(imageCol);
+			smilersObservers.push(ro);
+			var img = imageCol.querySelector('img');
+			if (img && !img.complete) {
+				img.addEventListener('load', function onHeroLoad() {
+					img.removeEventListener('load', onHeroLoad);
+					applySmilersCopyCap(grid);
+				});
+			}
+		});
+
+		window.addEventListener(
+			'resize',
+			function () {
+				smilersGrids.forEach(applySmilersCopyCap);
+			},
+			{ passive: true }
+		);
+	}
+
 	// Cookie Banner
 	var cookieBanner = document.getElementById('mci-cookie-banner');
 	if (cookieBanner && !localStorage.getItem('mci_cookies_accepted')) {
