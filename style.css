@@ -2650,7 +2650,7 @@ hr {
   }
 }
 
-/* Smilers dual gallery: desktop (≥1025px) — wrapper 60% of text column, 300px-tall band, equal-height imgs (width: auto, contain). */
+/* Smilers dual gallery: desktop (≥1025px) — wrapper 60% of text column, 300px-tall band; items height: fit-content; imgs max-height 300px, width auto, contain. */
 @media (min-width: 1025px) {
   .services-item__grid--smilers-dual-balanced .services-item__smilers-dual {
     width: 60%;
