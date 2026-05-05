@@ -2590,7 +2590,7 @@ hr {
   margin-top: calc(var(--mci-spacing-md) + 2rem);
 }
 
-/* Smilers: two companion gallery images — equal-height slots, intrinsic image width (contain); tablet full text-column width, desktop 60%. */
+/* Smilers: one row — line height follows the taller image; both span that height; width stays intrinsic (auto). Tablet: full text-column width; ≥1025px: 60%. */
 @media (min-width: 769px) {
   .services-item__grid--smilers-dual-balanced {
     align-items: stretch;
@@ -2604,8 +2604,9 @@ hr {
 
   .services-item__grid--smilers-dual-balanced .services-item__smilers-dual {
     flex: 0 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: stretch;
     gap: var(--mci-spacing-md);
     width: 100%;
@@ -2615,11 +2616,10 @@ hr {
 
   .services-item__grid--smilers-dual-balanced .services-item__smilers-dual-item {
     display: flex;
+    flex: 0 0 auto;
+    align-items: stretch;
     justify-content: center;
-    align-items: center;
     min-width: 0;
-    min-height: 0;
-    aspect-ratio: 4 / 5;
     border-radius: var(--mci-radius-lg);
     overflow: hidden;
   }
@@ -2627,9 +2627,9 @@ hr {
   .services-item__grid--smilers-dual-balanced .services-item__smilers-dual-item img {
     display: block;
     width: auto;
-    max-width: 100%;
+    max-width: none;
     height: 100%;
-    object-fit: contain;
+    flex-shrink: 0;
     border-radius: var(--mci-radius-lg);
   }
 
