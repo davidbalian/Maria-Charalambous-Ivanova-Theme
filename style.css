@@ -2590,7 +2590,7 @@ hr {
   margin-top: calc(var(--mci-spacing-md) + 2rem);
 }
 
-/* Smilers: two companion gallery images — natural height on desktop, 60% text-column width. */
+/* Smilers: two companion gallery images — equal-height slots, intrinsic image width (contain); tablet full text-column width, desktop 60%. */
 @media (min-width: 769px) {
   .services-item__grid--smilers-dual-balanced {
     align-items: stretch;
@@ -2604,28 +2604,32 @@ hr {
 
   .services-item__grid--smilers-dual-balanced .services-item__smilers-dual {
     flex: 0 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
     gap: var(--mci-spacing-md);
-    width: 60%;
-    max-width: 60%;
+    width: 100%;
+    max-width: 100%;
     align-self: flex-start;
   }
 
   .services-item__grid--smilers-dual-balanced .services-item__smilers-dual-item {
-    flex: 0 1 48%;
-    max-width: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+    min-height: 0;
+    aspect-ratio: 4 / 5;
     border-radius: var(--mci-radius-lg);
     overflow: hidden;
   }
 
   .services-item__grid--smilers-dual-balanced .services-item__smilers-dual-item img {
     display: block;
-    width: 100%;
-    height: auto;
-    object-fit: unset;
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
     border-radius: var(--mci-radius-lg);
   }
 
@@ -2652,6 +2656,14 @@ hr {
     height: 100%;
     object-fit: cover;
     border-radius: var(--mci-radius-lg);
+  }
+}
+
+/* Smilers dual gallery: narrower on large desktop only (tablet keeps full text-column width). */
+@media (min-width: 1025px) {
+  .services-item__grid--smilers-dual-balanced .services-item__smilers-dual {
+    width: 60%;
+    max-width: 60%;
   }
 }
 
