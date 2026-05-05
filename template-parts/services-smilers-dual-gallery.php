@@ -53,15 +53,16 @@ if ( empty( $items_with_src ) ) {
 
 ?>
 <div class="services-item__smilers-dual" role="group" aria-label="<?php echo esc_attr__( 'Smilers gallery', 'maria-charalambous-ivanova' ); ?>">
-	<?php foreach ( $items_with_src as $row ) : ?>
+	<?php foreach ( $items_with_src as $index => $row ) : ?>
 		<?php
 		$width  = isset( $row['width'] ) && (int) $row['width'] > 0 ? (int) $row['width'] : 320;
 		$height = isset( $row['height'] ) && (int) $row['height'] > 0 ? (int) $row['height'] : 320;
 		$src    = ( isset( $row['thumb_url'] ) && '' !== $row['thumb_url'] )
 			? $row['thumb_url']
 			: ( isset( $row['url'] ) ? $row['url'] : '' );
+		$fade_delay_step = min( 5 + (int) $index, 10 );
 		?>
-		<div class="services-item__smilers-dual-item">
+		<div class="services-item__smilers-dual-item fade-in fade-in-delay-<?php echo esc_attr( (string) $fade_delay_step ); ?>">
 			<img
 				src="<?php echo esc_url( $src ); ?>"
 				alt="<?php echo isset( $row['alt'] ) ? esc_attr( (string) $row['alt'] ) : ''; ?>"
