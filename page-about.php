@@ -46,19 +46,10 @@ $clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
 				<div class="about-doctor__bio">
 					<h2 class="fade-in fade-in-delay-1"><?php mci_te( 'Dr. Maria Charalambous-Ivanova' ); ?></h2>
 					<p class="about-doctor__subtitle fade-in fade-in-delay-2"><?php echo mci_t( 'DMD, MSD | Founder &amp; Clinical Director' ); ?></p>
-					<p class="fade-in fade-in-delay-3"><?php mci_te( 'Dr. Maria Charalambous-Ivanova graduated from the University of Sofia in 2007 and has practiced since 2008. Through ongoing participation in international congresses and advanced training, she remains at the forefront of modern dental techniques.' ); ?></p>
-					<p class="fade-in fade-in-delay-4"><?php mci_te( 'Composite and Emax veneers form the foundation of her aesthetic philosophy. She also undertakes complex full mouth rehabilitation cases requiring functional analysis, precise diagnosis, and structured treatment planning.' ); ?></p>
+					<p class="fade-in fade-in-delay-3"><?php mci_te( 'Graduate of the University of Sofia, with active clinical practice since 2008.' ); ?></p>
+					<p class="fade-in fade-in-delay-4"><?php mci_te( 'She specialises in aesthetic dentistry and complex restorations, with emphasis on naturalness and functionality.' ); ?></p>
 					<p class="fade-in fade-in-delay-5"><?php mci_te( 'Every case is treated individually — no standardized solutions, only the right approach for each patient, focusing on long-term health, proper function, and aesthetic balance.' ); ?></p>
 					<p class="fade-in fade-in-delay-6"><?php mci_te( 'Collaboration with skilled partners ensures optimal, natural, and harmoniously balanced results.' ); ?></p>
-					<div class="about-doctor__philosophy fade-in fade-in-delay-7">
-						<div class="about-doctor__philosophy-item"><?php mci_te( 'Scientific precision' ); ?></div>
-						<div class="about-doctor__philosophy-divider"></div>
-						<div class="about-doctor__philosophy-item"><?php mci_te( 'Strategic treatment planning' ); ?></div>
-						<div class="about-doctor__philosophy-divider"></div>
-						<div class="about-doctor__philosophy-item"><?php mci_te( 'Pain-free experience' ); ?></div>
-						<div class="about-doctor__philosophy-divider"></div>
-						<div class="about-doctor__philosophy-item"><?php mci_te( 'Absolute transparency and trust' ); ?></div>
-					</div>
 				</div>
 			</div>
 		</div>

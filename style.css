@@ -2127,7 +2127,7 @@ hr {
   margin-bottom: var(--mci-spacing-sm);
 }
 
-.about-doctor__subtitle {
+.about-doctor__bio .about-doctor__subtitle {
   font-size: 1.05rem;
   color: var(--mci-color-primary);
   font-weight: var(--mci-font-weight-bold);
