@@ -2,8 +2,8 @@
 /**
  * Smilers row: two companion images from Galleries CPT (location smilers_dual).
  *
- * Expects $mci_smilers_dual_gallery_rows from get_template_part() $args — avoids collisions with
- * generic variable names (e.g. "items") skipped by load_template's EXTR_SKIP merging.
+ * WordPress passes get_template_part() extras as the `$args` array inside load_template(); it does
+ * not extract keys into separate variables. Read rows from `$args['mci_smilers_dual_gallery_rows']`.
  *
  * @package Maria_Charalambous_Ivanova
  */
@@ -13,7 +13,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $mci_dual_rows = array();
-if ( isset( $mci_smilers_dual_gallery_rows ) && is_array( $mci_smilers_dual_gallery_rows ) ) {
+$mci_bundle   = wp_parse_args( isset( $args ) && is_array( $args ) ? $args : array(), array( 'mci_smilers_dual_gallery_rows' => array() ) );
+$fetched_rows = $mci_bundle['mci_smilers_dual_gallery_rows'];
+
+if ( is_array( $fetched_rows ) ) {
+	$mci_dual_rows = $fetched_rows;
+}
+
+// Legacy fallback if this partial were ever loaded with an extracted row variable (Core does not do this).
+if ( empty( $mci_dual_rows ) && isset( $mci_smilers_dual_gallery_rows ) && is_array( $mci_smilers_dual_gallery_rows ) ) {
 	$mci_dual_rows = $mci_smilers_dual_gallery_rows;
 }
 
