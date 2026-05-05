@@ -2590,7 +2590,7 @@ hr {
   margin-top: calc(var(--mci-spacing-md) + 2rem);
 }
 
-/* Smilers dual grid (≥769px): hero keeps natural height; copy column capped to hero height (see main.js + --mci-smilers-copy-max-h). Tablet: full dual width; ≥1025px: 60% wrapper, 300px-tall dual row. */
+/* Smilers dual grid (≥769px): hero intrinsic height; copy column grows with content (no scroll cap). ≥1025px: 60% dual wrapper, 300px-tall dual row. */
 @media (min-width: 769px) {
   .services-item__grid--smilers-dual-balanced {
     align-items: start;
@@ -2600,8 +2600,6 @@ hr {
     display: flex;
     flex-direction: column;
     min-height: 0;
-    max-height: var(--mci-smilers-copy-max-h);
-    overflow-y: auto;
   }
 
   .services-item__grid--smilers-dual-balanced .services-item__smilers-dual {
