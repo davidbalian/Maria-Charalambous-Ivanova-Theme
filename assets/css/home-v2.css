@@ -544,7 +544,8 @@
   background: transparent;
   margin-bottom: var(--mci-spacing-2xl);
   width: 100%;
-  max-width: var(--mci-home-v2-smilers-max-width);
+  /* TEMP: capped at 1000px — uncomment to restore narrow band */
+  /* max-width: var(--mci-home-v2-smilers-max-width); */
   margin-inline: auto;
 }
 
