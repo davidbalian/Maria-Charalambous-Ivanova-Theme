@@ -3,9 +3,10 @@
  * Repository for resolving which gallery powers each location.
  *
  * Templates call `get_items_for_location( $slug )` to receive ready-to-render
- * image rows. The repository resolves the newest published gallery post
- * tagged with that location, flattens its stored items via the image VO, and
- * caches the result in a per-request memo.
+ * image rows. The repository resolves published gallery posts tagged with
+ * that location (newest first), uses the first post whose resolved image
+ * rows are non-empty — so an empty duplicate does not hide an older filled
+ * gallery — flattens items via the image VO, and caches the result per slug.
  *
  * @package Maria_Charalambous_Ivanova
  */
@@ -20,6 +21,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 final class MCI_Galleries_Repository {
 
 	/**
+	 * Max published galleries to consider per location when picking the first
+	 * with resolvable image rows (guards against unbounded duplicate slots).
+	 */
+	private const CANDIDATE_POST_LIMIT = 25;
+
+	/**
 	 * Per-request cache keyed by location slug.
 	 *
 	 * @var array<string, array<int, array<string, mixed>>>
@@ -27,7 +34,7 @@ final class MCI_Galleries_Repository {
 	private static $cache = array();
 
 	/**
-	 * Resolve the newest gallery post for a location and return its image rows.
+	 * Resolve image rows for a location (newest published post with content wins).
 	 *
 	 * @param string $location_slug One of MCI_Galleries_Locations::all() keys.
 	 * @return array<int, array{url:string,thumb_url:string,alt:string,width:int,height:int}>
@@ -41,29 +48,31 @@ final class MCI_Galleries_Repository {
 			return self::$cache[ $location_slug ];
 		}
 
-		$post_id = self::find_post_id_for_location( $location_slug );
-		if ( $post_id <= 0 ) {
-			self::$cache[ $location_slug ] = array();
-			return array();
+		$post_ids = self::candidate_post_ids_for_location( $location_slug );
+		foreach ( $post_ids as $post_id ) {
+			$rows = self::rows_from_post( $post_id );
+			if ( ! empty( $rows ) ) {
+				self::$cache[ $location_slug ] = $rows;
+				return $rows;
+			}
 		}
 
-		$rows                              = self::rows_from_post( $post_id );
-		self::$cache[ $location_slug ]     = $rows;
-		return $rows;
+		self::$cache[ $location_slug ] = array();
+		return array();
 	}
 
 	/**
-	 * Look up the newest published gallery post assigned to this location.
+	 * Published gallery post IDs for a location, newest first (bounded).
 	 *
 	 * @param string $location_slug Location slug.
-	 * @return int Post ID, or 0 if none.
+	 * @return array<int, int>
 	 */
-	private static function find_post_id_for_location( $location_slug ) {
+	private static function candidate_post_ids_for_location( $location_slug ) {
 		$query = new WP_Query(
 			array(
 				'post_type'              => MCI_Galleries_Constants::POST_TYPE,
 				'post_status'            => 'publish',
-				'posts_per_page'         => 1,
+				'posts_per_page'         => self::CANDIDATE_POST_LIMIT,
 				'orderby'                => 'date',
 				'order'                  => 'DESC',
 				'no_found_rows'          => true,
@@ -80,10 +89,10 @@ final class MCI_Galleries_Repository {
 		);
 
 		if ( empty( $query->posts ) ) {
-			return 0;
+			return array();
 		}
 
-		return (int) $query->posts[0];
+		return array_map( 'intval', $query->posts );
 	}
 
 	/**
