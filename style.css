@@ -2512,8 +2512,7 @@ hr {
     grid-column: 1;
   }
 
-  .services-page .services-item__image,
-  .services-page .services-item__grid > .services-item__media-col {
+  .services-page .services-item__image {
     grid-column: 2;
   }
 
@@ -2526,8 +2525,7 @@ hr {
     grid-column: 2;
   }
 
-  .services-page .services-item--reverse .services-item__image,
-  .services-page .services-item--reverse .services-item__grid > .services-item__media-col {
+  .services-page .services-item--reverse .services-item__image {
     grid-column: 1;
   }
 }
@@ -2543,8 +2541,7 @@ hr {
   order: 2;
 }
 
-.services-item--reverse .services-item__image,
-.services-item--reverse .services-item__media-col {
+.services-item--reverse .services-item__image {
   order: 1;
 }
 
@@ -2587,37 +2584,22 @@ hr {
   object-fit: unset;
 }
 
-/* Smilers hero + companion gallery stack in one grid track (narrow column beside copy). */
-
-.home-v2-comprehensive__smilers .services-item__media-col,
-.services-item--smilers .services-item__media-col {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: var(--mci-spacing-md);
-  min-height: 0;
-  width: 100%;
-}
-
-/* Smilers: two companion CPT images under hero — column width matches main photo; dual row grows to row height (desktop). */
+/* Smilers: two companion CPT images stretch with the text column to match the hero column (desktop only). */
 @media (min-width: 769px) {
   .services-item__grid--smilers-dual-balanced {
     align-items: stretch;
   }
 
-  .services-item__grid--smilers-dual-balanced .services-item__media-col {
+  .services-item__grid--smilers-dual-balanced .services-item__content {
+    display: flex;
+    flex-direction: column;
     min-height: 0;
-  }
-
-  .services-item__grid--smilers-dual-balanced .services-item__image {
-    flex: 0 0 auto;
   }
 
   .services-item__grid--smilers-dual-balanced .services-item__smilers-dual {
     flex: 1 1 auto;
     min-height: 0;
-    margin-top: 0;
-    width: 100%;
+    margin-top: var(--mci-spacing-md);
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -2626,9 +2608,8 @@ hr {
   }
 
   .services-item__grid--smilers-dual-balanced .services-item__smilers-dual-item {
-    flex: 1 1 0;
-    min-width: 0;
-    max-width: none;
+    flex: 0 1 48%;
+    max-width: 48%;
     min-height: 0;
     border-radius: var(--mci-radius-lg);
     overflow: hidden;
@@ -2637,6 +2618,31 @@ hr {
 
   .services-item__grid--smilers-dual-balanced .services-item__smilers-dual-item img {
     display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--mci-radius-lg);
+  }
+
+  /*
+   * Main Smilers hero (left/narrow column): stretch to full row height so it matches the text+dual column.
+   */
+  .services-item__grid--smilers-dual-balanced .services-item__image {
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .services-item__grid--smilers-dual-balanced .services-item__image picture {
+    display: flex;
+    flex: 1 1 auto;
+    min-height: 0;
+    border-radius: var(--mci-radius-lg);
+    overflow: hidden;
+  }
+
+  .services-item__grid--smilers-dual-balanced .services-item__image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -2660,7 +2666,7 @@ hr {
     justify-content: flex-start;
     align-items: stretch;
     gap: var(--mci-spacing-sm);
-    margin-top: 0;
+    margin-top: var(--mci-spacing-md);
   }
 
   .services-item__grid--smilers-dual-balanced .services-item__smilers-dual-item {
@@ -3143,17 +3149,15 @@ hr {
     gap: var(--mci-spacing-lg);
   }
 
-  .services-item--reverse .services-item__media-col,
-  .services-item--reverse .services-item__image {
-    order: 2;
-  }
-
   .services-item--reverse .services-item__content {
     order: 1;
   }
 
-  .services-page .services-item__image,
-  .services-page .services-item__grid > .services-item__media-col {
+  .services-item--reverse .services-item__image {
+    order: 2;
+  }
+
+  .services-page .services-item__image {
     order: -1;
   }
 
