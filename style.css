@@ -2617,6 +2617,7 @@ hr {
   .services-item__grid--smilers-dual-balanced .services-item__smilers-dual-item {
     flex: 1 1 50%;
     min-width: 0;
+    height: fit-content;
     border-radius: var(--mci-radius-lg);
     overflow: hidden;
   }
@@ -2708,6 +2709,7 @@ hr {
   .services-item__grid--smilers-dual-balanced .services-item__smilers-dual-item {
     flex: 1 1 50%;
     min-width: 0;
+    height: fit-content;
     border-radius: var(--mci-radius-lg);
     overflow: hidden;
   }
