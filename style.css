@@ -2610,6 +2610,9 @@ hr {
     justify-content: flex-start;
     align-items: stretch;
     gap: var(--mci-spacing-md);
+    width: 60%;
+    max-width: 60%;
+    align-self: flex-start;
   }
 
   .services-item__grid--smilers-dual-balanced .services-item__smilers-dual-item {
