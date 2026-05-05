@@ -738,7 +738,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--mci-spacing-2xl);
-  align-items: center;
+  align-items: start;
 }
 
 .home-v2-welcome__image {
@@ -766,7 +766,7 @@
 .home-v2-welcome__content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .home-v2-welcome__content p {
