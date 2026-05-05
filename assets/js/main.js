@@ -286,8 +286,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	var SMILERS_BALANCED_DESKTOP_MIN = 769;
 	var smilersGrids = document.querySelectorAll('.services-item__grid--smilers-dual-balanced');
 	if (smilersGrids.length && typeof ResizeObserver !== 'undefined') {
-		var smilersObservers = [];
-
 		function isSmilersDesktop() {
 			return window.innerWidth >= SMILERS_BALANCED_DESKTOP_MIN;
 		}
@@ -311,7 +309,6 @@ document.addEventListener('DOMContentLoaded', function () {
 				applySmilersCopyCap(grid);
 			});
 			ro.observe(imageCol);
-			smilersObservers.push(ro);
 			var img = imageCol.querySelector('img');
 			if (img && !img.complete) {
 				img.addEventListener('load', function onHeroLoad() {
@@ -328,6 +325,10 @@ document.addEventListener('DOMContentLoaded', function () {
 			},
 			{ passive: true }
 		);
+
+		requestAnimationFrame(function () {
+			smilersGrids.forEach(applySmilersCopyCap);
+		});
 	}
 
 	// Cookie Banner
