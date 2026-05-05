@@ -20,13 +20,15 @@ $grid_smilers_dual_suffix = count( $smilers_dual_items ) >= 2 ? ' services-item_
 				<div class="fade-in fade-in-delay-4">
 					<a href="<?php echo esc_url( mci_url( '/contact/' ) ); ?>" class="btn btn-primary"><?php mci_te( 'Book Appointment' ); ?></a>
 				</div>
-				<?php get_template_part( 'template-parts/services-smilers-dual-gallery', null, array( 'mci_smilers_dual_gallery_rows' => $smilers_dual_items ) ); ?>
 			</div>
-			<div class="services-item__image fade-in fade-in-delay-2">
-				<picture>
-					<source media="(max-width: 768px)" srcset="<?php echo esc_url( home_url( '/wp-content/uploads/2026/04/smilers-new-5-body-mobile.webp' ) ); ?>">
-					<img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/04/smilers-new-5.webp' ) ); ?>" alt="Smilers Aligners" width="560">
-				</picture>
+			<div class="services-item__media-col">
+				<div class="services-item__image fade-in fade-in-delay-2">
+					<picture>
+						<source media="(max-width: 768px)" srcset="<?php echo esc_url( home_url( '/wp-content/uploads/2026/04/smilers-new-5-body-mobile.webp' ) ); ?>">
+						<img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/04/smilers-new-5.webp' ) ); ?>" alt="Smilers Aligners" width="560">
+					</picture>
+				</div>
+				<?php get_template_part( 'template-parts/services-smilers-dual-gallery', null, array( 'mci_smilers_dual_gallery_rows' => $smilers_dual_items ) ); ?>
 			</div>
 		</div>
 	</div>

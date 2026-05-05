@@ -888,7 +888,7 @@
     grid-template-columns: 1fr;
   }
 
-  .home-v2-comprehensive__smilers .services-item__image {
+  .home-v2-comprehensive__smilers .services-item__media-col {
     order: -1;
   }
 

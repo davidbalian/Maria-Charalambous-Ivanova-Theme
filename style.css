@@ -2512,7 +2512,8 @@ hr {
     grid-column: 1;
   }
 
-  .services-page .services-item__image {
+  .services-page .services-item__image,
+  .services-page .services-item__grid > .services-item__media-col {
     grid-column: 2;
   }
 
@@ -2525,7 +2526,8 @@ hr {
     grid-column: 2;
   }
 
-  .services-page .services-item--reverse .services-item__image {
+  .services-page .services-item--reverse .services-item__image,
+  .services-page .services-item--reverse .services-item__grid > .services-item__media-col {
     grid-column: 1;
   }
 }
@@ -2541,7 +2543,8 @@ hr {
   order: 2;
 }
 
-.services-item--reverse .services-item__image {
+.services-item--reverse .services-item__image,
+.services-item--reverse .services-item__media-col {
   order: 1;
 }
 
@@ -2584,22 +2587,37 @@ hr {
   object-fit: unset;
 }
 
-/* Smilers: two companion CPT images stretch with the text column to match the hero column (desktop only). */
+/* Smilers hero + companion gallery stack in one grid track (narrow column beside copy). */
+
+.home-v2-comprehensive__smilers .services-item__media-col,
+.services-item--smilers .services-item__media-col {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--mci-spacing-md);
+  min-height: 0;
+  width: 100%;
+}
+
+/* Smilers: two companion CPT images under hero — column width matches main photo; dual row grows to row height (desktop). */
 @media (min-width: 769px) {
   .services-item__grid--smilers-dual-balanced {
     align-items: stretch;
   }
 
-  .services-item__grid--smilers-dual-balanced .services-item__content {
-    display: flex;
-    flex-direction: column;
+  .services-item__grid--smilers-dual-balanced .services-item__media-col {
     min-height: 0;
+  }
+
+  .services-item__grid--smilers-dual-balanced .services-item__image {
+    flex: 0 0 auto;
   }
 
   .services-item__grid--smilers-dual-balanced .services-item__smilers-dual {
     flex: 1 1 auto;
     min-height: 0;
-    margin-top: var(--mci-spacing-md);
+    margin-top: 0;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -2608,8 +2626,9 @@ hr {
   }
 
   .services-item__grid--smilers-dual-balanced .services-item__smilers-dual-item {
-    flex: 0 1 48%;
-    max-width: 48%;
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: none;
     min-height: 0;
     border-radius: var(--mci-radius-lg);
     overflow: hidden;
@@ -2641,7 +2660,7 @@ hr {
     justify-content: flex-start;
     align-items: stretch;
     gap: var(--mci-spacing-sm);
-    margin-top: var(--mci-spacing-md);
+    margin-top: 0;
   }
 
   .services-item__grid--smilers-dual-balanced .services-item__smilers-dual-item {
@@ -3124,15 +3143,17 @@ hr {
     gap: var(--mci-spacing-lg);
   }
 
-  .services-item--reverse .services-item__content {
-    order: 1;
-  }
-
+  .services-item--reverse .services-item__media-col,
   .services-item--reverse .services-item__image {
     order: 2;
   }
 
-  .services-page .services-item__image {
+  .services-item--reverse .services-item__content {
+    order: 1;
+  }
+
+  .services-page .services-item__image,
+  .services-page .services-item__grid > .services-item__media-col {
     order: -1;
   }
 
