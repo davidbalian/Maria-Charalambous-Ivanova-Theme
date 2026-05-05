@@ -2549,6 +2549,14 @@ hr {
   margin-bottom: var(--mci-spacing-sm);
 }
 
+/* Smilers: badge pill hugs text — column-flex parents stretch children cross-axis by default. */
+.services-item--smilers .services-item__content > .badge,
+.home-v2-comprehensive__smilers.services-item--reverse .services-item__content > .badge {
+  align-self: flex-start;
+  width: fit-content;
+  max-width: 100%;
+}
+
 .services-item__content h2 {
   font-size: 1.8rem;
   margin-bottom: var(--mci-spacing-md);
@@ -3141,6 +3149,14 @@ hr {
     display: block;
     width: fit-content;
     margin: 0 auto calc(var(--mci-spacing-sm) + 0.25rem);
+  }
+
+  /* Smilers: align category pill left (long Greek label); beats generic centred badge rule above. */
+  .services-item--smilers .services-item__content > .badge,
+  .home-v2-comprehensive__smilers.services-item--reverse .services-item__content > .badge {
+    display: inline-flex;
+    margin-left: 0;
+    margin-right: auto;
   }
 
   .services-item__content p {

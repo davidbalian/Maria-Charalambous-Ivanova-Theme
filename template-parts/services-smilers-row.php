@@ -20,7 +20,7 @@ $grid_smilers_dual_suffix = count( $smilers_dual_items ) >= 2 ? ' services-item_
 				<div class="fade-in fade-in-delay-4">
 					<a href="<?php echo esc_url( mci_url( '/contact/' ) ); ?>" class="btn btn-primary"><?php mci_te( 'Book Appointment' ); ?></a>
 				</div>
-				<?php get_template_part( 'template-parts/services-smilers-dual-gallery', '', array( 'items' => $smilers_dual_items ) ); ?>
+				<?php get_template_part( 'template-parts/services-smilers-dual-gallery', null, array( 'mci_smilers_dual_gallery_rows' => $smilers_dual_items ) ); ?>
 			</div>
 			<div class="services-item__image fade-in fade-in-delay-2">
 				<picture>

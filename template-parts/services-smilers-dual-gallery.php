@@ -2,7 +2,8 @@
 /**
  * Smilers row: two companion images from Galleries CPT (location smilers_dual).
  *
- * Expects `items` in scope (via get_template_part $args). Renders nothing when empty.
+ * Expects $mci_smilers_dual_gallery_rows from get_template_part() $args — avoids collisions with
+ * generic variable names (e.g. "items") skipped by load_template's EXTR_SKIP merging.
  *
  * @package Maria_Charalambous_Ivanova
  */
@@ -11,13 +12,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( empty( $items ) || ! is_array( $items ) ) {
+$mci_dual_rows = array();
+if ( isset( $mci_smilers_dual_gallery_rows ) && is_array( $mci_smilers_dual_gallery_rows ) ) {
+	$mci_dual_rows = $mci_smilers_dual_gallery_rows;
+}
+
+if ( empty( $mci_dual_rows ) ) {
 	return;
 }
 
 $items_with_src = array();
 
-foreach ( array_slice( $items, 0, 2 ) as $row ) {
+foreach ( array_slice( $mci_dual_rows, 0, 2 ) as $row ) {
 	if ( ! is_array( $row ) ) {
 		continue;
 	}
@@ -36,8 +42,9 @@ foreach ( array_slice( $items, 0, 2 ) as $row ) {
 if ( empty( $items_with_src ) ) {
 	return;
 }
+
 ?>
-<div class="services-item__smilers-dual fade-in fade-in-delay-5" role="group" aria-label="<?php echo esc_attr__( 'Smilers gallery', 'maria-charalambous-ivanova' ); ?>">
+<div class="services-item__smilers-dual" role="group" aria-label="<?php echo esc_attr__( 'Smilers gallery', 'maria-charalambous-ivanova' ); ?>">
 	<?php foreach ( $items_with_src as $row ) : ?>
 		<?php
 		$width  = isset( $row['width'] ) && (int) $row['width'] > 0 ? (int) $row['width'] : 320;
