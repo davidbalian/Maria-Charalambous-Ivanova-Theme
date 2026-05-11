@@ -57,16 +57,19 @@ $hero_slider_images = array(
 		'src' => '/wp-content/uploads/2026/04/additional-hero-images-3.webp',
 		'alt' => 'Dental Art Clinic additional hero image 3',
 	),
-	// Desktop-only additions.
+	// Desktop-only additions. mobile_src set to same file — no mobile crop exists,
+	// and the slide is removed on mobile by JS before Swiper inits.
 	array(
-		'src'  => '/wp-content/uploads/2026/05/homepage-slider-new-image-4.webp',
-		'alt'  => 'Dental Art Clinic',
-		'show' => 'desktop',
+		'src'        => '/wp-content/uploads/2026/05/homepage-slider-new-image-4.webp',
+		'mobile_src' => '/wp-content/uploads/2026/05/homepage-slider-new-image-4.webp',
+		'alt'        => 'Dental Art Clinic',
+		'show'       => 'desktop',
 	),
 	array(
-		'src'  => '/wp-content/uploads/2026/05/homepage-slider-new-image-3.webp',
-		'alt'  => 'Dental Art Clinic',
-		'show' => 'desktop',
+		'src'        => '/wp-content/uploads/2026/05/homepage-slider-new-image-3.webp',
+		'mobile_src' => '/wp-content/uploads/2026/05/homepage-slider-new-image-3.webp',
+		'alt'        => 'Dental Art Clinic',
+		'show'       => 'desktop',
 	),
 	// Mobile-only additions.
 	array(
