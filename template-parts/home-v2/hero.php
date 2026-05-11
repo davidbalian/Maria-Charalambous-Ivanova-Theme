@@ -57,6 +57,36 @@ $hero_slider_images = array(
 		'src' => '/wp-content/uploads/2026/04/additional-hero-images-3.webp',
 		'alt' => 'Dental Art Clinic additional hero image 3',
 	),
+	// Desktop-only additions.
+	array(
+		'src'  => '/wp-content/uploads/2026/05/homepage-slider-new-image-4.webp',
+		'alt'  => 'Dental Art Clinic',
+		'show' => 'desktop',
+	),
+	array(
+		'src'  => '/wp-content/uploads/2026/05/homepage-slider-new-image-3.webp',
+		'alt'  => 'Dental Art Clinic',
+		'show' => 'desktop',
+	),
+	// Mobile-only additions.
+	array(
+		'src'        => '/wp-content/uploads/2026/05/homepage-slider-new-image-1.webp',
+		'mobile_src' => '/wp-content/uploads/2026/05/homepage-slider-new-image-1.webp',
+		'alt'        => 'Dental Art Clinic',
+		'show'       => 'mobile',
+	),
+	array(
+		'src'        => '/wp-content/uploads/2026/05/homepage-slider-new-image-2.webp',
+		'mobile_src' => '/wp-content/uploads/2026/05/homepage-slider-new-image-2.webp',
+		'alt'        => 'Dental Art Clinic',
+		'show'       => 'mobile',
+	),
+	array(
+		'src'        => '/wp-content/uploads/2026/05/homepage-slider-new-image-5.webp',
+		'mobile_src' => '/wp-content/uploads/2026/05/homepage-slider-new-image-5.webp',
+		'alt'        => 'Dental Art Clinic',
+		'show'       => 'mobile',
+	),
 );
 
 // Inject "-mobile" before the extension to derive the mobile-cropped variant filename.
@@ -90,7 +120,7 @@ $mci_hero_to_mobile = static function ( $src ) {
 						isset( $hero_slide['mobile_src'] ) ? $hero_slide['mobile_src'] : $mci_hero_to_mobile( $hero_slide['src'] )
 					);
 					?>
-					<div class="swiper-slide">
+					<div class="swiper-slide"<?php if ( ! empty( $hero_slide['show'] ) ) : ?> data-show="<?php echo esc_attr( $hero_slide['show'] ); ?>"<?php endif; ?>>
 						<div class="home-hero__slide">
 							<picture>
 								<source media="(max-width: 768px)" srcset="<?php echo esc_url( $hero_mobile_src ); ?>" />
