@@ -81,10 +81,11 @@ return array(
 	   ===================================================================== */
 	'Dr. Maria Charalambous-Ivanova'          => 'Δρ. Μαρία Χαραλάμπους-Ιβάνοβα',
 	'DMD, MSD | Founder &amp; Clinical Director' => 'DMD, MSD | Ιδρύτρια &amp; Κλινική Διευθύντρια',
-	'Graduate of the University of Sofia, with active clinical practice since 2008.' => 'Απόφοιτος Πανεπιστημίου Σόφιας, με ενεργή κλινική πορεία από το 2008.',
-	'She specialises in aesthetic dentistry and complex restorations, with emphasis on naturalness and functionality.' => 'Εξειδικεύεται στην αισθητική οδοντιατρική και στις σύνθετες αποκαταστάσεις, με έμφαση στη φυσικότητα και τη λειτουργικότητα.',
-	'Our philosophy is simple:'               => 'Η φιλοσοφία μας είναι απλή:',
-	'A beautiful smile should look natural, function correctly, and make you feel at ease.' => 'Ένα όμορφο χαμόγελο πρέπει να δείχνει φυσικό, να λειτουργεί σωστά και να σε κάνει να νιώθεις άνετα.',
+	'With more than 20 years of clinical experience, Dr. Maria Charalambous-Ivanova specializes in aesthetic and restorative dentistry, with a particular focus on modern smile design and complex aesthetic rehabilitations.' => 'Με περισσότερα από 20 χρόνια κλινικής εμπειρίας, η Δρ. Μαρία Χαραλάμπους-Ιβάνοβα εξειδικεύεται στην αισθητική και αποκαταστατική οδοντιατρική, με ιδιαίτερη έμφαση στον σύγχρονο σχεδιασμό χαμόγελου και στις σύνθετες αισθητικές αποκαταστάσεις.',
+	'She continuously attends international educational programs and advanced seminars, staying up to date with the latest techniques and innovations in contemporary dentistry.' => 'Παρακολουθεί διαρκώς διεθνή εκπαιδευτικά προγράμματα και εξειδικευμένα σεμινάρια, παραμένοντας ενημερωμένη στις πλέον σύγχρονες τεχνικές και εξελίξεις της σύγχρονης οδοντιατρικής.',
+	'Her approach combines scientific precision, modern techniques, and refined aesthetics, aiming to achieve natural, functional, and fully personalized results.' => 'Η προσέγγιση της συνδυάζει επιστημονική ακρίβεια, σύγχρονες τεχνικές και υψηλή αισθητική, με στόχο φυσικά, λειτουργικά και απόλυτα εξατομικευμένα αποτελέσματα.',
+	'Each treatment is carefully designed with attention to detail, respect for the natural harmony of the face, and emphasis on patient comfort and confidence.' => 'Κάθε θεραπεία σχεδιάζεται με προσοχή στη λεπτομέρεια, σεβασμό στη φυσική αρμονία του προσώπου και έμφαση στην άνεση και την αυτοπεποίθηση του ασθενή.',
+	'Her philosophy is based on creating smiles that reflect natural beauty, balance, and timeless aesthetics.' => 'Η φιλοσοφία της βασίζεται στη δημιουργία χαμόγελων που αποπνέουν φυσικότητα, ισορροπία και διαχρονική αισθητική.',
 
 	/* =====================================================================
 	   Clinic Section
@@ -168,8 +169,6 @@ return array(
 	'Where your oral health and smile are our top priorities.' => 'Όπου η στοματική σας υγεία και το χαμόγελο σας, αποτελούν τις κορυφαίες προτεραιότητες μας.',
 	'The Masterpiece Philosophy'              => 'Η Φιλοσοφία του Αριστουργήματος',
 	'At DENTAL ART CLINIC LIMASSOL, dentistry combines scientific precision, strategic planning, and aesthetic harmony — the natural evolution of a career built on trust, consistency, and excellence.' => 'Στην κλινική μας, η οδοντιατρική συνδυάζει επιστημονική ακρίβεια, στρατηγικό σχεδιασμό και αισθητική αρμονία με φυσική εξέλιξη μιας σταδιοδρομίας χτισμένης στην εμπιστοσύνη, τη συνέπεια και την αριστεία.',
-	'Every case is treated individually — no standardized solutions, only the right approach for each patient, focusing on long-term health, proper function, and aesthetic balance.' => 'Κάθε περιστατικό αντιμετωπίζεται ξεχωριστά — χωρίς τυποποιημένες λύσεις, μόνο η σωστή προσέγγιση για κάθε ασθενή, με εστίαση στη μακροπρόθεσμη υγεία, τη λειτουργία και την αισθητική ισορροπία.',
-	'Collaboration with skilled partners ensures optimal, natural, and harmoniously balanced results.' => 'Η συνεργασία με εξειδικευμένους συνεργάτες εξασφαλίζει βέλτιστα, φυσικά και αρμονικά ισορροπημένα αποτελέσματα.',
 	'The Clinic Experience'                   => 'Η Εμπειρία του Οδοντιατρείου',
 	'Our clinic provides comprehensive dental care for patients of all ages, focusing on prevention, accurate diagnosis, and high-quality treatment for the best possible results.' => 'Το οδοντιατρείο μας παρέχει ολοκληρωμένη φροντίδα για ασθενείς όλων των ηλικιών, με εστίαση στην πρόληψη, την ακριβή διάγνωση και την υψηλής ποιότητας θεραπεία για τα καλύτερα δυνατά αποτελέσματα.',
 	'We believe dental visits should be comfortable and positive. We create a friendly, relaxed environment with personalized care tailored to each patient\'s needs.' => 'Πιστεύουμε ότι η επίσκεψη στον οδοντίατρο πρέπει να είναι άνετη και θετική. Δημιουργούμε φιλικό, χαλαρό περιβάλλον με εξατομικευμένη φροντίδα προσαρμοσμένη στις ανάγκες κάθε ασθενούς.',

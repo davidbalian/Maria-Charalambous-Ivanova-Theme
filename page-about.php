@@ -46,10 +46,11 @@ $clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
 				<div class="about-doctor__bio">
 					<h2 class="fade-in fade-in-delay-1"><?php mci_te( 'Dr. Maria Charalambous-Ivanova' ); ?></h2>
 					<p class="about-doctor__subtitle fade-in fade-in-delay-2"><?php echo mci_t( 'DMD, MSD | Founder &amp; Clinical Director' ); ?></p>
-					<p class="fade-in fade-in-delay-3"><?php mci_te( 'Graduate of the University of Sofia, with active clinical practice since 2008.' ); ?></p>
-					<p class="fade-in fade-in-delay-4"><?php mci_te( 'She specialises in aesthetic dentistry and complex restorations, with emphasis on naturalness and functionality.' ); ?></p>
-					<p class="fade-in fade-in-delay-5"><?php mci_te( 'Every case is treated individually — no standardized solutions, only the right approach for each patient, focusing on long-term health, proper function, and aesthetic balance.' ); ?></p>
-					<p class="fade-in fade-in-delay-6"><?php mci_te( 'Collaboration with skilled partners ensures optimal, natural, and harmoniously balanced results.' ); ?></p>
+					<p class="fade-in fade-in-delay-3"><?php mci_te( 'With more than 20 years of clinical experience, Dr. Maria Charalambous-Ivanova specializes in aesthetic and restorative dentistry, with a particular focus on modern smile design and complex aesthetic rehabilitations.' ); ?></p>
+					<p class="fade-in fade-in-delay-4"><?php mci_te( 'She continuously attends international educational programs and advanced seminars, staying up to date with the latest techniques and innovations in contemporary dentistry.' ); ?></p>
+					<p class="fade-in fade-in-delay-5"><?php mci_te( 'Her approach combines scientific precision, modern techniques, and refined aesthetics, aiming to achieve natural, functional, and fully personalized results.' ); ?></p>
+					<p class="fade-in fade-in-delay-6"><?php mci_te( 'Each treatment is carefully designed with attention to detail, respect for the natural harmony of the face, and emphasis on patient comfort and confidence.' ); ?></p>
+					<p class="fade-in fade-in-delay-7"><?php mci_te( 'Her philosophy is based on creating smiles that reflect natural beauty, balance, and timeless aesthetics.' ); ?></p>
 				</div>
 			</div>
 		</div>

@@ -79,12 +79,13 @@ return array(
 	/* =====================================================================
 	   Doctor
 	   ===================================================================== */
-	'Dr. Maria Charalambous-Ivanova'          => 'Др. Мария Харалампус-Иванова',
+	'Dr. Maria Charalambous-Ivanova'          => 'Доктор Мария Хараламбус-Иванова',
 	'DMD, MSD | Founder &amp; Clinical Director' => 'DMD, MSD | Основатель и клинический директор',
-	'Graduate of the University of Sofia, with active clinical practice since 2008.' => 'Выпускница Софийского университета, ведёт активную клиническую практику с 2008 года.',
-	'She specialises in aesthetic dentistry and complex restorations, with emphasis on naturalness and functionality.' => 'Специализируется на эстетической стоматологии и комплексных реставрациях, делая акцент на естественность и функциональность.',
-	'Our philosophy is simple:'               => 'Наша философия проста:',
-	'A beautiful smile should look natural, function correctly, and make you feel at ease.' => 'Красивая улыбка должна выглядеть естественно, правильно функционировать и дарить ощущение комфорта.',
+	'With more than 20 years of clinical experience, Dr. Maria Charalambous-Ivanova specializes in aesthetic and restorative dentistry, with a particular focus on modern smile design and complex aesthetic rehabilitations.' => 'Имея более 20 лет клинического опыта, доктор Мария Хараламбус-Иванова специализируется в области эстетической и восстановительной стоматологии, уделяя особое внимание современному дизайну улыбки и сложным эстетическим реставрациям.',
+	'She continuously attends international educational programs and advanced seminars, staying up to date with the latest techniques and innovations in contemporary dentistry.' => 'Она регулярно проходит международные образовательные программы и специализированные семинары, оставаясь в курсе новейших технологий и современных тенденций в стоматологии.',
+	'Her approach combines scientific precision, modern techniques, and refined aesthetics, aiming to achieve natural, functional, and fully personalized results.' => 'Её подход сочетает научную точность, современные методы и высокую эстетику, с целью достижения естественных, функциональных и полностью индивидуализированных результатов.',
+	'Each treatment is carefully designed with attention to detail, respect for the natural harmony of the face, and emphasis on patient comfort and confidence.' => 'Каждое лечение разрабатывается с вниманием к деталям, уважением к естественной гармонии лица, а также с акцентом на комфорт и уверенность пациента.',
+	'Her philosophy is based on creating smiles that reflect natural beauty, balance, and timeless aesthetics.' => 'Её философия основана на создании улыбок, отражающих естественность, гармонию и неподвластную времени эстетику.',
 
 	/* =====================================================================
 	   Clinic Section
@@ -168,8 +169,6 @@ return array(
 	'Where your oral health and smile are our top priorities.' => 'Здоровье Вашей полости рта и улыбка — наш главный приоритет.',
 	'The Masterpiece Philosophy'               => 'Философия мастерства',
 	'At DENTAL ART CLINIC LIMASSOL, dentistry combines scientific precision, strategic planning, and aesthetic harmony — the natural evolution of a career built on trust, consistency, and excellence.' => 'В DENTAL ART CLINIC LIMASSOL стоматология сочетает научную точность, стратегическое планирование и эстетическую гармонию — это естественная эволюция карьеры, построенной на доверии, последовательности и стремлении к совершенству.',
-	'Every case is treated individually — no standardized solutions, only the right approach for each patient, focusing on long-term health, proper function, and aesthetic balance.' => 'Каждый случай рассматривается индивидуально — никаких шаблонных решений, только правильный подход для каждого пациента, с акцентом на долгосрочное здоровье, правильную функцию и эстетический баланс.',
-	'Collaboration with skilled partners ensures optimal, natural, and harmoniously balanced results.' => 'Сотрудничество с квалифицированными партнёрами обеспечивает оптимальные, естественные и гармонично сбалансированные результаты.',
 	'The Clinic Experience'                   => 'Атмосфера клиники',
 	'Our clinic provides comprehensive dental care for patients of all ages, focusing on prevention, accurate diagnosis, and high-quality treatment for the best possible results.' => 'Наша клиника оказывает комплексную стоматологическую помощь пациентам всех возрастов, делая акцент на профилактике, точной диагностике и высококачественном лечении для наилучших результатов.',
 	'We believe dental visits should be comfortable and positive. We create a friendly, relaxed environment with personalized care tailored to each patient\'s needs.' => 'Мы убеждены, что визит к стоматологу должен быть комфортным и приятным. Мы создаём дружелюбную, расслабленную атмосферу с индивидуальным уходом, адаптированным к потребностям каждого пациента.',
