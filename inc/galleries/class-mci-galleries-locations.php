@@ -16,11 +16,12 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 final class MCI_Galleries_Locations {
 
-	const HOME_BEFORE_AFTER = 'home_before_after';
-	const HOME_CLINIC       = 'home_clinic';
-	const PAGE_BEFORE_AFTER = 'page_before_after';
-	const PAGE_CLINIC       = 'page_clinic';
-	const SMILERS_DUAL      = 'smilers_dual';
+	const HOME_BEFORE_AFTER  = 'home_before_after';
+	const HOME_CLINIC        = 'home_clinic';
+	const PAGE_EMAX_VENEERS  = 'page_emax_veneers';
+	const PAGE_BEFORE_AFTER  = 'page_before_after';
+	const PAGE_CLINIC        = 'page_clinic';
+	const SMILERS_DUAL       = 'smilers_dual';
 
 	/**
 	 * Location slug => human label map.
@@ -29,11 +30,12 @@ final class MCI_Galleries_Locations {
 	 */
 	public static function all() {
 		return array(
-			self::HOME_BEFORE_AFTER => __( 'Home: Before & After', 'maria-charalambous-ivanova' ),
-			self::HOME_CLINIC       => __( 'Home: The Clinic', 'maria-charalambous-ivanova' ),
-			self::PAGE_BEFORE_AFTER => __( 'Gallery page: Before & After', 'maria-charalambous-ivanova' ),
-			self::PAGE_CLINIC       => __( 'Gallery page: The Clinic', 'maria-charalambous-ivanova' ),
-			self::SMILERS_DUAL      => __( 'Home & Services: Smilers — companion images', 'maria-charalambous-ivanova' ),
+			self::HOME_BEFORE_AFTER  => __( 'Home: Before & After', 'maria-charalambous-ivanova' ),
+			self::HOME_CLINIC        => __( 'Home: The Clinic', 'maria-charalambous-ivanova' ),
+			self::PAGE_EMAX_VENEERS  => __( 'Gallery page: E.max Veneers', 'maria-charalambous-ivanova' ),
+			self::PAGE_BEFORE_AFTER  => __( 'Gallery page: Before & After', 'maria-charalambous-ivanova' ),
+			self::PAGE_CLINIC        => __( 'Gallery page: The Clinic', 'maria-charalambous-ivanova' ),
+			self::SMILERS_DUAL       => __( 'Home & Services: Smilers — companion images', 'maria-charalambous-ivanova' ),
 		);
 	}
 

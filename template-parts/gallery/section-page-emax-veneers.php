@@ -1,0 +1,42 @@
+<?php
+/**
+ * Gallery page: E.max Veneers grid.
+ *
+ * Driven by the Galleries CPT (location = page_emax_veneers).
+ *
+ * @package Maria_Charalambous_Ivanova
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+$items = MCI_Galleries_Repository::get_items_for_location( MCI_Galleries_Locations::PAGE_EMAX_VENEERS );
+if ( empty( $items ) ) {
+	return;
+}
+?>
+<section class="gallery-section page-section page-section--background">
+	<div class="container">
+		<h2 class="gallery-section__heading fade-in fade-in-delay-0"><?php mci_te( 'E.max Veneers' ); ?></h2>
+		<div class="gallery-grid" id="emax-veneers-gallery">
+			<?php foreach ( $items as $row ) : ?>
+				<?php
+				$width  = $row['width'] > 0 ? (int) $row['width'] : 400;
+				$height = $row['height'] > 0 ? (int) $row['height'] : 300;
+				$src    = '' !== $row['thumb_url'] ? $row['thumb_url'] : $row['url'];
+				?>
+				<div class="gallery-grid__item fade-in">
+					<img
+						src="<?php echo esc_url( $src ); ?>"
+						alt="<?php echo esc_attr( $row['alt'] ); ?>"
+						width="<?php echo esc_attr( (string) $width ); ?>"
+						height="<?php echo esc_attr( (string) $height ); ?>"
+						loading="lazy"
+						decoding="async"
+					>
+				</div>
+			<?php endforeach; ?>
+		</div>
+	</div>
+</section>

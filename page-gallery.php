@@ -24,6 +24,8 @@ $clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
 		</div>
 	</section>
 
+	<?php get_template_part( 'template-parts/gallery/section-page-emax-veneers' ); ?>
+
 	<?php get_template_part( 'template-parts/gallery/section-page-before-after' ); ?>
 
 	<?php get_template_part( 'template-parts/gallery/section-page-clinic' ); ?>

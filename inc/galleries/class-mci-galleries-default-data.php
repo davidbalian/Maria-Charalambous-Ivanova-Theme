@@ -36,6 +36,10 @@ final class MCI_Galleries_Default_Data {
 				'title' => __( 'Home — The Clinic', 'maria-charalambous-ivanova' ),
 				'items' => self::home_clinic(),
 			),
+			MCI_Galleries_Locations::PAGE_EMAX_VENEERS => array(
+				'title' => __( 'Gallery page — E.max Veneers', 'maria-charalambous-ivanova' ),
+				'items' => array(),
+			),
 			MCI_Galleries_Locations::PAGE_BEFORE_AFTER => array(
 				'title' => __( 'Gallery page — Before & After', 'maria-charalambous-ivanova' ),
 				'items' => self::page_before_after(),
