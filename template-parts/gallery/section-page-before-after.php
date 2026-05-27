@@ -16,7 +16,7 @@ if ( empty( $items ) ) {
 	return;
 }
 ?>
-<section class="gallery-section page-section page-section--background">
+<section class="gallery-section page-section page-section--gradient">
 	<div class="container">
 		<h2 class="gallery-section__heading fade-in fade-in-delay-0"><?php echo mci_t( 'Before &amp; After' ); ?></h2>
 		<div class="gallery-grid" id="page-gallery">

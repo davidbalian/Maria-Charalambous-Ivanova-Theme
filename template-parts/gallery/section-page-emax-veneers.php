@@ -16,7 +16,7 @@ if ( empty( $items ) ) {
 	return;
 }
 ?>
-<section class="gallery-section page-section page-section--background">
+<section class="gallery-section page-section page-section--footer">
 	<div class="container">
 		<h2 class="gallery-section__heading fade-in fade-in-delay-0"><?php mci_te( 'E.max Veneers' ); ?></h2>
 		<div class="gallery-grid" id="emax-veneers-gallery">

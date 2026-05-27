@@ -2015,8 +2015,20 @@ hr {
   background-color: var(--mci-color-surface);
 }
 
+.page-section--footer {
+  background-color: var(--mci-color-text);
+  color: var(--mci-color-white);
+}
+
+.page-section--gradient {
+  background: linear-gradient(to top right, var(--mci-color-text), var(--mci-color-secondary));
+  color: var(--mci-color-white);
+}
+
 .page-section.page-section--background,
-.page-section.page-section--surface {
+.page-section.page-section--surface,
+.page-section.page-section--footer,
+.page-section.page-section--gradient {
   padding: var(--mci-spacing-3xl) 0;
 }
 
