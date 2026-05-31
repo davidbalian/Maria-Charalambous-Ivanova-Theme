@@ -947,13 +947,18 @@
    triggers frosted-glass via main.js).
    ========================================================================== */
 
-/* 1. Pull hero behind top bar + header; viewport height via --mci-home-hero-viewport */
+/* 1. Pull hero behind top bar + header; height from --mci-home-hero-viewport on .home-hero */
 .home .home-hero {
-  --mci-home-hero-viewport: min(98svh, 1920px);
   min-height: var(--mci-home-hero-viewport);
   height: var(--mci-home-hero-viewport);
   max-height: var(--mci-home-hero-viewport);
   margin-top: -7rem;
+}
+
+@media (min-width: 1920px) {
+  .home .home-hero {
+    --mci-home-hero-viewport: min(98svh, 900px);
+  }
 }
 
 /* Slider fills the full hero — absolutely positioned behind the text overlay */
