@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'MCI_THEME_VERSION', '1.6.22' );
+define( 'MCI_THEME_VERSION', '1.7.1' );
 
 /**
  * Theme setup.

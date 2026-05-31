@@ -32,7 +32,7 @@
   letter-spacing: -0.006em;
 }
 
-/* Hero Section — full-bleed slider + text band */
+/* Hero Section — full-bleed slider + text band (1920px+ width: min(98svh, 900px)) */
 .home-hero {
   --mci-home-hero-viewport: min(98svh, 1920px);
   position: relative;
@@ -153,9 +153,10 @@
   transform: scale(0.97);
 }
 
-@media (min-width: 1921px) {
-  .home-hero {
-    --mci-home-hero-viewport: min(98svh, 1920px);
+@media (min-width: 1920px) {
+  .home-hero,
+  .home .home-hero {
+    --mci-home-hero-viewport: min(98svh, 900px);
   }
 }
 
@@ -946,7 +947,7 @@
    triggers frosted-glass via main.js).
    ========================================================================== */
 
-/* 1. Pull hero behind top bar + header; slider fills min(98svh, 1920px) */
+/* 1. Pull hero behind top bar + header; viewport height via --mci-home-hero-viewport */
 .home .home-hero {
   --mci-home-hero-viewport: min(98svh, 1920px);
   min-height: var(--mci-home-hero-viewport);
