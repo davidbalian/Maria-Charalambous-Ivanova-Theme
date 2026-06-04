@@ -15,7 +15,7 @@ $clinic_image_base = home_url( '/wp-content/uploads/2026/02/' );
 <main id="main" class="site-main">
 
 	<!-- Hero with background image -->
-	<section class="gallery-hero mci-parallax" style="--mci-parallax-bg: url('<?php echo esc_url( 'https://dentalartclinic.cy/wp-content/uploads/2026/06/dental-art-clinic-gallery-bg.webp' ); ?>');">
+	<section class="gallery-hero mci-parallax" style="--mci-parallax-bg: url('<?php echo esc_url( 'https://dentalartclinic.cy/wp-content/uploads/2026/06/dental-art-clinic-gallery-bg-mobile.webp' ); ?>');">
 		<div class="gallery-hero__overlay"></div>
 		<div class="container gallery-hero__content">
 			<h1 class="gallery-hero__title fade-in fade-in-delay-0"><?php mci_te( 'Gallery' ); ?></h1>
