@@ -72,7 +72,7 @@
 
 @media (max-width: 768px) {
   .home-hero__slider-bleed::after {
-    background: rgba(0, 0, 0, 0.45);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.45) 100%);
   }
 
   /* On mobile, give the slider an explicit height so it doesn't
